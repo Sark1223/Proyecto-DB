@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Diagrama Logico" id="DD3C7192-1BD9-AF51-EA3F-6BE25F24BED0" version="3.5">
+<createdBy>perro</createdBy>
+<createdTime>2023-03-09 04:18:26 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DD3C7192-1BD9-AF51-EA3F-6BE25F24BED0</designId>
+</OSDM_Design>

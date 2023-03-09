@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D529BB37-6F53-E4B9-FB8D-54BB4BAF3C71" name="hola">
+<createdBy>perro</createdBy>
+<createdTime>2023-03-09 04:25:56 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+</Entity>

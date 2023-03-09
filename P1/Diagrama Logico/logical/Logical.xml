@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="758DEC37-18C0-E86E-CF58-5363F37F6AB4" mainViewID="218DB4E9-A909-C114-2F62-50D77D997AFD">
+<createdBy>perro</createdBy>
+<createdTime>2023-03-09 04:18:26 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
