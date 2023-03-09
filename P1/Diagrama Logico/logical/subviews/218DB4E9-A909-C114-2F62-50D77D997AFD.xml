@@ -6,17 +6,31 @@
 <autoRoute>false</autoRoute>
 <boxInbox>true</boxInbox>
 <showLegend>false</showLegend>
-<showLabels>false</showLabels>
+<showLabels>true</showLabels>
 <showRelAttributes>false</showRelAttributes>
 <gridEnabled>false</gridEnabled>
 <showGrid>false</showGrid>
 <diagramColor>-1</diagramColor>
 <display>false</display>
-<notation>1</notation>
+<notation>2</notation>
 <objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="1C71D91D-9341-5DA2-17A2-2F304646A92F" otype="Entity" vid="9C35CF78-88AA-60F8-D735-5DE9E52D37A3">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="783" y="59" width="241" height="221"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-8705</backgroundColor>
+<foregroundColor>-6750055</foregroundColor>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="CEA95853-09BC-0325-C7F0-9D4687F3BC62" otype="Entity" vid="099064E4-8671-049F-5CF2-335707018DF7">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="482" y="61" width="241" height="221"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-8705</backgroundColor>
+<foregroundColor>-6750055</foregroundColor>
+</OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="D529BB37-6F53-E4B9-FB8D-54BB4BAF3C71" otype="Entity" vid="87804637-03AC-8EC6-337E-50FACB511300">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="123" y="58" width="160" height="159"/>
+<bounds x="121" y="46" width="307" height="559"/>
 <useDefaultColor>false</useDefaultColor>
 <backgroundColor>-8705</backgroundColor>
 <foregroundColor>-6750055</foregroundColor>

@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CEA95853-09BC-0325-C7F0-9D4687F3BC62" name="PERIODO">
+<createdBy>edwin</createdBy>
+<createdTime>2023-03-09 15:04:17 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PERIODO_CLAVE" id="CF8522A8-42C0-6525-4C7B-F129AB792B9D">
+<createdBy>edwin</createdBy>
+<createdTime>2023-03-09 15:47:19 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE_PERIODO" id="F4B3E103-89D5-2D40-C7E2-0C46CB5755E4">
+<createdBy>edwin</createdBy>
+<createdTime>2023-03-09 15:50:12 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Attribute_3" id="AC32DC29-922F-52ED-E599-1738B81FEC15">
+<createdBy>edwin</createdBy>
+<createdTime>2023-03-09 15:50:12 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
