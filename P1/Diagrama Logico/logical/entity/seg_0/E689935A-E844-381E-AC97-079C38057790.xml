@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CEA95853-09BC-0325-C7F0-9D4687F3BC62" name="PERIODO">
-<createdBy>edwin</createdBy>
-<createdTime>2023-03-09 15:04:17 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E689935A-E844-381E-AC97-079C38057790" name="ADMINISTRADOR">
+<createdBy>erick</createdBy>
+<createdTime>2023-03-15 23:02:11 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
@@ -15,20 +15,21 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="PERIODO_CLAVE" id="CF8522A8-42C0-6525-4C7B-F129AB792B9D">
-<createdBy>edwin</createdBy>
-<createdTime>2023-03-09 15:47:19 UTC</createdTime>
+<Attribute name="ADMINISTRADOR_ID" id="3EABC1B3-EBCE-73E8-94CE-92660C4E1293">
+<createdBy>erick</createdBy>
+<createdTime>2023-03-15 23:02:31 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PERIODO_NOMBRE" id="F4B3E103-89D5-2D40-C7E2-0C46CB5755E4">
-<createdBy>edwin</createdBy>
-<createdTime>2023-03-09 15:50:12 UTC</createdTime>
+<Attribute name="ADM_NOMBRES" id="D57D045F-A6FA-E5ED-687B-6AA617CA25EA">
+<createdBy>erick</createdBy>
+<createdTime>2023-03-15 23:02:59 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
@@ -37,25 +38,12 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PERIODO_INICIO" id="AC32DC29-922F-52ED-E599-1738B81FEC15">
-<createdBy>edwin</createdBy>
-<createdTime>2023-03-09 15:50:12 UTC</createdTime>
-<ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="PERIODO_FIN" id="0FF84E61-9C4C-70F0-60AF-958FADE554B2">
+<Attribute name="ADM_APATERNO" id="BE79924B-B9CF-F7AE-A59C-BF1F406EB46F">
 <createdBy>erick</createdBy>
-<createdTime>2023-03-15 22:46:53 UTC</createdTime>
+<createdTime>2023-03-15 23:04:08 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
@@ -63,21 +51,36 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ADM_AMATERNO" id="29278BF8-BED1-781F-7E47-02B97621A23D">
+<createdBy>erick</createdBy>
+<createdTime>2023-03-15 23:04:39 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="7A255969-DFD5-1EE7-09EA-60C366871084" name="PERIODO PK">
+<identifier id="E7EA5D97-4F82-5E30-D3F8-30865A2E9D8A" name="ADMINISTRADOR PK">
 <createdBy>erick</createdBy>
-<createdTime>2023-03-15 22:49:16 UTC</createdTime>
+<createdTime>2023-03-15 23:02:44 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>CF8522A8-42C0-6525-4C7B-F129AB792B9D</attributeRef>
+<attributeRef>3EABC1B3-EBCE-73E8-94CE-92660C4E1293</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
