@@ -24,7 +24,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PERIODO_NOMBRE" id="F4B3E103-89D5-2D40-C7E2-0C46CB5755E4">
 <createdBy>edwin</createdBy>
@@ -72,8 +74,9 @@
 <createdBy>erick</createdBy>
 <createdTime>2023-03-15 22:49:16 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

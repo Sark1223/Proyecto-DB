@@ -47,8 +47,9 @@
 <createdBy>perro</createdBy>
 <createdTime>2023-03-10 03:35:05 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>81B9F5C1-C60F-D8E1-82F5-07165CC119AF</newElementsIDs>

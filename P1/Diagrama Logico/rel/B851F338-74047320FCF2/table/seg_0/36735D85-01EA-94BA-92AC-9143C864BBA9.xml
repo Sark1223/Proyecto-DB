@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36735D85-01EA-94BA-92AC-9143C864BBA9" name="PERIODO">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-13 02:38:27 UTC</createdTime>
+<generatorID>CEA95853-09BC-0325-C7F0-9D4687F3BC62</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PERIODO_CLAVE" id="25BD0659-774A-159E-32DF-F9CA0AFBF45F">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-13 02:38:27 UTC</createdTime>
+<generatorID>CF8522A8-42C0-6525-4C7B-F129AB792B9D</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODO_NOMBRE" id="2840AAE9-C16B-92E2-3AA0-C9C2DEA89D5E">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-13 02:38:27 UTC</createdTime>
+<generatorID>F4B3E103-89D5-2D40-C7E2-0C46CB5755E4</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODO_INICIO" id="00A19B74-D71A-96CD-6828-EBCEEECDD60B">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-13 02:38:27 UTC</createdTime>
+<generatorID>AC32DC29-922F-52ED-E599-1738B81FEC15</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODO_FIN" id="D751B99E-4B83-CA24-EB62-50A09E1B42E1">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-13 02:38:27 UTC</createdTime>
+<generatorID>0FF84E61-9C4C-70F0-60AF-958FADE554B2</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C00091FA-E5BD-7545-989F-1C29EC2A8D77" name="PERIODO_PK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-13 02:38:27 UTC</createdTime>
+<generatorID>7A255969-DFD5-1EE7-09EA-60C366871084</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25BD0659-774A-159E-32DF-F9CA0AFBF45F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

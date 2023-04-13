@@ -28,7 +28,7 @@
 <dataTypeSize>4</dataTypeSize>
 <ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="TIPO_PERSONA" id="05D05845-1FD4-3E32-93F5-1D5740DB48E6">
+<Attribute name="PERSONA_TIPO" id="05D05845-1FD4-3E32-93F5-1D5740DB48E6">
 <createdBy>perro</createdBy>
 <createdTime>2023-03-10 03:36:40 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -47,8 +47,9 @@
 <createdBy>perro</createdBy>
 <createdTime>2023-03-10 03:36:40 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>986D2607-77E8-4DFE-2BC2-8F6C82C78580</newElementsIDs>
