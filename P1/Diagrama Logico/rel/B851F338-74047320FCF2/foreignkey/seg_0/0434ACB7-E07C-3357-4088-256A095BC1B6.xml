@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0434ACB7-E07C-3357-4088-256A095BC1B6" containerWithKeyObject="6D15EE8B-F9E2-4625-EF17-E702B2F2CAAC" localFKIndex="F59CAF03-2926-8E89-A1E4-2D4BF8CC0134" name="RECIBO_ASISTENTE_ADMINISTRATIVO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>E300BB75-ED59-BD45-DC45-0FCF0B5B9DE3</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referredTableLongName>ASISTENTE_ADMINISTRATIVO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>333E45C0-6157-76DC-819E-0D019D3726EF</referredTableID>
+<keyObject>793CE332-E7A4-77FB-E92B-379B7F30E38F</keyObject>
+<referredKeyID>793CE332-E7A4-77FB-E92B-379B7F30E38F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>AA_ID_ASISTENTE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,276 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E9829540-D404-4A21-59E9-C33A304B094E" name="SOCIO">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>D529BB37-6F53-E4B9-FB8D-54BB4BAF3C71</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SOCIO_ID" id="6AD0AEC3-EE38-B07D-6E13-C181E69650CC">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>1C9977AD-A917-18E8-C30F-57BCCDD12573</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_APATERNO" id="D99815AF-B518-948D-D2AA-6F0530D77A39">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>6C3B85C3-16ED-3507-7483-12295C7ADEE3</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_AMATERNO" id="41ECC0E0-5283-6D97-441B-A8A6956070CD">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>61C84B78-5BE0-DBD1-5B1D-B1910C102F04</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_NOMBRE(S)" id="66F54E7E-6C8E-AB99-E430-96E43BD7607C">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>38E8CF1F-3DC8-2691-7AEB-4A125C157F8E</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_RFC" id="883DE7C7-D887-A241-06F6-0B4DFAEC718C">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>FE67ECEA-171A-F007-F0C1-7F937FB641F4</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_CALLE" id="7537E4FA-297D-3FEE-F24F-9EC988284546">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>CBFE4603-ADD6-E0E3-111D-81FA6555F2E3</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_NUM_INT" id="EA36C705-82C7-4855-6D3F-3350B96A9FE1">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>9D6DB44B-58DB-742F-71C6-6B7E1D9B552F</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_NUM_EXT" id="90237201-D994-8977-E43E-F637FF8A79BB">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>4FF8845B-065F-D3D8-349E-E03E4BB894E5</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_COLONIA" id="34C435BD-4A6A-36FF-92D2-1B199B95E681">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>736459AD-82FA-35D3-1E3F-12A7BCC171D9</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_CIUDAD" id="8E67A043-0202-7594-DE73-BC2873CC4F39">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>78AB57F0-C4AA-B2AB-F654-720E6F9B522A</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_CP" id="240D19D6-97FA-6BF2-5072-64ECF83696FD">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>E59F84FC-92D3-FC8E-E30A-472DFC42A318</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_LADA" id="E8119DBC-7077-B220-F1C5-8E3014504115">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>864FF2D1-7498-F4ED-9E59-498853593F48</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_TELEFONO" id="968AC169-F50A-792D-78CC-FE59C5228329">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>65CD4403-8F63-0E5A-CA98-80FEB7AAA3B2</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_TELEFONO2" id="78E9D4BA-B4A6-C67D-E968-2A00A8D5F85C">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>9E845CE4-F175-EE2A-FEE5-EEF48389627C</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_TELEFONO3" id="016DE8BB-60C2-2587-CC80-9F0377F5337D">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>AA36EE08-3C49-7CE5-679D-FBBC3CA1D243</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_EXTENSION" id="59B520C1-96A6-E754-4B35-4136093EA6A6">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>40483973-21B1-A699-67E5-C3AE56FAE106</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_EMAIL" id="24665FEA-F9B9-E664-2D9F-916EF26BEC05">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>88AE4C3B-FFB2-C7CA-7B2D-2136DCAA5F0F</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_FECHA_NACIMIENTO" id="EDCD8795-4CB5-66AD-4361-5AA62BFE9CD9">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>EEEB752D-F582-EF92-1F09-4D2C1B851048</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_FECHA_INGRESO" id="D1A3835B-7047-8F84-6281-AFBAD3609FA7">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>D2D18F2E-9B57-EF90-512D-06658023D560</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_ID_TIPO" id="BA1FD6E6-A8E7-3E10-A6C9-8BE12E2D1AD8">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>821ED2DC-AB4A-8177-019D-E005B7C33F6A</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9B051CD1-740D-C7AE-8E7F-E33F90B3C9BC" referredColumn="373F81C4-7579-7C86-5012-3C9340B5BC6D"/>
+</associations>
+</Column>
+<Column name="SC_ESTATUS" id="98F610E8-7D2F-BD4E-A4FE-352204439EB5">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>898BDD4A-AF3D-EE5E-5BD5-5855352EC7E9</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0FCC898D-1E81-3A8B-6F54-F6929D4E57A4" name="SOCIO_PK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>B017800B-D92A-276F-8A74-C5025375F84A</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AD0AEC3-EE38-B07D-6E13-C181E69650CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6614896A-341F-81D8-4106-64420332A6BD" name="SOCIO_TIPO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<generatorID>F182F4D7-2D08-5DA8-F65A-84E87FA5058E</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA1FD6E6-A8E7-3E10-A6C9-8BE12E2D1AD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
