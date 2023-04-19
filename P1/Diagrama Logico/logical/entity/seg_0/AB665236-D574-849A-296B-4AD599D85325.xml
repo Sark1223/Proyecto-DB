@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AB665236-D574-849A-296B-4AD599D85325" name="ROLL">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-19 16:28:22 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ROLL" id="C41DCD09-B2E7-868C-84F1-C1D2B0ECF128">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-19 16:28:22 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE_ROLL" id="2F04EF24-B074-2270-7DFD-E47F9A180E7B">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-19 16:28:22 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ED4062F1-F196-8190-1432-B290FAD99AB3" name="ESTATUS  PK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-19 16:28:22 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C41DCD09-B2E7-868C-84F1-C1D2B0ECF128</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

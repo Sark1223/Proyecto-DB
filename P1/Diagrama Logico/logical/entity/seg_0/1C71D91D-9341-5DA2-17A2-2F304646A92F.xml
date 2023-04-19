@@ -39,7 +39,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_ID_ASISTENTE" id="E70CBB59-3FE2-DAD1-4E9D-D61E71101181">
+<Attribute name="USUARIO_ID" id="E70CBB59-3FE2-DAD1-4E9D-D61E71101181">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:21:57 UTC</createdTime>
 <generatorID>E300BB75-ED59-BD45-DC45-0FCF0B5B9DE3</generatorID>
@@ -105,7 +105,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PERIODO_CLAVE" id="482475F9-3304-A497-7F2F-522C6E2D668F">
 <createdBy>perro</createdBy>
@@ -120,9 +120,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="REC_FIRMA_SOCIO" id="D8EE6E70-3FE0-4215-ECE0-B8A4379460F9">
+<Attribute name="REC_FIRMA_ASISTENTE" id="D8EE6E70-3FE0-4215-ECE0-B8A4379460F9">
 <createdBy>erick</createdBy>
 <createdTime>2023-03-15 22:53:06 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -131,8 +131,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT010</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="REC_FIRMA_ADMINISTRATIVO" id="ED14E45F-532F-1D9D-1E51-EE6FA18D0008">
 <createdBy>perro</createdBy>
@@ -144,20 +145,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT010</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID_FIRMA" id="D4BC5E2F-40E9-A75A-4918-1C1EAEFD8C66">
-<createdBy>perro</createdBy>
-<createdTime>2023-04-19 04:50:10 UTC</createdTime>
-<generatorID>B9D6B3C6-F518-3CE2-94FD-640121050739</generatorID>
-<ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
-</engineerTo>
-<referedAttribute>2C69F94F-DD8D-FC3D-336C-4EF2DDC1AD91</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT018</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

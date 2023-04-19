@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA31A5F5-089E-E8CB-E153-998247870C33" name="EMPLEADO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA31A5F5-089E-E8CB-E153-998247870C33" name="USUSARIO">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="EMP_ID_ASISTENTE" id="12ED40C7-1CF3-2220-D691-D1055A2E7A7C">
+<Attribute name="USUARIO_ID" id="12ED40C7-1CF3-2220-D691-D1055A2E7A7C">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_APATERNO" id="7BE17133-8032-9B02-E271-98CDEFB307A8">
+<Attribute name="USU_APATERNO" id="7BE17133-8032-9B02-E271-98CDEFB307A8">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -40,7 +40,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_AMATERNO" id="B9E3E70F-FBA4-3FCE-509E-AEC58BD80640">
+<Attribute name="USU_AMATERNO" id="B9E3E70F-FBA4-3FCE-509E-AEC58BD80640">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -53,7 +53,7 @@
 <dataTypeSize>30 CHAR</dataTypeSize>
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_NOMBRE(S)" id="61E81DF1-9519-0CC2-5A0A-DA2B9A7E00FA">
+<Attribute name="USU_NOMBRE(S)" id="61E81DF1-9519-0CC2-5A0A-DA2B9A7E00FA">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -66,7 +66,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_RFC" id="89399563-4C5B-5BB0-616C-145EC8C2D3F3">
+<Attribute name="USU_RFC" id="89399563-4C5B-5BB0-616C-145EC8C2D3F3">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -79,7 +79,7 @@
 <dataTypeSize>16 CHAR</dataTypeSize>
 <ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_CALLE" id="6A360B3B-0801-43D7-1E4D-114E81F47F7A">
+<Attribute name="USU_CALLE" id="6A360B3B-0801-43D7-1E4D-114E81F47F7A">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -92,7 +92,7 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_NUM_INT" id="613BA165-B3B9-A499-CEFA-81C3C3277FC1">
+<Attribute name="USU_NUM_INT" id="613BA165-B3B9-A499-CEFA-81C3C3277FC1">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -105,7 +105,7 @@
 <dataTypeSize>5 CHAR</dataTypeSize>
 <ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_NUM_EXT" id="824E27AD-0A05-B06F-60DC-2CC0983AB8C1">
+<Attribute name="USU_NUM_EXT" id="824E27AD-0A05-B06F-60DC-2CC0983AB8C1">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -117,7 +117,7 @@
 <logicalDatatype>LOGDT018</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_COLONIA" id="46A93EB6-2829-EB5A-0149-EEC15813748D">
+<Attribute name="USU_COLONIA" id="46A93EB6-2829-EB5A-0149-EEC15813748D">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -130,7 +130,7 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_CIUDAD" id="52204EA6-0A5B-A52F-3BFD-719555A3D06F">
+<Attribute name="USU_CIUDAD" id="52204EA6-0A5B-A52F-3BFD-719555A3D06F">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -143,7 +143,7 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_CP" id="214FF1A0-87B0-C56F-7352-3CDF11335ECD">
+<Attribute name="USU_CP" id="214FF1A0-87B0-C56F-7352-3CDF11335ECD">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -152,10 +152,11 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_LADA" id="6F89052A-E1C5-76D0-F189-4C41DF1E8704">
+<Attribute name="USU_LADA" id="6F89052A-E1C5-76D0-F189-4C41DF1E8704">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -167,7 +168,7 @@
 <logicalDatatype>LOGDT018</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_TELEFONO" id="834CA39E-920C-AD97-B036-D4226702F221">
+<Attribute name="USU_TELEFONO" id="834CA39E-920C-AD97-B036-D4226702F221">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -180,7 +181,7 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_EMAIL" id="6FB0ACA0-60DB-07AC-DBB6-89E902B10960">
+<Attribute name="USU_EMAIL" id="6FB0ACA0-60DB-07AC-DBB6-89E902B10960">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -192,7 +193,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_FECHA_NACIMIENTO" id="985C97D3-9D0F-26FD-995E-E86B15D802A6">
+<Attribute name="USU_FECHA_NACIMIENTO" id="985C97D3-9D0F-26FD-995E-E86B15D802A6">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -204,7 +205,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EMP_FECHA_INGRESO" id="33234CCE-90C0-FA11-1C3A-55D5ED91E5AC">
+<Attribute name="USU_FECHA_INGRESO" id="33234CCE-90C0-FA11-1C3A-55D5ED91E5AC">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -216,19 +217,19 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PUESTO_ID" id="1160071D-E434-2BCE-C15E-6DC16087928C">
+<Attribute name="ID_ROLL" id="2ADE1FB6-16FA-DF97-6AE2-2DA1EDE7D794">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-19 04:46:12 UTC</createdTime>
-<generatorID>E5F4E222-27D5-F8E8-69B1-38169E8A0D85</generatorID>
+<createdTime>2023-04-19 16:29:45 UTC</createdTime>
+<generatorID>A764D778-6C2F-E1CD-F679-B82E656D722C</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
-<referedAttribute>4C5520BB-9329-D096-F37E-3110EA52CFAC</referedAttribute>
+<referedAttribute>C41DCD09-B2E7-868C-84F1-C1D2B0ECF128</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10 CHAR</dataTypeSize>
+<dataTypeSize>4</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

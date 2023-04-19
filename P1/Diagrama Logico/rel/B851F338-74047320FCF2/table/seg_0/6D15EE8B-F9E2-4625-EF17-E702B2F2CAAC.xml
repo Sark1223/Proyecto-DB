@@ -95,7 +95,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -111,7 +111,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -141,7 +141,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>64CDE102-29CD-8A2D-C517-F45562F7F043</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
@@ -156,7 +155,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>64CDE102-29CD-8A2D-C517-F45562F7F043</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
@@ -171,7 +169,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>64CDE102-29CD-8A2D-C517-F45562F7F043</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
@@ -186,7 +183,6 @@
 <dataTypeSize>16 CHAR</dataTypeSize>
 <ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>64CDE102-29CD-8A2D-C517-F45562F7F043</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
@@ -201,7 +197,6 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>0434ACB7-E07C-3357-4088-256A095BC1B6</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
@@ -216,7 +211,6 @@
 <dataTypeSize>30 CHAR</dataTypeSize>
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>0434ACB7-E07C-3357-4088-256A095BC1B6</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
@@ -231,7 +225,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<isRelationshipColumn>true</isRelationshipColumn>
 <dependOnForeignKeyID>0434ACB7-E07C-3357-4088-256A095BC1B6</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
