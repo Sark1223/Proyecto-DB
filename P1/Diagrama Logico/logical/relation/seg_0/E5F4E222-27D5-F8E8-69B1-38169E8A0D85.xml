@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_10" directorySegmentName="seg_0" id="E5F4E222-27D5-F8E8-69B1-38169E8A0D85">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-19 04:46:12 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<sourcePk>63F44943-E974-2A8C-C929-654CE1FDA801</sourcePk>
+<identifying>false</identifying>
+<nameOnSource> </nameOnSource>
+<nameOnTarget>TIENE</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>33C52848-FFA2-51F5-EEAA-97FCC09FF7B2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FA31A5F5-089E-E8CB-E153-998247870C33</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

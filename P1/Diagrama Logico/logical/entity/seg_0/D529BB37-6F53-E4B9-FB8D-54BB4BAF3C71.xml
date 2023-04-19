@@ -183,7 +183,9 @@
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_TELEFONO3" id="AA36EE08-3C49-7CE5-679D-FBBC3CA1D243">
@@ -194,7 +196,9 @@
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_EXTENSION" id="40483973-21B1-A699-67E5-C3AE56FAE106">
