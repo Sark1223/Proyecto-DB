@@ -98,10 +98,12 @@
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_NUM_EXT" id="4FF8845B-065F-D3D8-349E-E03E4BB894E5">
 <createdBy>edwin</createdBy>
@@ -112,8 +114,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_COLONIA" id="736459AD-82FA-35D3-1E3F-12A7BCC171D9">
 <createdBy>edwin</createdBy>
