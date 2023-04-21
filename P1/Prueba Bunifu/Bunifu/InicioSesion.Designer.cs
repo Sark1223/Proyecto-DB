@@ -52,7 +52,7 @@
             // 
             // Logo
             // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Image = global::Bunifu.Properties.Resources.mascota;
             this.Logo.Location = new System.Drawing.Point(30, 34);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(90, 80);
