@@ -44,3 +44,13 @@ C:\Users\edwin\OneDrive\Desktop\Semestre 4\Topicos avanzados de programacion\Pru
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Topicos avanzados de programacion\Prueba Bunifu\Bunifu\bin\Debug\System.Threading.AccessControl.xml
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Topicos avanzados de programacion\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.csproj.Fody.CopyLocal.cache
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Topicos avanzados de programacion\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.Gestion.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.csproj.AssemblyReference.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.csproj.SuggestedBindingRedirects.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.Gestion.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.Form1.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.InicioSesion.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.Properties.Resources.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.csproj.GenerateResource.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.csproj.CoreCompileInputs.cache
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.exe
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\Prueba Bunifu\Bunifu\obj\Debug\Bunifu.pdb
