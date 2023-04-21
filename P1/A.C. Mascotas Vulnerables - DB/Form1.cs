@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace A.C.Mascotas_Vulnerables___DB
 {
-    public partial class Form1 : Form
+    public partial class frmInicio : Form
     {
-        public Form1()
+        public frmInicio()
         {
             InitializeComponent();
+        }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
