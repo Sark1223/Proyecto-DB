@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BunifuAnimatorNS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,7 @@ namespace A.C.Mascotas_Vulnerables___DB
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menu.ShowDialog();
+            menu.ShowDialog();            
             this.Show();
         }
     }

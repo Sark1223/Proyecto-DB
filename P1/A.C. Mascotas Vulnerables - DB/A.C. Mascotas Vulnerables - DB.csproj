@@ -68,6 +68,18 @@
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmNuevaAportacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmNuevaAportacion.Designer.cs">
+      <DependentUpon>frmNuevaAportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmSocios.Designer.cs">
+      <DependentUpon>frmSocios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\frmAportacion.resx">
@@ -78,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmNuevaAportacion.resx">
+      <DependentUpon>frmNuevaAportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmSocios.resx">
+      <DependentUpon>frmSocios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

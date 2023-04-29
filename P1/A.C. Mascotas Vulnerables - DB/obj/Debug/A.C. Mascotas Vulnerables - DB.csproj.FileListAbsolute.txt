@@ -10,7 +10,6 @@ C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proy
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.pdb
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\Bunifu_UI_v1.52.dll
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C. Mascotas Vulnerables - DB.csproj.CopyComplete
-C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.frmInicio.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\A.C.Mascotas_Vulnerables___DB.exe.config
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\A.C.Mascotas_Vulnerables___DB.exe
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\A.C.Mascotas_Vulnerables___DB.pdb
@@ -25,3 +24,8 @@ C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerabl
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.pdb
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.frmMenu_Principal.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmAportacion.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmAportacion.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.frmMenu_Principal.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.InicioSesion.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmSocios.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmNuevaAportacion.resources

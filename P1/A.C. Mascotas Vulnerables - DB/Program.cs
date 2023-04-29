@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A.C.Mascotas_Vulnerables___DB.PL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace A.C.Mascotas_Vulnerables___DB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InicioSesion());
+            Application.Run(new frmNuevaAportacion());
         }
     }
 }

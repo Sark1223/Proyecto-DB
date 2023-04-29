@@ -10,27 +10,21 @@ using System.Windows.Forms;
 
 namespace A.C.Mascotas_Vulnerables___DB.PL
 {
-    public partial class frmAportacion : Form
+    public partial class frmSocios : Form
     {
-        frmNuevaAportacion nAportacion = new frmNuevaAportacion();
-        public frmAportacion()
+        public frmSocios()
         {
             InitializeComponent();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        private void cmdAportacion(object sender, EventArgs e)
-        {
-            nAportacion.Show();
+            this.Close();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

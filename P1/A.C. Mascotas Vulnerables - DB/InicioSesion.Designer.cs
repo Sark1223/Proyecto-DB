@@ -59,22 +59,22 @@
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Dubai Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblLogo.Location = new System.Drawing.Point(328, 102);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(180, 27);
+            this.lblLogo.Size = new System.Drawing.Size(200, 20);
             this.lblLogo.TabIndex = 12;
             this.lblLogo.Text = "A.C. Mascotas Vulnerables";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 17F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
             this.label1.Location = new System.Drawing.Point(344, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 27);
+            this.label1.Size = new System.Drawing.Size(185, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "Inicio de Sesion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,22 +132,22 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Dubai Light", 10.5F);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
             this.lblUsuario.Location = new System.Drawing.Point(305, 198);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(53, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(57, 17);
             this.lblUsuario.TabIndex = 19;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Font = new System.Drawing.Font("Dubai Light", 10.5F);
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.lblContraseña.ForeColor = System.Drawing.Color.Black;
             this.lblContraseña.Location = new System.Drawing.Point(307, 272);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(73, 24);
+            this.lblContraseña.Size = new System.Drawing.Size(81, 17);
             this.lblContraseña.TabIndex = 20;
             this.lblContraseña.Text = "Contraseña";
             // 
@@ -201,7 +201,7 @@
             this.cmdIniciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdIniciar.BackgroundImage")));
             this.cmdIniciar.ButtonText = "INICIAR";
             this.cmdIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdIniciar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdIniciar.ForeColor = System.Drawing.Color.SeaGreen;
             this.cmdIniciar.IdleBorderThickness = 1;
             this.cmdIniciar.IdleCornerRadius = 20;
