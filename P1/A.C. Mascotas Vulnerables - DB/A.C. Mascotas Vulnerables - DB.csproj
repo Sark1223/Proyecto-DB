@@ -102,5 +102,14 @@
   <ItemGroup>
     <None Include="Resources\Equis.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ŧσllσฬ ๓є %40ღ Ꮙαƪƪεȵα ღ #Corgi.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
