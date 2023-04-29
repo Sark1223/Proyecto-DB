@@ -16,5 +16,16 @@ namespace A.C.Mascotas_Vulnerables___DB
         {
             InitializeComponent();
         }
+
+        private void InicioSesion_Load(object sender, EventArgs e)
+        {
+            lblBienvenido.Parent = pbInicio;
+            lblBienvenido.BackColor = Color.Transparent;
+        }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

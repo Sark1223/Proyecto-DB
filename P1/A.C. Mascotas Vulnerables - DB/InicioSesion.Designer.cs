@@ -29,19 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.rdInicioSesion = new ns1.BunifuElipse(this.components);
             this.lblLogo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.pbInicio = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.cmdIniciar = new ns1.BunifuThinButton2();
+            this.cmdCerrar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // rdInicioSesion
@@ -54,7 +61,7 @@
             this.lblLogo.AutoSize = true;
             this.lblLogo.Font = new System.Drawing.Font("Dubai Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblLogo.Location = new System.Drawing.Point(334, 72);
+            this.lblLogo.Location = new System.Drawing.Point(328, 102);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(180, 27);
             this.lblLogo.TabIndex = 12;
@@ -63,11 +70,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(367, 142);
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 17F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.label1.Location = new System.Drawing.Point(344, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 19);
+            this.label1.Size = new System.Drawing.Size(154, 27);
             this.label1.TabIndex = 14;
             this.label1.Text = "Inicio de Sesion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,7 +85,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 480);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 3);
+            this.panel1.Size = new System.Drawing.Size(562, 3);
             this.panel1.TabIndex = 15;
             // 
             // panel2
@@ -87,94 +94,168 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(565, 3);
+            this.panel2.Size = new System.Drawing.Size(562, 3);
             this.panel2.TabIndex = 16;
             // 
-            // label2
+            // lblBienvenido
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(338, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 29);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "¡BIENVENIDO!";
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblBienvenido.Font = new System.Drawing.Font("MV Boli", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.White;
+            this.lblBienvenido.Location = new System.Drawing.Point(47, 125);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(178, 29);
+            this.lblBienvenido.TabIndex = 17;
+            this.lblBienvenido.Text = "¡BIENVENIDO!";
             // 
-            // pictureBox1
+            // pbInicio
             // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Ŧσllσฬ_๓є__ღ_Ꮙαƪƪεȵα_ღ__Corgi;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 483);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pbInicio.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Ŧσllσฬ_๓є__ღ_Ꮙαƪƪεȵα_ღ__Corgi;
+            this.pbInicio.Location = new System.Drawing.Point(0, 0);
+            this.pbInicio.Name = "pbInicio";
+            this.pbInicio.Size = new System.Drawing.Size(273, 483);
+            this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbInicio.TabIndex = 18;
+            this.pbInicio.TabStop = false;
             // 
             // Logo
             // 
             this.Logo.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.Logo.Location = new System.Drawing.Point(390, 12);
+            this.Logo.Location = new System.Drawing.Point(384, 42);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(72, 62);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 13;
             this.Logo.TabStop = false;
             // 
-            // label3
+            // lblUsuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Dubai Light", 10.5F);
-            this.label3.Location = new System.Drawing.Point(310, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 24);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Usuario";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Dubai Light", 10.5F);
+            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.Location = new System.Drawing.Point(305, 198);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(53, 24);
+            this.lblUsuario.TabIndex = 19;
+            this.lblUsuario.Text = "Usuario";
             // 
-            // label4
+            // lblContraseña
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Dubai Light", 10.5F);
-            this.label4.Location = new System.Drawing.Point(310, 244);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 24);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Contraseña";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Font = new System.Drawing.Font("Dubai Light", 10.5F);
+            this.lblContraseña.ForeColor = System.Drawing.Color.Black;
+            this.lblContraseña.Location = new System.Drawing.Point(307, 272);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(73, 24);
+            this.lblContraseña.TabIndex = 20;
+            this.lblContraseña.Text = "Contraseña";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(316, 193);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 25);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.Text = "Santos Karla";
+            this.txtUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(309, 221);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(210, 25);
+            this.txtUsuario.TabIndex = 21;
+            this.txtUsuario.Text = "Santos Karla";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panel3.Location = new System.Drawing.Point(308, 245);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(216, 1);
+            this.panel3.TabIndex = 22;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panel4.Location = new System.Drawing.Point(308, 318);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(216, 1);
+            this.panel4.TabIndex = 24;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(309, 294);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(210, 25);
+            this.txtContraseña.TabIndex = 23;
+            this.txtContraseña.Text = "Santos Karla";
+            // 
+            // cmdIniciar
+            // 
+            this.cmdIniciar.ActiveBorderThickness = 1;
+            this.cmdIniciar.ActiveCornerRadius = 20;
+            this.cmdIniciar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdIniciar.ActiveForecolor = System.Drawing.Color.White;
+            this.cmdIniciar.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdIniciar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmdIniciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdIniciar.BackgroundImage")));
+            this.cmdIniciar.ButtonText = "INICIAR";
+            this.cmdIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdIniciar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdIniciar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdIniciar.IdleBorderThickness = 1;
+            this.cmdIniciar.IdleCornerRadius = 20;
+            this.cmdIniciar.IdleFillColor = System.Drawing.Color.White;
+            this.cmdIniciar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdIniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdIniciar.Location = new System.Drawing.Point(340, 330);
+            this.cmdIniciar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmdIniciar.Name = "cmdIniciar";
+            this.cmdIniciar.Size = new System.Drawing.Size(145, 33);
+            this.cmdIniciar.TabIndex = 26;
+            this.cmdIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.cmdCerrar.Location = new System.Drawing.Point(520, 9);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(33, 23);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 27;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(565, 483);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(562, 483);
+            this.Controls.Add(this.cmdCerrar);
+            this.Controls.Add(this.cmdIniciar);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.lblBienvenido);
+            this.Controls.Add(this.pbInicio);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.lblLogo);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioSesion";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.InicioSesion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,12 +267,17 @@
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbInicio;
+        private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblUsuario;
+        private ns1.BunifuThinButton2 cmdIniciar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox cmdCerrar;
     }
 }
