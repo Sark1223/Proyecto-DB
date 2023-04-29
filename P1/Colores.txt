@@ -1,0 +1,12 @@
+------ COLORES CLAROS ------
+Rojo-Rosa      217,126,150
+Verde          186,211,109
+Durazno claro  250,218,203
+Naranja 	   250,175,107
+Color Base     248,243,223
+
+---- COLORES OSCUROS -----
+Ginda rosado   192,57,120
+Morado Oscuro  57,7,64
+Azul Oscuro    23,46,115
+Amarillo verde 238,242,109
