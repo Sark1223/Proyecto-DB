@@ -17,6 +17,9 @@ namespace A.C.Mascotas_Vulnerables___DB
             InitializeComponent();
         }
 
+        //Objetos de clase
+        frmMenu_Principal menu = new frmMenu_Principal();
+
         private void InicioSesion_Load(object sender, EventArgs e)
         {
             lblBienvenido.Parent = pbInicio;
@@ -26,6 +29,13 @@ namespace A.C.Mascotas_Vulnerables___DB
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmdIniciar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            menu.ShowDialog();
+            this.Show();
         }
     }
 }

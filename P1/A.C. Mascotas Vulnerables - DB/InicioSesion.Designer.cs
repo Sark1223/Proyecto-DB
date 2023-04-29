@@ -115,7 +115,7 @@
             this.pbInicio.Location = new System.Drawing.Point(0, 0);
             this.pbInicio.Name = "pbInicio";
             this.pbInicio.Size = new System.Drawing.Size(273, 483);
-            this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbInicio.TabIndex = 18;
             this.pbInicio.TabStop = false;
             // 
@@ -209,11 +209,12 @@
             this.cmdIniciar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
             this.cmdIniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
             this.cmdIniciar.Location = new System.Drawing.Point(340, 330);
-            this.cmdIniciar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmdIniciar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdIniciar.Name = "cmdIniciar";
             this.cmdIniciar.Size = new System.Drawing.Size(145, 33);
             this.cmdIniciar.TabIndex = 26;
             this.cmdIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmdIniciar.Click += new System.EventHandler(this.cmdIniciar_Click);
             // 
             // cmdCerrar
             // 
@@ -250,6 +251,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InicioSesion";
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioSesion";
             this.Load += new System.EventHandler(this.InicioSesion_Load);

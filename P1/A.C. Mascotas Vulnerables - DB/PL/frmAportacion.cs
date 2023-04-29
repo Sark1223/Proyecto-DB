@@ -8,23 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace A.C.Mascotas_Vulnerables___DB
+namespace A.C.Mascotas_Vulnerables___DB.PL
 {
-    public partial class frmInicio : Form
+    public partial class frmAportacion : Form
     {
-        public frmInicio()
+        public frmAportacion()
         {
             InitializeComponent();
         }
 
-        private void lblLogo_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            Close();
         }
     }
 }
