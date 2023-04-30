@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA31A5F5-089E-E8CB-E153-998247870C33" name="USUSARIO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA31A5F5-089E-E8CB-E153-998247870C33" name="USUARIO">
 <createdBy>perro</createdBy>
 <createdTime>2023-04-13 02:09:18 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -232,19 +232,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
 <ownDataTypeParameters>4,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="USUARIO" id="108DDD2B-D5AF-CC85-ABB4-5DB1E8719517">
-<createdBy>perro</createdBy>
-<createdTime>2023-04-19 17:44:06 UTC</createdTime>
-<ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>30 CHAR</dataTypeSize>
-<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="CONTRASEÑA" id="D5ED4948-15BD-CCDF-1964-E8FD603C034D">
 <createdBy>perro</createdBy>

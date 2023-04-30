@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E473E69B-709B-36B6-1CCC-75E61D872741" name="TIPO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="338F1A77-1646-CC48-170B-6B4294CDC5E5" name="ROLL">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
-<generatorID>BF99B4AE-2E0C-643B-29A3-26544FDC3758</generatorID>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
+<generatorID>AB665236-D574-849A-296B-4AD599D85325</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ID_TIPO" id="373F81C4-7579-7C86-5012-3C9340B5BC6D">
+<Column name="ID_ROLL" id="6318A2C8-1585-BD63-9C2C-2684AC899C26">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
-<generatorID>986D2607-77E8-4DFE-2BC2-8F6C82C78580</generatorID>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
+<generatorID>C41DCD09-B2E7-868C-84F1-C1D2B0ECF128</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -20,30 +20,30 @@
 <ownDataTypeParameters>4,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PERSONA_TIPO" id="7E3CBB3B-F65F-7F78-FE3D-F6B2677BD053">
+<Column name="NOMBRE_ROLL" id="BFBFD156-27F6-AC6B-2010-2C4D11FD1F77">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
-<generatorID>05D05845-1FD4-3E32-93F5-1D5740DB48E6</generatorID>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
+<generatorID>2F04EF24-B074-2270-7DFD-E47F9A180E7B</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>30</dataTypeSize>
-<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="C61CACA8-96F1-4EDC-33A2-268F37D558D1" name="TIPO_PK">
+<ind_PK_UK id="79597427-12BC-F667-9B70-81FACBED8015" name="ROLL_PK">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
-<generatorID>8085C01F-267C-19E2-1057-9DFA5F6528C7</generatorID>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
+<generatorID>ED4062F1-F196-8190-1432-B290FAD99AB3</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="373F81C4-7579-7C86-5012-3C9340B5BC6D"/>
+<colUsage columnID="6318A2C8-1585-BD63-9C2C-2684AC899C26"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

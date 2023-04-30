@@ -25,7 +25,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="REC_FECHA" id="FEB27D60-4B0B-EDEA-5F8F-92BA14A1F67D">
 <createdBy>erick</createdBy>
@@ -64,7 +65,8 @@
 <referedAttribute>1C9977AD-A917-18E8-C30F-57BCCDD12573</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="REC_MONTO" id="3A1160E2-6FFC-ED11-0967-213BA7F260C9">
@@ -76,8 +78,10 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT043</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="REC_MTO_ESCRITO" id="0C04CF67-5C82-ABB2-D967-6E37BF1AE92E">
 <createdBy>erick</createdBy>
@@ -105,7 +109,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PERIODO_CLAVE" id="482475F9-3304-A497-7F2F-522C6E2D668F">
 <createdBy>perro</createdBy>
@@ -120,7 +124,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="REC_FIRMA_ASISTENTE" id="D8EE6E70-3FE0-4215-ECE0-B8A4379460F9">
 <createdBy>erick</createdBy>

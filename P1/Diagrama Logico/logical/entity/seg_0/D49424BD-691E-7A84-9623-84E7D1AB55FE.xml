@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D49424BD-691E-7A84-9623-84E7D1AB55FE" name="HISTORIAL">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-30 07:06:41 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="FECHA" id="CEE83F28-B64E-BDA2-086C-5ECDB6D6C3AA">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-30 07:06:41 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USUARIO_ID" id="EB447A01-D66E-18C6-47E2-106DA31D774A">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-30 07:21:06 UTC</createdTime>
+<generatorID>C27E72A7-B0B7-5EF7-F083-F07F74153256</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<referedAttribute>12ED40C7-1CF3-2220-D691-D1055A2E7A7C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CAMBIO" id="656809DA-DE33-8DE7-E229-92390E900CA7">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-30 07:16:22 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="60A71749-5DC0-536C-5BDB-175A160A1DA7" name="HISTORIAL PK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-30 07:06:41 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>CEE83F28-B64E-BDA2-086C-5ECDB6D6C3AA</newElementsIDs>
+<usedAttributes>
+<attributeRef>CEE83F28-B64E-BDA2-086C-5ECDB6D6C3AA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

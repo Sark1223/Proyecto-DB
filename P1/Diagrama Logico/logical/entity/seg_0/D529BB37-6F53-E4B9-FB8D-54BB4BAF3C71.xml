@@ -24,8 +24,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
+<ownDataTypeParameters>7 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_APATERNO" id="6C3B85C3-16ED-3507-7483-12295C7ADEE3">
 <createdBy>edwin</createdBy>
@@ -53,7 +54,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="SC_NOMBRE(S)" id="38E8CF1F-3DC8-2691-7AEB-4A125C157F8E">
+<Attribute name="SC_NOMBRE_S" id="38E8CF1F-3DC8-2691-7AEB-4A125C157F8E">
 <createdBy>edwin</createdBy>
 <createdTime>2023-03-09 15:04:55 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
@@ -76,8 +77,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>16 CHAR</dataTypeSize>
-<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>14 CHAR</dataTypeSize>
+<ownDataTypeParameters>14 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_CALLE" id="CBFE4603-ADD6-E0E3-111D-81FA6555F2E3">
 <createdBy>edwin</createdBy>
@@ -89,7 +90,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_NUM_INT" id="9D6DB44B-58DB-742F-71C6-6B7E1D9B552F">
 <createdBy>edwin</createdBy>
@@ -140,7 +142,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_CP" id="E59F84FC-92D3-FC8E-E30A-472DFC42A318">
 <createdBy>edwin</createdBy>
@@ -152,7 +155,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_LADA" id="864FF2D1-7498-F4ED-9E59-498853593F48">
 <createdBy>edwin</createdBy>
@@ -163,8 +167,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_TELEFONO" id="65CD4403-8F63-0E5A-CA98-80FEB7AAA3B2">
 <createdBy>edwin</createdBy>
@@ -176,7 +181,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_TELEFONO2" id="9E845CE4-F175-EE2A-FEE5-EEF48389627C">
 <createdBy>perro</createdBy>
@@ -189,20 +195,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="SC_TELEFONO3" id="AA36EE08-3C49-7CE5-679D-FBBC3CA1D243">
-<createdBy>perro</createdBy>
-<createdTime>2023-04-13 02:03:35 UTC</createdTime>
-<ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_EXTENSION" id="40483973-21B1-A699-67E5-C3AE56FAE106">
 <createdBy>edwin</createdBy>
@@ -223,10 +217,12 @@
 <engineerTo>
 <item key="B851F338-DA32-19EC-D8D5-74047320FCF2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_FECHA_NACIMIENTO" id="EEEB752D-F582-EF92-1F09-4D2C1B851048">
 <createdBy>edwin</createdBy>
@@ -265,7 +261,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_ESTATUS" id="898BDD4A-AF3D-EE5E-5BD5-5855352EC7E9">
 <createdBy>perro</createdBy>
