@@ -261,7 +261,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SC_ESTATUS" id="898BDD4A-AF3D-EE5E-5BD5-5855352EC7E9">
 <createdBy>perro</createdBy>
