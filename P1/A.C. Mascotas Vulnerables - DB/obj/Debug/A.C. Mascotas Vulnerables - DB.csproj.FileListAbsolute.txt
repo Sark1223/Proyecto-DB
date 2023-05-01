@@ -29,3 +29,20 @@ C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proy
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.InicioSesion.resources
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmSocios.resources
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmNuevaAportacion.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\A.C.Mascotas_Vulnerables___DB.exe.config
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\A.C.Mascotas_Vulnerables___DB.exe
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\bin\Debug\A.C.Mascotas_Vulnerables___DB.pdb
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C. Mascotas Vulnerables - DB.csproj.AssemblyReference.cache
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C. Mascotas Vulnerables - DB.csproj.SuggestedBindingRedirects.cache
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmAportacion.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmBuscador.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.frmMenu_Principal.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.InicioSesion.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmNuevaAportacion.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmSocios.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.Properties.Resources.resources
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C. Mascotas Vulnerables - DB.csproj.GenerateResource.cache
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C. Mascotas Vulnerables - DB.csproj.CoreCompileInputs.cache
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C. Mascotas Vulnerables - DB.csproj.CopyComplete
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.exe
+C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.pdb

@@ -50,11 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Conexion.cs" />
     <Compile Include="PL\frmAportacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\frmAportacion.Designer.cs">
       <DependentUpon>frmAportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmBuscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmBuscador.Designer.cs">
+      <DependentUpon>frmBuscador.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\frmMenu_Principal.cs">
       <SubType>Form</SubType>
@@ -84,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\frmAportacion.resx">
       <DependentUpon>frmAportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmBuscador.resx">
+      <DependentUpon>frmBuscador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMenu_Principal.resx">
       <DependentUpon>frmMenu_Principal.cs</DependentUpon>
@@ -138,9 +148,7 @@
   <ItemGroup>
     <None Include="Resources\Ŧσllσฬ ๓є %40ღ Ꮙαƪƪεȵα ღ #Corgi.jfif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\mujer %281%29.png" />
   </ItemGroup>
