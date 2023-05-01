@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E63DB36-04C3-09C8-1FBD-8B56FE1DD528" name="ESTATUS">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D763524-41D9-E9A3-B54F-126FCE0ED325" name="ESTATUS">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
 <generatorID>DC22EAF5-8D4D-8101-8A44-E39244CD97A3</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ID_ESTATUS" id="834EBEC2-DE96-54AC-52B3-C465B7A92ECE">
+<Column name="ID_ESTATUS" id="A5F996DB-D0B6-5DF7-3B8F-F741F6868F03">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
 <generatorID>81B9F5C1-C60F-D8E1-82F5-07165CC119AF</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,30 +20,30 @@
 <ownDataTypeParameters>4,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="TIPO_ESTATUS" id="1677BD6F-AC67-686D-A503-76AA72F1D18A">
+<Column name="TIPO_ESTATUS" id="6D97A32C-539F-69E3-E244-36D984981FA3">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
 <generatorID>8BD67775-F713-0FA4-20CB-4B5FCA9F80E1</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>30</dataTypeSize>
-<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="0A531982-3B4F-4C9A-713F-7CE639687585" name="ESTATUS_PK">
+<ind_PK_UK id="B883EBBE-0EB2-2C4D-2078-D76DEE9E9C0C" name="ESTATUS_PK">
 <createdBy>perro</createdBy>
-<createdTime>2023-04-14 06:28:10 UTC</createdTime>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
 <generatorID>3DAF8320-06BF-4BCC-4514-E07514D0DD83</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="834EBEC2-DE96-54AC-52B3-C465B7A92ECE"/>
+<colUsage columnID="A5F996DB-D0B6-5DF7-3B8F-F741F6868F03"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

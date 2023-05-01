@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="575B73CB-153B-F617-E077-F80A1BCD3F99" containerWithKeyObject="771FD397-9076-54CA-D5AD-734F6A4E91C3" localFKIndex="66A8D42D-95B2-1F45-F5E6-3C230A9634D4" name="RECIBO_ESTATUS_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-04-30 07:27:19 UTC</createdTime>
+<generatorID>8D2304BA-86CF-2B38-EB1B-9A3E3A7D78B5</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referredTableLongName>ESTATUS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8D763524-41D9-E9A3-B54F-126FCE0ED325</referredTableID>
+<keyObject>B883EBBE-0EB2-2C4D-2078-D76DEE9E9C0C</keyObject>
+<referredKeyID>B883EBBE-0EB2-2C4D-2078-D76DEE9E9C0C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ESTATUS</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
