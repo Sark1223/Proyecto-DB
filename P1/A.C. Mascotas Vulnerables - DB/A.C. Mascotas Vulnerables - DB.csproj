@@ -57,6 +57,12 @@
     <Compile Include="PL\frmAportacion.Designer.cs">
       <DependentUpon>frmAportacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmBuscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmBuscador.Designer.cs">
+      <DependentUpon>frmBuscador.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmMenu_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\frmAportacion.resx">
       <DependentUpon>frmAportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmBuscador.resx">
+      <DependentUpon>frmBuscador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMenu_Principal.resx">
       <DependentUpon>frmMenu_Principal.cs</DependentUpon>
