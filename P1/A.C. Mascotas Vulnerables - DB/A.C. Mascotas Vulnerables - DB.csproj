@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Conexion.cs" />
     <Compile Include="PL\frmAportacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,9 +139,7 @@
   <ItemGroup>
     <None Include="Resources\Ŧσllσฬ ๓є %40ღ Ꮙαƪƪεȵα ღ #Corgi.jfif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\mujer %281%29.png" />
   </ItemGroup>
