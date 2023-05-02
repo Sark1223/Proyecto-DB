@@ -34,9 +34,17 @@ namespace A.C.Mascotas_Vulnerables___DB
 
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            menu.ShowDialog();            
-            this.Show();
+            if()
+            {
+                this.Hide();
+                menu.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+
+            }
+            
         }
     }
 }

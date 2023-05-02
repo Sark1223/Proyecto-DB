@@ -34,13 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.encabezado = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmdAgregarUsuario = new ns1.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdCerrar = new ns1.BunifuImageButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmdAgregarUsuario = new ns1.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -81,9 +79,6 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvUsuarios.ColumnHeadersHeight = 30;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column4});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(197)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -110,22 +105,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(759, 215);
             this.dgvUsuarios.TabIndex = 17;
             // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 23.51233F;
-            this.Column3.HeaderText = "No_Paso";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 97;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 176.4876F;
-            this.Column4.HeaderText = "Instruccion";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 110;
-            // 
             // encabezado
             // 
             this.encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
@@ -137,6 +116,30 @@
             this.encabezado.Name = "encabezado";
             this.encabezado.Size = new System.Drawing.Size(800, 39);
             this.encabezado.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.cmdCerrar.ImageActive = null;
+            this.cmdCerrar.Location = new System.Drawing.Point(748, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // label3
             // 
@@ -185,29 +188,6 @@
             this.cmdAgregarUsuario.Textcolor = System.Drawing.Color.Black;
             this.cmdAgregarUsuario.TextFont = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregarUsuario.Click += new System.EventHandler(this.cmdAgregarUsuario_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.cmdCerrar.ImageActive = null;
-            this.cmdCerrar.Location = new System.Drawing.Point(748, 3);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
-            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdCerrar.TabIndex = 0;
-            this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Zoom = 10;
             // 
             // panel1
             // 
@@ -329,8 +309,6 @@
         #endregion
 
         public System.Windows.Forms.DataGridView dgvUsuarios;
-        public System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        public System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Panel encabezado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ns1.BunifuImageButton cmdCerrar;

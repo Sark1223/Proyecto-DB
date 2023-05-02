@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -70,6 +71,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             }
             return true;
 
+        }
+
+        public DataSet MostrarUsuarios()
+        {
+            SqlCommand comandoSQL = new SqlCommand("Select * from USUARIO");
+            return conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
     }
 }

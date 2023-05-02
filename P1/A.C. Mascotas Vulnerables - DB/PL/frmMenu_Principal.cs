@@ -1,4 +1,5 @@
-﻿using A.C.Mascotas_Vulnerables___DB.PL;
+﻿using A.C.Mascotas_Vulnerables___DB.DAL;
+using A.C.Mascotas_Vulnerables___DB.PL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,8 @@ namespace A.C.Mascotas_Vulnerables___DB
         //Objetos de formas
         frmAportacion aportacion = new frmAportacion();
         frmEdit_Socios socio = new frmEdit_Socios();
+        frmUsuarios usuarios = new frmUsuarios();
+        UsuarioDAL mu = new UsuarioDAL();
 
         private void lblLogo_Click(object sender, EventArgs e)
         {
@@ -50,6 +53,12 @@ namespace A.C.Mascotas_Vulnerables___DB
 
         private void frmMenu_Principal_Load(object sender, EventArgs e)
         {
+        }
+
+        private void cmdAdministra_Click(object sender, EventArgs e)
+        {
+            usuarios.dgvUsuarios.DataSource = mu.MostrarUsuarios().Tables[0];
+            usuarios.ShowDialog();
         }
     }
 }

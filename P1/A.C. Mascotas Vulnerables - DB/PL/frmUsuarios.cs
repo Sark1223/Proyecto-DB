@@ -17,9 +17,16 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             InitializeComponent();
         }
 
+        frmEdit_Usuario eusuario = new frmEdit_Usuario();
+
         private void cmdAgregarUsuario_Click(object sender, EventArgs e)
         {
+            eusuario.ShowDialog();
+        }
 
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

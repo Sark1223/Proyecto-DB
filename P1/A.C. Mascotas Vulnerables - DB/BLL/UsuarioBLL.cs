@@ -30,10 +30,6 @@ namespace A.C.Mascotas_Vulnerables___DB.BLL
     usu_email            VARCHAR not null,
     usu_fecha_ingreso    DATE NOT NULL
 );*/
-
-
-
-
         public int usu_id;
         public string usu_apaterno;
         public string usu_amaterno;
@@ -44,15 +40,15 @@ namespace A.C.Mascotas_Vulnerables___DB.BLL
         public string usu_rfc;
         public DateTime usu_fechana_nacimiento;//??????
         public string usu_calle;
-        public string usu_noExte;
+        public int usu_noExte;
         public string usu_noInte;
         public string usu_colonia;
         public string usu_CP;
         public string usu_municipio;
         public string usu_Estado;
         public string usu_Pais;
-        public string usu_Telefono;
+        public long usu_Telefono;
         public string usu_eMail;
-        public string usu_Fecha_ingreso;
+        public DateTime usu_Fecha_ingreso;
     }
 }

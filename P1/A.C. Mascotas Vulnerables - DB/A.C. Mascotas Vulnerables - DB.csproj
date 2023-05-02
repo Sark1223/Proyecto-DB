@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\Conexion.cs" />
+    <Compile Include="DAL\InicioSesionDaL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="PL\frmAportacion.cs">
       <SubType>Form</SubType>
