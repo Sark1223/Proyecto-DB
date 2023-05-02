@@ -25,7 +25,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdAportacion(object sender, EventArgs e)
         {
-            nAportacion.Show();
+            nAportacion.ShowDialog();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

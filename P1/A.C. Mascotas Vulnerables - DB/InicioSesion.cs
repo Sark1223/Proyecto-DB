@@ -34,16 +34,16 @@ namespace A.C.Mascotas_Vulnerables___DB
 
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
-            if()
-            {
-                this.Hide();
-                menu.ShowDialog();
-                this.Show();
-            }
-            else
-            {
+            //if()
+            //{
+            //    this.Hide();
+            //    menu.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
 
-            }
+            //}
             
         }
     }

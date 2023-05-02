@@ -12,7 +12,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
     {
         Conexion conexion = new Conexion();
 
-        public UsuarioDAL()
+        public InicioSesionDaL()
         {
             conexion = new Conexion();
         }
