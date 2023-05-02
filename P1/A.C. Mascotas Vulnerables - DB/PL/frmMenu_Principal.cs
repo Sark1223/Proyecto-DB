@@ -21,7 +21,7 @@ namespace A.C.Mascotas_Vulnerables___DB
 
         //Objetos de formas
         frmAportacion aportacion = new frmAportacion();
-        frmSocios socio = new frmSocios();
+        frmEdit_Socios socio = new frmEdit_Socios();
 
         private void lblLogo_Click(object sender, EventArgs e)
         {

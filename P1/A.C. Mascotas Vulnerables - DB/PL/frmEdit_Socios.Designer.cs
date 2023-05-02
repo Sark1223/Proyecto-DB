@@ -1,6 +1,6 @@
 ﻿namespace A.C.Mascotas_Vulnerables___DB.PL
 {
-    partial class frmSocios
+    partial class frmEdit_Socios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSocios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEdit_Socios));
             this.cmdCerrar = new ns1.BunifuImageButton();
             this.rdSocios = new ns1.BunifuElipse(this.components);
             this.encabezado = new System.Windows.Forms.Panel();

@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\Conexion.cs" />
+    <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="PL\frmAportacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,17 +83,23 @@
     <Compile Include="PL\frmNuevaAportacion.Designer.cs">
       <DependentUpon>frmNuevaAportacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frmSocios.cs">
+    <Compile Include="PL\frmEdit_Socios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\frmSocios.Designer.cs">
-      <DependentUpon>frmSocios.cs</DependentUpon>
+    <Compile Include="PL\frmEdit_Socios.Designer.cs">
+      <DependentUpon>frmEdit_Socios.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frmUsuario.cs">
+    <Compile Include="PL\frmEdit_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\frmUsuario.Designer.cs">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
+    <Compile Include="PL\frmEdit_Usuario.Designer.cs">
+      <DependentUpon>frmEdit_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,11 +118,14 @@
     <EmbeddedResource Include="PL\frmNuevaAportacion.resx">
       <DependentUpon>frmNuevaAportacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\frmSocios.resx">
-      <DependentUpon>frmSocios.cs</DependentUpon>
+    <EmbeddedResource Include="PL\frmEdit_Socios.resx">
+      <DependentUpon>frmEdit_Socios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\frmUsuario.resx">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="PL\frmEdit_Usuario.resx">
+      <DependentUpon>frmEdit_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,7 +168,9 @@
   <ItemGroup>
     <None Include="Resources\Ŧσllσฬ ๓є %40ღ Ꮙαƪƪεȵα ღ #Corgi.jfif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\estilo-grafico.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mujer %281%29.png" />
   </ItemGroup>
@@ -166,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

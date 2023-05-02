@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace A.C.Mascotas_Vulnerables___DB.PL
 {
-    public partial class frmSocios : Form
+    public partial class frmUsuarios : Form
     {
-        public frmSocios()
+        public frmUsuarios()
         {
             InitializeComponent();
         }
 
-        private void btnCerrar(object sender, EventArgs e)
+        private void cmdAgregarUsuario_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
-        private void cmdCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

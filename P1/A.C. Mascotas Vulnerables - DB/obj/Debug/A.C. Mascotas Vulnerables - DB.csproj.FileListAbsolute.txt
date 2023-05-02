@@ -48,4 +48,6 @@ C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\De
 C:\Users\Geo\Downloads\Proyecto-DB-main\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.pdb
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmBuscador.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmNuevaAportacion.resources
-C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmSocios.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Socios.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Usuario.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmUsuarios.resources

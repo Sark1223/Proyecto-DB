@@ -73,6 +73,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_usuario__3_ {
+            get {
+                object obj = ResourceManager.GetObject("agregar-usuario (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -86,6 +96,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         internal static System.Drawing.Bitmap Equis {
             get {
                 object obj = ResourceManager.GetObject("Equis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estilo_grafico {
+            get {
+                object obj = ResourceManager.GetObject("estilo-grafico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
