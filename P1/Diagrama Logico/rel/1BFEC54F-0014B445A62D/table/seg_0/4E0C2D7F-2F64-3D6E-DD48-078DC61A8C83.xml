@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E0C2D7F-2F64-3D6E-DD48-078DC61A8C83" name="HISTORIAL">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>D49424BD-691E-7A84-9623-84E7D1AB55FE</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAMBIO_ID" id="43491DC4-2AD8-1A76-CF96-BC9530CE6714">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>4CBB56EC-4B9C-DB5D-AFEA-F07D1F99CD3A</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_USUARIO_ID" id="E14442E5-D803-F412-1C22-8C6E3AA09402">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>EB447A01-D66E-18C6-47E2-106DA31D774A</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0AE39ED-E8B7-9661-ABE3-2281DF414FB9" referredColumn="917A8B8D-11F6-8C4A-07E8-ADC810DAA496"/>
+</associations>
+</Column>
+<Column name="CAMBIO" id="F8869591-BAD6-1111-92E4-1B3A71336DDA">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>656809DA-DE33-8DE7-E229-92390E900CA7</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="8FDB6830-C4F1-0625-2A87-715763CA8C61">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>CEE83F28-B64E-BDA2-086C-5ECDB6D6C3AA</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9A739DC1-D4E9-9999-99E7-5CD3B5FA8308" name="HISTORIAL_PK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>60A71749-5DC0-536C-5BDB-175A160A1DA7</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43491DC4-2AD8-1A76-CF96-BC9530CE6714"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1B817AA-EB9E-8AC5-0DE2-6C4723CE9CD9" name="HISTORIAL_USUARIO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>C27E72A7-B0B7-5EF7-F083-F07F74153256</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E14442E5-D803-F412-1C22-8C6E3AA09402"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

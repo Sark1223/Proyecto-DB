@@ -17,7 +17,7 @@ namespace A.C.Mascotas_Vulnerables___DB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNuevaAportacion());
+            Application.Run(new frmSocios());
         }
     }
 }

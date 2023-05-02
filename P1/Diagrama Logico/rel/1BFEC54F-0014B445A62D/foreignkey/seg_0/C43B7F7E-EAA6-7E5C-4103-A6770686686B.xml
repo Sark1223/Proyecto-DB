@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C43B7F7E-EAA6-7E5C-4103-A6770686686B" containerWithKeyObject="73748EFE-7881-34FF-7CF6-5334DA04079C" localFKIndex="45F7D137-B337-A526-4DC3-3FC012A6B366" name="USUARIO_ROLL_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>A764D778-6C2F-E1CD-F679-B82E656D722C</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referredTableLongName>ROLL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AF488A40-1DF2-7772-2AF3-2865801FA3C4</referredTableID>
+<keyObject>67F0766B-0168-6094-6CA7-3EBC4B3B52DD</keyObject>
+<referredKeyID>67F0766B-0168-6094-6CA7-3EBC4B3B52DD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ROLL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

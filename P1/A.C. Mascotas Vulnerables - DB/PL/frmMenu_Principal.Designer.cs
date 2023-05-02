@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu_Principal));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panEncabezado = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
@@ -145,7 +145,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(15, 234);
+            this.button1.Location = new System.Drawing.Point(12, 319);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 28);
             this.button1.TabIndex = 24;
@@ -255,7 +255,7 @@
             this.cmdAdministra.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
             this.cmdAdministra.IdleForecolor = System.Drawing.Color.White;
             this.cmdAdministra.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
-            this.cmdAdministra.Location = new System.Drawing.Point(497, 234);
+            this.cmdAdministra.Location = new System.Drawing.Point(497, 238);
             this.cmdAdministra.Margin = new System.Windows.Forms.Padding(5);
             this.cmdAdministra.Name = "cmdAdministra";
             this.cmdAdministra.Size = new System.Drawing.Size(145, 33);
@@ -281,7 +281,7 @@
             this.cmdSocios.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
             this.cmdSocios.IdleForecolor = System.Drawing.Color.White;
             this.cmdSocios.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdSocios.Location = new System.Drawing.Point(270, 234);
+            this.cmdSocios.Location = new System.Drawing.Point(270, 238);
             this.cmdSocios.Margin = new System.Windows.Forms.Padding(5);
             this.cmdSocios.Name = "cmdSocios";
             this.cmdSocios.Size = new System.Drawing.Size(145, 33);
@@ -308,7 +308,7 @@
             this.cmdIniciar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             this.cmdIniciar.IdleForecolor = System.Drawing.Color.White;
             this.cmdIniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.cmdIniciar.Location = new System.Drawing.Point(40, 234);
+            this.cmdIniciar.Location = new System.Drawing.Point(40, 238);
             this.cmdIniciar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdIniciar.Name = "cmdIniciar";
             this.cmdIniciar.Size = new System.Drawing.Size(145, 33);
@@ -333,7 +333,7 @@
             // 
             this.panelTransition.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(487, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(487, 63);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(165, 148);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -344,7 +344,7 @@
             // 
             this.panelTransition.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -355,7 +355,7 @@
             // 
             this.panelTransition.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox5.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.hucha;
-            this.pictureBox5.Location = new System.Drawing.Point(260, 58);
+            this.pictureBox5.Location = new System.Drawing.Point(260, 62);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(165, 148);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,7 +368,7 @@
             this.panelTransition.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(316, 209);
+            this.label3.Location = new System.Drawing.Point(316, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 21;
@@ -381,7 +381,7 @@
             this.panelTransition.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(61, 209);
+            this.label2.Location = new System.Drawing.Point(61, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 22);
             this.label2.TabIndex = 21;
@@ -394,7 +394,7 @@
             this.panelTransition.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(509, 209);
+            this.label4.Location = new System.Drawing.Point(509, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 22);
             this.label4.TabIndex = 21;
@@ -433,22 +433,22 @@
             // 
             this.panelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.panelTransition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 1;
-            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 2F;
-            animation3.TransparencyCoeff = 0F;
-            this.panelTransition.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 1;
+            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 2F;
+            animation2.TransparencyCoeff = 0F;
+            this.panelTransition.DefaultAnimation = animation2;
             this.panelTransition.Interval = 5;
             // 
             // frmMenu_Principal

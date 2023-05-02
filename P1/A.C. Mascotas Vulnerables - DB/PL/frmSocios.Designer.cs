@@ -29,29 +29,103 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuImageButton1 = new ns1.BunifuImageButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSocios));
+            this.cmdCerrar = new ns1.BunifuImageButton();
             this.rdSocios = new ns1.BunifuElipse(this.components);
             this.encabezado = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
+            this.bunifuSeparator2 = new ns1.BunifuSeparator();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bunifuSeparator3 = new ns1.BunifuSeparator();
+            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuSeparator4 = new ns1.BunifuSeparator();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuSeparator5 = new ns1.BunifuSeparator();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bunifuSeparator6 = new ns1.BunifuSeparator();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.bunifuSeparator8 = new ns1.BunifuSeparator();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuSeparator9 = new ns1.BunifuSeparator();
+            this.label12 = new System.Windows.Forms.Label();
+            this.bunifuSeparator10 = new ns1.BunifuSeparator();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bunifuSeparator11 = new ns1.BunifuSeparator();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.bunifuSeparator12 = new ns1.BunifuSeparator();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.bunifuSeparator13 = new ns1.BunifuSeparator();
+            this.label19 = new System.Windows.Forms.Label();
+            this.bunifuSeparator14 = new ns1.BunifuSeparator();
+            this.label20 = new System.Windows.Forms.Label();
+            this.bunifuSeparator15 = new ns1.BunifuSeparator();
+            this.label21 = new System.Windows.Forms.Label();
+            this.bunifuSeparator16 = new ns1.BunifuSeparator();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.bunifuSeparator17 = new ns1.BunifuSeparator();
+            this.bunifuVTrackbar1 = new ns1.BunifuVTrackbar();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.bunifuSeparator18 = new ns1.BunifuSeparator();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.bunifuSeparator19 = new ns1.BunifuSeparator();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.bunifuSeparator20 = new ns1.BunifuSeparator();
+            this.bunifuSeparator7 = new ns1.BunifuSeparator();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuDatepicker2 = new ns1.BunifuDatepicker();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdcmdAgregar = new ns1.BunifuElipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuImageButton1
+            // cmdCerrar
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(658, 3);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 29);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 0;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.cmdCerrar.ImageActive = null;
+            this.cmdCerrar.Location = new System.Drawing.Point(658, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // rdSocios
             // 
@@ -62,12 +136,23 @@
             // 
             this.encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
             this.encabezado.Controls.Add(this.pictureBox1);
-            this.encabezado.Controls.Add(this.bunifuImageButton1);
+            this.encabezado.Controls.Add(this.cmdCerrar);
+            this.encabezado.Controls.Add(this.label3);
             this.encabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.encabezado.Location = new System.Drawing.Point(0, 0);
             this.encabezado.Name = "encabezado";
             this.encabezado.Size = new System.Drawing.Size(710, 39);
             this.encabezado.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuDragControl1
             // 
@@ -76,39 +161,992 @@
             this.bunifuDragControl1.TargetControl = this.encabezado;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // pictureBox1
+            // bunifuSeparator2
             // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(151, 123);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(171, 13);
+            this.bunifuSeparator2.TabIndex = 42;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(147, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 18);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Nombre(s):";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(242, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 25);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "AGREGAR NUEVO SOCIO";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator1.LineThickness = 4;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(38, 57);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(638, 10);
+            this.bunifuSeparator1.TabIndex = 45;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.IndianRed;
+            this.label4.Location = new System.Drawing.Point(276, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(177, 20);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "DATOS PERSONALES";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(344, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 18);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Apellido Paterno:";
+            // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator3.LineThickness = 1;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(348, 123);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Size = new System.Drawing.Size(133, 13);
+            this.bunifuSeparator3.TabIndex = 49;
+            this.bunifuSeparator3.Transparency = 255;
+            this.bunifuSeparator3.Vertical = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(515, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 18);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Apellido Materno:";
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(519, 123);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Size = new System.Drawing.Size(132, 13);
+            this.bunifuSeparator4.TabIndex = 52;
+            this.bunifuSeparator4.Transparency = 255;
+            this.bunifuSeparator4.Vertical = false;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsuario.Location = new System.Drawing.Point(150, 108);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(172, 19);
+            this.txtUsuario.TabIndex = 53;
+            this.txtUsuario.Text = "KARLA JUDITH";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(519, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 19);
+            this.textBox1.TabIndex = 54;
+            this.textBox1.Text = "SANTILLANA";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox2.Location = new System.Drawing.Point(348, 108);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(134, 19);
+            this.textBox2.TabIndex = 55;
+            this.textBox2.Text = "DOMINGUEZ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.Location = new System.Drawing.Point(38, 108);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(84, 19);
+            this.textBox3.TabIndex = 58;
+            this.textBox3.Text = "122308";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(35, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 18);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "Socio ID:";
+            // 
+            // bunifuSeparator5
+            // 
+            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator5.LineThickness = 1;
+            this.bunifuSeparator5.Location = new System.Drawing.Point(39, 123);
+            this.bunifuSeparator5.Name = "bunifuSeparator5";
+            this.bunifuSeparator5.Size = new System.Drawing.Size(83, 13);
+            this.bunifuSeparator5.TabIndex = 57;
+            this.bunifuSeparator5.Transparency = 255;
+            this.bunifuSeparator5.Vertical = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox4.Location = new System.Drawing.Point(38, 168);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(145, 19);
+            this.textBox4.TabIndex = 61;
+            this.textBox4.Text = "SARK0312239A5";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(35, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 18);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "RFC:";
+            // 
+            // bunifuSeparator6
+            // 
+            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator6.LineThickness = 1;
+            this.bunifuSeparator6.Location = new System.Drawing.Point(39, 183);
+            this.bunifuSeparator6.Name = "bunifuSeparator6";
+            this.bunifuSeparator6.Size = new System.Drawing.Size(144, 13);
+            this.bunifuSeparator6.TabIndex = 60;
+            this.bunifuSeparator6.Transparency = 255;
+            this.bunifuSeparator6.Vertical = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox5.Location = new System.Drawing.Point(369, 309);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(113, 19);
+            this.textBox5.TabIndex = 75;
+            this.textBox5.Text = "6641978732";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(366, 286);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 18);
+            this.label10.TabIndex = 73;
+            this.label10.Text = "Telefono princial:";
+            // 
+            // bunifuSeparator8
+            // 
+            this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator8.LineThickness = 1;
+            this.bunifuSeparator8.Location = new System.Drawing.Point(370, 324);
+            this.bunifuSeparator8.Name = "bunifuSeparator8";
+            this.bunifuSeparator8.Size = new System.Drawing.Size(112, 13);
+            this.bunifuSeparator8.TabIndex = 74;
+            this.bunifuSeparator8.Transparency = 255;
+            this.bunifuSeparator8.Vertical = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox6.Location = new System.Drawing.Point(512, 309);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(112, 19);
+            this.textBox6.TabIndex = 72;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox7.Location = new System.Drawing.Point(39, 364);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(112, 19);
+            this.textBox7.TabIndex = 71;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox8.Location = new System.Drawing.Point(38, 309);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(301, 19);
+            this.textBox8.TabIndex = 70;
+            this.textBox8.Text = "SANTOSKARLA122308@GMAIL.COM";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(35, 341);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 18);
+            this.label11.TabIndex = 68;
+            this.label11.Text = "Telefono 3:";
+            // 
+            // bunifuSeparator9
+            // 
+            this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator9.LineThickness = 1;
+            this.bunifuSeparator9.Location = new System.Drawing.Point(39, 379);
+            this.bunifuSeparator9.Name = "bunifuSeparator9";
+            this.bunifuSeparator9.Size = new System.Drawing.Size(111, 13);
+            this.bunifuSeparator9.TabIndex = 69;
+            this.bunifuSeparator9.Transparency = 255;
+            this.bunifuSeparator9.Vertical = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(508, 286);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(82, 18);
+            this.label12.TabIndex = 66;
+            this.label12.Text = "Telefono 2:";
+            // 
+            // bunifuSeparator10
+            // 
+            this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator10.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator10.LineThickness = 1;
+            this.bunifuSeparator10.Location = new System.Drawing.Point(512, 324);
+            this.bunifuSeparator10.Name = "bunifuSeparator10";
+            this.bunifuSeparator10.Size = new System.Drawing.Size(112, 13);
+            this.bunifuSeparator10.TabIndex = 67;
+            this.bunifuSeparator10.Transparency = 255;
+            this.bunifuSeparator10.Vertical = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(35, 286);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(136, 18);
+            this.label13.TabIndex = 64;
+            this.label13.Text = "Correo electronico:";
+            // 
+            // bunifuSeparator11
+            // 
+            this.bunifuSeparator11.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator11.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator11.LineThickness = 1;
+            this.bunifuSeparator11.Location = new System.Drawing.Point(39, 324);
+            this.bunifuSeparator11.Name = "bunifuSeparator11";
+            this.bunifuSeparator11.Size = new System.Drawing.Size(300, 13);
+            this.bunifuSeparator11.TabIndex = 65;
+            this.bunifuSeparator11.Transparency = 255;
+            this.bunifuSeparator11.Vertical = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Location = new System.Drawing.Point(203, 145);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(119, 18);
+            this.label14.TabIndex = 76;
+            this.label14.Text = "Tipo de persona:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "FISICA",
+            "MORAL"});
+            this.comboBox1.Location = new System.Drawing.Point(206, 166);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(126, 26);
+            this.comboBox1.TabIndex = 77;
+            this.comboBox1.Text = "- Seleccione -";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
+            this.comboBox2.Location = new System.Drawing.Point(534, 166);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(126, 26);
+            this.comboBox2.TabIndex = 79;
+            this.comboBox2.Text = "- Seleccione -";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(531, 145);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(123, 18);
+            this.label15.TabIndex = 78;
+            this.label15.Text = "Estado del socio:";
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(353, 164);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(161, 30);
+            this.bunifuDatepicker1.TabIndex = 80;
+            this.bunifuDatepicker1.Value = new System.DateTime(2023, 4, 30, 22, 40, 42, 977);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(350, 145);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(149, 18);
+            this.label16.TabIndex = 81;
+            this.label16.Text = "Fecha de nacimiento:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox9.Location = new System.Drawing.Point(257, 443);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(88, 19);
+            this.textBox9.TabIndex = 95;
+            this.textBox9.Text = "6641978732";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label17.Location = new System.Drawing.Point(254, 420);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 18);
+            this.label17.TabIndex = 93;
+            this.label17.Text = "No. Exterior:";
+            // 
+            // bunifuSeparator12
+            // 
+            this.bunifuSeparator12.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator12.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator12.LineThickness = 1;
+            this.bunifuSeparator12.Location = new System.Drawing.Point(258, 458);
+            this.bunifuSeparator12.Name = "bunifuSeparator12";
+            this.bunifuSeparator12.Size = new System.Drawing.Size(87, 13);
+            this.bunifuSeparator12.TabIndex = 94;
+            this.bunifuSeparator12.Transparency = 255;
+            this.bunifuSeparator12.Vertical = false;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox10.Location = new System.Drawing.Point(371, 443);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(78, 19);
+            this.textBox10.TabIndex = 92;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox11.Location = new System.Drawing.Point(476, 443);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(192, 19);
+            this.textBox11.TabIndex = 91;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox12.Location = new System.Drawing.Point(38, 443);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(192, 19);
+            this.textBox12.TabIndex = 90;
+            this.textBox12.Text = "VALLE ENCANTADO";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label18.Location = new System.Drawing.Point(472, 420);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 18);
+            this.label18.TabIndex = 88;
+            this.label18.Text = "Colonia:";
+            // 
+            // bunifuSeparator13
+            // 
+            this.bunifuSeparator13.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator13.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator13.LineThickness = 1;
+            this.bunifuSeparator13.Location = new System.Drawing.Point(476, 458);
+            this.bunifuSeparator13.Name = "bunifuSeparator13";
+            this.bunifuSeparator13.Size = new System.Drawing.Size(191, 13);
+            this.bunifuSeparator13.TabIndex = 89;
+            this.bunifuSeparator13.Transparency = 255;
+            this.bunifuSeparator13.Vertical = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label19.Location = new System.Drawing.Point(367, 420);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 18);
+            this.label19.TabIndex = 86;
+            this.label19.Text = "No. Interior:";
+            // 
+            // bunifuSeparator14
+            // 
+            this.bunifuSeparator14.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator14.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator14.LineThickness = 1;
+            this.bunifuSeparator14.Location = new System.Drawing.Point(371, 458);
+            this.bunifuSeparator14.Name = "bunifuSeparator14";
+            this.bunifuSeparator14.Size = new System.Drawing.Size(77, 13);
+            this.bunifuSeparator14.TabIndex = 87;
+            this.bunifuSeparator14.Transparency = 255;
+            this.bunifuSeparator14.Vertical = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Location = new System.Drawing.Point(35, 420);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 18);
+            this.label20.TabIndex = 84;
+            this.label20.Text = "Calle:";
+            // 
+            // bunifuSeparator15
+            // 
+            this.bunifuSeparator15.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator15.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator15.LineThickness = 1;
+            this.bunifuSeparator15.Location = new System.Drawing.Point(39, 458);
+            this.bunifuSeparator15.Name = "bunifuSeparator15";
+            this.bunifuSeparator15.Size = new System.Drawing.Size(191, 13);
+            this.bunifuSeparator15.TabIndex = 85;
+            this.bunifuSeparator15.Transparency = 255;
+            this.bunifuSeparator15.Vertical = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.IndianRed;
+            this.label21.Location = new System.Drawing.Point(248, 394);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(205, 20);
+            this.label21.TabIndex = 83;
+            this.label21.Text = "DIRECCION PARTICULAR";
+            // 
+            // bunifuSeparator16
+            // 
+            this.bunifuSeparator16.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator16.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator16.LineThickness = 4;
+            this.bunifuSeparator16.Location = new System.Drawing.Point(33, 399);
+            this.bunifuSeparator16.Name = "bunifuSeparator16";
+            this.bunifuSeparator16.Size = new System.Drawing.Size(638, 10);
+            this.bunifuSeparator16.TabIndex = 82;
+            this.bunifuSeparator16.Transparency = 255;
+            this.bunifuSeparator16.Vertical = false;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox13.Location = new System.Drawing.Point(119, 497);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(173, 19);
+            this.textBox13.TabIndex = 98;
+            this.textBox13.Text = "VALLE ENCANTADO";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label22.Location = new System.Drawing.Point(116, 474);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 18);
+            this.label22.TabIndex = 96;
+            this.label22.Text = "Municipio:";
+            // 
+            // bunifuSeparator17
+            // 
+            this.bunifuSeparator17.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator17.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator17.LineThickness = 1;
+            this.bunifuSeparator17.Location = new System.Drawing.Point(120, 512);
+            this.bunifuSeparator17.Name = "bunifuSeparator17";
+            this.bunifuSeparator17.Size = new System.Drawing.Size(172, 13);
+            this.bunifuSeparator17.TabIndex = 97;
+            this.bunifuSeparator17.Transparency = 255;
+            this.bunifuSeparator17.Vertical = false;
+            // 
+            // bunifuVTrackbar1
+            // 
+            this.bunifuVTrackbar1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuVTrackbar1.BackgroudColor = System.Drawing.Color.DarkGray;
+            this.bunifuVTrackbar1.BorderRadius = 5;
+            this.bunifuVTrackbar1.IndicatorColor = System.Drawing.Color.SeaGreen;
+            this.bunifuVTrackbar1.Location = new System.Drawing.Point(686, 45);
+            this.bunifuVTrackbar1.MaximumValue = 100;
+            this.bunifuVTrackbar1.Name = "bunifuVTrackbar1";
+            this.bunifuVTrackbar1.Size = new System.Drawing.Size(30, 393);
+            this.bunifuVTrackbar1.SliderRadius = 20;
+            this.bunifuVTrackbar1.TabIndex = 99;
+            this.bunifuVTrackbar1.Value = 0;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox14.Location = new System.Drawing.Point(315, 497);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(168, 19);
+            this.textBox14.TabIndex = 102;
+            this.textBox14.Text = "VALLE ENCANTADO";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label23.Location = new System.Drawing.Point(312, 474);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 18);
+            this.label23.TabIndex = 100;
+            this.label23.Text = "Estado:";
+            // 
+            // bunifuSeparator18
+            // 
+            this.bunifuSeparator18.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator18.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator18.LineThickness = 1;
+            this.bunifuSeparator18.Location = new System.Drawing.Point(316, 512);
+            this.bunifuSeparator18.Name = "bunifuSeparator18";
+            this.bunifuSeparator18.Size = new System.Drawing.Size(167, 13);
+            this.bunifuSeparator18.TabIndex = 101;
+            this.bunifuSeparator18.Transparency = 255;
+            this.bunifuSeparator18.Vertical = false;
+            // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox15.Location = new System.Drawing.Point(40, 497);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(59, 19);
+            this.textBox15.TabIndex = 105;
+            this.textBox15.Text = "22330";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label24.Location = new System.Drawing.Point(35, 474);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(41, 18);
+            this.label24.TabIndex = 103;
+            this.label24.Text = "C.P.:";
+            // 
+            // bunifuSeparator19
+            // 
+            this.bunifuSeparator19.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator19.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator19.LineThickness = 1;
+            this.bunifuSeparator19.Location = new System.Drawing.Point(39, 512);
+            this.bunifuSeparator19.Name = "bunifuSeparator19";
+            this.bunifuSeparator19.Size = new System.Drawing.Size(58, 13);
+            this.bunifuSeparator19.TabIndex = 104;
+            this.bunifuSeparator19.Transparency = 255;
+            this.bunifuSeparator19.Vertical = false;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox16.Location = new System.Drawing.Point(504, 497);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(162, 19);
+            this.textBox16.TabIndex = 108;
+            this.textBox16.Text = "VALLE ENCANTADO";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label25.Location = new System.Drawing.Point(501, 474);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(41, 18);
+            this.label25.TabIndex = 106;
+            this.label25.Text = "Pais:";
+            // 
+            // bunifuSeparator20
+            // 
+            this.bunifuSeparator20.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator20.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator20.LineThickness = 1;
+            this.bunifuSeparator20.Location = new System.Drawing.Point(505, 512);
+            this.bunifuSeparator20.Name = "bunifuSeparator20";
+            this.bunifuSeparator20.Size = new System.Drawing.Size(161, 13);
+            this.bunifuSeparator20.TabIndex = 107;
+            this.bunifuSeparator20.Transparency = 255;
+            this.bunifuSeparator20.Vertical = false;
+            // 
+            // bunifuSeparator7
+            // 
+            this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.bunifuSeparator7.LineThickness = 4;
+            this.bunifuSeparator7.Location = new System.Drawing.Point(33, 262);
+            this.bunifuSeparator7.Name = "bunifuSeparator7";
+            this.bunifuSeparator7.Size = new System.Drawing.Size(638, 10);
+            this.bunifuSeparator7.TabIndex = 62;
+            this.bunifuSeparator7.Transparency = 255;
+            this.bunifuSeparator7.Vertical = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.IndianRed;
+            this.label9.Location = new System.Drawing.Point(259, 258);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(181, 20);
+            this.label9.TabIndex = 63;
+            this.label9.Text = "DATOS DE CONTACTO";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(35, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 18);
+            this.label1.TabIndex = 110;
+            this.label1.Text = "Fecha de ingreso:";
+            // 
+            // bunifuDatepicker2
+            // 
+            this.bunifuDatepicker2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuDatepicker2.BorderRadius = 0;
+            this.bunifuDatepicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatepicker2.FormatCustom = null;
+            this.bunifuDatepicker2.Location = new System.Drawing.Point(38, 223);
+            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
+            this.bunifuDatepicker2.Size = new System.Drawing.Size(161, 30);
+            this.bunifuDatepicker2.TabIndex = 109;
+            this.bunifuDatepicker2.Value = new System.DateTime(2023, 4, 30, 22, 40, 42, 977);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(23, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 39);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 111;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.IndianRed;
+            this.label26.Location = new System.Drawing.Point(12, 50);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(59, 17);
+            this.label26.TabIndex = 112;
+            this.label26.Text = "Agregar";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Location = new System.Drawing.Point(305, 552);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(81, 72);
+            this.panel1.TabIndex = 113;
+            // 
+            // rdcmdAgregar
+            // 
+            this.rdcmdAgregar.ElipseRadius = 20;
+            this.rdcmdAgregar.TargetControl = this.panel1;
             // 
             // frmSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(710, 450);
+            this.ClientSize = new System.Drawing.Size(710, 649);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bunifuDatepicker2);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.bunifuSeparator20);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.bunifuSeparator19);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.bunifuSeparator18);
+            this.Controls.Add(this.bunifuVTrackbar1);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.bunifuSeparator17);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.bunifuSeparator12);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.bunifuSeparator13);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.bunifuSeparator14);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.bunifuSeparator15);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.bunifuSeparator16);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.bunifuDatepicker1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.bunifuSeparator8);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.bunifuSeparator9);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.bunifuSeparator10);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.bunifuSeparator11);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.bunifuSeparator7);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.bunifuSeparator6);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.bunifuSeparator5);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.bunifuSeparator4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.bunifuSeparator3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.bunifuSeparator1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.encabezado);
+            this.Controls.Add(this.bunifuSeparator2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSocios";
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
             this.encabezado.ResumeLayout(false);
+            this.encabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private ns1.BunifuImageButton bunifuImageButton1;
+        private ns1.BunifuImageButton cmdCerrar;
         private ns1.BunifuElipse rdSocios;
         private System.Windows.Forms.Panel encabezado;
         private ns1.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ns1.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private ns1.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.Label label6;
+        private ns1.BunifuSeparator bunifuSeparator4;
+        private System.Windows.Forms.Label label5;
+        private ns1.BunifuSeparator bunifuSeparator3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label10;
+        private ns1.BunifuSeparator bunifuSeparator8;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label11;
+        private ns1.BunifuSeparator bunifuSeparator9;
+        private System.Windows.Forms.Label label12;
+        private ns1.BunifuSeparator bunifuSeparator10;
+        private System.Windows.Forms.Label label13;
+        private ns1.BunifuSeparator bunifuSeparator11;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label8;
+        private ns1.BunifuSeparator bunifuSeparator6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label7;
+        private ns1.BunifuSeparator bunifuSeparator5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private ns1.BunifuDatepicker bunifuDatepicker1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label25;
+        private ns1.BunifuSeparator bunifuSeparator20;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label24;
+        private ns1.BunifuSeparator bunifuSeparator19;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label23;
+        private ns1.BunifuSeparator bunifuSeparator18;
+        private ns1.BunifuVTrackbar bunifuVTrackbar1;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label22;
+        private ns1.BunifuSeparator bunifuSeparator17;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label17;
+        private ns1.BunifuSeparator bunifuSeparator12;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label18;
+        private ns1.BunifuSeparator bunifuSeparator13;
+        private System.Windows.Forms.Label label19;
+        private ns1.BunifuSeparator bunifuSeparator14;
+        private System.Windows.Forms.Label label20;
+        private ns1.BunifuSeparator bunifuSeparator15;
+        private System.Windows.Forms.Label label21;
+        private ns1.BunifuSeparator bunifuSeparator16;
+        private System.Windows.Forms.Label label1;
+        private ns1.BunifuDatepicker bunifuDatepicker2;
+        private System.Windows.Forms.Label label9;
+        private ns1.BunifuSeparator bunifuSeparator7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label26;
+        private ns1.BunifuElipse rdcmdAgregar;
     }
 }

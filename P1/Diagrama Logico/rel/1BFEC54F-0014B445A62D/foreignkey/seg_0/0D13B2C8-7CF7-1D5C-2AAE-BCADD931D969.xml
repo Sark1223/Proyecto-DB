@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0D13B2C8-7CF7-1D5C-2AAE-BCADD931D969" containerWithKeyObject="7C83751A-DDBF-5435-A357-BE532D9D4916" localFKIndex="3DC18CAE-A0D8-1BA1-F37B-A98C227C662A" name="RECIBO_PERIODO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>9A215B77-85CB-913E-AE97-10ACA9E4E1D1</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referredTableLongName>PERIODO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A650FE2F-A55F-8B01-3DB8-D9580A5E1EEA</referredTableID>
+<keyObject>12BED085-150D-4C5E-41B6-D884F8E7F7F0</keyObject>
+<referredKeyID>12BED085-150D-4C5E-41B6-D884F8E7F7F0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Año,periodo_no</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

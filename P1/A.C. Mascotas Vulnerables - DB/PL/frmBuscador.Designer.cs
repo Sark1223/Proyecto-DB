@@ -71,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 43);
+            this.panel1.Size = new System.Drawing.Size(474, 36);
             this.panel1.TabIndex = 1;
             // 
             // btnCerrar
@@ -79,7 +79,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
             this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(414, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(433, 6);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(38, 25);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,9 +90,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -133,7 +133,7 @@
             this.dgvProcedimiento.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProcedimiento.EnableHeadersVisualStyles = false;
             this.dgvProcedimiento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
-            this.dgvProcedimiento.Location = new System.Drawing.Point(22, 214);
+            this.dgvProcedimiento.Location = new System.Drawing.Point(22, 204);
             this.dgvProcedimiento.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.dgvProcedimiento.Name = "dgvProcedimiento";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -178,7 +178,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.label5.Location = new System.Drawing.Point(146, 46);
+            this.label5.Location = new System.Drawing.Point(164, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 37);
             this.label5.TabIndex = 41;
@@ -284,12 +284,13 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Buscar Socio";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.ForeColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
             this.bunifuFlatButton1.Iconimage_right = null;
@@ -312,7 +313,7 @@
             this.bunifuFlatButton1.TabIndex = 40;
             this.bunifuFlatButton1.Text = "Buscar Socio";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panel2
@@ -326,7 +327,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.bunifuMaterialTextbox2);
             this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
-            this.panel2.Location = new System.Drawing.Point(22, 86);
+            this.panel2.Location = new System.Drawing.Point(22, 76);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(430, 117);
             this.panel2.TabIndex = 39;
@@ -336,7 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(474, 348);
+            this.ClientSize = new System.Drawing.Size(474, 337);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvProcedimiento);

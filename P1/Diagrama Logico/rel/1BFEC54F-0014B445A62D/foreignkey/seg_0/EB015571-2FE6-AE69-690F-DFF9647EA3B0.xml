@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EB015571-2FE6-AE69-690F-DFF9647EA3B0" containerWithKeyObject="7FAC9826-83E8-D144-D34E-365AF718D3C6" localFKIndex="6661BF22-B5E0-0C77-B9A8-23242AB0A344" name="SOCIO_TIPO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>F182F4D7-2D08-5DA8-F65A-84E87FA5058E</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referredTableLongName>TIPO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6E0922ED-F8B7-5A29-A43C-55007412AB5D</referredTableID>
+<keyObject>11D6D1BA-309A-F7FF-9AD1-8A53BA3D942C</keyObject>
+<referredKeyID>11D6D1BA-309A-F7FF-9AD1-8A53BA3D942C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

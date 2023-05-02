@@ -87,6 +87,12 @@
     <Compile Include="PL\frmSocios.Designer.cs">
       <DependentUpon>frmSocios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\frmAportacion.resx">
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmSocios.resx">
       <DependentUpon>frmSocios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,0 +1,324 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7C83751A-DDBF-5435-A357-BE532D9D4916" name="RECIBO">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>1C71D91D-9341-5DA2-17A2-2F304646A92F</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REC_ID_FOLIO" id="FD66108D-FA24-7AC8-5E6E-B4946BD652B3">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>6B1E3301-BC22-3EF8-C633-23287ED122B1</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REC_FECHA" id="F469EAAD-17C7-B2E9-CB02-6503ECB1065C">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>FEB27D60-4B0B-EDEA-5F8F-92BA14A1F67D</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_USUARIO_ID" id="45B2B62C-CC49-716C-8753-200510E1D08A">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>E70CBB59-3FE2-DAD1-4E9D-D61E71101181</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7AA950D2-6793-B6C2-6D32-DCEFA1CAC75A" referredColumn="917A8B8D-11F6-8C4A-07E8-ADC810DAA496"/>
+</associations>
+</Column>
+<Column name="SOCIO_SOCIO_ID" id="90E8602B-9FA2-9446-58EA-78B3746E72D2">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>DAFCBE61-3E12-C8F8-CAAC-4803B9DB2AE8</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02ADCA14-7D07-2F40-B6FE-4FA581A5F26A" referredColumn="6E50957E-26FF-DF9D-F0AD-17EAC145C7FE"/>
+</associations>
+</Column>
+<Column name="REC_MONTO" id="6F03E7F2-8F80-9DEC-189B-DDB0ECD46C27">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>3A1160E2-6FFC-ED11-0967-213BA7F260C9</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REC_MTO_ESCRITO" id="31EB84F1-23C2-8665-5076-E8025B3390CC">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>0C04CF67-5C82-ABB2-D967-6E37BF1AE92E</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTATUS_ID_ESTATUS" id="EB51B885-706E-AB0B-676D-9D7405E6854C">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>F0F0C26B-8C08-006B-236C-9ECE15759F59</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B9BA4742-010D-C8AC-B597-F9FA99496CA1" referredColumn="8BFA2E6C-69D8-30FC-74B3-09526C41B771"/>
+</associations>
+</Column>
+<Column name="PERIODO_PERIODO_CLAVE" id="CC081290-DE5C-CC9A-F041-04A008C9B720">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>482475F9-3304-A497-7F2F-522C6E2D668F</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D13B2C8-7CF7-1D5C-2AAE-BCADD931D969" referredColumn="4D6736B9-A3FB-06AE-4D06-28333C4A58B4"/>
+</associations>
+</Column>
+<Column name="REC_FIRMA_ASISTENTE" id="404C126C-255F-BEC9-8625-3A5DFB46307A">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>D8EE6E70-3FE0-4215-ECE0-B8A4379460F9</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REC_FIRMA_ADMINISTRATIVO" id="A207BFA4-DF3B-C9B6-09D8-61C8E42D8D18">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>ED14E45F-532F-1D9D-1E51-EE6FA18D0008</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC_APATERNO" id="89FAE8B8-26E8-E42D-B334-99BC583E9AE2">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>AC88A184-0D83-ABF4-23C1-B7968BA32344</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>02ADCA14-7D07-2F40-B6FE-4FA581A5F26A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="SC_AMATERNO" id="C82FA7F9-13AB-BF43-2AAF-71B21C1B403B">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>08C429EC-A113-B156-A9F8-FD82DAD6D67C</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>02ADCA14-7D07-2F40-B6FE-4FA581A5F26A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="SC_NOMBRE(S)" id="D52BCAAA-889B-F1A2-D990-0249FEFCD10F">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>EE65434E-F829-8E1E-8295-A9BDF3D268D2</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>02ADCA14-7D07-2F40-B6FE-4FA581A5F26A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="SC_RFC" id="6457107F-E070-F667-AC9C-E0134D375134">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>BBDCBC75-EFD3-1E31-7F96-64A21EF5B062</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>02ADCA14-7D07-2F40-B6FE-4FA581A5F26A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="AA_APATERNO" id="6E8A0B35-3D2F-0940-2FD0-D411E7E29E6C">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>3582B5F5-0BB5-C959-7B3A-F765459C1338</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7AA950D2-6793-B6C2-6D32-DCEFA1CAC75A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="AA_AMATERNO" id="F00FDD61-6070-81E5-A7A3-027B56A334BC">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>6FE75AC9-479E-11B9-D3D6-193F7BBAB0AB</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7AA950D2-6793-B6C2-6D32-DCEFA1CAC75A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="AA_NOMBRE(S)" id="86DC80AB-4C54-CE6E-283C-6941C1794BCD">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>11D55162-B9D9-67F9-22F4-A3D1A5FFC408</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7AA950D2-6793-B6C2-6D32-DCEFA1CAC75A</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="PERIODO_periodo_no" id="BD608BDF-7629-B9D1-20A4-CA91A41404E3">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:49:14 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D13B2C8-7CF7-1D5C-2AAE-BCADD931D969" referredColumn="2CCA548E-8CC2-A860-C676-A1105225475D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2AE6C816-F0BB-CEF5-24E5-7FD3E98B6E9A" name="RECIBO_PK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>78D76F1B-1D80-599C-3009-1AC4BC6118E3</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD66108D-FA24-7AC8-5E6E-B4946BD652B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3DC18CAE-A0D8-1BA1-F37B-A98C227C662A" name="RECIBO_PERIODO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>9A215B77-85CB-913E-AE97-10ACA9E4E1D1</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC081290-DE5C-CC9A-F041-04A008C9B720"/>
+<colUsage columnID="BD608BDF-7629-B9D1-20A4-CA91A41404E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6FA27387-6A21-B706-777E-CF28779BE5BB" name="RECIBO_ESTATUS_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>8D2304BA-86CF-2B38-EB1B-9A3E3A7D78B5</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB51B885-706E-AB0B-676D-9D7405E6854C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF779A8A-701D-522C-0C4D-1CD16CEC4482" name="RECIBO_SOCIO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>D32E4DE5-C2A3-F708-2AE9-2C88DE4A2665</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90E8602B-9FA2-9446-58EA-78B3746E72D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06C178E2-CB5B-90C1-BCF5-AC3AF5E23221" name="RECIBO_USUARIO_FK">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-01 20:17:39 UTC</createdTime>
+<generatorID>E300BB75-ED59-BD45-DC45-0FCF0B5B9DE3</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="45B2B62C-CC49-716C-8753-200510E1D08A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
