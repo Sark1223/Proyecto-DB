@@ -784,7 +784,7 @@
             this.bunifuVTrackbar1.BackgroudColor = System.Drawing.Color.DarkGray;
             this.bunifuVTrackbar1.BorderRadius = 5;
             this.bunifuVTrackbar1.IndicatorColor = System.Drawing.Color.SeaGreen;
-            this.bunifuVTrackbar1.Location = new System.Drawing.Point(686, 45);
+            this.bunifuVTrackbar1.Location = new System.Drawing.Point(680, 45);
             this.bunifuVTrackbar1.MaximumValue = 100;
             this.bunifuVTrackbar1.Name = "bunifuVTrackbar1";
             this.bunifuVTrackbar1.Size = new System.Drawing.Size(30, 393);

@@ -50,12 +50,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnDatos = new System.Windows.Forms.Panel();
+            this.rdpnDatos = new ns1.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimiento)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -316,21 +317,26 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel2
+            // pnDatos
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox3);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox2);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
-            this.panel2.Location = new System.Drawing.Point(22, 76);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(430, 117);
-            this.panel2.TabIndex = 39;
+            this.pnDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.pnDatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnDatos.Controls.Add(this.bunifuFlatButton1);
+            this.pnDatos.Controls.Add(this.label1);
+            this.pnDatos.Controls.Add(this.label2);
+            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox3);
+            this.pnDatos.Controls.Add(this.label7);
+            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox2);
+            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox1);
+            this.pnDatos.Location = new System.Drawing.Point(22, 76);
+            this.pnDatos.Name = "pnDatos";
+            this.pnDatos.Size = new System.Drawing.Size(430, 117);
+            this.pnDatos.TabIndex = 39;
+            // 
+            // rdpnDatos
+            // 
+            this.rdpnDatos.ElipseRadius = 15;
+            this.rdpnDatos.TargetControl = this.pnDatos;
             // 
             // frmBuscador
             // 
@@ -338,7 +344,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(474, 337);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnDatos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvProcedimiento);
             this.Controls.Add(this.panel1);
@@ -349,8 +355,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimiento)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnDatos.ResumeLayout(false);
+            this.pnDatos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +373,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn column1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnDatos;
         private ns1.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -375,5 +381,6 @@
         private System.Windows.Forms.Label label7;
         private ns1.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private ns1.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private ns1.BunifuElipse rdpnDatos;
     }
 }
