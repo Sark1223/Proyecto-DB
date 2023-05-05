@@ -43,7 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnSocio = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -56,40 +56,43 @@
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnMonto = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuMetroTextbox5 = new ns1.BunifuMetroTextbox();
             this.bunifuMetroTextbox4 = new ns1.BunifuMetroTextbox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnAgregarRecibo = new ns1.BunifuThinButton2();
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new ns1.BunifuMaterialTextbox();
             this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
-            this.btnAgregarRecibo = new ns1.BunifuThinButton2();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnFirmas = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
+            this.rdSocio = new ns1.BunifuElipse(this.components);
+            this.rdMonto = new ns1.BunifuElipse(this.components);
+            this.rdFirmas = new ns1.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            this.panel8.SuspendLayout();
+            this.pnSocio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.pnMonto.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.pnFirmas.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -232,28 +235,28 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Importe en Letra:";
             // 
-            // panel8
+            // pnSocio
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
-            this.panel8.Controls.Add(this.pictureBox6);
-            this.panel8.Controls.Add(this.pictureBox5);
-            this.panel8.Controls.Add(this.pictureBox4);
-            this.panel8.Controls.Add(this.pictureBox3);
-            this.panel8.Controls.Add(this.bunifuThinButton21);
-            this.panel8.Controls.Add(this.bunifuSeparator4);
-            this.panel8.Controls.Add(this.bunifuCustomLabel3);
-            this.panel8.Controls.Add(this.bunifuSeparator3);
-            this.panel8.Controls.Add(this.bunifuCustomLabel2);
-            this.panel8.Controls.Add(this.bunifuSeparator2);
-            this.panel8.Controls.Add(this.bunifuCustomLabel1);
-            this.panel8.Controls.Add(this.panel2);
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(28, 137);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(576, 154);
-            this.panel8.TabIndex = 24;
+            this.pnSocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.pnSocio.Controls.Add(this.pictureBox6);
+            this.pnSocio.Controls.Add(this.pictureBox5);
+            this.pnSocio.Controls.Add(this.pictureBox4);
+            this.pnSocio.Controls.Add(this.pictureBox3);
+            this.pnSocio.Controls.Add(this.bunifuThinButton21);
+            this.pnSocio.Controls.Add(this.bunifuSeparator4);
+            this.pnSocio.Controls.Add(this.bunifuCustomLabel3);
+            this.pnSocio.Controls.Add(this.bunifuSeparator3);
+            this.pnSocio.Controls.Add(this.bunifuCustomLabel2);
+            this.pnSocio.Controls.Add(this.bunifuSeparator2);
+            this.pnSocio.Controls.Add(this.bunifuCustomLabel1);
+            this.pnSocio.Controls.Add(this.panel2);
+            this.pnSocio.Controls.Add(this.label2);
+            this.pnSocio.Controls.Add(this.label3);
+            this.pnSocio.Controls.Add(this.label4);
+            this.pnSocio.Location = new System.Drawing.Point(28, 137);
+            this.pnSocio.Name = "pnSocio";
+            this.pnSocio.Size = new System.Drawing.Size(576, 154);
+            this.pnSocio.TabIndex = 24;
             // 
             // pictureBox6
             // 
@@ -399,18 +402,18 @@
             this.panel2.Size = new System.Drawing.Size(576, 40);
             this.panel2.TabIndex = 37;
             // 
-            // panel10
+            // pnMonto
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
-            this.panel10.Controls.Add(this.panel3);
-            this.panel10.Controls.Add(this.bunifuMetroTextbox5);
-            this.panel10.Controls.Add(this.bunifuMetroTextbox4);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Controls.Add(this.label7);
-            this.panel10.Location = new System.Drawing.Point(28, 297);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(576, 122);
-            this.panel10.TabIndex = 25;
+            this.pnMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.pnMonto.Controls.Add(this.panel3);
+            this.pnMonto.Controls.Add(this.bunifuMetroTextbox5);
+            this.pnMonto.Controls.Add(this.bunifuMetroTextbox4);
+            this.pnMonto.Controls.Add(this.label8);
+            this.pnMonto.Controls.Add(this.label7);
+            this.pnMonto.Location = new System.Drawing.Point(28, 297);
+            this.pnMonto.Name = "pnMonto";
+            this.pnMonto.Size = new System.Drawing.Size(576, 122);
+            this.pnMonto.TabIndex = 25;
             // 
             // panel3
             // 
@@ -493,6 +496,31 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // btnAgregarRecibo
+            // 
+            this.btnAgregarRecibo.ActiveBorderThickness = 1;
+            this.btnAgregarRecibo.ActiveCornerRadius = 20;
+            this.btnAgregarRecibo.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.btnAgregarRecibo.ActiveForecolor = System.Drawing.SystemColors.Window;
+            this.btnAgregarRecibo.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.btnAgregarRecibo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.btnAgregarRecibo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarRecibo.BackgroundImage")));
+            this.btnAgregarRecibo.ButtonText = "Agregar";
+            this.btnAgregarRecibo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarRecibo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarRecibo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAgregarRecibo.IdleBorderThickness = 1;
+            this.btnAgregarRecibo.IdleCornerRadius = 20;
+            this.btnAgregarRecibo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.btnAgregarRecibo.IdleForecolor = System.Drawing.Color.White;
+            this.btnAgregarRecibo.IdleLineColor = System.Drawing.Color.White;
+            this.btnAgregarRecibo.Location = new System.Drawing.Point(27, 458);
+            this.btnAgregarRecibo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAgregarRecibo.Name = "btnAgregarRecibo";
+            this.btnAgregarRecibo.Size = new System.Drawing.Size(111, 50);
+            this.btnAgregarRecibo.TabIndex = 23;
+            this.btnAgregarRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -548,43 +576,37 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // btnAgregarRecibo
+            // pnFirmas
             // 
-            this.btnAgregarRecibo.ActiveBorderThickness = 1;
-            this.btnAgregarRecibo.ActiveCornerRadius = 20;
-            this.btnAgregarRecibo.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.btnAgregarRecibo.ActiveForecolor = System.Drawing.SystemColors.Window;
-            this.btnAgregarRecibo.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.btnAgregarRecibo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.btnAgregarRecibo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarRecibo.BackgroundImage")));
-            this.btnAgregarRecibo.ButtonText = "Agregar";
-            this.btnAgregarRecibo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarRecibo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarRecibo.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAgregarRecibo.IdleBorderThickness = 1;
-            this.btnAgregarRecibo.IdleCornerRadius = 20;
-            this.btnAgregarRecibo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.btnAgregarRecibo.IdleForecolor = System.Drawing.Color.White;
-            this.btnAgregarRecibo.IdleLineColor = System.Drawing.Color.White;
-            this.btnAgregarRecibo.Location = new System.Drawing.Point(27, 458);
-            this.btnAgregarRecibo.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAgregarRecibo.Name = "btnAgregarRecibo";
-            this.btnAgregarRecibo.Size = new System.Drawing.Size(111, 50);
-            this.btnAgregarRecibo.TabIndex = 23;
-            this.btnAgregarRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnFirmas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.pnFirmas.Controls.Add(this.bunifuCustomLabel4);
+            this.pnFirmas.Controls.Add(this.comboBox2);
+            this.pnFirmas.Controls.Add(this.panel5);
+            this.pnFirmas.Controls.Add(this.label12);
+            this.pnFirmas.Controls.Add(this.label13);
+            this.pnFirmas.Location = new System.Drawing.Point(28, 458);
+            this.pnFirmas.Name = "pnFirmas";
+            this.pnFirmas.Size = new System.Drawing.Size(576, 122);
+            this.pnFirmas.TabIndex = 38;
             // 
-            // panel4
+            // bunifuCustomLabel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
-            this.panel4.Controls.Add(this.bunifuCustomLabel4);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(28, 458);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(576, 122);
-            this.panel4.TabIndex = 38;
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(121, 43);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(196, 20);
+            this.bunifuCustomLabel4.TabIndex = 41;
+            this.bunifuCustomLabel4.Text = "Karla Judith Santos Rivera";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(121, 89);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(255, 21);
+            this.comboBox2.TabIndex = 40;
             // 
             // panel5
             // 
@@ -613,9 +635,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(11, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 20);
+            this.label12.Size = new System.Drawing.Size(104, 20);
             this.label12.TabIndex = 15;
-            this.label12.Text = "ENcargado 2:";
+            this.label12.Text = "Encargado 2:";
             // 
             // label13
             // 
@@ -627,24 +649,20 @@
             this.label13.TabIndex = 13;
             this.label13.Text = "Encargado 1:";
             // 
-            // comboBox2
+            // rdSocio
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(121, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(255, 21);
-            this.comboBox2.TabIndex = 40;
+            this.rdSocio.ElipseRadius = 20;
+            this.rdSocio.TargetControl = this.pnSocio;
             // 
-            // bunifuCustomLabel4
+            // rdMonto
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(121, 43);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(196, 20);
-            this.bunifuCustomLabel4.TabIndex = 41;
-            this.bunifuCustomLabel4.Text = "Karla Judith Santos Rivera";
+            this.rdMonto.ElipseRadius = 20;
+            this.rdMonto.TargetControl = this.pnMonto;
+            // 
+            // rdFirmas
+            // 
+            this.rdFirmas.ElipseRadius = 20;
+            this.rdFirmas.TargetControl = this.pnFirmas;
             // 
             // frmNuevaAportacion
             // 
@@ -652,7 +670,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(796, 600);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnFirmas);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.bunifuDatepicker1);
             this.Controls.Add(this.bunifuMaterialTextbox1);
@@ -660,8 +678,8 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.pnSocio);
+            this.Controls.Add(this.pnMonto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNuevaAportacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -671,23 +689,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.pnSocio.ResumeLayout(false);
+            this.pnSocio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.pnMonto.ResumeLayout(false);
+            this.pnMonto.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnFirmas.ResumeLayout(false);
+            this.pnFirmas.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -710,8 +728,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private ns1.BunifuThinButton2 btnAgregarRecibo;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnSocio;
+        private System.Windows.Forms.Panel pnMonto;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label10;
         private ns1.BunifuMetroTextbox bunifuMetroTextbox5;
@@ -735,12 +753,15 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnFirmas;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.ComboBox comboBox2;
+        private ns1.BunifuElipse rdSocio;
+        private ns1.BunifuElipse rdMonto;
+        private ns1.BunifuElipse rdFirmas;
     }
 }

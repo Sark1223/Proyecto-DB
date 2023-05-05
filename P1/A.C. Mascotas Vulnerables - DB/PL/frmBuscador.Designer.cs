@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscador));
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.rdBuscador = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new ns1.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,6 +52,7 @@
             this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
             this.pnDatos = new System.Windows.Forms.Panel();
             this.rdpnDatos = new ns1.BunifuElipse(this.components);
+            this.rdbtnBuscar = new ns1.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,10 +60,10 @@
             this.pnDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // rdBuscador
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.rdBuscador.ElipseRadius = 20;
+            this.rdBuscador.TargetControl = this;
             // 
             // panel1
             // 
@@ -110,9 +111,9 @@
             this.dgvProcedimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvProcedimiento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.dgvProcedimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProcedimiento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProcedimiento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
@@ -125,7 +126,7 @@
             this.Column4,
             this.column1});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(197)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(197)))), ((int)(((byte)(237)))));
@@ -133,8 +134,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProcedimiento.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProcedimiento.EnableHeadersVisualStyles = false;
-            this.dgvProcedimiento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
-            this.dgvProcedimiento.Location = new System.Drawing.Point(22, 204);
+            this.dgvProcedimiento.GridColor = System.Drawing.Color.Black;
+            this.dgvProcedimiento.Location = new System.Drawing.Point(22, 229);
             this.dgvProcedimiento.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.dgvProcedimiento.Name = "dgvProcedimiento";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -285,7 +286,7 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Buscar Socio";
@@ -304,17 +305,17 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(137, 69);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(139, 84);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(139, 42);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(139, 53);
             this.bunifuFlatButton1.TabIndex = 40;
             this.bunifuFlatButton1.Text = "Buscar Socio";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // pnDatos
@@ -330,7 +331,7 @@
             this.pnDatos.Controls.Add(this.bunifuMaterialTextbox1);
             this.pnDatos.Location = new System.Drawing.Point(22, 76);
             this.pnDatos.Name = "pnDatos";
-            this.pnDatos.Size = new System.Drawing.Size(430, 117);
+            this.pnDatos.Size = new System.Drawing.Size(430, 142);
             this.pnDatos.TabIndex = 39;
             // 
             // rdpnDatos
@@ -338,12 +339,17 @@
             this.rdpnDatos.ElipseRadius = 15;
             this.rdpnDatos.TargetControl = this.pnDatos;
             // 
+            // rdbtnBuscar
+            // 
+            this.rdbtnBuscar.ElipseRadius = 30;
+            this.rdbtnBuscar.TargetControl = this.bunifuFlatButton1;
+            // 
             // frmBuscador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(474, 337);
+            this.ClientSize = new System.Drawing.Size(474, 363);
             this.Controls.Add(this.pnDatos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvProcedimiento);
@@ -364,7 +370,7 @@
 
         #endregion
 
-        private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuElipse rdBuscador;
         private System.Windows.Forms.Panel panel1;
         private ns1.BunifuImageButton btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -382,5 +388,6 @@
         private ns1.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private ns1.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private ns1.BunifuElipse rdpnDatos;
+        private ns1.BunifuElipse rdbtnBuscar;
     }
 }
