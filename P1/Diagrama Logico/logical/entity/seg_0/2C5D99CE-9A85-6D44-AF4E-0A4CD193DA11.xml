@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2C5D99CE-9A85-6D44-AF4E-0A4CD193DA11" name="CIUDAD">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:01:21 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CIUDAD_ID" id="BCEE68FA-04D9-70FA-57B6-91641B53AF29">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:01:33 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CI_NOMBRE" id="EC682875-46A9-7BAE-E11C-DC9AD73F3CFE">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:01:51 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7AA5FE12-45F3-B8D7-585E-23DA12E893FD" name="CIUDAD PK">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:01:48 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BCEE68FA-04D9-70FA-57B6-91641B53AF29</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

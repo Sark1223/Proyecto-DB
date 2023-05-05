@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CIUDAD-ESTADO" directorySegmentName="seg_0" id="DC4482E6-1856-E177-0CDC-402ED5BB006F">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:08:14 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<sourcePk>7AA5FE12-45F3-B8D7-585E-23DA12E893FD</sourcePk>
+<targetPk>817D6D74-754C-5988-447D-70A9F054BBBE</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2C5D99CE-9A85-6D44-AF4E-0A4CD193DA11</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1CBD3D5B-F735-E1C7-CCD9-4339DA909067</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

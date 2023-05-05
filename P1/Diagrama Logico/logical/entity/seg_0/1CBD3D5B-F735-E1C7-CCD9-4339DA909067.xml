@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1CBD3D5B-F735-E1C7-CCD9-4339DA909067" name="ESTADO">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:06:59 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ESTADO_ID" id="7118DE84-357A-0640-FAF9-C5063192272E">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:07:29 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EST_NOMBRE" id="21C9CEF5-3953-48B3-4095-4C9FE4CC4B6E">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:07:45 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CIUDAD_ID" id="65D0DC30-0E47-ED00-228F-3BE61A15B569">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:08:14 UTC</createdTime>
+<generatorID>DC4482E6-1856-E177-0CDC-402ED5BB006F</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referedAttribute>BCEE68FA-04D9-70FA-57B6-91641B53AF29</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="817D6D74-754C-5988-447D-70A9F054BBBE" name="ESTADO PK">
+<createdBy>zazuk</createdBy>
+<createdTime>2023-05-05 02:07:43 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7118DE84-357A-0640-FAF9-C5063192272E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
