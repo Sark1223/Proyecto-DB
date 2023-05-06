@@ -50,9 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ReciboBLL.cs" />
+    <Compile Include="BLL\SocioBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\Conexion.cs" />
     <Compile Include="DAL\InicioSesionDaL.cs" />
+    <Compile Include="DAL\ReciboDAL.cs" />
+    <Compile Include="DAL\SocioDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="PL\frmAportacion.cs">
       <SubType>Form</SubType>
