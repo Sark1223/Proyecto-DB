@@ -1,10 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CIUDAD-USUARIO" directorySegmentName="seg_0" id="ED8CE900-A906-CC84-4092-3E14E182A823">
-<createdBy>zazuk</createdBy>
-<createdTime>2023-05-05 02:09:22 UTC</createdTime>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_15" directorySegmentName="seg_0" id="8A7823EA-DB2F-B938-52D1-4C2CD6E9142D">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-06 22:28:45 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <sourcePk>7AA5FE12-45F3-B8D7-585E-23DA12E893FD</sourcePk>
-<targetPk>9A6C779E-8F47-63A6-B01B-6E7E4F6A2E0B</targetPk>
 <identifying>false</identifying>
 <nameOnSource>tiene</nameOnSource>
 <nameOnTarget>esta</nameOnTarget>
@@ -13,7 +12,7 @@
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>2C5D99CE-9A85-6D44-AF4E-0A4CD193DA11</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>FA31A5F5-089E-E8CB-E153-998247870C33</targetEntity>
+<targetEntity>D529BB37-6F53-E4B9-FB8D-54BB4BAF3C71</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

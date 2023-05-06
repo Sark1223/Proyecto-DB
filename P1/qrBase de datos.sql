@@ -2,7 +2,41 @@ cREATE DATABASE AC_MASCOTAS;
 
 USE AC_MASCOTAS;
 
+-- ENTIDADES DE DIRECCION --------------------------------------------------------------------
+
+CREATE TABLE PAIS (
+    pais_id   INTEGER NOT NULL,
+    pa_nombre VARCHAR(50)
+);
+
+ALTER TABLE pais ADD CONSTRAINT pais_pk PRIMARY KEY ( pais_id );
+
+CREATE TABLE ESTADO (
+    estado_id    INTEGER NOT NULL,
+    est_nombre   VARCHAR(50),
+    pais_id INTEGER NOT NULL
+);
+
+ALTER TABLE ESTADO ADD CONSTRAINT estado_pk PRIMARY KEY ( estado_id );
+
+ALTER TABLE ESTADO
+    ADD CONSTRAINT estado_pais_fk FOREIGN KEY ( pais_id )
+        REFERENCES pais ( pais_id );
+
+CREATE TABLE CIUDAD (
+    ciudad_id        INTEGER NOT NULL,
+    ci_nombre        VARCHAR(50),
+    estado_id INTEGER NOT NULL
+);
+
+ALTER TABLE CIUDAD ADD CONSTRAINT ciudad_pk PRIMARY KEY ( ciudad_id );
+
+ALTER TABLE ciudad
+    ADD CONSTRAINT ciudad_estado_fk FOREIGN KEY ( estado_id )
+        REFERENCES estado ( estado_id );
+
 -- TABLAS INDEPENDIENTES ------------------------------------------------------------------
+
 CREATE TABLE ESTATUS_RECIBO (
     estatus_id   char(2) NOT NULL,
     estatus_descripcion VARCHAR(30) NOT NULL UNIQUE
@@ -21,6 +55,7 @@ ALTER TABLE PERIODO ADD CONSTRAINT periodo_pk PRIMARY KEY ( periodo_año,
                                                             periodo_num );
 
 
+--TABLAS DEPENDIENTES----------------------------------------------------------------------------
 CREATE TABLE USUARIO (
     usuario_id           tinyint NOT NULL,
     usu_apaterno         VARCHAR(30) NOT NULL,
@@ -36,15 +71,18 @@ CREATE TABLE USUARIO (
     usu_num_int          VARCHAR(8),
     usu_colonia          VARCHAR(100) NOT NULL,
     usu_cp               VARCHAR(6) NOT NULL,
-    usu_Municipio        VARCHAR(50) NOT NULL,
-    usu_Estado           VARCHAR(50) NOT NULL,
-    usu_Pais            VARCHAR(50) NOT NULL,
+	ciudad_id            INTEGER NOT NULL,
     usu_telefono         NUMERiC(10,0) NOT NULL,
     usu_email            VARCHAR(130) not null,
     usu_fecha_ingreso    DATE NOT NULL
 );
 
 ALTER TABLE USUARIO ADD CONSTRAINT usuario_pk PRIMARY KEY ( usuario_id );
+
+ALTER TABLE usuario
+    ADD CONSTRAINT usuario_ciudad_fk FOREIGN KEY ( ciudad_id )
+        REFERENCES CIUDAD ( ciudad_id );
+
 
 CREATE TABLE SOCIO (
     socio_id            SMALLINT NOT NULL,
@@ -57,9 +95,7 @@ CREATE TABLE SOCIO (
 	sc_num_int          VARCHAR(8),
     sc_colonia          VARCHAR(100) NOT NULL,
     sc_cp               VARCHAR(6) NOT NULL,
-	sc_Municipio        VARCHAR(50) NOT NULL,
-	sc_Estado           VARCHAR(50) NOT NULL,
-	sc_Pais             VARCHAR(50) NOT NULL,
+	ciudad_id            INTEGER NOT NULL,
     sc_telefono         CHAR(10) NOT NULL,
     sc_telefono2        CHAR(10),
 	sc_telefono3        CHAR(10),
@@ -72,8 +108,10 @@ CREATE TABLE SOCIO (
 
 ALTER TABLE socio ADD CONSTRAINT socio_pk PRIMARY KEY ( socio_id );
 
+ALTER TABLE SOCIO
+    ADD CONSTRAINT SICIO_ciudad_fk FOREIGN KEY ( ciudad_id )
+        REFERENCES CIUDAD ( ciudad_id );
 
---TABLAS DEPENDIENTES----------------------------------------------------------------------------
 
 CREATE TABLE HISTORIAL (
     historia_num          INTEGER NOT NULL,
@@ -88,6 +126,7 @@ ALTER TABLE HISTORIAL ADD CONSTRAINT historial_pk PRIMARY KEY ( historia_num );
 ALTER TABLE HISTORIAL
     ADD CONSTRAINT historial_usuario_fk FOREIGN KEY ( usuario_id )
         REFERENCES USUARIO ( usuario_id );
+
 
 CREATE TABLE RECIBO (
     rec_folio				 INTEGER NOT NULL,

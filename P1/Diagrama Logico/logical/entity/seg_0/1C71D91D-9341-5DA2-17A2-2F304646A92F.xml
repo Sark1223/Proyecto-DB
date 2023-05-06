@@ -3,9 +3,6 @@
 <createdBy>edwin</createdBy>
 <createdTime>2023-03-09 15:04:15 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -19,9 +16,6 @@
 <createdBy>edwin</createdBy>
 <createdTime>2023-03-09 15:04:15 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -31,9 +25,6 @@
 <createdBy>erick</createdBy>
 <createdTime>2023-03-15 22:32:13 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -44,13 +35,10 @@
 <createdTime>2023-04-13 02:21:57 UTC</createdTime>
 <generatorID>E300BB75-ED59-BD45-DC45-0FCF0B5B9DE3</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <referedAttribute>12ED40C7-1CF3-2220-D691-D1055A2E7A7C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<logicalDatatype>LOGDT042</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SOCIO_ID" id="DAFCBE61-3E12-C8F8-CAAC-4803B9DB2AE8">
@@ -58,9 +46,6 @@
 <createdTime>2023-03-15 23:09:46 UTC</createdTime>
 <generatorID>D32E4DE5-C2A3-F708-2AE9-2C88DE4A2665</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <referedAttribute>1C9977AD-A917-18E8-C30F-57BCCDD12573</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -72,9 +57,6 @@
 <createdBy>erick</createdBy>
 <createdTime>2023-03-15 22:32:39 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -86,9 +68,6 @@
 <createdBy>erick</createdBy>
 <createdTime>2023-03-15 22:33:10 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -100,9 +79,6 @@
 <createdTime>2023-03-15 22:51:03 UTC</createdTime>
 <generatorID>8D2304BA-86CF-2B38-EB1B-9A3E3A7D78B5</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <referedAttribute>81B9F5C1-C60F-D8E1-82F5-07165CC119AF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -115,9 +91,6 @@
 <createdTime>2023-04-13 02:20:46 UTC</createdTime>
 <generatorID>9A215B77-85CB-913E-AE97-10ACA9E4E1D1</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <referedAttribute>CF8522A8-42C0-6525-4C7B-F129AB792B9D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -129,9 +102,6 @@
 <createdBy>erick</createdBy>
 <createdTime>2023-03-15 22:53:06 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -142,9 +112,6 @@
 <createdBy>perro</createdBy>
 <createdTime>2023-04-19 04:12:27 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -157,9 +124,6 @@
 <createdBy>edwin</createdBy>
 <createdTime>2023-03-09 15:04:15 UTC</createdTime>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<engineerTo>
-<item key="1BFEC54F-CAD3-14DC-6954-0014B445A62D" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <newElementsIDs>6B1E3301-BC22-3EF8-C633-23287ED122B1</newElementsIDs>
 <usedAttributes>

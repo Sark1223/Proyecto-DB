@@ -18,7 +18,7 @@
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<logicalDatatype>LOGDT042</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="USU_APATERNO" id="7BE17133-8032-9B02-E271-98CDEFB307A8">
@@ -50,6 +50,16 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="foto" id="44C057B7-C82B-CAF8-5EA4-D3DE27BA7D07">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-06 22:25:10 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="USU_RFC" id="89399563-4C5B-5BB0-616C-145EC8C2D3F3">
 <createdBy>perro</createdBy>
@@ -167,7 +177,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="CONTRASEÑA" id="D5ED4948-15BD-CCDF-1964-E8FD603C034D">
 <createdBy>perro</createdBy>
@@ -179,9 +189,9 @@
 <dataTypeSize>15 CHAR</dataTypeSize>
 <ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CIUDAD_ID1" id="1343FCB9-97ED-88F0-45DF-3BF5E934D6AA">
-<createdBy>zazuk</createdBy>
-<createdTime>2023-05-05 02:09:22 UTC</createdTime>
+<Attribute name="CIUDAD_ID" id="BA4BCDE6-2BAF-78B3-CFB1-1E92F1DD5BD8">
+<createdBy>perro</createdBy>
+<createdTime>2023-05-06 22:28:14 UTC</createdTime>
 <generatorID>ED8CE900-A906-CC84-4092-3E14E182A823</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
 <referedAttribute>BCEE68FA-04D9-70FA-57B6-91641B53AF29</referedAttribute>
