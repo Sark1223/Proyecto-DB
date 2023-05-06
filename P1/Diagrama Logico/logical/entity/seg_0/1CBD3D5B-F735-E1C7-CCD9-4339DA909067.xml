@@ -32,12 +32,12 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CIUDAD_ID" id="65D0DC30-0E47-ED00-228F-3BE61A15B569">
-<createdBy>zazuk</createdBy>
-<createdTime>2023-05-05 02:08:14 UTC</createdTime>
-<generatorID>DC4482E6-1856-E177-0CDC-402ED5BB006F</generatorID>
+<Attribute name="PAIS_ID" id="93D46C30-17A6-3167-6B2D-2174EB3FF048">
+<createdBy>Geo</createdBy>
+<createdTime>2023-05-06 00:27:13 UTC</createdTime>
+<generatorID>3CD3F9CC-9A6C-4998-B087-3F7A670A0F48</generatorID>
 <ownerDesignName>Diagrama Logico</ownerDesignName>
-<referedAttribute>BCEE68FA-04D9-70FA-57B6-91641B53AF29</referedAttribute>
+<referedAttribute>84417667-5374-704D-2344-6C23DF2AF4E1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

@@ -32,6 +32,17 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ESTADO_ID" id="3C4B8F69-9201-8D48-05D1-B6FDDB06D55C">
+<createdBy>Geo</createdBy>
+<createdTime>2023-05-06 00:24:44 UTC</createdTime>
+<generatorID>DC4482E6-1856-E177-0CDC-402ED5BB006F</generatorID>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<referedAttribute>7118DE84-357A-0640-FAF9-C5063192272E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7AA5FE12-45F3-B8D7-585E-23DA12E893FD" name="CIUDAD PK">

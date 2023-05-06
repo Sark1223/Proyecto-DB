@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_13" directorySegmentName="seg_0" id="3CD3F9CC-9A6C-4998-B087-3F7A670A0F48">
+<createdBy>Geo</createdBy>
+<createdTime>2023-05-06 00:27:13 UTC</createdTime>
+<ownerDesignName>Diagrama Logico</ownerDesignName>
+<sourcePk>AD35AE81-F0A7-E302-AD3D-147F2AEBD715</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>es parte de</nameOnSource>
+<nameOnTarget>contiene</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F9C1CD96-0830-5A56-70B3-8833EA0E49F2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1CBD3D5B-F735-E1C7-CCD9-4339DA909067</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
