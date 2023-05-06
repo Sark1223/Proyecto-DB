@@ -70,6 +70,12 @@
     <Compile Include="PL\frmBuscador.Designer.cs">
       <DependentUpon>frmBuscador.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmLugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmLugar.Designer.cs">
+      <DependentUpon>frmLugar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmMenu_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmBuscador.resx">
       <DependentUpon>frmBuscador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmLugar.resx">
+      <DependentUpon>frmLugar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMenu_Principal.resx">
       <DependentUpon>frmMenu_Principal.cs</DependentUpon>

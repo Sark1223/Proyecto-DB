@@ -36,9 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscador));
             this.rdBuscador = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar = new ns1.BunifuImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvProcedimiento = new System.Windows.Forms.DataGridView();
+            this.dgvSocios = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,20 +47,22 @@
             this.bunifuMaterialTextbox3 = new ns1.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
             this.pnDatos = new System.Windows.Forms.Panel();
             this.rdpnDatos = new ns1.BunifuElipse(this.components);
             this.rdbtnBuscar = new ns1.BunifuElipse(this.components);
+            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
+            this.btnCerrar = new ns1.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
+            this.pnDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimiento)).BeginInit();
-            this.pnDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdBuscador
             // 
-            this.rdBuscador.ElipseRadius = 20;
+            this.rdBuscador.ElipseRadius = 35;
             this.rdBuscador.TargetControl = this;
             // 
             // panel1
@@ -76,30 +76,7 @@
             this.panel1.Size = new System.Drawing.Size(474, 36);
             this.panel1.TabIndex = 1;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(433, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(38, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 38;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dgvProcedimiento
+            // dgvSocios
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(193)))));
@@ -107,11 +84,11 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(193)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProcedimiento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProcedimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProcedimiento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.dgvProcedimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProcedimiento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvSocios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSocios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSocios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.dgvSocios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSocios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F);
@@ -119,9 +96,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProcedimiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProcedimiento.ColumnHeadersHeight = 30;
-            this.dgvProcedimiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSocios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSocios.ColumnHeadersHeight = 30;
+            this.dgvSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4,
             this.column1});
@@ -132,12 +109,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(197)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProcedimiento.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProcedimiento.EnableHeadersVisualStyles = false;
-            this.dgvProcedimiento.GridColor = System.Drawing.Color.Black;
-            this.dgvProcedimiento.Location = new System.Drawing.Point(22, 229);
-            this.dgvProcedimiento.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.dgvProcedimiento.Name = "dgvProcedimiento";
+            this.dgvSocios.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSocios.EnableHeadersVisualStyles = false;
+            this.dgvSocios.GridColor = System.Drawing.Color.Black;
+            this.dgvSocios.Location = new System.Drawing.Point(22, 229);
+            this.dgvSocios.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.dgvSocios.Name = "dgvSocios";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(88)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,12 +122,12 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProcedimiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProcedimiento.RowHeadersVisible = false;
-            this.dgvProcedimiento.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvProcedimiento.RowTemplate.Height = 30;
-            this.dgvProcedimiento.Size = new System.Drawing.Size(430, 117);
-            this.dgvProcedimiento.TabIndex = 17;
+            this.dgvSocios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSocios.RowHeadersVisible = false;
+            this.dgvSocios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvSocios.RowTemplate.Height = 30;
+            this.dgvSocios.Size = new System.Drawing.Size(430, 117);
+            this.dgvSocios.TabIndex = 17;
             // 
             // Column3
             // 
@@ -283,10 +260,36 @@
             this.label1.Text = "Nombre:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // pnDatos
+            // 
+            this.pnDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.pnDatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnDatos.Controls.Add(this.bunifuFlatButton1);
+            this.pnDatos.Controls.Add(this.label1);
+            this.pnDatos.Controls.Add(this.label2);
+            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox3);
+            this.pnDatos.Controls.Add(this.label7);
+            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox2);
+            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox1);
+            this.pnDatos.Location = new System.Drawing.Point(22, 76);
+            this.pnDatos.Name = "pnDatos";
+            this.pnDatos.Size = new System.Drawing.Size(430, 142);
+            this.pnDatos.TabIndex = 39;
+            // 
+            // rdpnDatos
+            // 
+            this.rdpnDatos.ElipseRadius = 15;
+            this.rdpnDatos.TargetControl = this.pnDatos;
+            // 
+            // rdbtnBuscar
+            // 
+            this.rdbtnBuscar.ElipseRadius = 30;
+            this.rdbtnBuscar.TargetControl = this.bunifuFlatButton1;
+            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(46)))), ((int)(((byte)(115)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Buscar Socio";
@@ -318,31 +321,28 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // pnDatos
+            // btnCerrar
             // 
-            this.pnDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.pnDatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnDatos.Controls.Add(this.bunifuFlatButton1);
-            this.pnDatos.Controls.Add(this.label1);
-            this.pnDatos.Controls.Add(this.label2);
-            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox3);
-            this.pnDatos.Controls.Add(this.label7);
-            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox2);
-            this.pnDatos.Controls.Add(this.bunifuMaterialTextbox1);
-            this.pnDatos.Location = new System.Drawing.Point(22, 76);
-            this.pnDatos.Name = "pnDatos";
-            this.pnDatos.Size = new System.Drawing.Size(430, 142);
-            this.pnDatos.TabIndex = 39;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(433, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(38, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 38;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
             // 
-            // rdpnDatos
+            // pictureBox1
             // 
-            this.rdpnDatos.ElipseRadius = 15;
-            this.rdpnDatos.TargetControl = this.pnDatos;
-            // 
-            // rdbtnBuscar
-            // 
-            this.rdbtnBuscar.ElipseRadius = 30;
-            this.rdbtnBuscar.TargetControl = this.bunifuFlatButton1;
+            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmBuscador
             // 
@@ -352,17 +352,17 @@
             this.ClientSize = new System.Drawing.Size(474, 363);
             this.Controls.Add(this.pnDatos);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgvProcedimiento);
+            this.Controls.Add(this.dgvSocios);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBuscador";
             this.Text = "frmBuscador";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();
             this.pnDatos.ResumeLayout(false);
             this.pnDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,7 +374,7 @@
         private System.Windows.Forms.Panel panel1;
         private ns1.BunifuImageButton btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.DataGridView dgvProcedimiento;
+        public System.Windows.Forms.DataGridView dgvSocios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn column1;
