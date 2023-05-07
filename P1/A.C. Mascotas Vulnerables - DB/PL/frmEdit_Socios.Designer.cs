@@ -1056,6 +1056,7 @@
             this.Controls.Add(this.encabezado);
             this.Controls.Add(this.bunifuSeparator2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEdit_Socios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSocios";

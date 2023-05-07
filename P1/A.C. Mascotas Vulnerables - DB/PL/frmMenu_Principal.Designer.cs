@@ -57,6 +57,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panelTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.cmdLugares = new ns1.BunifuThinButton2();
             this.panEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -219,6 +220,7 @@
             // panPantalla
             // 
             this.panPantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.panPantalla.Controls.Add(this.cmdLugares);
             this.panPantalla.Controls.Add(this.cmdAdministra);
             this.panPantalla.Controls.Add(this.cmdSocios);
             this.panPantalla.Controls.Add(this.cmdIniciar);
@@ -452,6 +454,33 @@
             this.panelTransition.DefaultAnimation = animation1;
             this.panelTransition.Interval = 5;
             // 
+            // cmdLugares
+            // 
+            this.cmdLugares.ActiveBorderThickness = 1;
+            this.cmdLugares.ActiveCornerRadius = 20;
+            this.cmdLugares.ActiveFillColor = System.Drawing.Color.White;
+            this.cmdLugares.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLugares.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.cmdLugares.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdLugares.BackgroundImage")));
+            this.cmdLugares.ButtonText = "IR";
+            this.cmdLugares.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelTransition.SetDecoration(this.cmdLugares, BunifuAnimatorNS.DecorationType.None);
+            this.cmdLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLugares.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdLugares.IdleBorderThickness = 1;
+            this.cmdLugares.IdleCornerRadius = 20;
+            this.cmdLugares.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLugares.IdleForecolor = System.Drawing.Color.White;
+            this.cmdLugares.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLugares.Location = new System.Drawing.Point(248, 302);
+            this.cmdLugares.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdLugares.Name = "cmdLugares";
+            this.cmdLugares.Size = new System.Drawing.Size(145, 33);
+            this.cmdLugares.TabIndex = 34;
+            this.cmdLugares.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmdLugares.Click += new System.EventHandler(this.cmdLugares_Click);
+            // 
             // frmMenu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,6 +492,7 @@
             this.Controls.Add(this.panel1);
             this.panelTransition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenu_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -512,6 +542,7 @@
         public System.Windows.Forms.Panel panPantalla;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pbUsuario;
+        private ns1.BunifuThinButton2 cmdLugares;
     }
 }
 

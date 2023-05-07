@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using A.C.Mascotas_Vulnerables___DB.BLL;
 
 namespace A.C.Mascotas_Vulnerables___DB.DAL
@@ -16,6 +17,29 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         public UsuarioDAL()
         {
             conexion = new Conexion();
+        }
+
+        public DataSet MostrarUsuarios()
+        {
+            SqlCommand comandoSQL = new SqlCommand("Select * from USUARIO");
+            return conexion.EjecutarSentenciaConRetorno(comandoSQL);
+        }
+
+        public void LlenarCBCiudad(ComboBox cbCiudad)
+        {
+            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "- SELECCIONE CIUDAD -", 1);
+        }
+
+        //Obtener el ID del registro
+        public string ObtenerID(string Sentencia)
+        {
+            return conexion.RetornarID(Sentencia);
+        }
+
+        //Obtener la informacion del registro con ID conocido
+        public DataTable InformacionID(string sentencia)
+        {
+            return conexion.InformacionID(sentencia);
         }
 
         //METODOS Usuario
@@ -36,15 +60,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                            "usu_num_int," +
                            "usu_colonia," +
                            "usu_cp," +
-                           "usu_Municipio," +
-                           "usu_Estado," +
-                           "usu_Pais," +
+                           "ciudad_id," +
                            "usu_telefono," +
                            "usu_email," +
                            "usu_fecha_ingreso)" +
         "values(@id,@apaterno,@amaterno,@nombres,@foto,@cargo,@contraseña, @rfc," +
-        "@nacimiento,@calle,@exterior,@interior,@colonia,@cp,@municipio, @estado," +
-        "@pais,@telefono,@email,@ingreso)");
+        "@nacimiento,@calle,@exterior,@interior,@colonia,@cp,@ciudad,@telefono,@email,@ingreso)");
             {
                 agregar.Parameters.AddWithValue("id", usuario.usu_id);
                 agregar.Parameters.AddWithValue("apaterno", usuario.usu_apaterno);
@@ -60,9 +81,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 agregar.Parameters.AddWithValue("interior", usuario.usu_noInte);
                 agregar.Parameters.AddWithValue("colonia", usuario.usu_colonia);
                 agregar.Parameters.AddWithValue("cp", usuario.usu_CP);
-                agregar.Parameters.AddWithValue("municipio", usuario.usu_municipio);
-                agregar.Parameters.AddWithValue("estado", usuario.usu_Estado);
-                agregar.Parameters.AddWithValue("pais", usuario.usu_Pais);
+                agregar.Parameters.AddWithValue("ciudad", usuario.ciudad_id);
                 agregar.Parameters.AddWithValue("telefono", usuario.usu_Telefono);
                 agregar.Parameters.AddWithValue("email", usuario.usu_eMail);
                 agregar.Parameters.AddWithValue("ingreso", usuario.usu_Fecha_ingreso);
@@ -73,10 +92,56 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
         }
 
-        public DataSet MostrarUsuarios()
+        //METODOS Usuario
+        public bool ModificarUsuario(UsuarioBLL usuario, string idAnterior)
         {
-            SqlCommand comandoSQL = new SqlCommand("Select * from USUARIO");
-            return conexion.EjecutarSentenciaConRetorno(comandoSQL);
+            SqlCommand modificar = new SqlCommand(
+        "Update USUARIO set usuario_id = @id," +
+                           "usu_apaterno = @apaterno," +
+                           "usu_amaterno = @amaterno," +
+                           "usu_nombre_s = @nombres," +
+                           "usu_foto = @foto," +
+                           "usu_cargo = @cargo," +
+                           "usu_contraseña = @contraseña," +
+                           "usu_rfc = @rfc," +
+                           "usu_fecha_nacimiento = @nacimiento," +
+                           "usu_calle = @calle," +
+                           "usu_num_ext = @exterior," +
+                           "usu_num_int = @interior," +
+                           "usu_colonia = @colonia," +
+                           "usu_cp = @cp," +
+                           "ciudad_id = @ciudad," +
+                           "usu_telefono = @telefono," +
+                           "usu_email = @email," +
+                           "usu_fecha_ingreso = @ingreso " +
+                           "WHERE usuario_id = " + idAnterior);
+            {
+                modificar.Parameters.AddWithValue("id", usuario.usu_id);
+                modificar.Parameters.AddWithValue("apaterno", usuario.usu_apaterno);
+                modificar.Parameters.AddWithValue("amaterno", usuario.usu_amaterno);
+                modificar.Parameters.AddWithValue("nombres", usuario.usu_nombres);
+                modificar.Parameters.AddWithValue("foto", usuario.usu_foto);
+                modificar.Parameters.AddWithValue("cargo", usuario.usu_cargo);
+                modificar.Parameters.AddWithValue("contraseña", usuario.usu_contraseña);
+                modificar.Parameters.AddWithValue("rfc", usuario.usu_rfc);
+                modificar.Parameters.AddWithValue("nacimiento", usuario.usu_fechana_nacimiento);
+                modificar.Parameters.AddWithValue("calle", usuario.usu_calle);
+                modificar.Parameters.AddWithValue("exterior", usuario.usu_noExte);
+                modificar.Parameters.AddWithValue("interior", usuario.usu_noInte);
+                modificar.Parameters.AddWithValue("colonia", usuario.usu_colonia);
+                modificar.Parameters.AddWithValue("cp", usuario.usu_CP);
+                modificar.Parameters.AddWithValue("ciudad", usuario.ciudad_id);
+                modificar.Parameters.AddWithValue("telefono", usuario.usu_Telefono);
+                modificar.Parameters.AddWithValue("email", usuario.usu_eMail);
+                modificar.Parameters.AddWithValue("ingreso", usuario.usu_Fecha_ingreso);
+
+                conexion.ejecutarComandoSinRetorno(modificar);
+            }
+            return true;
+
         }
+
+
+        
     }
 }

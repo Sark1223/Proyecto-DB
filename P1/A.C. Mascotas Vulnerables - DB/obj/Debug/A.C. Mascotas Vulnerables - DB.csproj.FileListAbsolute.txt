@@ -51,3 +51,4 @@ C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerabl
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Socios.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Usuario.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmUsuarios.resources
+C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmLugar.resources

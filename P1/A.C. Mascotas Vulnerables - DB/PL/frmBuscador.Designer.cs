@@ -36,6 +36,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscador));
             this.rdBuscador = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new ns1.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvSocios = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,16 +50,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnDatos = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
             this.rdpnDatos = new ns1.BunifuElipse(this.components);
             this.rdbtnBuscar = new ns1.BunifuElipse(this.components);
-            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
-            this.btnCerrar = new ns1.BunifuImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
-            this.pnDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
+            this.pnDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdBuscador
@@ -75,6 +75,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(474, 36);
             this.panel1.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(433, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(38, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 38;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // dgvSocios
             // 
@@ -276,16 +299,6 @@
             this.pnDatos.Size = new System.Drawing.Size(430, 142);
             this.pnDatos.TabIndex = 39;
             // 
-            // rdpnDatos
-            // 
-            this.rdpnDatos.ElipseRadius = 15;
-            this.rdpnDatos.TargetControl = this.pnDatos;
-            // 
-            // rdbtnBuscar
-            // 
-            this.rdbtnBuscar.ElipseRadius = 30;
-            this.rdbtnBuscar.TargetControl = this.bunifuFlatButton1;
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Black;
@@ -321,28 +334,15 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btnCerrar
+            // rdpnDatos
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(433, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(38, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 38;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
+            this.rdpnDatos.ElipseRadius = 15;
+            this.rdpnDatos.TargetControl = this.pnDatos;
             // 
-            // pictureBox1
+            // rdbtnBuscar
             // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.rdbtnBuscar.ElipseRadius = 30;
+            this.rdbtnBuscar.TargetControl = this.bunifuFlatButton1;
             // 
             // frmBuscador
             // 
@@ -355,14 +355,15 @@
             this.Controls.Add(this.dgvSocios);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscador";
             this.Text = "frmBuscador";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();
             this.pnDatos.ResumeLayout(false);
             this.pnDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

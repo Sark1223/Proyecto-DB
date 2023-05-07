@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace A.C.Mascotas_Vulnerables___DB.DAL
 {
@@ -56,6 +57,58 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             conexion.Open();
             comando.ExecuteNonQuery();
             conexion.Close();
+        }
+
+        //METODOS COMBO BOX - COMPLEJO
+        public void RellenarCB(ComboBox cb, string sentencia, string textoCB, int posicion)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = this.EstablecerConexion();
+            conexion.Open();
+
+            cb.Items.Clear();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (dr[posicion].ToString() != textoCB)
+                {
+                    cb.Items.Add(dr[posicion].ToString());
+                }
+
+            }
+            conexion.Close();
+            cb.Items.Insert(0, textoCB);
+            cb.SelectedIndex = 0;
+        }
+
+        //Recuperar ID
+        public string RetornarID(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            cmd.Connection.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            string id = "";
+
+            while (dr.Read())
+            {
+                id = dr[0].ToString();
+            }
+            cmd.Connection.Close();
+            return id;
+        }//para el metodo modificar
+
+        //Recuperar información del ID
+        public DataTable InformacionID(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            DataTable tb = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sentencia, cmd.Connection);
+            da.Fill(tb);
+            return tb;
         }
     }
 }

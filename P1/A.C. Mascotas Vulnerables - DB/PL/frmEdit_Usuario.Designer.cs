@@ -76,9 +76,7 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.bunifuSeparator18 = new ns1.BunifuSeparator();
-            this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.bunifuSeparator17 = new ns1.BunifuSeparator();
             this.txtExterior = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.bunifuSeparator12 = new ns1.BunifuSeparator();
@@ -103,6 +101,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.bunifuSeparator21 = new ns1.BunifuSeparator();
             this.rdcmdAgregar = new ns1.BunifuElipse(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
@@ -110,6 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
             this.pnDatosCuenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // encabezado
@@ -373,9 +376,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(132, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 18);
+            this.label7.Size = new System.Drawing.Size(82, 18);
             this.label7.TabIndex = 122;
-            this.label7.Text = "Socio ID:";
+            this.label7.Text = "Usuario ID:";
             // 
             // bunifuSeparator5
             // 
@@ -556,6 +559,7 @@
             this.txtPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPais.Location = new System.Drawing.Point(495, 440);
             this.txtPais.Name = "txtPais";
+            this.txtPais.ReadOnly = true;
             this.txtPais.Size = new System.Drawing.Size(162, 19);
             this.txtPais.TabIndex = 176;
             this.txtPais.Text = "MÉXICO";
@@ -625,6 +629,7 @@
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEstado.Location = new System.Drawing.Point(306, 440);
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(168, 19);
             this.txtEstado.TabIndex = 170;
             this.txtEstado.Text = "BAJA CALIFORNIA";
@@ -652,18 +657,6 @@
             this.bunifuSeparator18.Transparency = 255;
             this.bunifuSeparator18.Vertical = false;
             // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.BackColor = System.Drawing.Color.White;
-            this.txtMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMunicipio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtMunicipio.Location = new System.Drawing.Point(110, 440);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(173, 19);
-            this.txtMunicipio.TabIndex = 167;
-            this.txtMunicipio.Text = "TIJUANA";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -671,21 +664,9 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label22.Location = new System.Drawing.Point(107, 417);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 18);
+            this.label22.Size = new System.Drawing.Size(58, 18);
             this.label22.TabIndex = 165;
-            this.label22.Text = "Municipio:";
-            // 
-            // bunifuSeparator17
-            // 
-            this.bunifuSeparator17.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator17.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.bunifuSeparator17.LineThickness = 1;
-            this.bunifuSeparator17.Location = new System.Drawing.Point(111, 455);
-            this.bunifuSeparator17.Name = "bunifuSeparator17";
-            this.bunifuSeparator17.Size = new System.Drawing.Size(172, 13);
-            this.bunifuSeparator17.TabIndex = 166;
-            this.bunifuSeparator17.Transparency = 255;
-            this.bunifuSeparator17.Vertical = false;
+            this.label22.Text = "Ciudad:";
             // 
             // txtExterior
             // 
@@ -948,12 +929,47 @@
             this.rdcmdAgregar.ElipseRadius = 30;
             this.rdcmdAgregar.TargetControl = this.cmdAgregar;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(361, 414);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 186;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(532, 414);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 187;
+            this.pictureBox2.TabStop = false;
+            // 
+            // cbCiudad
+            // 
+            this.cbCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cbCiudad.FormattingEnabled = true;
+            this.cbCiudad.Location = new System.Drawing.Point(110, 438);
+            this.cbCiudad.Name = "cbCiudad";
+            this.cbCiudad.Size = new System.Drawing.Size(177, 26);
+            this.cbCiudad.TabIndex = 188;
+            this.cbCiudad.Text = "- SELECCIONE CIUDAD-";
+            this.cbCiudad.SelectedIndexChanged += new System.EventHandler(this.cbCiudad_SelectedIndexChanged);
+            // 
             // frmEdit_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(710, 593);
+            this.Controls.Add(this.cbCiudad);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.bunifuSeparator21);
@@ -970,9 +986,7 @@
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.bunifuSeparator18);
-            this.Controls.Add(this.txtMunicipio);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.bunifuSeparator17);
             this.Controls.Add(this.txtExterior);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.bunifuSeparator12);
@@ -1013,8 +1027,10 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.encabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEdit_Usuario";
             this.Text = "frmUsuario";
+            this.Load += new System.EventHandler(this.frmEdit_Usuario_Load);
             this.encabezado.ResumeLayout(false);
             this.encabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1025,6 +1041,8 @@
             this.pnDatosCuenta.ResumeLayout(false);
             this.pnDatosCuenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1078,9 +1096,7 @@
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label23;
         private ns1.BunifuSeparator bunifuSeparator18;
-        private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.Label label22;
-        private ns1.BunifuSeparator bunifuSeparator17;
         private System.Windows.Forms.TextBox txtExterior;
         private System.Windows.Forms.Label label17;
         private ns1.BunifuSeparator bunifuSeparator12;
@@ -1105,5 +1121,8 @@
         private ns1.BunifuSeparator bunifuSeparator21;
         private System.Windows.Forms.Label label9;
         private ns1.BunifuElipse rdcmdAgregar;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox cbCiudad;
     }
 }

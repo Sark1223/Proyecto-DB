@@ -18,6 +18,7 @@ namespace A.C.Mascotas_Vulnerables___DB
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMenu_Principal());
+            //Application.Run(new frmUsuarios());
         }
     }
 }

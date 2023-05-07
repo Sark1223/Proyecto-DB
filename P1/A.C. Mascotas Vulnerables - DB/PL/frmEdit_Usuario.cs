@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.Layout;
 using A.C.Mascotas_Vulnerables___DB.BLL;
 using A.C.Mascotas_Vulnerables___DB.DAL;
+using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;
 
 namespace A.C.Mascotas_Vulnerables___DB.PL
@@ -24,6 +25,56 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         UsuarioBLL usuario = new UsuarioBLL();
         UsuarioDAL mu = new UsuarioDAL();
+
+        private void frmEdit_Usuario_Load(object sender, EventArgs e)
+        {
+            mu.LlenarCBCiudad(cbCiudad);
+            //if (lblTitle.Text == "AGREGAR PLATILLO")
+            //{
+            //    editar_plato.LlenarCBCategoria(cbCategoria);
+
+            //    cmdAgregarIngrediente.Enabled = false;
+            //    cmdAgregarPaso.Enabled = false;
+
+            //    //Habilitar paneles de añadir
+            //    //pnAñadirIngre.Visible = true;
+            //    pnAñadirPaso.Visible = true;
+            //    pnAgregar.Visible = true;
+
+            //    //Inabilitar paneles modificar
+            //    pnModificar.Visible = false;
+            //    pnModifiIngre.Visible = false;
+            //    pnModifiPaso.Visible = false;
+            //    imagen = false;
+            //}
+            //else
+            //{
+            //    cmdAgregarIngrediente.Enabled = true;
+            //    cmdAgregarPaso.Enabled = true;
+            //    //Inabilitar paneles de añadir
+            //    //pnAñadirIngre.Visible = false;
+            //    //pnAñadirPaso.Visible = false;
+            //    pnAgregar.Visible = false;
+
+            //    //Mostrar paneles modificar
+            //    pnModificar.Visible = true;
+            //    pnModifiIngre.Visible = true;
+            //    pnModifiPaso.Visible = true;
+
+            //    imagen = true;
+
+            //    if (txtId_platillo.Text != "")
+            //    {
+            //        ID_Actual = txtId_platillo.Text;
+            //    }
+
+            //    if (txtNombre.Text != "")
+            //    {
+            //        nombre = txtNombre.Text;
+            //    }
+            //}
+            //primeraApertura = false;
+        }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
@@ -73,10 +124,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             usuario.usu_noInte = txtInterior.Text;
             usuario.usu_colonia = txtColonia.Text;
             usuario.usu_CP = txtcp.Text;
-            usuario.usu_municipio = txtMunicipio.Text;
-            usuario.usu_Estado = txtEstado.Text;
-            usuario.usu_Pais = txtPais.Text;
-            
         }
         
         private void cmdAgregar_Click(object sender, EventArgs e)
@@ -90,6 +137,28 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             else
             {
                 MessageBox.Show("NO se pudo ingresar la informacion del usuario", "Error al ingresar usuario");
+            }
+        }
+
+        private void cbCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCiudad.SelectedIndex > 0)
+            {
+
+                //Recuperar informacion de de la tabla CIUDAD
+                DataTable tb = mu.InformacionID($"Select ciudad_id, estado_id From CIUDAD WHERE ci_nombre = '{cbCiudad.Text}'");
+
+                //Reccuperar el id del nombre de la ciudad
+                usuario.ciudad_id = int.Parse(tb.Rows[0]["ciudad_id"].ToString());//guardarlo
+
+                //Recuperar informacion del ESTADO
+                tb = mu.InformacionID($"Select est_nombre, pais_id From ESTADO WHERE estado_id = {tb.Rows[1]["estado_id"]}");
+                txtEstado.Text = tb.Rows[0]["est_nombre"].ToString();//impriir estado
+
+                //Recuperar informacion del PAIS
+                tb = mu.InformacionID($"Select pa_nombre From PAIS WHERE pais_id = {tb.Rows[1]["pais_id"]}");
+                txtEstado.Text = tb.Rows[0]["pa_nombre"].ToString();//impriir estado
+
             }
         }
     }

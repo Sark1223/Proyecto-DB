@@ -25,6 +25,7 @@ namespace A.C.Mascotas_Vulnerables___DB
         frmEdit_Socios socio = new frmEdit_Socios();
         frmUsuarios usuarios = new frmUsuarios();
         UsuarioDAL mu = new UsuarioDAL();
+        frmLugar lugar = new frmLugar();
 
         private void lblLogo_Click(object sender, EventArgs e)
         {
@@ -59,6 +60,11 @@ namespace A.C.Mascotas_Vulnerables___DB
         {
             usuarios.dgvUsuarios.DataSource = mu.MostrarUsuarios().Tables[0];
             usuarios.ShowDialog();
+        }
+
+        private void cmdLugares_Click(object sender, EventArgs e)
+        {
+            lugar.ShowDialog();
         }
     }
 }
