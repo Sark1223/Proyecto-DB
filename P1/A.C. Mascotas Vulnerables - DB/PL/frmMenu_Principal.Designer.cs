@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu_Principal));
             this.panEncabezado = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
@@ -43,6 +43,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.arrastrarForma1 = new ns1.BunifuDragControl(this.components);
             this.panPantalla = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cmdAdministra = new ns1.BunifuThinButton2();
             this.cmdSocios = new ns1.BunifuThinButton2();
             this.cmdIniciar = new ns1.BunifuThinButton2();
@@ -57,13 +59,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panelTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.cmdLugares = new ns1.BunifuThinButton2();
+            this.cmdLocalizacion = new System.Windows.Forms.Button();
+            this.rdLocation = new ns1.BunifuElipse(this.components);
             this.panEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.panPantalla.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -82,6 +86,7 @@
             this.panEncabezado.Name = "panEncabezado";
             this.panEncabezado.Size = new System.Drawing.Size(771, 40);
             this.panEncabezado.TabIndex = 0;
+            this.panEncabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // lblLogo
             // 
@@ -220,7 +225,8 @@
             // panPantalla
             // 
             this.panPantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.panPantalla.Controls.Add(this.cmdLugares);
+            this.panPantalla.Controls.Add(this.panel2);
+            this.panPantalla.Controls.Add(this.pictureBox3);
             this.panPantalla.Controls.Add(this.cmdAdministra);
             this.panPantalla.Controls.Add(this.cmdSocios);
             this.panPantalla.Controls.Add(this.cmdIniciar);
@@ -231,12 +237,33 @@
             this.panPantalla.Controls.Add(this.label3);
             this.panPantalla.Controls.Add(this.label2);
             this.panPantalla.Controls.Add(this.label4);
+            this.panPantalla.Controls.Add(this.cmdLocalizacion);
             this.panelTransition.SetDecoration(this.panPantalla, BunifuAnimatorNS.DecorationType.None);
             this.panPantalla.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panPantalla.Location = new System.Drawing.Point(104, 40);
             this.panPantalla.Name = "panPantalla";
             this.panPantalla.Size = new System.Drawing.Size(667, 353);
             this.panPantalla.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panelTransition.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Location = new System.Drawing.Point(602, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(13, 48);
+            this.panel2.TabIndex = 36;
+            // 
+            // pictureBox3
+            // 
+            this.panelTransition.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox3.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.localizacion;
+            this.pictureBox3.Location = new System.Drawing.Point(612, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
             // 
             // cmdAdministra
             // 
@@ -257,7 +284,7 @@
             this.cmdAdministra.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
             this.cmdAdministra.IdleForecolor = System.Drawing.Color.White;
             this.cmdAdministra.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
-            this.cmdAdministra.Location = new System.Drawing.Point(497, 238);
+            this.cmdAdministra.Location = new System.Drawing.Point(500, 263);
             this.cmdAdministra.Margin = new System.Windows.Forms.Padding(5);
             this.cmdAdministra.Name = "cmdAdministra";
             this.cmdAdministra.Size = new System.Drawing.Size(145, 33);
@@ -284,7 +311,7 @@
             this.cmdSocios.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
             this.cmdSocios.IdleForecolor = System.Drawing.Color.White;
             this.cmdSocios.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdSocios.Location = new System.Drawing.Point(270, 238);
+            this.cmdSocios.Location = new System.Drawing.Point(273, 263);
             this.cmdSocios.Margin = new System.Windows.Forms.Padding(5);
             this.cmdSocios.Name = "cmdSocios";
             this.cmdSocios.Size = new System.Drawing.Size(145, 33);
@@ -311,7 +338,7 @@
             this.cmdIniciar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             this.cmdIniciar.IdleForecolor = System.Drawing.Color.White;
             this.cmdIniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.cmdIniciar.Location = new System.Drawing.Point(40, 238);
+            this.cmdIniciar.Location = new System.Drawing.Point(43, 263);
             this.cmdIniciar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdIniciar.Name = "cmdIniciar";
             this.cmdIniciar.Size = new System.Drawing.Size(145, 33);
@@ -326,7 +353,7 @@
             this.panelTransition.SetDecoration(this.lblBienvenido, BunifuAnimatorNS.DecorationType.None);
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.lblBienvenido.Location = new System.Drawing.Point(243, 8);
+            this.lblBienvenido.Location = new System.Drawing.Point(237, 24);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(200, 26);
             this.lblBienvenido.TabIndex = 30;
@@ -336,7 +363,7 @@
             // 
             this.panelTransition.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(487, 63);
+            this.pictureBox2.Location = new System.Drawing.Point(490, 88);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(165, 148);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -347,7 +374,7 @@
             // 
             this.panelTransition.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 87);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -358,7 +385,7 @@
             // 
             this.panelTransition.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox5.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.hucha;
-            this.pictureBox5.Location = new System.Drawing.Point(260, 62);
+            this.pictureBox5.Location = new System.Drawing.Point(263, 87);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(165, 148);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -371,7 +398,7 @@
             this.panelTransition.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(316, 213);
+            this.label3.Location = new System.Drawing.Point(319, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 21;
@@ -384,7 +411,7 @@
             this.panelTransition.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(61, 213);
+            this.label2.Location = new System.Drawing.Point(64, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 22);
             this.label2.TabIndex = 21;
@@ -397,7 +424,7 @@
             this.panelTransition.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(509, 213);
+            this.label4.Location = new System.Drawing.Point(512, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 22);
             this.label4.TabIndex = 21;
@@ -436,50 +463,45 @@
             // 
             this.panelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.panelTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.panelTransition.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 1;
+            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 2F;
+            animation3.TransparencyCoeff = 0F;
+            this.panelTransition.DefaultAnimation = animation3;
             this.panelTransition.Interval = 5;
             // 
-            // cmdLugares
+            // cmdLocalizacion
             // 
-            this.cmdLugares.ActiveBorderThickness = 1;
-            this.cmdLugares.ActiveCornerRadius = 20;
-            this.cmdLugares.ActiveFillColor = System.Drawing.Color.White;
-            this.cmdLugares.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdLugares.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.cmdLugares.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdLugares.BackgroundImage")));
-            this.cmdLugares.ButtonText = "IR";
-            this.cmdLugares.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelTransition.SetDecoration(this.cmdLugares, BunifuAnimatorNS.DecorationType.None);
-            this.cmdLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLugares.ForeColor = System.Drawing.Color.SeaGreen;
-            this.cmdLugares.IdleBorderThickness = 1;
-            this.cmdLugares.IdleCornerRadius = 20;
-            this.cmdLugares.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdLugares.IdleForecolor = System.Drawing.Color.White;
-            this.cmdLugares.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdLugares.Location = new System.Drawing.Point(248, 302);
-            this.cmdLugares.Margin = new System.Windows.Forms.Padding(5);
-            this.cmdLugares.Name = "cmdLugares";
-            this.cmdLugares.Size = new System.Drawing.Size(145, 33);
-            this.cmdLugares.TabIndex = 34;
-            this.cmdLugares.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cmdLugares.Click += new System.EventHandler(this.cmdLugares_Click);
+            this.cmdLocalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panelTransition.SetDecoration(this.cmdLocalizacion, BunifuAnimatorNS.DecorationType.None);
+            this.cmdLocalizacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLocalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmdLocalizacion.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmdLocalizacion.Location = new System.Drawing.Point(477, 8);
+            this.cmdLocalizacion.Name = "cmdLocalizacion";
+            this.cmdLocalizacion.Size = new System.Drawing.Size(152, 49);
+            this.cmdLocalizacion.TabIndex = 37;
+            this.cmdLocalizacion.Text = "Nueva Ubicación";
+            this.cmdLocalizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdLocalizacion.UseVisualStyleBackColor = false;
+            this.cmdLocalizacion.Click += new System.EventHandler(this.cmdLugares_Click);
+            // 
+            // rdLocation
+            // 
+            this.rdLocation.ElipseRadius = 20;
+            this.rdLocation.TargetControl = this.cmdLocalizacion;
             // 
             // frmMenu_Principal
             // 
@@ -506,6 +528,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.panPantalla.ResumeLayout(false);
             this.panPantalla.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -542,7 +565,10 @@
         public System.Windows.Forms.Panel panPantalla;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pbUsuario;
-        private ns1.BunifuThinButton2 cmdLugares;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button cmdLocalizacion;
+        private ns1.BunifuElipse rdLocation;
     }
 }
 

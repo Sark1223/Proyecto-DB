@@ -127,6 +127,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 ciudad.estado_id = int.Parse(id);//guardarlo
             }
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
     public class CiudadBLL

@@ -46,9 +46,11 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.cmdIniciar = new ns1.BunifuThinButton2();
             this.cmdCerrar = new System.Windows.Forms.PictureBox();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // rdInicioSesion
@@ -227,6 +229,11 @@
             this.cmdCerrar.TabStop = false;
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            this.error.Icon = ((System.Drawing.Icon)(resources.GetObject("error.Icon")));
+            // 
             // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +266,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +290,6 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox cmdCerrar;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

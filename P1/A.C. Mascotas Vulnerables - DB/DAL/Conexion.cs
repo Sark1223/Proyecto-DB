@@ -110,5 +110,40 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             da.Fill(tb);
             return tb;
         }
+
+
+        public bool BuscarEnTabla(string sentencia, string valor, string texto, int posicion, Control control, ErrorProvider error)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sentencia);
+                cmd.Connection = EstablecerConexion();
+                conexion.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr[posicion].ToString() == valor)
+                    {
+                        return true;
+                    }
+
+                }
+                conexion.Close();
+
+                error.SetError(control, texto);
+                return false;
+            }
+            catch
+            {
+
+                error.SetError(control, texto);
+                return false;
+            }
+
+        }
     }
+
+
 }
+

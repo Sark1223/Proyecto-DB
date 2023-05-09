@@ -93,6 +93,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("editar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Equis {
             get {
                 object obj = ResourceManager.GetObject("Equis", resourceCulture);
@@ -116,6 +126,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         internal static System.Drawing.Bitmap hucha {
             get {
                 object obj = ResourceManager.GetObject("hucha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap localizacion {
+            get {
+                object obj = ResourceManager.GetObject("localizacion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         internal static System.Drawing.Bitmap Ŧσllσฬ_๓є__ღ_Ꮙαƪƪεȵα_ღ__Corgi {
             get {
                 object obj = ResourceManager.GetObject("Ŧσllσฬ ๓є @ღ Ꮙαƪƪεȵα ღ #Corgi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario__1_ {
+            get {
+                object obj = ResourceManager.GetObject("usuario (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,13 +23,35 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             InitializeComponent();
         }
+        ///Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void Mover(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         UsuarioBLL usuario = new UsuarioBLL();
         UsuarioDAL mu = new UsuarioDAL();
 
+        //Variables auxiliares 
+        string idActual = "";
+
         private void frmEdit_Usuario_Load(object sender, EventArgs e)
         {
-            mu.LlenarCBCiudad(cbCiudad);
+            if(lblTitle.Text == "AGREGAR USUARIO")
+            {
+                mu.LlenarCBCiudad(cbCiudad);
+            }
+            else
+            {
+                idActual = txtID.Text;
+            }
+            
             //if (lblTitle.Text == "AGREGAR PLATILLO")
             //{
             //    editar_plato.LlenarCBCategoria(cbCategoria);
@@ -89,7 +112,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             usuario.usu_foto = memoria.GetBuffer();
         }
 
-
+        //
+        bool foto = false;
         private void pbFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog selectorImagen = new OpenFileDialog();
@@ -100,6 +124,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 pbFoto.Image = Image.FromStream(selectorImagen.OpenFile());
 
+                foto = true;
             }
         }
 
@@ -125,19 +150,123 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             usuario.usu_colonia = txtColonia.Text;
             usuario.usu_CP = txtcp.Text;
         }
-        
-        private void cmdAgregar_Click(object sender, EventArgs e)
-        {
-            RecuperarInformacion();
-            if (mu.AgregarUsuario(usuario))
-            {
-                MessageBox.Show("El USUARIO " + usuario.usu_id + "se AGREGO correctamente", "Usuario Agregado");
 
+        //VALIDACION DE VALORES INGRESADOS POR EL USUARIO
+        public bool ValoresVaciosUsuario()
+        {
+            string valoresVacios = "";
+            int no_vacios = 0;
+            //VERIFICACION DE VALORES VACIOS
+            {
+                //Informacion personal
+                if (txtID.Text == "")
+                {
+                    valoresVacios += "Usuario id, ";
+                    no_vacios++;
+                }
+                if (txtContraseña.Text == "")
+                {
+                    valoresVacios += "Contraseña, ";
+                    no_vacios++;
+                }
+                if (txtNombre.Text == "")
+                {
+                    valoresVacios += "Nombre, ";
+                    no_vacios++;
+                }
+                if (txtApaterno.Text == "")
+                {
+                    valoresVacios += "Apellido paterno, ";
+                    no_vacios++;
+                }
+                if (txtAmaterno.Text == "")
+                {
+                    valoresVacios += "Apellido materno,";
+                    no_vacios++;
+                }
+                if (txtrfc.Text == "")
+                {
+                    valoresVacios += "RFC, ";
+                    no_vacios++;
+                }
+                if (foto == false)
+                {
+                    valoresVacios += "Imagen";
+                    no_vacios++;
+                }
+                if (cbCargo.Text == "- SELECCIONE CARGO -")
+                {
+                    valoresVacios += "Cargo, ";
+                    no_vacios++;
+                }
+                if (txtCorreo.Text == "")
+                {
+                    valoresVacios += "Correo,";
+                    no_vacios++;
+                }
+                if (txttelefono.Text == "")
+                {
+                    valoresVacios += "Telefono, ";
+                    no_vacios++;
+                }
+
+                //Direccion
+                if (cbCiudad.Text == "- SELECCIONE CIUDAD -")
+                {
+                    valoresVacios += "Ciudad, ";
+                    no_vacios++;
+                }
+                if (txtCalle.Text == "")
+                {
+                    valoresVacios += "Calle, ";
+                    no_vacios++;
+                }
+                if (txtExterior.Text == "")
+                {
+                    valoresVacios += "No. exterior,";
+                    no_vacios++;
+                }
+                if (txtcp.Text == "")
+                {
+                    valoresVacios += "CP, ";
+                    no_vacios++;
+                }
+                if (txtColonia.Text == "")
+                {
+                    valoresVacios += "Colonia,";
+                    no_vacios++;
+                }
+
+            }
+            if (no_vacios > 0)
+            {
+                MessageBox.Show("No puede dejar información en blanco \r\n\r\n" +
+                                "No. de valores vacios: " + no_vacios + "\r\n" +
+                                "Valores vacios: " + valoresVacios, "ERROR AL INGRESAR VALORES");
+                return true;
             }
             else
             {
-                MessageBox.Show("NO se pudo ingresar la informacion del usuario", "Error al ingresar usuario");
+                return false;
             }
+        }
+
+        private void cmdAgregar_Click(object sender, EventArgs e)
+        {
+            if (!ValoresVaciosUsuario())
+            {
+                RecuperarInformacion();
+                if (mu.AgregarUsuario(usuario))
+                {
+                    MessageBox.Show("El USUARIO " + usuario.usu_id + " se AGREGO correctamente", "Usuario Agregado");
+
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo ingresar la informacion del usuario", "Error al ingresar usuario");
+                }
+            }
+            
         }
 
         private void cbCiudad_SelectedIndexChanged(object sender, EventArgs e)
@@ -152,13 +281,30 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 usuario.ciudad_id = int.Parse(tb.Rows[0]["ciudad_id"].ToString());//guardarlo
 
                 //Recuperar informacion del ESTADO
-                tb = mu.InformacionID($"Select est_nombre, pais_id From ESTADO WHERE estado_id = {tb.Rows[1]["estado_id"]}");
-                txtEstado.Text = tb.Rows[0]["est_nombre"].ToString();//impriir estado
+                DataTable t = mu.InformacionID($"Select est_nombre, pais_id From ESTADO WHERE estado_id = {tb.Rows[0]["estado_id"]}");
+                txtEstado.Text = t.Rows[0]["est_nombre"].ToString();//impriir estado
 
                 //Recuperar informacion del PAIS
-                tb = mu.InformacionID($"Select pa_nombre From PAIS WHERE pais_id = {tb.Rows[1]["pais_id"]}");
-                txtEstado.Text = tb.Rows[0]["pa_nombre"].ToString();//impriir estado
+                DataTable a = mu.InformacionID($"Select pa_nombre From PAIS WHERE pais_id = {t.Rows[0]["pais_id"]}");
+                txtEstado.Text = a.Rows[0]["pa_nombre"].ToString();//impriir estado
 
+            }
+        }
+
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            if (!ValoresVaciosUsuario())
+            {
+                RecuperarInformacion();
+                if (mu.ModificarUsuario(usuario,idActual))
+                {
+                    MessageBox.Show("El USUARIO " + usuario.usu_id + " se MODIFICO correctamente", "Usuario Modificado");
+
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo Modificar la informacion del usuario", "Error al Modificar usuario");
+                }
             }
         }
     }
