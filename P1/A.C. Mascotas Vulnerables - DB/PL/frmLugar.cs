@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,10 +29,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
 
         //Objetos de forma
-        PaisBLL pais = new PaisBLL(); 
+        PaisBLL pais = new PaisBLL();
         EstadoBLL estado = new EstadoBLL();
         CiudadBLL ciudad = new CiudadBLL();
-        
+
         //Objetos de Clases
         LugarDAL lugar = new LugarDAL();
 
@@ -41,6 +42,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             pais.pais_id = int.Parse(txtPaisID.Text);
             pais.pa_nombre = txtNombrePais.Text;
         }
+
 
         private void btnAgregarPais_Click(object sender, EventArgs e)
         {
@@ -128,10 +130,37 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             }
         }
 
+        LugarDAL lugDAL = new LugarDAL();
+
+        private void ModificarCiudad(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            /*CREATE TABLE CIUDAD (
+    ciudad_id        INTEGER NOT NULL,
+    ci_nombre        VARCHAR(50),
+    estado_id INTEGER NOT NULL
+);*/
+            lblTitulo.Text =  "MODIFICAR USUARIO";
+            {
+                int indice =  e.RowIndex;
+                //Obtener toda la informacion por medio de plato_id 
+                DataTable tb = lugDAL.InformacionID($"Select * from CIUDAD WHERE ciudad_id = {dgvCiudad.Rows[indice].Cells[0].Value}");
+                //Mostrar ID
+                txtCiudadID.Text = tb.Rows[0]["ciudad_id"].ToString();
+                //Nombre del plato
+                txtNombreCiudad.Text = tb.Rows[0]["ci_nombre"].ToString();
+                //Desccripcion
+                txtEstadoID.Text = tb.Rows[0]["estado_id"].ToString();
+
+                ShowDialog();
+            }
+
+        }
+
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 
     public class CiudadBLL
@@ -143,7 +172,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
     public class EstadoBLL
     {
-        
+
         public int estado_id;
         public string est_nombre;
         public int pais_id;
