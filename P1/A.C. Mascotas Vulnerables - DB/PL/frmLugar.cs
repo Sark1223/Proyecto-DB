@@ -58,6 +58,23 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 MessageBox.Show("NO se pudo ingresar la informacion del pais", "Error al ingresar pais");
             }
         }
+        private void ModificarPais(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            lblTitulo.Text = "MODIFICAR LUGAR";
+            {
+                int indice = e.RowIndex;
+                //Obtener toda la informacion por medio de plato_id 
+                DataTable tb = lugDAL.InformacionID($"Select * from CIUDAD WHERE pais_id = {dgvCiudad.Rows[indice].Cells[0].Value}");
+                //Mostrar ID
+                txtPaisID.Text = tb.Rows[0]["pais_id"].ToString();
+                //Nombre del plato
+                txtNombrePais.Text = tb.Rows[0]["pa_nombre"].ToString();
+
+                ShowDialog();
+            }
+
+        }
 
         //METODOS DE ESTADO ------------------------------------------------------------
         private void RecuperarInformacionEstado()
@@ -93,6 +110,25 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 //Reccuperar el id del nombre de la ciudad
                 estado.pais_id = int.Parse(id);//guardarlo
             }
+        }
+        private void ModificarEstado(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            lblTitulo.Text = "MODIFICAR LUGAR";
+            {
+                int indice = e.RowIndex;
+                //Obtener toda la informacion por medio de plato_id 
+                DataTable tb = lugDAL.InformacionID($"Select * from CIUDAD WHERE estado_id = {dgvEstado.Rows[indice].Cells[0].Value}");
+                //Mostrar ID
+                txtEstadoID.Text = tb.Rows[0]["estado_id"].ToString();
+                //Nombre del plato
+                txtNombreEstado.Text = tb.Rows[0]["est_nombre"].ToString();
+                //Desccripcion
+                txtPaisID.Text = tb.Rows[0]["pais_id"].ToString();
+
+                ShowDialog();
+            }
+
         }
 
         //METODOS DE CIUDAD ------------------------------------------------------------
@@ -139,7 +175,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
     ci_nombre        VARCHAR(50),
     estado_id INTEGER NOT NULL
 );*/
-            lblTitulo.Text =  "MODIFICAR USUARIO";
+            lblTitulo.Text =  "MODIFICAR LUGAR";
             {
                 int indice =  e.RowIndex;
                 //Obtener toda la informacion por medio de plato_id 
