@@ -25,6 +25,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
 
+        public DataSet Buscar(string valor)
+        {
+            SqlCommand comandoSQL = new SqlCommand($"Select * from USUARIO where (usu_nombre_s like '%{valor}%') or (usuario_id like '%{valor}%')");
+            return conexion.EjecutarSentenciaConRetorno(comandoSQL);
+        }
+
         public void LlenarCBCiudad(ComboBox cbCiudad)
         {
             conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "- SELECCIONE CIUDAD -", 1);

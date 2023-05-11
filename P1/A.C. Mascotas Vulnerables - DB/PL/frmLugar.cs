@@ -58,6 +58,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 MessageBox.Show("NO se pudo ingresar la informacion del pais", "Error al ingresar pais");
             }
         }
+
         private void ModificarPais(object sender, DataGridViewCellMouseEventArgs e)
         {
 
@@ -65,13 +66,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             {
                 int indice = e.RowIndex;
                 //Obtener toda la informacion por medio de plato_id 
-                DataTable tb = lugDAL.InformacionID($"Select * from CIUDAD WHERE pais_id = {dgvCiudad.Rows[indice].Cells[0].Value}");
+                DataTable tb = lugDAL.InformacionID($"Select * from PAIS WHERE pais_id = {dgvPais.Rows[indice].Cells[0].Value}");
                 //Mostrar ID
                 txtPaisID.Text = tb.Rows[0]["pais_id"].ToString();
                 //Nombre del plato
                 txtNombrePais.Text = tb.Rows[0]["pa_nombre"].ToString();
-
-                ShowDialog();
             }
 
         }
@@ -118,15 +117,13 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             {
                 int indice = e.RowIndex;
                 //Obtener toda la informacion por medio de plato_id 
-                DataTable tb = lugDAL.InformacionID($"Select * from CIUDAD WHERE estado_id = {dgvEstado.Rows[indice].Cells[0].Value}");
+                DataTable tb = lugDAL.InformacionID($"Select * from ESTADO WHERE estado_id = {dgvEstado.Rows[indice].Cells[0].Value}");
                 //Mostrar ID
                 txtEstadoID.Text = tb.Rows[0]["estado_id"].ToString();
                 //Nombre del plato
                 txtNombreEstado.Text = tb.Rows[0]["est_nombre"].ToString();
                 //Desccripcion
                 txtPaisID.Text = tb.Rows[0]["pais_id"].ToString();
-
-                ShowDialog();
             }
 
         }
@@ -186,8 +183,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 txtNombreCiudad.Text = tb.Rows[0]["ci_nombre"].ToString();
                 //Desccripcion
                 txtEstadoID.Text = tb.Rows[0]["estado_id"].ToString();
-
-                ShowDialog();
             }
 
         }

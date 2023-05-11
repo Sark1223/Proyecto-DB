@@ -1,4 +1,5 @@
 ﻿using A.C.Mascotas_Vulnerables___DB.DAL;
+using A.C.Mascotas_Vulnerables___DB.PL;
 using BunifuAnimatorNS;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace A.C.Mascotas_Vulnerables___DB
         //Objetos de clase
         frmMenu_Principal menu = new frmMenu_Principal();
         InicioSesionDaL inicioDAL = new InicioSesionDaL();
+        frmNuevaAportacion nuevaAportacion = new frmNuevaAportacion();
+        frmAportacion aportacion = new frmAportacion();
 
         private void InicioSesion_Load(object sender, EventArgs e)
         {
@@ -42,13 +45,28 @@ namespace A.C.Mascotas_Vulnerables___DB
 
             if (inicioDAL.BuscarUsuario(txtUsuario.Text, txtUsuario, error)/*usuario && contraseña*/)
             {
-                DataTable tb = inicioDAL.InformacionID($"Select usu_apaterno, usu_foto, usu_cargo, usu_contraseña From USUARIO WHERE usuario_id = {txtUsuario.Text}");
+                DataTable tb = inicioDAL.InformacionID($"Select usu_apaterno, usu_amaterno, usu_nombre_s, usu_foto, usu_cargo, usu_contraseña From USUARIO WHERE usuario_id = {txtUsuario.Text}");
 
                 string contraseña = tb.Rows[0]["usu_contraseña"].ToString();
 
-                if(contraseña == txtContraseña.Text ) 
+                if (contraseña == txtContraseña.Text)
                 {
                     error.SetError(txtContraseña, "");
+                    menu.txtPuesto.Text = tb.Rows[0]["usu_cargo"].ToString();
+                    menu.txtUsuario.Text = txtUsuario.Text + " " + tb.Rows[0]["usu_apaterno"].ToString();
+                    
+                    nuevaAportacion.txtEncargado1.Text = tb.Rows[0]["usu_apaterno"].ToString() + " " + tb.Rows[0]["usu_amaterno"].ToString() + " " + tb.Rows[0]["usu_nombre_s"].ToString();
+
+                    //aportacion.ObtenerObjetoNuevaAportacion(nuevaAportacion);
+                    
+                    menu.ObtenerObjetoAportacion(aportacion, nuevaAportacion);
+                    
+                    //Obtener el arreglo de Bytes 
+                    byte[] img = (byte[])tb.Rows[0]["usu_foto"];
+                    //Convertir el arreglo a imagen
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream(img);
+                    menu.pbUsuario.Image = Image.FromStream(ms);
+
                     this.Hide();
                     menu.ShowDialog();
                     this.Show();

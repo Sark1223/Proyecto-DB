@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu_Principal));
             this.panEncabezado = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
@@ -55,11 +55,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmdLocalizacion = new System.Windows.Forms.Button();
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panelTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.cmdLocalizacion = new System.Windows.Forms.Button();
             this.rdLocation = new ns1.BunifuElipse(this.components);
             this.panEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -176,7 +176,7 @@
             this.txtPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.txtPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.panelTransition.SetDecoration(this.txtPuesto, BunifuAnimatorNS.DecorationType.None);
-            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtPuesto.ForeColor = System.Drawing.Color.White;
             this.txtPuesto.Location = new System.Drawing.Point(3, 125);
             this.txtPuesto.Multiline = true;
@@ -204,12 +204,12 @@
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.panelTransition.SetDecoration(this.txtUsuario, BunifuAnimatorNS.DecorationType.None);
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(1, 77);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ReadOnly = true;
-            this.txtUsuario.Size = new System.Drawing.Size(102, 17);
+            this.txtUsuario.Size = new System.Drawing.Size(102, 14);
             this.txtUsuario.TabIndex = 22;
             this.txtUsuario.TabStop = false;
             this.txtUsuario.Text = "Santos Karla";
@@ -431,6 +431,23 @@
             this.label4.Text = "Administradores";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmdLocalizacion
+            // 
+            this.cmdLocalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panelTransition.SetDecoration(this.cmdLocalizacion, BunifuAnimatorNS.DecorationType.None);
+            this.cmdLocalizacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLocalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmdLocalizacion.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmdLocalizacion.Location = new System.Drawing.Point(477, 8);
+            this.cmdLocalizacion.Name = "cmdLocalizacion";
+            this.cmdLocalizacion.Size = new System.Drawing.Size(152, 49);
+            this.cmdLocalizacion.TabIndex = 37;
+            this.cmdLocalizacion.Text = "Nueva Ubicación";
+            this.cmdLocalizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdLocalizacion.UseVisualStyleBackColor = false;
+            this.cmdLocalizacion.Click += new System.EventHandler(this.cmdLugares_Click);
+            // 
             // rdForma
             // 
             this.rdForma.ElipseRadius = 30;
@@ -463,40 +480,23 @@
             // 
             this.panelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.panelTransition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 1;
-            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 2F;
-            animation3.TransparencyCoeff = 0F;
-            this.panelTransition.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 1;
+            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 2F;
+            animation1.TransparencyCoeff = 0F;
+            this.panelTransition.DefaultAnimation = animation1;
             this.panelTransition.Interval = 5;
-            // 
-            // cmdLocalizacion
-            // 
-            this.cmdLocalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.panelTransition.SetDecoration(this.cmdLocalizacion, BunifuAnimatorNS.DecorationType.None);
-            this.cmdLocalizacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdLocalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cmdLocalizacion.ForeColor = System.Drawing.SystemColors.Control;
-            this.cmdLocalizacion.Location = new System.Drawing.Point(477, 8);
-            this.cmdLocalizacion.Name = "cmdLocalizacion";
-            this.cmdLocalizacion.Size = new System.Drawing.Size(152, 49);
-            this.cmdLocalizacion.TabIndex = 37;
-            this.cmdLocalizacion.Text = "Nueva Ubicación";
-            this.cmdLocalizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdLocalizacion.UseVisualStyleBackColor = false;
-            this.cmdLocalizacion.Click += new System.EventHandler(this.cmdLugares_Click);
             // 
             // rdLocation
             // 
@@ -544,8 +544,8 @@
         private ns1.BunifuElipse rdForma;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPuesto;
+        public System.Windows.Forms.TextBox txtUsuario;
+        public System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox5;

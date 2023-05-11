@@ -18,6 +18,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             InitializeComponent();
         }
 
+        public void ObtenerObjetoNuevaAportacion(frmNuevaAportacion nuevaAportacion)
+        {
+            nAportacion = nuevaAportacion;
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();

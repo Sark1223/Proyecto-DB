@@ -43,6 +43,12 @@ namespace A.C.Mascotas_Vulnerables___DB
 
         }
 
+        public void ObtenerObjetoAportacion(frmAportacion aportacion, frmNuevaAportacion nuevaAportacion) 
+        {
+            this.aportacion = aportacion;
+            aportacion.ObtenerObjetoNuevaAportacion(nuevaAportacion);
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();

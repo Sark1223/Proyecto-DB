@@ -37,11 +37,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void cmdAgregarUsuario_Click(object sender, EventArgs e)
         {
             eusuario.cbCargo.Items.Insert(0, "- SELECCIONE CARGO -");
-            eusuario.cbCargo.Items.Insert(1, "ADMINISTRADOR");
-            eusuario.cbCargo.Items.Insert(1, "ASISTENTE ADMINISTRATIVO");
+            eusuario.cbCargo.Items.Insert(1, "Administrados");
+            eusuario.cbCargo.Items.Insert(2, "Asistente administrativo");
             eusuario.cbCargo.SelectedIndex = 0;
             eusuario.lblTitle.Text = "AGREGAR USUARIO";
             eusuario.ShowDialog();
+            dgvUsuarios.DataSource = usuDAL.MostrarUsuarios().Tables[0];
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
@@ -100,8 +101,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 {
 
                     eusuario.cbCargo.Items.Insert(0, "- SELECCIONE CARGO -");
-                    eusuario.cbCargo.Items.Insert(1, "ADMINISTRADOR");
-                    eusuario.cbCargo.Items.Insert(2, "ASISTENTE ADMINISTRATIVO");
+                    eusuario.cbCargo.Items.Insert(1, "Administrador");
+                    eusuario.cbCargo.Items.Insert(2, "Asistente administrativo");
 
                     eusuario.cbCargo.SelectedIndex = i;
                     if (eusuario.cbCargo.SelectedItem.ToString() == tb.Rows[0]["usu_cargo"].ToString())
@@ -157,8 +158,13 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 eusuario.dtIngreso.Value = (DateTime)tb.Rows[0]["usu_fecha_ingreso"];
 
                 eusuario.ShowDialog();
-
+                dgvUsuarios.DataSource = usuDAL.MostrarUsuarios().Tables[0];
             }
+        }
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            dgvUsuarios.DataSource = usuDAL.Buscar(txtBuscar.Text).Tables[0];
         }
     }
 }

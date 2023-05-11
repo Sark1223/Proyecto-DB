@@ -89,7 +89,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.bunifuSeparator16 = new ns1.BunifuSeparator();
             this.pnDatosCuenta = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblAgregarFoto = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.rdDatosCuenta = new ns1.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -100,6 +100,10 @@
             this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.cmdModificar = new System.Windows.Forms.Panel();
             this.lblModificar = new System.Windows.Forms.Label();
+            this.cmdBorrar = new System.Windows.Forms.Panel();
+            this.lblBorrar = new System.Windows.Forms.Label();
+            this.pnModificar = new System.Windows.Forms.Panel();
+            this.pbBorrar = new System.Windows.Forms.PictureBox();
             this.pbModificar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -107,10 +111,15 @@
             this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdCerrar = new ns1.BunifuImageButton();
+            this.rdEliminar = new ns1.BunifuElipse(this.components);
+            this.rdModificar = new ns1.BunifuElipse(this.components);
             this.encabezado.SuspendLayout();
             this.cmdAgregar.SuspendLayout();
             this.pnDatosCuenta.SuspendLayout();
             this.cmdModificar.SuspendLayout();
+            this.cmdBorrar.SuspendLayout();
+            this.pnModificar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -271,7 +280,6 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.White;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCorreo.Location = new System.Drawing.Point(27, 296);
             this.txtCorreo.Name = "txtCorreo";
@@ -306,7 +314,6 @@
             // 
             this.txtrfc.BackColor = System.Drawing.Color.White;
             this.txtrfc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtrfc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtrfc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtrfc.Location = new System.Drawing.Point(26, 242);
             this.txtrfc.Name = "txtrfc";
@@ -375,7 +382,6 @@
             // 
             this.txtApaterno.BackColor = System.Drawing.Color.White;
             this.txtApaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtApaterno.Location = new System.Drawing.Point(509, 113);
             this.txtApaterno.Name = "txtApaterno";
@@ -387,7 +393,6 @@
             // 
             this.txtAmaterno.BackColor = System.Drawing.Color.White;
             this.txtAmaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAmaterno.Location = new System.Drawing.Point(305, 167);
             this.txtAmaterno.Name = "txtAmaterno";
@@ -519,12 +524,12 @@
             this.lblAgregar.Size = new System.Drawing.Size(59, 17);
             this.lblAgregar.TabIndex = 0;
             this.lblAgregar.Text = "Agregar";
+            this.lblAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // txtPais
             // 
             this.txtPais.BackColor = System.Drawing.Color.White;
             this.txtPais.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPais.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPais.Location = new System.Drawing.Point(495, 440);
             this.txtPais.Name = "txtPais";
@@ -594,7 +599,6 @@
             // 
             this.txtEstado.BackColor = System.Drawing.Color.White;
             this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEstado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEstado.Location = new System.Drawing.Point(306, 440);
             this.txtEstado.Name = "txtEstado";
@@ -675,7 +679,6 @@
             // 
             this.txtInterior.BackColor = System.Drawing.Color.White;
             this.txtInterior.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInterior.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtInterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtInterior.Location = new System.Drawing.Point(362, 386);
             this.txtInterior.Name = "txtInterior";
@@ -686,7 +689,6 @@
             // 
             this.txtColonia.BackColor = System.Drawing.Color.White;
             this.txtColonia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtColonia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtColonia.Location = new System.Drawing.Point(467, 386);
             this.txtColonia.Name = "txtColonia";
@@ -698,7 +700,6 @@
             // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
             this.txtCalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCalle.Location = new System.Drawing.Point(29, 386);
             this.txtCalle.Name = "txtCalle";
@@ -801,7 +802,7 @@
             // pnDatosCuenta
             // 
             this.pnDatosCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.pnDatosCuenta.Controls.Add(this.label9);
+            this.pnDatosCuenta.Controls.Add(this.lblAgregarFoto);
             this.pnDatosCuenta.Controls.Add(this.pbFoto);
             this.pnDatosCuenta.Controls.Add(this.txtID);
             this.pnDatosCuenta.Controls.Add(this.label7);
@@ -814,14 +815,14 @@
             this.pnDatosCuenta.Size = new System.Drawing.Size(272, 125);
             this.pnDatosCuenta.TabIndex = 1;
             // 
-            // label9
+            // lblAgregarFoto
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(41, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Agregar foto";
+            this.lblAgregarFoto.AutoSize = true;
+            this.lblAgregarFoto.Location = new System.Drawing.Point(41, 79);
+            this.lblAgregarFoto.Name = "lblAgregarFoto";
+            this.lblAgregarFoto.Size = new System.Drawing.Size(65, 13);
+            this.lblAgregarFoto.TabIndex = 2;
+            this.lblAgregarFoto.Text = "Agregar foto";
             // 
             // label28
             // 
@@ -851,7 +852,6 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombre.Location = new System.Drawing.Point(305, 113);
             this.txtNombre.Name = "txtNombre";
@@ -904,7 +904,7 @@
             this.cmdModificar.BackColor = System.Drawing.Color.MistyRose;
             this.cmdModificar.Controls.Add(this.pbModificar);
             this.cmdModificar.Controls.Add(this.lblModificar);
-            this.cmdModificar.Location = new System.Drawing.Point(432, 495);
+            this.cmdModificar.Location = new System.Drawing.Point(17, 12);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(81, 72);
             this.cmdModificar.TabIndex = 188;
@@ -915,21 +915,63 @@
             this.lblModificar.AutoSize = true;
             this.lblModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificar.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblModificar.Location = new System.Drawing.Point(10, 50);
+            this.lblModificar.Location = new System.Drawing.Point(9, 44);
             this.lblModificar.Name = "lblModificar";
             this.lblModificar.Size = new System.Drawing.Size(65, 17);
             this.lblModificar.TabIndex = 0;
             this.lblModificar.Text = "Modificar";
+            this.lblModificar.Click += new System.EventHandler(this.cmdModificar_Click);
+            // 
+            // cmdBorrar
+            // 
+            this.cmdBorrar.BackColor = System.Drawing.Color.MistyRose;
+            this.cmdBorrar.Controls.Add(this.pbBorrar);
+            this.cmdBorrar.Controls.Add(this.lblBorrar);
+            this.cmdBorrar.Location = new System.Drawing.Point(146, 12);
+            this.cmdBorrar.Name = "cmdBorrar";
+            this.cmdBorrar.Size = new System.Drawing.Size(81, 72);
+            this.cmdBorrar.TabIndex = 189;
+            // 
+            // lblBorrar
+            // 
+            this.lblBorrar.AutoSize = true;
+            this.lblBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBorrar.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblBorrar.Location = new System.Drawing.Point(13, 45);
+            this.lblBorrar.Name = "lblBorrar";
+            this.lblBorrar.Size = new System.Drawing.Size(58, 17);
+            this.lblBorrar.TabIndex = 0;
+            this.lblBorrar.Text = "Eliminar";
+            // 
+            // pnModificar
+            // 
+            this.pnModificar.Controls.Add(this.cmdBorrar);
+            this.pnModificar.Controls.Add(this.cmdModificar);
+            this.pnModificar.Location = new System.Drawing.Point(241, 485);
+            this.pnModificar.Name = "pnModificar";
+            this.pnModificar.Size = new System.Drawing.Size(242, 96);
+            this.pnModificar.TabIndex = 190;
+            // 
+            // pbBorrar
+            // 
+            this.pbBorrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.borrar__1_;
+            this.pbBorrar.Location = new System.Drawing.Point(18, 6);
+            this.pbBorrar.Name = "pbBorrar";
+            this.pbBorrar.Size = new System.Drawing.Size(44, 41);
+            this.pbBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBorrar.TabIndex = 111;
+            this.pbBorrar.TabStop = false;
             // 
             // pbModificar
             // 
             this.pbModificar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.editar__1_;
-            this.pbModificar.Location = new System.Drawing.Point(23, 11);
+            this.pbModificar.Location = new System.Drawing.Point(22, 7);
             this.pbModificar.Name = "pbModificar";
             this.pbModificar.Size = new System.Drawing.Size(38, 39);
             this.pbModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbModificar.TabIndex = 111;
             this.pbModificar.TabStop = false;
+            this.pbModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // pictureBox2
             // 
@@ -971,6 +1013,7 @@
             this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAgregar.TabIndex = 111;
             this.pbAgregar.TabStop = false;
+            this.pbAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // pictureBox1
             // 
@@ -996,13 +1039,23 @@
             this.cmdCerrar.Zoom = 10;
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
+            // rdEliminar
+            // 
+            this.rdEliminar.ElipseRadius = 70;
+            this.rdEliminar.TargetControl = this.cmdBorrar;
+            // 
+            // rdModificar
+            // 
+            this.rdModificar.ElipseRadius = 70;
+            this.rdModificar.TargetControl = this.cmdModificar;
+            // 
             // frmEdit_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(710, 593);
-            this.Controls.Add(this.cmdModificar);
+            this.Controls.Add(this.pnModificar);
             this.Controls.Add(this.cbCiudad);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox4);
@@ -1075,6 +1128,10 @@
             this.pnDatosCuenta.PerformLayout();
             this.cmdModificar.ResumeLayout(false);
             this.cmdModificar.PerformLayout();
+            this.cmdBorrar.ResumeLayout(false);
+            this.cmdBorrar.PerformLayout();
+            this.pnModificar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1158,7 +1215,7 @@
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.Label label29;
         public ns1.BunifuSeparator bunifuSeparator21;
-        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label lblAgregarFoto;
         public ns1.BunifuElipse rdcmdAgregar;
         public System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.PictureBox pictureBox2;
@@ -1166,5 +1223,11 @@
         public System.Windows.Forms.Panel cmdModificar;
         public System.Windows.Forms.PictureBox pbModificar;
         public System.Windows.Forms.Label lblModificar;
+        public System.Windows.Forms.Panel cmdBorrar;
+        public System.Windows.Forms.PictureBox pbBorrar;
+        public System.Windows.Forms.Label lblBorrar;
+        private System.Windows.Forms.Panel pnModificar;
+        private ns1.BunifuElipse rdEliminar;
+        private ns1.BunifuElipse rdModificar;
     }
 }

@@ -45,10 +45,14 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             if(lblTitle.Text == "AGREGAR USUARIO")
             {
+                cmdAgregar.Visible = true;
+                pnModificar.Visible = false;
                 mu.LlenarCBCiudad(cbCiudad);
             }
             else
             {
+                cmdAgregar.Visible = false;
+                pnModificar.Visible = true;
                 idActual = txtID.Text;
             }
             
@@ -123,7 +127,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             {
                 pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 pbFoto.Image = Image.FromStream(selectorImagen.OpenFile());
-
+                lblAgregarFoto.Visible = false;
                 foto = true;
             }
         }

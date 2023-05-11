@@ -69,7 +69,7 @@
             this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.pnFirmas = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
+            this.txtEncargado1 = new ns1.BunifuCustomLabel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -579,7 +579,7 @@
             // pnFirmas
             // 
             this.pnFirmas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
-            this.pnFirmas.Controls.Add(this.bunifuCustomLabel4);
+            this.pnFirmas.Controls.Add(this.txtEncargado1);
             this.pnFirmas.Controls.Add(this.comboBox2);
             this.pnFirmas.Controls.Add(this.panel5);
             this.pnFirmas.Controls.Add(this.label12);
@@ -589,16 +589,16 @@
             this.pnFirmas.Size = new System.Drawing.Size(576, 122);
             this.pnFirmas.TabIndex = 38;
             // 
-            // bunifuCustomLabel4
+            // txtEncargado1
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(121, 43);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(196, 20);
-            this.bunifuCustomLabel4.TabIndex = 41;
-            this.bunifuCustomLabel4.Text = "Karla Judith Santos Rivera";
+            this.txtEncargado1.AutoSize = true;
+            this.txtEncargado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEncargado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEncargado1.Location = new System.Drawing.Point(121, 43);
+            this.txtEncargado1.Name = "txtEncargado1";
+            this.txtEncargado1.Size = new System.Drawing.Size(196, 20);
+            this.txtEncargado1.TabIndex = 41;
+            this.txtEncargado1.Text = "Karla Judith Santos Rivera";
             // 
             // comboBox2
             // 
@@ -716,53 +716,53 @@
 
         #endregion
 
-        private ns1.BunifuElipse rdNuevaAportacion;
-        private System.Windows.Forms.Panel panel1;
-        private ns1.BunifuImageButton bunifuImageButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private ns1.BunifuThinButton2 btnAgregarRecibo;
-        private System.Windows.Forms.Panel pnSocio;
-        private System.Windows.Forms.Panel pnMonto;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label10;
-        private ns1.BunifuMetroTextbox bunifuMetroTextbox5;
-        private ns1.BunifuMetroTextbox bunifuMetroTextbox4;
-        private ns1.BunifuDatepicker bunifuDatepicker1;
-        private ns1.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label11;
-        private ns1.BunifuSeparator bunifuSeparator1;
-        private ns1.BunifuImageButton btnCerrar;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private ns1.BunifuThinButton2 bunifuThinButton21;
-        private ns1.BunifuSeparator bunifuSeparator4;
-        private ns1.BunifuCustomLabel bunifuCustomLabel3;
-        private ns1.BunifuSeparator bunifuSeparator3;
-        private ns1.BunifuCustomLabel bunifuCustomLabel2;
-        private ns1.BunifuSeparator bunifuSeparator2;
-        private ns1.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel pnFirmas;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private ns1.BunifuCustomLabel bunifuCustomLabel4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private ns1.BunifuElipse rdSocio;
-        private ns1.BunifuElipse rdMonto;
-        private ns1.BunifuElipse rdFirmas;
+        public ns1.BunifuElipse rdNuevaAportacion;
+        public System.Windows.Forms.Panel panel1;
+        public ns1.BunifuImageButton bunifuImageButton1;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
+        public ns1.BunifuThinButton2 btnAgregarRecibo;
+        public System.Windows.Forms.Panel pnSocio;
+        public System.Windows.Forms.Panel pnMonto;
+        public System.Windows.Forms.Panel panel9;
+        public System.Windows.Forms.Label label10;
+        public ns1.BunifuMetroTextbox bunifuMetroTextbox5;
+        public ns1.BunifuMetroTextbox bunifuMetroTextbox4;
+        public ns1.BunifuDatepicker bunifuDatepicker1;
+        public ns1.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label label11;
+        public ns1.BunifuSeparator bunifuSeparator1;
+        public ns1.BunifuImageButton btnCerrar;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public ns1.BunifuThinButton2 bunifuThinButton21;
+        public ns1.BunifuSeparator bunifuSeparator4;
+        public ns1.BunifuCustomLabel bunifuCustomLabel3;
+        public ns1.BunifuSeparator bunifuSeparator3;
+        public ns1.BunifuCustomLabel bunifuCustomLabel2;
+        public ns1.BunifuSeparator bunifuSeparator2;
+        public ns1.BunifuCustomLabel bunifuCustomLabel1;
+        public System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.Panel pnFirmas;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label13;
+        public ns1.BunifuCustomLabel txtEncargado1;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public ns1.BunifuElipse rdSocio;
+        public ns1.BunifuElipse rdMonto;
+        public ns1.BunifuElipse rdFirmas;
     }
 }
