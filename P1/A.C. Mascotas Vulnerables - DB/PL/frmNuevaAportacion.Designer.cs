@@ -70,7 +70,7 @@
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.pnFirmas = new System.Windows.Forms.Panel();
             this.txtEncargado1 = new ns1.BunifuCustomLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbEncargado2 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -580,7 +580,7 @@
             // 
             this.pnFirmas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
             this.pnFirmas.Controls.Add(this.txtEncargado1);
-            this.pnFirmas.Controls.Add(this.comboBox2);
+            this.pnFirmas.Controls.Add(this.cbEncargado2);
             this.pnFirmas.Controls.Add(this.panel5);
             this.pnFirmas.Controls.Add(this.label12);
             this.pnFirmas.Controls.Add(this.label13);
@@ -600,13 +600,14 @@
             this.txtEncargado1.TabIndex = 41;
             this.txtEncargado1.Text = "Karla Judith Santos Rivera";
             // 
-            // comboBox2
+            // cbEncargado2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(121, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(255, 21);
-            this.comboBox2.TabIndex = 40;
+            this.cbEncargado2.FormattingEnabled = true;
+            this.cbEncargado2.Location = new System.Drawing.Point(121, 89);
+            this.cbEncargado2.Name = "cbEncargado2";
+            this.cbEncargado2.Size = new System.Drawing.Size(255, 21);
+            this.cbEncargado2.TabIndex = 40;
+            this.cbEncargado2.SelectedIndexChanged += new System.EventHandler(this.cbEncargado2_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -760,7 +761,7 @@
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label label13;
         public ns1.BunifuCustomLabel txtEncargado1;
-        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox cbEncargado2;
         public ns1.BunifuElipse rdSocio;
         public ns1.BunifuElipse rdMonto;
         public ns1.BunifuElipse rdFirmas;

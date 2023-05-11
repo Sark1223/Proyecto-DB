@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using A.C.Mascotas_Vulnerables___DB.BLL;
 
 namespace A.C.Mascotas_Vulnerables___DB.DAL
@@ -17,7 +18,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             conexion = new Conexion();
         }
         //METODOS Socio
-        public bool AgregarUsuario(ReciboBLL recibo)
+        public bool AgregarRecibo(ReciboBLL recibo)
         {
             SqlCommand agregar = new SqlCommand(
         "insert into RECIBO(rec_folio," +
@@ -42,10 +43,16 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return true;
 
         }
-        public DataSet MostratSocios()
+
+        public DataSet MostratRecibo()
         {
             SqlCommand comandoSQL = new SqlCommand("Select * from RECIBO");
             return conexion.EjecutarSentenciaConRetorno(comandoSQL);
+        }
+
+        public void LlenarCBEncargado2(ComboBox cbEncargado)
+        {
+            conexion.RellenarCB(cbEncargado, "SELECT * FROM USUARIO", "- SELECCIONE ENCARGADO -", 1);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using A.C.Mascotas_Vulnerables___DB.BLL;
+using A.C.Mascotas_Vulnerables___DB.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             InitializeComponent();
         }
 
+        ReciboDAL recibo = new ReciboDAL();
+
         private void cmdCerrar(object sender, EventArgs e)
         {
             this.Close();
@@ -24,7 +28,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void frmNuevaAportacion_Load(object sender, EventArgs e)
         {
-
+            recibo.LlenarCBEncargado2(cbEncargado2);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -43,6 +47,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEncargado2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
