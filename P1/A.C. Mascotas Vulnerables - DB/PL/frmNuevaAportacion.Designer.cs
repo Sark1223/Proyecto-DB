@@ -125,6 +125,7 @@
             this.btnCerrar.TabIndex = 38;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pictureBox1
             // 

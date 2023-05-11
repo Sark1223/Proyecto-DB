@@ -54,5 +54,11 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             conexion.RellenarCB(cbEncargado, "SELECT * FROM USUARIO", "- SELECCIONE ENCARGADO -", 1);
         }
+
+        public DataSet Buscar(string valor)
+        {
+            SqlCommand comandoSQL = new SqlCommand($"Select * from USUARIO where (usu_nombre_s like '%{valor}%') or (usuario_id like '%{valor}%')");
+            return conexion.EjecutarSentenciaConRetorno(comandoSQL);
+        }
     }
 }

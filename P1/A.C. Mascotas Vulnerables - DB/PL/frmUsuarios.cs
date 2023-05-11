@@ -36,8 +36,9 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdAgregarUsuario_Click(object sender, EventArgs e)
         {
+            eusuario.cbCargo.Items.Clear();
             eusuario.cbCargo.Items.Insert(0, "- SELECCIONE CARGO -");
-            eusuario.cbCargo.Items.Insert(1, "Administrados");
+            eusuario.cbCargo.Items.Insert(1, "Administrador");
             eusuario.cbCargo.Items.Insert(2, "Asistente administrativo");
             eusuario.cbCargo.SelectedIndex = 0;
             eusuario.lblTitle.Text = "AGREGAR USUARIO";
@@ -92,20 +93,22 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 byte[] img = (byte[])tb.Rows[0]["usu_foto"];
                 //Convertir el arreglo a imagen
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(img);
+                eusuario.lblAgregarFoto.Visible = false;
+                eusuario.pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
                 eusuario.pbFoto.Image = Image.FromStream(ms);
 
                 //Dificultad
                 bool bandera = false;
                 int i = 0;
+                eusuario.cbCargo.Items.Clear();
+                eusuario.cbCargo.Items.Insert(0, "- SELECCIONE CARGO -");
+                eusuario.cbCargo.Items.Insert(1, "Administrador");
+                eusuario.cbCargo.Items.Insert(2, "Asistente administrativo");
+
                 while (bandera == false)
                 {
-
-                    eusuario.cbCargo.Items.Insert(0, "- SELECCIONE CARGO -");
-                    eusuario.cbCargo.Items.Insert(1, "Administrador");
-                    eusuario.cbCargo.Items.Insert(2, "Asistente administrativo");
-
                     eusuario.cbCargo.SelectedIndex = i;
-                    if (eusuario.cbCargo.SelectedItem.ToString() == tb.Rows[0]["usu_cargo"].ToString())
+                    if (eusuario.cbCargo.SelectedItem.ToString().ToLower() == tb.Rows[0]["usu_cargo"].ToString().ToLower())
                     {
                         bandera = true;
                     }

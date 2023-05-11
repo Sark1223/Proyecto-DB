@@ -18,16 +18,41 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             conexion = new Conexion();
         }
+        /*CREATE TABLE USUARIO (
+    usuario_id           tinyint NOT NULL,
+    usu_apaterno         VARCHAR(30) NOT NULL,
+    usu_amaterno         VARCHAR(30) NOT NULL,
+    usu_nombre_s         VARCHAR(50) NOT NULL,
+    usu_foto			 Image not null,
+    usu_cargo            Varchar(24) not null,
+    usu_contraseña       VARCHAR(15) NOT NULL,
+    usu_rfc              VARCHAR(13) NOT NULL,
+    usu_fecha_nacimiento DATE NOT NULL,
+    usu_calle            VARCHAR(50) NOT NULL,
+    usu_num_ext          VARCHAR(9) NOT NULL,
+    usu_num_int          VARCHAR(8),
+    usu_colonia          VARCHAR(100) NOT NULL,
+    usu_cp               VARCHAR(6) NOT NULL,
+	ciudad_id            INTEGER NOT NULL,
+    usu_telefono         NUMERiC(10,0) NOT NULL,
+    usu_email            VARCHAR(130) not null,
+    usu_fecha_ingreso    DATE NOT NULL
+);*/
 
         public DataSet MostrarUsuarios()
         {
-            SqlCommand comandoSQL = new SqlCommand("Select * from USUARIO");
+            SqlCommand comandoSQL = new SqlCommand("Select usuario_id as ID, usu_apaterno as A_Paterno, usu_amaterno as A_Materno, " +
+                "usu_nombre_s as 'Nombre(s)', usu_cargo as Cargo, usu_contraseña as Contraseña, usu_rfc as RFC, usu_fecha_nacimiento as Fecha_Nacimiento, " +
+                "usu_telefono as Telefono, usu_email as Correo from USUARIO");
             return conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
 
         public DataSet Buscar(string valor)
         {
-            SqlCommand comandoSQL = new SqlCommand($"Select * from USUARIO where (usu_nombre_s like '%{valor}%') or (usuario_id like '%{valor}%')");
+            SqlCommand comandoSQL = new SqlCommand($"Select usuario_id as ID, usu_apaterno as A_Paterno, usu_amaterno as A_Materno, " +
+                "usu_nombre_s as 'Nombre(s)', usu_cargo as Cargo, usu_contraseña as Contraseña, usu_rfc as RFC, usu_fecha_nacimiento as Fecha_Nacimiento, " +
+                $"usu_telefono as Telefono, usu_email as Correo from USUARIO " +
+                $"where (usu_nombre_s like '%{valor}%') or (usuario_id like '%{valor}%') or (usu_apaterno like '%{valor}%')");
             return conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
 
@@ -147,7 +172,10 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
         }
 
+        public void EliminarUsuario()
+        {
 
+        }
         
     }
 }

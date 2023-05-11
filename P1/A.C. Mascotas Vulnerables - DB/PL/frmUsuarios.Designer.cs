@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmdAgregarUsuario = new ns1.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pnBuscar = new System.Windows.Forms.Panel();
@@ -52,7 +53,6 @@
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.rdAgregar = new ns1.BunifuElipse(this.components);
             this.rdBuscar = new ns1.BunifuElipse(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -210,6 +210,14 @@
             this.panel1.Size = new System.Drawing.Size(451, 74);
             this.panel1.TabIndex = 42;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panel3.Location = new System.Drawing.Point(51, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(9, 29);
+            this.panel3.TabIndex = 34;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -217,9 +225,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(12, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 16);
+            this.label2.Size = new System.Drawing.Size(381, 16);
             this.label2.TabIndex = 40;
-            this.label2.Text = "Ingrese el valor a buscar";
+            this.label2.Text = "Ingrese el valor a buscar (ID, A_paterno ó uno de los nombres).";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtBuscar
@@ -323,14 +331,6 @@
             // 
             this.rdBuscar.ElipseRadius = 20;
             this.rdBuscar.TargetControl = this.pnBuscar;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.panel3.Location = new System.Drawing.Point(51, 30);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(9, 29);
-            this.panel3.TabIndex = 34;
             // 
             // frmUsuarios
             // 

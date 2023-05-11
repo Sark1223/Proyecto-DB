@@ -39,12 +39,8 @@
             this.btnCerrar = new ns1.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvSocios = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.rdpnDatos = new ns1.BunifuElipse(this.components);
-            this.rdbtnBuscar = new ns1.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +48,8 @@
             this.pnBuscar = new System.Windows.Forms.Panel();
             this.cmdBuscar = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton21 = new ns1.BunifuThinButton2();
+            this.cmdListo = new System.Windows.Forms.Button();
+            this.rdListo = new ns1.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +87,7 @@
             this.btnCerrar.TabIndex = 38;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pictureBox1
             // 
@@ -122,10 +121,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSocios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSocios.ColumnHeadersHeight = 30;
-            this.dgvSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column4,
-            this.column1});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,7 +130,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSocios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSocios.EnableHeadersVisualStyles = false;
-            this.dgvSocios.GridColor = System.Drawing.Color.Black;
+            this.dgvSocios.GridColor = System.Drawing.Color.Chocolate;
             this.dgvSocios.Location = new System.Drawing.Point(17, 153);
             this.dgvSocios.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.dgvSocios.Name = "dgvSocios";
@@ -150,30 +145,8 @@
             this.dgvSocios.RowHeadersVisible = false;
             this.dgvSocios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSocios.RowTemplate.Height = 30;
-            this.dgvSocios.Size = new System.Drawing.Size(430, 117);
+            this.dgvSocios.Size = new System.Drawing.Size(439, 135);
             this.dgvSocios.TabIndex = 17;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 23.51233F;
-            this.Column3.HeaderText = "ID";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 176.4876F;
-            this.Column4.HeaderText = "Nombre";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
-            // column1
-            // 
-            this.column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.column1.HeaderText = "Apellido";
-            this.column1.Name = "column1";
             // 
             // label5
             // 
@@ -191,10 +164,7 @@
             // rdpnDatos
             // 
             this.rdpnDatos.ElipseRadius = 15;
-            // 
-            // rdbtnBuscar
-            // 
-            this.rdbtnBuscar.ElipseRadius = 30;
+            this.rdpnDatos.TargetControl = this;
             // 
             // panel2
             // 
@@ -259,6 +229,7 @@
             this.cmdBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cmdBuscar.TabIndex = 33;
             this.cmdBuscar.TabStop = false;
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
             // bunifuThinButton21
             // 
@@ -286,12 +257,34 @@
             this.bunifuThinButton21.TabIndex = 32;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmdListo
+            // 
+            this.cmdListo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdListo.FlatAppearance.BorderSize = 0;
+            this.cmdListo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdListo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.cmdListo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdListo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdListo.Location = new System.Drawing.Point(183, 299);
+            this.cmdListo.Name = "cmdListo";
+            this.cmdListo.Size = new System.Drawing.Size(100, 29);
+            this.cmdListo.TabIndex = 44;
+            this.cmdListo.Text = "Listo";
+            this.cmdListo.UseVisualStyleBackColor = false;
+            this.cmdListo.Click += new System.EventHandler(this.cmdListo_Click);
+            // 
+            // rdListo
+            // 
+            this.rdListo.ElipseRadius = 15;
+            this.rdListo.TargetControl = this.cmdListo;
+            // 
             // frmBuscador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(474, 292);
+            this.ClientSize = new System.Drawing.Size(474, 340);
+            this.Controls.Add(this.cmdListo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvSocios);
@@ -320,12 +313,8 @@
         private ns1.BunifuImageButton btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dgvSocios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column1;
         private System.Windows.Forms.Label label5;
         private ns1.BunifuElipse rdpnDatos;
-        private ns1.BunifuElipse rdbtnBuscar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
@@ -333,5 +322,7 @@
         private System.Windows.Forms.Panel pnBuscar;
         private System.Windows.Forms.PictureBox cmdBuscar;
         private ns1.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.Button cmdListo;
+        private ns1.BunifuElipse rdListo;
     }
 }

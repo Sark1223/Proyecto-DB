@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A.C.Mascotas_Vulnerables___DB.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,25 +13,26 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 {
     public partial class frmBuscador : Form
     {
-        frmBuscador busca= new frmBuscador();
+        //frmBuscador busca= new frmBuscador();
+        ReciboDAL recibo = new ReciboDAL();
         public frmBuscador()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmdListo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void cmdBuscar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            dgvSocios.DataSource = recibo.Buscar(txtBuscar.Text).Tables[0];
         }
     }
 }

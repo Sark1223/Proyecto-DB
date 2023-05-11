@@ -48,12 +48,15 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 cmdAgregar.Visible = true;
                 pnModificar.Visible = false;
                 mu.LlenarCBCiudad(cbCiudad);
+
+                foto = false;
             }
             else
             {
                 cmdAgregar.Visible = false;
                 pnModificar.Visible = true;
                 idActual = txtID.Text;
+                foto = true;
             }
             
             //if (lblTitle.Text == "AGREGAR PLATILLO")
