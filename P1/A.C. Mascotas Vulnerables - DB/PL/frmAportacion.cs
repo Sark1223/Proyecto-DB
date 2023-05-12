@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,15 +18,21 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             InitializeComponent();
         }
+        ///Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void Mover(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         public void ObtenerObjetoNuevaAportacion(frmNuevaAportacion nuevaAportacion)
         {
             nAportacion = nuevaAportacion;
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void cmdAportacion(object sender, EventArgs e)
@@ -33,7 +40,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             nAportacion.ShowDialog();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnModificarEstatus_Click(object sender, EventArgs e)
         {
 
         }

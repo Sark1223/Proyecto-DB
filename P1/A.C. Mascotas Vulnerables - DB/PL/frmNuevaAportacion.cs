@@ -20,6 +20,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
 
         ReciboDAL recibo = new ReciboDAL();
+        frmBuscador buscador = new frmBuscador();
+        BuscadorDAL bus  =  new BuscadorDAL();
 
         private void cmdCerrar(object sender, EventArgs e)
         {
@@ -31,34 +33,22 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             recibo.LlenarCBEncargado2(cbEncargado2);
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbEncargado2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BuscarSOcio(object sender, EventArgs e)
+        {
+            buscador.dgvSocios.DataSource = bus.MostrarTabla().Tables[0];
+            if (buscador.ShowDialog() == DialogResult.OK)
+            {
+                lblNombre.Text = buscador.nombre;
+                lblAPaterno.Text = buscador.apaterno;
+                lblAMaterno.Text = buscador.amaterno;
+
+            }
         }
     }
 }

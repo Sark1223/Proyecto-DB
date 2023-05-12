@@ -15,6 +15,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
     {
         //frmBuscador busca= new frmBuscador();
         ReciboDAL recibo = new ReciboDAL();
+
         public frmBuscador()
         {
             InitializeComponent();
@@ -27,12 +28,28 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdListo_Click(object sender, EventArgs e)
         {
-
+            //retornar datos
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             dgvSocios.DataSource = recibo.Buscar(txtBuscar.Text).Tables[0];
+        }
+        public string idsocio, nombre, apaterno, amaterno;
+        private void dgvSocios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int indice = e.RowIndex;
+            idsocio = dgvSocios.Rows[indice].Cells[0].Value.ToString();
+            apaterno = dgvSocios.Rows[indice].Cells[1].Value.ToString();
+            amaterno = dgvSocios.Rows[indice].Cells[2].Value.ToString();
+            nombre = dgvSocios.Rows[indice].Cells[3].Value.ToString();
+
+            MessageBox.Show("Se ha seleccionado el socio " + idsocio + " " + nombre);
+        }
+
+        private void frmBuscador_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
