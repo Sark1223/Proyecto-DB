@@ -28,6 +28,7 @@ namespace A.C.Mascotas_Vulnerables___DB.BLL
     usu_telefono         NUMERiC(10,0) NOT NULL,
     usu_email            VARCHAR(130) not null,
     usu_fecha_ingreso    DATE NOT NULL
+        usu_estatus          VARCHAR(8) NOT NULL
 );*/
         public int usu_id;
         public string usu_apaterno;
@@ -47,5 +48,6 @@ namespace A.C.Mascotas_Vulnerables___DB.BLL
         public long usu_Telefono;
         public string usu_eMail;
         public DateTime usu_Fecha_ingreso;
+        public string usu_estatus;
     }
 }

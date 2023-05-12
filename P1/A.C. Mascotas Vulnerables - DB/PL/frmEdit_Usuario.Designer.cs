@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEdit_Usuario));
             this.encabezado = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmdCerrar = new ns1.BunifuImageButton();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtIngreso = new ns1.BunifuDatepicker();
-            this.bunifuVTrackbar1 = new ns1.BunifuVTrackbar();
             this.label16 = new System.Windows.Forms.Label();
             this.dtNacimiento = new ns1.BunifuDatepicker();
             this.cbCargo = new System.Windows.Forms.ComboBox();
@@ -63,6 +64,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.cmdAgregar = new System.Windows.Forms.Panel();
+            this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.lblAgregar = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -90,6 +92,7 @@
             this.bunifuSeparator16 = new ns1.BunifuSeparator();
             this.pnDatosCuenta = new System.Windows.Forms.Panel();
             this.lblAgregarFoto = new System.Windows.Forms.Label();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
             this.rdDatosCuenta = new ns1.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -99,34 +102,30 @@
             this.rdcmdAgregar = new ns1.BunifuElipse(this.components);
             this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.cmdModificar = new System.Windows.Forms.Panel();
+            this.pbModificar = new System.Windows.Forms.PictureBox();
             this.lblModificar = new System.Windows.Forms.Label();
             this.cmdBorrar = new System.Windows.Forms.Panel();
+            this.pbBorrar = new System.Windows.Forms.PictureBox();
             this.lblBorrar = new System.Windows.Forms.Label();
             this.pnModificar = new System.Windows.Forms.Panel();
-            this.pbBorrar = new System.Windows.Forms.PictureBox();
-            this.pbModificar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.pbAgregar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmdCerrar = new ns1.BunifuImageButton();
             this.rdEliminar = new ns1.BunifuElipse(this.components);
             this.rdModificar = new ns1.BunifuElipse(this.components);
             this.encabezado.SuspendLayout();
-            this.cmdAgregar.SuspendLayout();
-            this.pnDatosCuenta.SuspendLayout();
-            this.cmdModificar.SuspendLayout();
-            this.cmdBorrar.SuspendLayout();
-            this.pnModificar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
+            this.cmdAgregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
+            this.pnDatosCuenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.cmdModificar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
+            this.cmdBorrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).BeginInit();
+            this.pnModificar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // encabezado
@@ -138,9 +137,33 @@
             this.encabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.encabezado.Location = new System.Drawing.Point(0, 0);
             this.encabezado.Name = "encabezado";
-            this.encabezado.Size = new System.Drawing.Size(710, 39);
+            this.encabezado.Size = new System.Drawing.Size(677, 39);
             this.encabezado.TabIndex = 17;
             this.encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.cmdCerrar.ImageActive = null;
+            this.cmdCerrar.Location = new System.Drawing.Point(634, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // lblTitle
             // 
@@ -179,20 +202,6 @@
             this.dtIngreso.Size = new System.Drawing.Size(177, 30);
             this.dtIngreso.TabIndex = 8;
             this.dtIngreso.Value = new System.DateTime(2023, 4, 30, 22, 40, 42, 977);
-            // 
-            // bunifuVTrackbar1
-            // 
-            this.bunifuVTrackbar1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuVTrackbar1.BackgroudColor = System.Drawing.Color.DarkGray;
-            this.bunifuVTrackbar1.BorderRadius = 5;
-            this.bunifuVTrackbar1.IndicatorColor = System.Drawing.Color.SeaGreen;
-            this.bunifuVTrackbar1.Location = new System.Drawing.Point(673, 47);
-            this.bunifuVTrackbar1.MaximumValue = 100;
-            this.bunifuVTrackbar1.Name = "bunifuVTrackbar1";
-            this.bunifuVTrackbar1.Size = new System.Drawing.Size(30, 393);
-            this.bunifuVTrackbar1.SliderRadius = 20;
-            this.bunifuVTrackbar1.TabIndex = 22;
-            this.bunifuVTrackbar1.Value = 0;
             // 
             // label16
             // 
@@ -508,11 +517,22 @@
             this.cmdAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
             this.cmdAgregar.Controls.Add(this.pbAgregar);
             this.cmdAgregar.Controls.Add(this.lblAgregar);
-            this.cmdAgregar.Location = new System.Drawing.Point(296, 495);
+            this.cmdAgregar.Location = new System.Drawing.Point(278, 495);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(81, 72);
             this.cmdAgregar.TabIndex = 55;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
+            // 
+            // pbAgregar
+            // 
+            this.pbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregar.Image")));
+            this.pbAgregar.Location = new System.Drawing.Point(23, 11);
+            this.pbAgregar.Name = "pbAgregar";
+            this.pbAgregar.Size = new System.Drawing.Size(38, 39);
+            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAgregar.TabIndex = 111;
+            this.pbAgregar.TabStop = false;
+            this.pbAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // lblAgregar
             // 
@@ -824,6 +844,17 @@
             this.lblAgregarFoto.TabIndex = 2;
             this.lblAgregarFoto.Text = "Agregar foto";
             // 
+            // pbFoto
+            // 
+            this.pbFoto.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.estilo_grafico;
+            this.pbFoto.Location = new System.Drawing.Point(22, 13);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(100, 100);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbFoto.TabIndex = 178;
+            this.pbFoto.TabStop = false;
+            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
+            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -910,6 +941,17 @@
             this.cmdModificar.TabIndex = 188;
             this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
+            // pbModificar
+            // 
+            this.pbModificar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.editar__1_;
+            this.pbModificar.Location = new System.Drawing.Point(22, 7);
+            this.pbModificar.Name = "pbModificar";
+            this.pbModificar.Size = new System.Drawing.Size(38, 39);
+            this.pbModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbModificar.TabIndex = 111;
+            this.pbModificar.TabStop = false;
+            this.pbModificar.Click += new System.EventHandler(this.cmdModificar_Click);
+            // 
             // lblModificar
             // 
             this.lblModificar.AutoSize = true;
@@ -932,6 +974,16 @@
             this.cmdBorrar.Size = new System.Drawing.Size(81, 72);
             this.cmdBorrar.TabIndex = 189;
             // 
+            // pbBorrar
+            // 
+            this.pbBorrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.borrar__1_;
+            this.pbBorrar.Location = new System.Drawing.Point(18, 6);
+            this.pbBorrar.Name = "pbBorrar";
+            this.pbBorrar.Size = new System.Drawing.Size(44, 41);
+            this.pbBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBorrar.TabIndex = 111;
+            this.pbBorrar.TabStop = false;
+            // 
             // lblBorrar
             // 
             this.lblBorrar.AutoSize = true;
@@ -947,31 +999,10 @@
             // 
             this.pnModificar.Controls.Add(this.cmdBorrar);
             this.pnModificar.Controls.Add(this.cmdModificar);
-            this.pnModificar.Location = new System.Drawing.Point(241, 485);
+            this.pnModificar.Location = new System.Drawing.Point(223, 485);
             this.pnModificar.Name = "pnModificar";
             this.pnModificar.Size = new System.Drawing.Size(242, 96);
             this.pnModificar.TabIndex = 190;
-            // 
-            // pbBorrar
-            // 
-            this.pbBorrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.borrar__1_;
-            this.pbBorrar.Location = new System.Drawing.Point(18, 6);
-            this.pbBorrar.Name = "pbBorrar";
-            this.pbBorrar.Size = new System.Drawing.Size(44, 41);
-            this.pbBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBorrar.TabIndex = 111;
-            this.pbBorrar.TabStop = false;
-            // 
-            // pbModificar
-            // 
-            this.pbModificar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.editar__1_;
-            this.pbModificar.Location = new System.Drawing.Point(22, 7);
-            this.pbModificar.Name = "pbModificar";
-            this.pbModificar.Size = new System.Drawing.Size(38, 39);
-            this.pbModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbModificar.TabIndex = 111;
-            this.pbModificar.TabStop = false;
-            this.pbModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // pictureBox2
             // 
@@ -993,52 +1024,6 @@
             this.pictureBox4.TabIndex = 186;
             this.pictureBox4.TabStop = false;
             // 
-            // pbFoto
-            // 
-            this.pbFoto.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.estilo_grafico;
-            this.pbFoto.Location = new System.Drawing.Point(22, 13);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(100, 100);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbFoto.TabIndex = 178;
-            this.pbFoto.TabStop = false;
-            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
-            // 
-            // pbAgregar
-            // 
-            this.pbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("pbAgregar.Image")));
-            this.pbAgregar.Location = new System.Drawing.Point(23, 11);
-            this.pbAgregar.Name = "pbAgregar";
-            this.pbAgregar.Size = new System.Drawing.Size(38, 39);
-            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAgregar.TabIndex = 111;
-            this.pbAgregar.TabStop = false;
-            this.pbAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.cmdCerrar.ImageActive = null;
-            this.cmdCerrar.Location = new System.Drawing.Point(658, 3);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
-            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdCerrar.TabIndex = 0;
-            this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Zoom = 10;
-            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
-            // 
             // rdEliminar
             // 
             this.rdEliminar.ElipseRadius = 70;
@@ -1054,7 +1039,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(710, 593);
+            this.ClientSize = new System.Drawing.Size(677, 593);
             this.Controls.Add(this.pnModificar);
             this.Controls.Add(this.cbCiudad);
             this.Controls.Add(this.pictureBox2);
@@ -1092,7 +1077,6 @@
             this.Controls.Add(this.bunifuSeparator16);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtIngreso);
-            this.Controls.Add(this.bunifuVTrackbar1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.dtNacimiento);
             this.Controls.Add(this.cbCargo);
@@ -1122,23 +1106,23 @@
             this.Load += new System.EventHandler(this.frmEdit_Usuario_Load);
             this.encabezado.ResumeLayout(false);
             this.encabezado.PerformLayout();
-            this.cmdAgregar.ResumeLayout(false);
-            this.cmdAgregar.PerformLayout();
-            this.pnDatosCuenta.ResumeLayout(false);
-            this.pnDatosCuenta.PerformLayout();
-            this.cmdModificar.ResumeLayout(false);
-            this.cmdModificar.PerformLayout();
-            this.cmdBorrar.ResumeLayout(false);
-            this.cmdBorrar.PerformLayout();
-            this.pnModificar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
+            this.cmdAgregar.ResumeLayout(false);
+            this.cmdAgregar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
+            this.pnDatosCuenta.ResumeLayout(false);
+            this.pnDatosCuenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            this.cmdModificar.ResumeLayout(false);
+            this.cmdModificar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).EndInit();
+            this.cmdBorrar.ResumeLayout(false);
+            this.cmdBorrar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).EndInit();
+            this.pnModificar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1152,7 +1136,6 @@
         public System.Windows.Forms.Label lblTitle;
         public System.Windows.Forms.Label label1;
         public ns1.BunifuDatepicker dtIngreso;
-        public ns1.BunifuVTrackbar bunifuVTrackbar1;
         public System.Windows.Forms.Label label16;
         public ns1.BunifuDatepicker dtNacimiento;
         public System.Windows.Forms.ComboBox cbCargo;

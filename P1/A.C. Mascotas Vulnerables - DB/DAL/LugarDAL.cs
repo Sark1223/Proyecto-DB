@@ -116,9 +116,9 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         public bool ModificarEstado(EstadoBLL estado, string idAnterior)
         {
             SqlCommand modificar = new SqlCommand(
-            "Update ESTADO set estado_id = @estado_id," +
-                             "est_nombre = @est_nombre," +
-                             "pais_id = @pais_id" +
+            "Update ESTADO set estado_id = @estado_id, " +
+                             "est_nombre = @est_nombre, " +
+                             "pais_id = @pais_id " +
                              "WHERE estado_id = " + idAnterior);
             {
                 modificar.Parameters.AddWithValue("estado_id", estado.estado_id);

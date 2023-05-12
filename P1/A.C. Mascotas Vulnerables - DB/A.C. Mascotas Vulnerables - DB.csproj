@@ -71,6 +71,18 @@
     <Compile Include="PL\frmBuscador.Designer.cs">
       <DependentUpon>frmBuscador.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmEstadoRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmEstadoRecibo.Designer.cs">
+      <DependentUpon>frmEstadoRecibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmHistorial.Designer.cs">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmLugar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     <Compile Include="PL\frmEdit_Usuario.Designer.cs">
       <DependentUpon>frmEdit_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmSocios.Designer.cs">
+      <DependentUpon>frmSocios.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmBuscador.resx">
       <DependentUpon>frmBuscador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmEstadoRecibo.resx">
+      <DependentUpon>frmEstadoRecibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmHistorial.resx">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmLugar.resx">
       <DependentUpon>frmLugar.cs</DependentUpon>
@@ -138,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmEdit_Usuario.resx">
       <DependentUpon>frmEdit_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmSocios.resx">
+      <DependentUpon>frmSocios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

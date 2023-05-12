@@ -248,7 +248,7 @@
             this.pnBuscar.Controls.Add(this.cmdBuscar);
             this.pnBuscar.Location = new System.Drawing.Point(7, 29);
             this.pnBuscar.Name = "pnBuscar";
-            this.pnBuscar.Size = new System.Drawing.Size(54, 31);
+            this.pnBuscar.Size = new System.Drawing.Size(54, 32);
             this.pnBuscar.TabIndex = 41;
             this.pnBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 

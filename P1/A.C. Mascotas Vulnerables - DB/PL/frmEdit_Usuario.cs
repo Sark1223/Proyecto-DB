@@ -263,6 +263,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             if (!ValoresVaciosUsuario())
             {
                 RecuperarInformacion();
+                usuario.usu_estatus = "Activo";//Al agregar un usuario significa que esta activo
                 if (mu.AgregarUsuario(usuario))
                 {
                     MessageBox.Show("El USUARIO " + usuario.usu_id + " se AGREGO correctamente", "Usuario Agregado");
@@ -293,7 +294,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
                 //Recuperar informacion del PAIS
                 DataTable a = mu.InformacionID($"Select pa_nombre From PAIS WHERE pais_id = {t.Rows[0]["pais_id"]}");
-                txtEstado.Text = a.Rows[0]["pa_nombre"].ToString();//impriir estado
+                txtPais.Text = a.Rows[0]["pa_nombre"].ToString();//impriir estado
 
             }
         }

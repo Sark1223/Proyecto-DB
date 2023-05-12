@@ -153,7 +153,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
                     //Recuperar informacion del PAIS
                     t = usuDAL.InformacionID($"Select pa_nombre From PAIS WHERE pais_id = {t.Rows[0]["pais_id"]}");
-                    eusuario.txtEstado.Text = t.Rows[0]["pa_nombre"].ToString();//impriir estado
+                    eusuario.txtPais.Text = t.Rows[0]["pa_nombre"].ToString();//impriir estado
                 }
 
                 eusuario.txttelefono.Text = tb.Rows[0]["usu_telefono"].ToString();

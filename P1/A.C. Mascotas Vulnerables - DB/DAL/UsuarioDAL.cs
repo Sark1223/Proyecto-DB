@@ -43,7 +43,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             SqlCommand comandoSQL = new SqlCommand("Select usuario_id as ID, usu_apaterno as A_Paterno, usu_amaterno as A_Materno, " +
                 "usu_nombre_s as 'Nombre(s)', usu_cargo as Cargo, usu_contraseña as Contraseña, usu_rfc as RFC, usu_fecha_nacimiento as Fecha_Nacimiento, " +
-                "usu_telefono as Telefono, usu_email as Correo from USUARIO");
+                "usu_telefono as Telefono, usu_email as Correo from USUARIO where usu_estatus = 'Activo'");
             return conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
 
@@ -51,7 +51,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             SqlCommand comandoSQL = new SqlCommand($"Select usuario_id as ID, usu_apaterno as A_Paterno, usu_amaterno as A_Materno, " +
                 "usu_nombre_s as 'Nombre(s)', usu_cargo as Cargo, usu_contraseña as Contraseña, usu_rfc as RFC, usu_fecha_nacimiento as Fecha_Nacimiento, " +
-                $"usu_telefono as Telefono, usu_email as Correo from USUARIO " +
+                $"usu_telefono as Telefono, usu_email as Correo from USUARIO where usu_estatus = 'Activo'" +
                 $"where (usu_nombre_s like '%{valor}%') or (usuario_id like '%{valor}%') or (usu_apaterno like '%{valor}%')");
             return conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
@@ -94,9 +94,10 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                            "ciudad_id," +
                            "usu_telefono," +
                            "usu_email," +
-                           "usu_fecha_ingreso)" +
+                           "usu_fecha_ingreso," +
+                           "usu_estatus)" +
         "values(@id,@apaterno,@amaterno,@nombres,@foto,@cargo,@contraseña, @rfc," +
-        "@nacimiento,@calle,@exterior,@interior,@colonia,@cp,@ciudad,@telefono,@email,@ingreso)");
+        "@nacimiento,@calle,@exterior,@interior,@colonia,@cp,@ciudad,@telefono,@email,@ingreso, @estatus)");
             {
                 agregar.Parameters.AddWithValue("id", usuario.usu_id);
                 agregar.Parameters.AddWithValue("apaterno", usuario.usu_apaterno);
@@ -116,6 +117,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 agregar.Parameters.AddWithValue("telefono", usuario.usu_Telefono);
                 agregar.Parameters.AddWithValue("email", usuario.usu_eMail);
                 agregar.Parameters.AddWithValue("ingreso", usuario.usu_Fecha_ingreso);
+                agregar.Parameters.AddWithValue("estatus", usuario.usu_estatus);
 
                 conexion.ejecutarComandoSinRetorno(agregar);
             }
@@ -144,7 +146,8 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                            "ciudad_id = @ciudad," +
                            "usu_telefono = @telefono," +
                            "usu_email = @email," +
-                           "usu_fecha_ingreso = @ingreso " +
+                           "usu_fecha_ingreso = @ingreso," +
+                           "usu_estatus = @estatus " +
                            "WHERE usuario_id = " + idAnterior);
             {
                 modificar.Parameters.AddWithValue("id", usuario.usu_id);
@@ -165,6 +168,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 modificar.Parameters.AddWithValue("telefono", usuario.usu_Telefono);
                 modificar.Parameters.AddWithValue("email", usuario.usu_eMail);
                 modificar.Parameters.AddWithValue("ingreso", usuario.usu_Fecha_ingreso);
+                modificar.Parameters.AddWithValue("estatus", usuario.usu_estatus);
 
                 conexion.ejecutarComandoSinRetorno(modificar);
             }

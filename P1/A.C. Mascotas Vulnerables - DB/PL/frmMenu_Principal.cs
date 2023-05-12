@@ -33,7 +33,8 @@ namespace A.C.Mascotas_Vulnerables___DB
         }
         //Objetos de formas
         frmAportacion aportacion = new frmAportacion();
-        frmEdit_Socios socio = new frmEdit_Socios();
+        frmSocios socios = new frmSocios();
+        SocioDAL socio = new SocioDAL();
         frmUsuarios usuarios = new frmUsuarios();
         UsuarioDAL mu = new UsuarioDAL();
         frmLugar lugar = new frmLugar();
@@ -59,14 +60,10 @@ namespace A.C.Mascotas_Vulnerables___DB
             aportacion.ShowDialog();
         }
 
-        //private void cmdSocios(object sender, EventArgs e)
-        //{
-            
-        //}
-
         private void cmdSocio(object sender, EventArgs e)
         {
-            socio.ShowDialog();
+            socios.dgvSocios.DataSource = socio.MostratSocios().Tables[0];
+            socios.ShowDialog();
         }
 
         private void frmMenu_Principal_Load(object sender, EventArgs e)
