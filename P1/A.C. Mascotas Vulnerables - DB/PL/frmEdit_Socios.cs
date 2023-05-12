@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         public frmEdit_Socios()
         {
             InitializeComponent();
+        }
+
+        ///Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void Mover(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         //Objetos 
@@ -45,7 +58,15 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             
         }
 
-       
+        private void Limpiar()
+        {
+            txtSocioID.Clear(); txtApellidoPSocio.Clear(); txtApellidoMSocio.Clear(); txtNombreSocio.Clear();
+            txtRfcSocio.Clear(); txtCorreoSocio.Clear(); txtTelefono2Socio.Clear(); txtTelefono3Socio.Clear();
+            txtTelefonoPSocio.Clear(); txtCalleSocio.Clear(); txtNoExtSocio.Clear(); txtNoIntSocio.Clear();
+            txtColoniaSocio.Clear(); txtEstado.Clear(); txtPais.Clear(); txtCpSocio.Clear(); cbCiudad.SelectedIndex = 0;
+            cbEstadoSocio.SelectedIndex = 0; cbTipoPSocio.SelectedIndex = 0;
+
+        }
 
         public bool ValoresVaciosUsuario()
         {
@@ -173,7 +194,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 if (socioDAL.AgregarSocio(socio))
                 {
                     MessageBox.Show("El SOCIO " + socio.sc_id + " se AGREGO correctamente", "Socio Agregado");
-
+                    Limpiar();
                 }
                 else
                 {
@@ -190,7 +211,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 if (socioDAL.ModificarSocio(socio, idActual))
                 {
                     MessageBox.Show("El SOCIO " + socio.sc_id + " se MODIFICO correctamente", "Socio Modificado");
-
+                    //Limpiar();
+                    //Close();
                 }
                 else
                 {
@@ -226,6 +248,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             Close();
         }
 
-        
+        private void cmdBorrar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El Socio no puede ser eliminado, pero su estatus puede ser modificado a " +
+                "'Inactivo' en Esatus del socio.");
+        }
     }
 }

@@ -18,26 +18,6 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             conexion = new Conexion();
         }
-        /*CREATE TABLE USUARIO (
-    usuario_id           tinyint NOT NULL,
-    usu_apaterno         VARCHAR(30) NOT NULL,
-    usu_amaterno         VARCHAR(30) NOT NULL,
-    usu_nombre_s         VARCHAR(50) NOT NULL,
-    usu_foto			 Image not null,
-    usu_cargo            Varchar(24) not null,
-    usu_contraseña       VARCHAR(15) NOT NULL,
-    usu_rfc              VARCHAR(13) NOT NULL,
-    usu_fecha_nacimiento DATE NOT NULL,
-    usu_calle            VARCHAR(50) NOT NULL,
-    usu_num_ext          VARCHAR(9) NOT NULL,
-    usu_num_int          VARCHAR(8),
-    usu_colonia          VARCHAR(100) NOT NULL,
-    usu_cp               VARCHAR(6) NOT NULL,
-	ciudad_id            INTEGER NOT NULL,
-    usu_telefono         NUMERiC(10,0) NOT NULL,
-    usu_email            VARCHAR(130) not null,
-    usu_fecha_ingreso    DATE NOT NULL
-);*/
 
         public DataSet MostrarUsuarios()
         {
@@ -176,9 +156,10 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
         }
 
-        public void EliminarUsuario()
+        public void EliminarUsuario(string valorid)
         {
-
+            SqlCommand comandoSQL = new SqlCommand($"Update USUARIO set usu_estatus = 'inactivo' where usuario_id = {valorid}");
+            conexion.EjecutarSentenciaConRetorno(comandoSQL);
         }
         
     }

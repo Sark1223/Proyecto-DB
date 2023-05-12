@@ -143,6 +143,7 @@
             this.encabezado.Name = "encabezado";
             this.encabezado.Size = new System.Drawing.Size(696, 39);
             this.encabezado.TabIndex = 1;
+            this.encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // pbLogo
             // 
@@ -179,6 +180,7 @@
             this.lblTitle.TabIndex = 44;
             this.lblTitle.Text = "AGREGAR NUEVO SOCIO";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // bunifuDragControl1
             // 
@@ -998,6 +1000,7 @@
             this.cmdBorrar.Name = "cmdBorrar";
             this.cmdBorrar.Size = new System.Drawing.Size(81, 72);
             this.cmdBorrar.TabIndex = 189;
+            this.cmdBorrar.Click += new System.EventHandler(this.cmdBorrar_Click);
             // 
             // pbBorrar
             // 
@@ -1008,6 +1011,7 @@
             this.pbBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBorrar.TabIndex = 111;
             this.pbBorrar.TabStop = false;
+            this.pbBorrar.Click += new System.EventHandler(this.cmdBorrar_Click);
             // 
             // lblBorrar
             // 
@@ -1019,6 +1023,7 @@
             this.lblBorrar.Size = new System.Drawing.Size(58, 17);
             this.lblBorrar.TabIndex = 0;
             this.lblBorrar.Text = "Eliminar";
+            this.lblBorrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // cmdModificar
             // 

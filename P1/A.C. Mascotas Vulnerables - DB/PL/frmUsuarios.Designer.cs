@@ -124,6 +124,7 @@
             this.encabezado.Name = "encabezado";
             this.encabezado.Size = new System.Drawing.Size(800, 39);
             this.encabezado.TabIndex = 18;
+            this.encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // pictureBox1
             // 

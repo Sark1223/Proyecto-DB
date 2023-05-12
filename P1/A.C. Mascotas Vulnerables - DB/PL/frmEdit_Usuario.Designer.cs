@@ -983,6 +983,7 @@
             this.pbBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBorrar.TabIndex = 111;
             this.pbBorrar.TabStop = false;
+            this.pbBorrar.Click += new System.EventHandler(this.pbBorrar_Click);
             // 
             // lblBorrar
             // 

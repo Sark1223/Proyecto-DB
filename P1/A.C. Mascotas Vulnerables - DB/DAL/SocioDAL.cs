@@ -17,6 +17,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             conexion = new Conexion();
         }
+        public DataSet Buscar(string valor)
+        {
+            SqlCommand comandoSQL = new SqlCommand($"Select * from SOCIO " +
+                $"where (socio_id like '%{valor}%') or (sc_apaterno like '%{valor}%') or (sc_nombre_s like '%{valor}%')");
+            return conexion.EjecutarSentenciaConRetorno(comandoSQL);
+        }
 
         public void LlenarCBCiudad(ComboBox cbCiudad)
         {
@@ -93,7 +99,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         public bool ModificarSocio(SocioBLL socio, string idAnterior)
         {
             SqlCommand modificar = new SqlCommand(
-        "Update USUARIO set socio_id = @id," +
+        "Update SOCIO set socio_id = @id," +
                            "sc_apaterno = @apaterno," +
                            "sc_amaterno = @amaterno," +
                            "sc_nombre_s = @nombres," +
@@ -112,7 +118,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                            "sc_fecha_ingreso = @ingreso," +
                            "sc_tipo_presona = @tipodepersona ," +
                            "sc_estatus = @estatus " +
-                           "WHERE usuario_id = " + idAnterior);
+                           "WHERE socio_id = " + idAnterior);
             {
                 modificar.Parameters.AddWithValue("id", socio.sc_id);
                 modificar.Parameters.AddWithValue("apaterno", socio.sc_apaterno);

@@ -76,17 +76,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             //Modificar encabezado
             eusuario.lblTitle.Text = "MODIFICAR USUARIO";
 
-            //OBTENER INFORMACION DEL PLATILLO -----------------------------------------------------------
+            //OBTENER INFORMACION DEL USUARIO -----------------------------------------------------------
             {
                 int indice = e.RowIndex;
 
-                //Obtener toda la informacion por medio de plato_id 
+                //Obtener toda la informacion por medio de usuario_id 
                 DataTable tb = usuDAL.InformacionID($"Select * from USUARIO WHERE usuario_id = {dgvUsuarios.Rows[indice].Cells[0].Value}");
                 //Mostrar ID
                 eusuario.txtID.Text = tb.Rows[0]["usuario_id"].ToString();
-                //Nombre del plato
+                //Nombre 
                 eusuario.txtApaterno.Text = tb.Rows[0]["usu_apaterno"].ToString();
-                //Desccripcion
+                eusuario.txtAmaterno.Text = tb.Rows[0]["usu_amaterno"].ToString();
                 eusuario.txtNombre.Text = tb.Rows[0]["usu_nombre_s"].ToString();
 
                 //Obtener el arreglo de Bytes 

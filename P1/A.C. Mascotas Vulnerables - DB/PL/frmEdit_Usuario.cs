@@ -45,9 +45,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             if(lblTitle.Text == "AGREGAR USUARIO")
             {
+                
                 cmdAgregar.Visible = true;
                 pnModificar.Visible = false;
                 mu.LlenarCBCiudad(cbCiudad);
+                Limpiar();
 
                 foto = false;
             }
@@ -109,6 +111,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Limpiar()
+        {
+            txtID.Clear(); txtApaterno.Clear(); txtAmaterno.Clear(); txtNombre.Clear();
+            txtContraseña.Clear(); txtrfc.Clear(); txttelefono.Clear(); txtCorreo.Clear();
+            txtCalle.Clear(); txtExterior.Clear(); txtInterior.Clear();
+            txtColonia.Clear(); txtPais.Clear(); txtEstado.Clear(); txtcp.Clear(); cbCiudad.SelectedIndex = 0;
+            cbCargo.SelectedIndex = 0;
+            pbFoto.Image = Properties.Resources.estilo_grafico;
+            lblAgregarFoto.Visible = true;
+            foto = false;
         }
 
         public void GuardarImagen()
@@ -268,6 +282,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 {
                     MessageBox.Show("El USUARIO " + usuario.usu_id + " se AGREGO correctamente", "Usuario Agregado");
 
+                    Limpiar();
                 }
                 else
                 {
@@ -304,6 +319,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             if (!ValoresVaciosUsuario())
             {
                 RecuperarInformacion();
+                usuario.usu_estatus = "Activo";
                 if (mu.ModificarUsuario(usuario,idActual))
                 {
                     MessageBox.Show("El USUARIO " + usuario.usu_id + " se MODIFICO correctamente", "Usuario Modificado");
@@ -314,6 +330,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     MessageBox.Show("NO se pudo Modificar la informacion del usuario", "Error al Modificar usuario");
                 }
             }
+        }
+
+        private void pbBorrar_Click(object sender, EventArgs e)
+        {
+            string Mesaje = $"Esta seguro de que quiere eliminar al Usuario {idActual}?";
+            if(MessageBox.Show(Mesaje, "ATENCIÓN",MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                mu.EliminarUsuario(idActual);
+                MessageBox.Show("El Usuario ha sido eliminado, sin embargo, los recibos creados por el mismo, " +
+                    "seguiran guardados en la base de datos.");
+                Close();
+            }
+            
         }
     }
 }
