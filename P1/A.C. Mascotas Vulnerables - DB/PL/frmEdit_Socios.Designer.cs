@@ -114,6 +114,7 @@
             this.pbModificar = new System.Windows.Forms.PictureBox();
             this.lblModificar = new System.Windows.Forms.Label();
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.error2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
@@ -127,6 +128,7 @@
             this.cmdModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error2)).BeginInit();
             this.SuspendLayout();
             // 
             // rdSocios
@@ -1107,6 +1109,10 @@
             // 
             this.error1.ContainerControl = this;
             // 
+            // error2
+            // 
+            this.error2.ContainerControl = this;
+            // 
             // frmEdit_Socios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1205,6 +1211,7 @@
             this.cmdModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1295,5 +1302,6 @@
         public System.Windows.Forms.PictureBox pbModificar;
         public System.Windows.Forms.Label lblModificar;
         private System.Windows.Forms.ErrorProvider error1;
+        private System.Windows.Forms.ErrorProvider error2;
     }
 }

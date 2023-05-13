@@ -188,6 +188,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             socio.sc_cp = txtCpSocio.Text;
         }
 
+        public void longitudTelefono()
+        {
+            if (txtTelefonoPSocio.TextLength != 10)
+            {
+                errorD = true;
+                error2.SetError(txtTelefonoPSocio, "El numero de telefono requiere 10 digitos");
+            }
+            else
+            {
+                errorD = false;
+                error2.SetError(txtTelefonoPSocio, "");
+            }
+        }
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             error = false;
@@ -202,6 +215,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     break;
                 }
             }
+      
             if (error)
             {
                 error1.SetError(txtNombreSocio, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
@@ -210,7 +224,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             {
                 error1.SetError(txtNombreSocio, "");
             }
-            if (error)
+            longitudTelefono();
+            if (error || errorD)
             {
                 MessageBox.Show("Verifique que los datos sean validos");
             }
@@ -473,12 +488,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             ValidarNumeros(txtSocioID, error1, e);
         }
-    
+
+        bool errorD = false;
         //Validaciones de Telefono Personal Socio
         private void txtTelefonoPSocio_TextChanged(object sender, EventArgs e)
         {
             error = false;
-
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtTelefonoPSocio.Text)
             {
@@ -507,6 +522,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void txtTelefonoPSocio_Validating(object sender, CancelEventArgs e)
         {
             ValidarNumeros(txtTelefonoPSocio, error1, e);
+            if(txtTelefonoPSocio.TextLength != 10)
+            {
+                errorD = true;
+                error2.SetError(txtTelefonoPSocio, "El numero de telefono requiere 10 digitos");
+            }
+            else
+            {
+                errorD = false;
+                error2.SetError(txtTelefonoPSocio, "");
+            }
+
+
         }
 
         //Validaciones de Telefono 2 Socio
