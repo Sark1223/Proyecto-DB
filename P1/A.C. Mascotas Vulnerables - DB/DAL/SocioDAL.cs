@@ -42,9 +42,45 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         }
 
         //METODOS Socio
+
+        //Busca valores en tabla
+        public bool BuscarEnTabla_Agregar(string sentencia, string valor, int posicion, Control control, ErrorProvider error)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sentencia);
+                cmd.Connection = conexion.EstablecerConexion();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr[posicion].ToString() == valor)
+                    {
+                        error.SetError(control, "EL valor " + valor + " de  ya existe");
+                        return false;
+                    }
+
+                }     
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public bool AgregarSocio(SocioBLL socio)
         {
-            SqlCommand agregar = new SqlCommand(
+            try
+            {
+                //verifica si ya existe un socio con el mismo ID
+                if (!BuscarEnTabla_Agregar("SELECT socio_id FROM SOCIO WHERE socio_id = @id", socio.sc_id.ToString(), 0, null, null))
+                {
+                    return false;
+                }
+
+                // Si el socio no existe, procede con la inserción
+                SqlCommand agregar = new SqlCommand(
         "insert into SOCIO(socio_id, " +
                            "sc_apaterno, " +
                            "sc_amaterno, " +
@@ -68,31 +104,36 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         "values(@id,@apaterno,@amaterno,@nombres,@rfc,@calle,@exterior, @interior," +
         "@colonia,@cp,@ciudad,@telefono,@telefono2, @telefono3," +
         "@email,@nacimiento,@ingreso,@tipodepersona,@estatus)");
-            {
-                agregar.Parameters.AddWithValue("id", socio.sc_id);
-                agregar.Parameters.AddWithValue("apaterno", socio.sc_apaterno);
-                agregar.Parameters.AddWithValue("amaterno", socio.sc_amaterno);
-                agregar.Parameters.AddWithValue("nombres", socio.sc_nombre_s);
-                agregar.Parameters.AddWithValue("rfc", socio.sc_rfc);
-                agregar.Parameters.AddWithValue("calle", socio.sc_calle);
-                agregar.Parameters.AddWithValue("exterior", socio.sc_num_ext);
-                agregar.Parameters.AddWithValue("interior", socio.sc_num_int);
-                agregar.Parameters.AddWithValue("colonia", socio.sc_colonia);
-                agregar.Parameters.AddWithValue("cp", socio.sc_cp);
-                agregar.Parameters.AddWithValue("ciudad", socio.ciudad_id);
-                agregar.Parameters.AddWithValue("telefono", socio.sc_telefono);
-                agregar.Parameters.AddWithValue("telefono2", socio.sc_telefono2);
-                agregar.Parameters.AddWithValue("telefono3", socio.sc_telefono3);
-                agregar.Parameters.AddWithValue("email", socio.sc_email);
-                agregar.Parameters.AddWithValue("nacimiento", socio.sc_fecha_nacimiento);
-                agregar.Parameters.AddWithValue("ingreso", socio.sc_fecha_ingreso);
-                agregar.Parameters.AddWithValue("tipodepersona", socio.sc_tipo_presona);
-                agregar.Parameters.AddWithValue("estatus", socio.sc_estatus);
+                {
+                    agregar.Parameters.AddWithValue("id", socio.sc_id);
+                    agregar.Parameters.AddWithValue("apaterno", socio.sc_apaterno);
+                    agregar.Parameters.AddWithValue("amaterno", socio.sc_amaterno);
+                    agregar.Parameters.AddWithValue("nombres", socio.sc_nombre_s);
+                    agregar.Parameters.AddWithValue("rfc", socio.sc_rfc);
+                    agregar.Parameters.AddWithValue("calle", socio.sc_calle);
+                    agregar.Parameters.AddWithValue("exterior", socio.sc_num_ext);
+                    agregar.Parameters.AddWithValue("interior", socio.sc_num_int);
+                    agregar.Parameters.AddWithValue("colonia", socio.sc_colonia);
+                    agregar.Parameters.AddWithValue("cp", socio.sc_cp);
+                    agregar.Parameters.AddWithValue("ciudad", socio.ciudad_id);
+                    agregar.Parameters.AddWithValue("telefono", socio.sc_telefono);
+                    agregar.Parameters.AddWithValue("telefono2", socio.sc_telefono2);
+                    agregar.Parameters.AddWithValue("telefono3", socio.sc_telefono3);
+                    agregar.Parameters.AddWithValue("email", socio.sc_email);
+                    agregar.Parameters.AddWithValue("nacimiento", socio.sc_fecha_nacimiento);
+                    agregar.Parameters.AddWithValue("ingreso", socio.sc_fecha_ingreso);
+                    agregar.Parameters.AddWithValue("tipodepersona", socio.sc_tipo_presona);
+                    agregar.Parameters.AddWithValue("estatus", socio.sc_estatus);
 
 
-                conexion.ejecutarComandoSinRetorno(agregar);
+                    conexion.ejecutarComandoSinRetorno(agregar);
+                }
+                return true;
             }
-            return true;
+            catch
+            {
+                return false;
+            }
 
         }
 

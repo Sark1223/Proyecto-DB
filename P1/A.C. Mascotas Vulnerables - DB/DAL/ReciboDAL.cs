@@ -17,6 +17,8 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             conexion = new Conexion();
         }
+        
+
         //METODOS Socio
         public bool AgregarRecibo(ReciboBLL recibo)
         {
