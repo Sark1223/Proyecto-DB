@@ -168,10 +168,67 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 dgvSocios.DataSource = socio.MostratSocios().Tables[0];
             }
         }
+        bool error = false;
+
+        //Metodo para validar que haya solamente numeros o letras
+        private void ValidarLetrasNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten espacios en blanco\nIngrese letras o números solamente");
+            }
+        }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             dgvSocios.DataSource = socio.Buscar(txtBuscar.Text).Tables[0];
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtBuscar.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtBuscar, "No se admiten espacios en blanco\nIngrese letras o números solamente");
+            }
+            else
+            {
+                error1.SetError(txtBuscar, "");
+            }
+        }
+
+        private void txtBuscar_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtBuscar, "");
+        }
+
+        private void txtBuscar_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasNumeros(txtBuscar, error1, e);
         }
     }
 }

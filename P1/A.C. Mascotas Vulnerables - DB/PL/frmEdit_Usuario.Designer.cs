@@ -889,6 +889,7 @@
             this.txtNombre.Size = new System.Drawing.Size(177, 19);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.Text = "DOMINGUEZ";
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label29
             // 

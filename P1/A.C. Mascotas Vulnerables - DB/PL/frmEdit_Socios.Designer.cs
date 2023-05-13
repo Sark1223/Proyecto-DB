@@ -113,6 +113,7 @@
             this.cmdModificar = new System.Windows.Forms.Panel();
             this.pbModificar = new System.Windows.Forms.PictureBox();
             this.lblModificar = new System.Windows.Forms.Label();
+            this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
@@ -125,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBorrar)).BeginInit();
             this.cmdModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdSocios
@@ -291,6 +293,9 @@
             this.txtNombreSocio.Size = new System.Drawing.Size(172, 19);
             this.txtNombreSocio.TabIndex = 53;
             this.txtNombreSocio.Text = "karla judith";
+            this.txtNombreSocio.TextChanged += new System.EventHandler(this.txtNombreSocio_TextChanged);
+            this.txtNombreSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombreSocio_Validating);
+            this.txtNombreSocio.Validated += new System.EventHandler(this.txtNombreSocio_Validated);
             // 
             // txtApellidoMSocio
             // 
@@ -302,6 +307,9 @@
             this.txtApellidoMSocio.Size = new System.Drawing.Size(133, 19);
             this.txtApellidoMSocio.TabIndex = 54;
             this.txtApellidoMSocio.Text = "santillana";
+            this.txtApellidoMSocio.TextChanged += new System.EventHandler(this.txtApellidoMSocio_TextChanged);
+            this.txtApellidoMSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoMSocio_Validating);
+            this.txtApellidoMSocio.Validated += new System.EventHandler(this.txtApellidoMSocio_Validated);
             // 
             // txtApellidoPSocio
             // 
@@ -313,6 +321,9 @@
             this.txtApellidoPSocio.Size = new System.Drawing.Size(134, 19);
             this.txtApellidoPSocio.TabIndex = 55;
             this.txtApellidoPSocio.Text = "dominguez";
+            this.txtApellidoPSocio.TextChanged += new System.EventHandler(this.txtApellidoPSocio_TextChanged);
+            this.txtApellidoPSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoPSocio_Validating);
+            this.txtApellidoPSocio.Validated += new System.EventHandler(this.txtApellidoPSocio_Validated);
             // 
             // txtSocioID
             // 
@@ -324,6 +335,9 @@
             this.txtSocioID.Size = new System.Drawing.Size(84, 19);
             this.txtSocioID.TabIndex = 58;
             this.txtSocioID.Text = "12";
+            this.txtSocioID.TextChanged += new System.EventHandler(this.txtSocioID_TextChanged);
+            this.txtSocioID.Validating += new System.ComponentModel.CancelEventHandler(this.txtSocioID_Validating);
+            this.txtSocioID.Validated += new System.EventHandler(this.txtSocioID_Validated);
             // 
             // lblSocioID
             // 
@@ -358,6 +372,9 @@
             this.txtRfcSocio.Size = new System.Drawing.Size(145, 19);
             this.txtRfcSocio.TabIndex = 61;
             this.txtRfcSocio.Text = "sark0312239a5";
+            this.txtRfcSocio.TextChanged += new System.EventHandler(this.txtRfcSocio_TextChanged);
+            this.txtRfcSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtRfcSocio_Validating);
+            this.txtRfcSocio.Validated += new System.EventHandler(this.txtRfcSocio_Validated);
             // 
             // lblRfcSocio
             // 
@@ -392,6 +409,9 @@
             this.txtTelefonoPSocio.Size = new System.Drawing.Size(113, 19);
             this.txtTelefonoPSocio.TabIndex = 75;
             this.txtTelefonoPSocio.Text = "6641978732";
+            this.txtTelefonoPSocio.TextChanged += new System.EventHandler(this.txtTelefonoPSocio_TextChanged);
+            this.txtTelefonoPSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefonoPSocio_Validating);
+            this.txtTelefonoPSocio.Validated += new System.EventHandler(this.txtTelefonoPSocio_Validated);
             // 
             // lblTelefonoPSocio
             // 
@@ -426,6 +446,9 @@
             this.txtTelefono2Socio.Size = new System.Drawing.Size(112, 19);
             this.txtTelefono2Socio.TabIndex = 72;
             this.txtTelefono2Socio.Text = "5567";
+            this.txtTelefono2Socio.TextChanged += new System.EventHandler(this.txtTelefono2Socio_TextChanged);
+            this.txtTelefono2Socio.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefono2Socio_Validating);
+            this.txtTelefono2Socio.Validated += new System.EventHandler(this.txtTelefono2Socio_Validated);
             // 
             // txtTelefono3Socio
             // 
@@ -436,6 +459,9 @@
             this.txtTelefono3Socio.Name = "txtTelefono3Socio";
             this.txtTelefono3Socio.Size = new System.Drawing.Size(112, 19);
             this.txtTelefono3Socio.TabIndex = 71;
+            this.txtTelefono3Socio.TextChanged += new System.EventHandler(this.txtTelefono3Socio_TextChanged);
+            this.txtTelefono3Socio.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefono3Socio_Validating);
+            this.txtTelefono3Socio.Validated += new System.EventHandler(this.txtTelefono3Socio_Validated);
             // 
             // txtCorreoSocio
             // 
@@ -447,6 +473,9 @@
             this.txtCorreoSocio.Size = new System.Drawing.Size(301, 19);
             this.txtCorreoSocio.TabIndex = 70;
             this.txtCorreoSocio.Text = "santoskarla122308@gmail.com";
+            this.txtCorreoSocio.TextChanged += new System.EventHandler(this.txtCorreoSocio_TextChanged);
+            this.txtCorreoSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreoSocio_Validating);
+            this.txtCorreoSocio.Validated += new System.EventHandler(this.txtCorreoSocio_Validated);
             // 
             // lblTelefono3Socio
             // 
@@ -600,6 +629,9 @@
             this.txtNoExtSocio.Size = new System.Drawing.Size(88, 19);
             this.txtNoExtSocio.TabIndex = 95;
             this.txtNoExtSocio.Text = "1223";
+            this.txtNoExtSocio.TextChanged += new System.EventHandler(this.txtNoExtSocio_TextChanged);
+            this.txtNoExtSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtNoExtSocio_Validating);
+            this.txtNoExtSocio.Validated += new System.EventHandler(this.txtNoExtSocio_Validated);
             // 
             // lblNoExtSocio
             // 
@@ -633,6 +665,9 @@
             this.txtNoIntSocio.Name = "txtNoIntSocio";
             this.txtNoIntSocio.Size = new System.Drawing.Size(78, 19);
             this.txtNoIntSocio.TabIndex = 92;
+            this.txtNoIntSocio.TextChanged += new System.EventHandler(this.txtNoIntSocio_TextChanged);
+            this.txtNoIntSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtNoIntSocio_Validating);
+            this.txtNoIntSocio.Validated += new System.EventHandler(this.txtNoIntSocio_Validated);
             // 
             // txtColoniaSocio
             // 
@@ -644,6 +679,9 @@
             this.txtColoniaSocio.Size = new System.Drawing.Size(192, 19);
             this.txtColoniaSocio.TabIndex = 91;
             this.txtColoniaSocio.Text = "Vista del Valle";
+            this.txtColoniaSocio.TextChanged += new System.EventHandler(this.txtColoniaSocio_TextChanged);
+            this.txtColoniaSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtColoniaSocio_Validating);
+            this.txtColoniaSocio.Validated += new System.EventHandler(this.txtColoniaSocio_Validated);
             // 
             // txtCalleSocio
             // 
@@ -655,6 +693,9 @@
             this.txtCalleSocio.Size = new System.Drawing.Size(192, 19);
             this.txtCalleSocio.TabIndex = 90;
             this.txtCalleSocio.Text = "valle encantado";
+            this.txtCalleSocio.TextChanged += new System.EventHandler(this.txtCalleSocio_TextChanged);
+            this.txtCalleSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtCalleSocio_Validating);
+            this.txtCalleSocio.Validated += new System.EventHandler(this.txtCalleSocio_Validated);
             // 
             // lblColoniaSocio
             // 
@@ -758,6 +799,9 @@
             this.txtCpSocio.Size = new System.Drawing.Size(59, 19);
             this.txtCpSocio.TabIndex = 105;
             this.txtCpSocio.Text = "22330";
+            this.txtCpSocio.TextChanged += new System.EventHandler(this.txtCpSocio_TextChanged);
+            this.txtCpSocio.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpSocio_Validating);
+            this.txtCpSocio.Validated += new System.EventHandler(this.txtCpSocio_Validated);
             // 
             // lblCpSocio
             // 
@@ -1059,6 +1103,10 @@
             this.lblModificar.Text = "Modificar";
             this.lblModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
+            // error1
+            // 
+            this.error1.ContainerControl = this;
+            // 
             // frmEdit_Socios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1156,6 +1204,7 @@
             this.cmdModificar.ResumeLayout(false);
             this.cmdModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1245,5 +1294,6 @@
         public System.Windows.Forms.Panel cmdModificar;
         public System.Windows.Forms.PictureBox pbModificar;
         public System.Windows.Forms.Label lblModificar;
+        private System.Windows.Forms.ErrorProvider error1;
     }
 }

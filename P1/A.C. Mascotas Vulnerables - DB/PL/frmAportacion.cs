@@ -49,5 +49,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
 
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

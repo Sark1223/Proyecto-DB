@@ -280,6 +280,278 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             }
         }
 
+        bool error = true;
+
+        //Metodo para validar que haya solamente numeros
+        private void ValidarNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+        }
+
+        //Validar el ID del pais
+        private void txtPaisID_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtPaisID.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtPaisID, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                error1.SetError(txtPaisID, "");
+            }
+        }
+
+        private void txtPaisID_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtPaisID, "");
+        }
+
+        private void txtPaisID_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarNumeros(txtPaisID, error1, e);
+        }
+
+        //Metodo para validar que haya solamente letras o espacios
+        private void ValidarLetrasEspacios(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            int espacio = 0;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txt.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+        }
+
+        //Validaciones de nombre pais
+        private void txtNombrePais_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNombrePais.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtNombrePais.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtNombrePais, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtNombrePais, "");
+            }
+        }
+
+        private void txtNombrePais_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtNombrePais, "");
+        }
+
+        private void txtNombrePais_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtNombrePais, error1, e);
+        }
+
+        //Validaciones de estado id
+        private void txtEstadoID_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtEstadoID.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtEstadoID.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtEstadoID, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtEstadoID, "");
+            }
+        }
+
+        private void txtEstadoID_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtEstadoID, error1, e);
+        }
+
+        private void txtEstadoID_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtEstadoID, "");
+        }
+
+        //Validar la ciudad id 
+        private void txtCiudadID_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtCiudadID.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtCiudadID.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtCiudadID, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtCiudadID, "");
+            }
+        }
+
+        private void txtCiudadID_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtCiudadID, error1, e);
+        }
+
+        private void txtCiudadID_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtEstadoID, "");
+        }
+
+        //Validaciones del nombre de la ciudad
+        private void txtNombreCiudad_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNombreCiudad.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtNombreCiudad.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtNombreCiudad, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtNombreCiudad, "");
+            }
+        }
+
+        private void txtNombreCiudad_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtNombreCiudad, "");
+        }
+
+        private void txtNombreCiudad_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtNombreCiudad, error1, e);
+        }
+
         LugarDAL lugDAL = new LugarDAL();
 
 

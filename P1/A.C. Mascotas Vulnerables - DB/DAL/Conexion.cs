@@ -12,12 +12,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
     internal class Conexion
     {
         //Conexion Santos Karla♥
-        public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
-        SqlConnection conexion;
+        //public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
+        //SqlConnection conexion;
 
         ////Conexion Villada Edwin
-        //public string CadenaConexion = @"server = DESKTOP-BNMO14B; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
-        //SqlConnection conexion;
+        public string CadenaConexion = @"server = DESKTOP-BNMO14B; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
+        SqlConnection conexion;
 
         //METODOS DE CONEXION
         public SqlConnection EstablecerConexion()
