@@ -445,7 +445,7 @@
             this.bunifuMetroTextbox5.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox5.BorderThickness = 1;
             this.bunifuMetroTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMetroTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox5.isPassword = false;
             this.bunifuMetroTextbox5.Location = new System.Drawing.Point(248, 68);
@@ -464,7 +464,7 @@
             this.txtImporte.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.txtImporte.BorderThickness = 2;
             this.txtImporte.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtImporte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtImporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtImporte.isPassword = false;
             this.txtImporte.Location = new System.Drawing.Point(62, 68);
@@ -521,6 +521,7 @@
             this.btnAgregarRecibo.Size = new System.Drawing.Size(111, 50);
             this.btnAgregarRecibo.TabIndex = 23;
             this.btnAgregarRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarRecibo.Click += new System.EventHandler(this.btnAgregarRecibo_Click);
             // 
             // label10
             // 
@@ -535,7 +536,7 @@
             // txtFolio
             // 
             this.txtFolio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFolio.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtFolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtFolio.HintForeColor = System.Drawing.Color.Empty;
             this.txtFolio.HintText = "";
@@ -608,7 +609,6 @@
             this.cbEncargado2.Name = "cbEncargado2";
             this.cbEncargado2.Size = new System.Drawing.Size(255, 21);
             this.cbEncargado2.TabIndex = 40;
-            
             // 
             // panel5
             // 

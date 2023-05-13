@@ -50,5 +50,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
             }
         }
+
+        private void btnAgregarRecibo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

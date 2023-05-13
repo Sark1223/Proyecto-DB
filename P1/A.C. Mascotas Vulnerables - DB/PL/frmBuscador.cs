@@ -16,6 +16,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         //frmBuscador busca= new frmBuscador();
         ReciboDAL recibo = new ReciboDAL();
 
+        bool error = false;
         public frmBuscador()
         {
             InitializeComponent();
@@ -36,6 +37,41 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             dgvSocios.DataSource = recibo.Buscar(txtBuscar.Text).Tables[0];
         }
         public string idsocio, nombre, apaterno, amaterno;
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtBuscar.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtBuscar, "No se admiten espacios en blanco\nIngrese letras o números solamente");
+            }
+            else
+            {
+                error1.SetError(txtBuscar, "");
+            }
+        }
+
+        private void txtBuscar_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtBuscar, "");
+        }
+
+        private void txtBuscar_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasNumeros(txtBuscar, error1, e);
+        }
+
         private void dgvSocios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int indice = e.RowIndex;
@@ -47,6 +83,27 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             MessageBox.Show("Se ha seleccionado el socio " + idsocio + " " + nombre);
         }
 
+        //Metodo para validar que haya solamente numeros o letras
+        private void ValidarLetrasNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten espacios en blanco\nIngrese letras o números solamente");
+            }
+        }
         private void frmBuscador_Load(object sender, EventArgs e)
         {
 

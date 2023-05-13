@@ -53,6 +53,7 @@
             this.rdForma = new ns1.BunifuElipse(this.components);
             this.rdAgregar = new ns1.BunifuElipse(this.components);
             this.rdBuscar = new ns1.BunifuElipse(this.components);
+            this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +61,7 @@
             this.panel1.SuspendLayout();
             this.pnBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -242,6 +244,9 @@
             this.txtBuscar.TabIndex = 34;
             this.txtBuscar.Text = "1139";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.txtBuscar.Validating += new System.ComponentModel.CancelEventHandler(this.txtBuscar_Validating);
+            this.txtBuscar.Validated += new System.EventHandler(this.txtBuscar_Validated);
             // 
             // pnBuscar
             // 
@@ -333,6 +338,10 @@
             this.rdBuscar.ElipseRadius = 20;
             this.rdBuscar.TargetControl = this.pnBuscar;
             // 
+            // error1
+            // 
+            this.error1.ContainerControl = this;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +358,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.encabezado.ResumeLayout(false);
@@ -359,6 +369,7 @@
             this.panel1.PerformLayout();
             this.pnBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmdBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,5 +395,6 @@
         private ns1.BunifuElipse rdAgregar;
         private ns1.BunifuElipse rdBuscar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ErrorProvider error1;
     }
 }

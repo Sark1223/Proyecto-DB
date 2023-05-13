@@ -112,6 +112,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.rdEliminar = new ns1.BunifuElipse(this.components);
             this.rdModificar = new ns1.BunifuElipse(this.components);
+            this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
@@ -126,6 +127,7 @@
             this.pnModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.SuspendLayout();
             // 
             // encabezado
@@ -261,6 +263,9 @@
             this.txttelefono.Size = new System.Drawing.Size(113, 19);
             this.txttelefono.TabIndex = 10;
             this.txttelefono.Text = "6641978732";
+            this.txttelefono.TextChanged += new System.EventHandler(this.txttelefono_TextChanged);
+            this.txttelefono.Validating += new System.ComponentModel.CancelEventHandler(this.txttelefono_Validating);
+            this.txttelefono.Validated += new System.EventHandler(this.txttelefono_Validated);
             // 
             // label10
             // 
@@ -329,6 +334,9 @@
             this.txtrfc.Size = new System.Drawing.Size(145, 19);
             this.txtrfc.TabIndex = 6;
             this.txtrfc.Text = "SARK0312239A5";
+            this.txtrfc.TextChanged += new System.EventHandler(this.txtrfc_TextChanged);
+            this.txtrfc.Validating += new System.ComponentModel.CancelEventHandler(this.txtrfc_Validating);
+            this.txtrfc.Validated += new System.EventHandler(this.txtrfc_Validated);
             // 
             // label8
             // 
@@ -397,6 +405,9 @@
             this.txtApaterno.Size = new System.Drawing.Size(134, 19);
             this.txtApaterno.TabIndex = 3;
             this.txtApaterno.Text = "DOMINGUEZ";
+            this.txtApaterno.TextChanged += new System.EventHandler(this.txtApaterno_TextChanged);
+            this.txtApaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtApaterno_Validating);
+            this.txtApaterno.Validated += new System.EventHandler(this.txtApaterno_Validated);
             // 
             // txtAmaterno
             // 
@@ -408,6 +419,9 @@
             this.txtAmaterno.Size = new System.Drawing.Size(133, 19);
             this.txtAmaterno.TabIndex = 4;
             this.txtAmaterno.Text = "SANTILLANA";
+            this.txtAmaterno.TextChanged += new System.EventHandler(this.txtAmaterno_TextChanged);
+            this.txtAmaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtAmaterno_Validating);
+            this.txtAmaterno.Validated += new System.EventHandler(this.txtAmaterno_Validated);
             // 
             // txtContraseña
             // 
@@ -591,6 +605,9 @@
             this.txtcp.Size = new System.Drawing.Size(59, 19);
             this.txtcp.TabIndex = 15;
             this.txtcp.Text = "22330";
+            this.txtcp.TextChanged += new System.EventHandler(this.txtcp_TextChanged);
+            this.txtcp.Validating += new System.ComponentModel.CancelEventHandler(this.txtcp_Validating);
+            this.txtcp.Validated += new System.EventHandler(this.txtcp_Validated);
             // 
             // label24
             // 
@@ -671,6 +688,9 @@
             this.txtExterior.Size = new System.Drawing.Size(88, 19);
             this.txtExterior.TabIndex = 12;
             this.txtExterior.Text = "5714";
+            this.txtExterior.TextChanged += new System.EventHandler(this.txtExterior_TextChanged);
+            this.txtExterior.Validating += new System.ComponentModel.CancelEventHandler(this.txtExterior_Validating);
+            this.txtExterior.Validated += new System.EventHandler(this.txtExterior_Validated);
             // 
             // label17
             // 
@@ -704,6 +724,9 @@
             this.txtInterior.Name = "txtInterior";
             this.txtInterior.Size = new System.Drawing.Size(78, 19);
             this.txtInterior.TabIndex = 13;
+            this.txtInterior.TextChanged += new System.EventHandler(this.txtInterior_TextChanged);
+            this.txtInterior.Validating += new System.ComponentModel.CancelEventHandler(this.txtInterior_Validating);
+            this.txtInterior.Validated += new System.EventHandler(this.txtInterior_Validated);
             // 
             // txtColonia
             // 
@@ -715,6 +738,9 @@
             this.txtColonia.Size = new System.Drawing.Size(192, 19);
             this.txtColonia.TabIndex = 14;
             this.txtColonia.Text = "VISTA DEL VALLE";
+            this.txtColonia.TextChanged += new System.EventHandler(this.txtColonia_TextChanged);
+            this.txtColonia.Validating += new System.ComponentModel.CancelEventHandler(this.txtColonia_Validating);
+            this.txtColonia.Validated += new System.EventHandler(this.txtColonia_Validated);
             // 
             // txtCalle
             // 
@@ -726,6 +752,9 @@
             this.txtCalle.Size = new System.Drawing.Size(192, 19);
             this.txtCalle.TabIndex = 11;
             this.txtCalle.Text = "VALLE ENCANTADO";
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
+            this.txtCalle.Validating += new System.ComponentModel.CancelEventHandler(this.txtCalle_Validating);
+            this.txtCalle.Validated += new System.EventHandler(this.txtCalle_Validated);
             // 
             // label18
             // 
@@ -889,6 +918,9 @@
             this.txtNombre.Size = new System.Drawing.Size(177, 19);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.Text = "DOMINGUEZ";
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
+            this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // label29
             // 
@@ -1035,6 +1067,10 @@
             this.rdModificar.ElipseRadius = 70;
             this.rdModificar.TargetControl = this.cmdModificar;
             // 
+            // error1
+            // 
+            this.error1.ContainerControl = this;
+            // 
             // frmEdit_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1103,6 +1139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEdit_Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuario";
             this.Load += new System.EventHandler(this.frmEdit_Usuario_Load);
             this.encabezado.ResumeLayout(false);
@@ -1124,6 +1161,7 @@
             this.pnModificar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1213,5 +1251,6 @@
         private System.Windows.Forms.Panel pnModificar;
         private ns1.BunifuElipse rdEliminar;
         private ns1.BunifuElipse rdModificar;
+        private System.Windows.Forms.ErrorProvider error1;
     }
 }

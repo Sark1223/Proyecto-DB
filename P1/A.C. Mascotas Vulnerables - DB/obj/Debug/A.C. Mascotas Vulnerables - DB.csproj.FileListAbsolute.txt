@@ -55,3 +55,10 @@ C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerabl
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEstadoRecibo.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmHistorial.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmSocios.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmBuscador.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEstadoRecibo.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmHistorial.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmLugar.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Socios.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Usuario.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmUsuarios.resources

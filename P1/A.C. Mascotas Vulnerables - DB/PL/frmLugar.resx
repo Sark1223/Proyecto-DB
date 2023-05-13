@@ -422,4 +422,7 @@
         fAD8AAAwAAD8AP4AAHgAAfwA/4AB/gAH/AA=
 </value>
   </data>
+  <metadata name="error1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>130, 0</value>
+  </metadata>
 </root>
