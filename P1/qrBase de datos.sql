@@ -74,7 +74,8 @@ CREATE TABLE USUARIO (
 	ciudad_id            INTEGER NOT NULL,
     usu_telefono         NUMERiC(10,0) NOT NULL,
     usu_email            VARCHAR(130) not null,
-    usu_fecha_ingreso    DATE NOT NULL
+    usu_fecha_ingreso    DATE NOT NULL,
+	usu_estatus          VARCHAR(8) NOT NULL
 );
 
 ALTER TABLE USUARIO ADD CONSTRAINT usuario_pk PRIMARY KEY ( usuario_id );
