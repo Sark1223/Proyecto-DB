@@ -117,56 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mascota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mascota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="rdForma.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdModificar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGkAAAAlCAYAAABBGMctAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVGhD7do9S8NAAMbxYov1BdFJHAQFEfQLiC6Cu+Ag
+        ODg4ODo4ODg4SJM0CabaF20rijiqg44iCIIgToIgguCnOfNcsBp6drLNHTzDb8rLkD9JLrlLfe7WBemN
+        kQzASAZgJAMwkgEYyQAtI33s1MT9clGcTnqiMpIXfp8tcqkc/QNcS1zT43FP3C0Vxft2TdkA/oz0uFoW
+        Xq8t3CzDtFu+2xJejyVuFw+ULZoioejZlB8exDid5obXvDrqiretaqxJLBICBYOOsLvUJ6HOQIPXzSN1
+        JNxBDKQHvK+aIsl3EB9x2sB76nq+8BMJozgMElQ7U3LQ5GXjMIqEISDKqXak5Fjhq+dyNogiYayu2omS
+        tz/kRJH2Bvio0xXuJhnJyfBRpzMZSbWB9MFIBmAkAzCSAWQkjCBUG0kPMhLnifQmI+H3uGojJQ/fsDLS
+        zUKB30qaOp/2o0iYu8DMoGonSo4bNnlYKUWR4Gou4E9WjdjpnDiZ8OLzSZiuKA3nlQdQ5/n9dmNxSiMS
+        YO6CI73kYR7paa3c6BKLBM/rFTnH7mTUJ6D2sdOWvIN+B4KmSIBH38VMwOn0DsLSufqYq1x/p4z0DUUx
+        BHSzHFC0Cz59sPgUi1BVDaBlJNIDIxmAkQzASAZgJO3VxReA6/C3wgSsJAAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="borrar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\borrar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="localizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\localizacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Equis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Equis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="editar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar-usuario (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-usuario (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hucha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hucha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lupa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lupa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ŧσllσฬ ๓є @ღ Ꮙαƪƪεȵα ღ #Corgi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ŧσllσฬ ๓є @ღ Ꮙαƪƪεȵα ღ #Corgi.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mujer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mujer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="estilo-grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estilo-grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="perro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="justicia-social" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\justicia-social.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cmdAgregar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGkAAAAlCAYAAABBGMctAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH+SURBVGhD7drPKwRhHMdxf9DKj13y4yClKJKzOHBWcnCQ
+        IkUiStSWclBc5UCuFFGKdp6Z2ZldK3/K1/N9Ruy2Xy6YeZ76HF6neWbUvJudxzxPS2WlSGA3RHIAIjkA
+        kRyASA5AJAf8HGltn8rHCxTcjpH/NEgq6iLvrRX+AN9Lvqf+/QiFJ/MUr+/JDbRvI0WHS6TiAnnVvL5o
+        rumPwN8oaaraSaqSp/B0TmzRFImLBjfj5iTpovB/+J77j0NU2dxpaNIQiQOpoI9Kr+3iRSAdKuileHtL
+        jsRPEALZgd9XTZHMOwg/cfZ46aTgfKYukp7FmUmCNBgyo+Iuinc3kkg8BeQZhjQQMvTaRuHlVBKJ5+o8
+        FRQHQqaU6k8iqbBHHAAW0E+TieTVOuQBYIUkknAA7IFIDkAkByCSA5JIegYhHQQ7mEhYJ7KbicSfx6WD
+        kD3+H9ZECs9mSdXw9ds2/BUouJ5IIvHahVfBB1bb8KpE+WgxiWSepotp83lcGgwZ0JM5/260cT2Jlyv8
+        5wH5BEhf1P25OeUrksZrF0ofFE+C1PA6UlRc/uzSEIlFB6tmn4OHiUTqzNYF/ZDUB2JNkQz90xdeTeoX
+        VwHrTKnIma1z/sOwuP9OjvSBi/IUMNl7J10cfq3WYTaf8iZUqQH7MRLYAZEcgEgOQCQHIJL1ivQOCQK3
+        ZPkX+qMAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

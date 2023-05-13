@@ -38,6 +38,8 @@ namespace A.C.Mascotas_Vulnerables___DB
         frmUsuarios usuarios = new frmUsuarios();
         UsuarioDAL mu = new UsuarioDAL();
         frmLugar lugar = new frmLugar();
+        frmPeriodo periodo = new frmPeriodo();
+        PeriodoDAL periodoDAL = new PeriodoDAL();   
 
         private void lblLogo_Click(object sender, EventArgs e)
         {
@@ -79,6 +81,12 @@ namespace A.C.Mascotas_Vulnerables___DB
         private void cmdLugares_Click(object sender, EventArgs e)
         {
             lugar.ShowDialog();
+        }
+
+        private void cmdPeriodo_Click(object sender, EventArgs e)
+        {
+            periodo.dgvPeriodo.DataSource = periodoDAL.MostrarPeriodos().Tables[0];
+            periodo.ShowDialog();
         }
     }
 }

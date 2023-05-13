@@ -78,6 +78,7 @@
             this.rdSocio = new ns1.BunifuElipse(this.components);
             this.rdMonto = new ns1.BunifuElipse(this.components);
             this.rdFirmas = new ns1.BunifuElipse(this.components);
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -478,6 +479,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.panel9.Controls.Add(this.bunifuThinButton21);
             this.panel9.Controls.Add(this.pictureBox2);
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.btnAgregarRecibo);
@@ -536,7 +538,7 @@
             // txtFolio
             // 
             this.txtFolio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtFolio.HintForeColor = System.Drawing.Color.Empty;
             this.txtFolio.HintText = "";
@@ -544,7 +546,7 @@
             this.txtFolio.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtFolio.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.txtFolio.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtFolio.LineThickness = 3;
+            this.txtFolio.LineThickness = 2;
             this.txtFolio.Location = new System.Drawing.Point(479, 76);
             this.txtFolio.Margin = new System.Windows.Forms.Padding(4);
             this.txtFolio.Name = "txtFolio";
@@ -666,6 +668,31 @@
             this.rdFirmas.ElipseRadius = 20;
             this.rdFirmas.TargetControl = this.pnFirmas;
             // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.SystemColors.Window;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Agregar";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(27, 382);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(111, 50);
+            this.bunifuThinButton21.TabIndex = 24;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmNuevaAportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -766,5 +793,6 @@
         public ns1.BunifuElipse rdSocio;
         public ns1.BunifuElipse rdMonto;
         public ns1.BunifuElipse rdFirmas;
+        public ns1.BunifuThinButton2 bunifuThinButton21;
     }
 }

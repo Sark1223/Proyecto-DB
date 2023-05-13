@@ -93,6 +93,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendario {
+            get {
+                object obj = ResourceManager.GetObject("calendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -136,6 +146,16 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         internal static System.Drawing.Bitmap hucha {
             get {
                 object obj = ResourceManager.GetObject("hucha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap justicia_social {
+            get {
+                object obj = ResourceManager.GetObject("justicia-social", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,29 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu_Principal));
             this.panEncabezado = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new ns1.BunifuImageButton();
             this.panOpciones = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPuesto = new System.Windows.Forms.TextBox();
-            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.arrastrarForma1 = new ns1.BunifuDragControl(this.components);
             this.panPantalla = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.cmdAdministra = new ns1.BunifuThinButton2();
-            this.cmdSocios = new ns1.BunifuThinButton2();
-            this.cmdIniciar = new ns1.BunifuThinButton2();
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,17 +50,32 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panelTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.rdLocation = new ns1.BunifuElipse(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmdPeriodo = new System.Windows.Forms.Button();
+            this.rdPeriodo = new ns1.BunifuElipse(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cmdAdministra = new ns1.BunifuThinButton2();
+            this.cmdSocios = new ns1.BunifuThinButton2();
+            this.cmdIniciar = new ns1.BunifuThinButton2();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new ns1.BunifuImageButton();
             this.panEncabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panOpciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.panPantalla.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panEncabezado
@@ -99,32 +103,6 @@
             this.lblLogo.Size = new System.Drawing.Size(200, 20);
             this.lblLogo.TabIndex = 15;
             this.lblLogo.Text = "A.C. Mascotas Vulnerables";
-            // 
-            // Logo
-            // 
-            this.panelTransition.SetDecoration(this.Logo, BunifuAnimatorNS.DecorationType.None);
-            this.Logo.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.Logo.Location = new System.Drawing.Point(10, 6);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(30, 27);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 14;
-            this.Logo.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.panelTransition.SetDecoration(this.btnCerrar, BunifuAnimatorNS.DecorationType.None);
-            this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(729, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(38, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panOpciones
             // 
@@ -188,17 +166,6 @@
             this.txtPuesto.Text = "Asistente\r\nadministrativo";
             this.txtPuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pbUsuario
-            // 
-            this.panelTransition.SetDecoration(this.pbUsuario, BunifuAnimatorNS.DecorationType.None);
-            this.pbUsuario.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.mujer__1_;
-            this.pbUsuario.Location = new System.Drawing.Point(10, 3);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(78, 75);
-            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsuario.TabIndex = 15;
-            this.pbUsuario.TabStop = false;
-            // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
@@ -215,16 +182,12 @@
             this.txtUsuario.Text = "Santos Karla";
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // arrastrarForma1
-            // 
-            this.arrastrarForma1.Fixed = true;
-            this.arrastrarForma1.Horizontal = true;
-            this.arrastrarForma1.TargetControl = this.panEncabezado;
-            this.arrastrarForma1.Vertical = true;
-            // 
             // panPantalla
             // 
             this.panPantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.panPantalla.Controls.Add(this.panel3);
+            this.panPantalla.Controls.Add(this.pictureBox4);
+            this.panPantalla.Controls.Add(this.cmdPeriodo);
             this.panPantalla.Controls.Add(this.panel2);
             this.panPantalla.Controls.Add(this.pictureBox3);
             this.panPantalla.Controls.Add(this.cmdAdministra);
@@ -249,16 +212,182 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
             this.panelTransition.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(602, 8);
+            this.panel2.Location = new System.Drawing.Point(601, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(13, 48);
             this.panel2.TabIndex = 36;
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.panelTransition.SetDecoration(this.lblBienvenido, BunifuAnimatorNS.DecorationType.None);
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.lblBienvenido.Location = new System.Drawing.Point(237, 22);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(200, 26);
+            this.lblBienvenido.TabIndex = 30;
+            this.lblBienvenido.Text = "MENÚ PRINCIPAL";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.panelTransition.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(319, 238);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Socios";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.panelTransition.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(64, 238);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 22);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Aportaciones";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.panelTransition.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(512, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 22);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Administradores";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmdLocalizacion
+            // 
+            this.cmdLocalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panelTransition.SetDecoration(this.cmdLocalizacion, BunifuAnimatorNS.DecorationType.None);
+            this.cmdLocalizacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdLocalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmdLocalizacion.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmdLocalizacion.Location = new System.Drawing.Point(476, 13);
+            this.cmdLocalizacion.Name = "cmdLocalizacion";
+            this.cmdLocalizacion.Size = new System.Drawing.Size(152, 49);
+            this.cmdLocalizacion.TabIndex = 37;
+            this.cmdLocalizacion.Text = "Nueva Ubicación";
+            this.cmdLocalizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdLocalizacion.UseVisualStyleBackColor = false;
+            this.cmdLocalizacion.Click += new System.EventHandler(this.cmdLugares_Click);
+            // 
+            // rdForma
+            // 
+            this.rdForma.ElipseRadius = 30;
+            this.rdForma.TargetControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label5);
+            this.panelTransition.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 393);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(771, 24);
+            this.panel1.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.panelTransition.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(196, -1);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(423, 18);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "@Karla Santos, Edwin Villada, Manuel Davila y Erick (Equipo 6)";
+            // 
+            // panelTransition
+            // 
+            this.panelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
+            this.panelTransition.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 1;
+            animation4.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 2F;
+            animation4.TransparencyCoeff = 0F;
+            this.panelTransition.DefaultAnimation = animation4;
+            this.panelTransition.Interval = 5;
+            // 
+            // rdLocation
+            // 
+            this.rdLocation.ElipseRadius = 20;
+            this.rdLocation.TargetControl = this.cmdLocalizacion;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panelTransition.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.panel3.Location = new System.Drawing.Point(52, 13);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(13, 48);
+            this.panel3.TabIndex = 39;
+            // 
+            // cmdPeriodo
+            // 
+            this.cmdPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.panelTransition.SetDecoration(this.cmdPeriodo, BunifuAnimatorNS.DecorationType.None);
+            this.cmdPeriodo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.cmdPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmdPeriodo.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmdPeriodo.Location = new System.Drawing.Point(43, 13);
+            this.cmdPeriodo.Name = "cmdPeriodo";
+            this.cmdPeriodo.Size = new System.Drawing.Size(146, 49);
+            this.cmdPeriodo.TabIndex = 40;
+            this.cmdPeriodo.Text = "Nuevo Periodo";
+            this.cmdPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdPeriodo.UseVisualStyleBackColor = false;
+            this.cmdPeriodo.Click += new System.EventHandler(this.cmdPeriodo_Click);
+            // 
+            // rdPeriodo
+            // 
+            this.rdPeriodo.ElipseRadius = 20;
+            this.rdPeriodo.TargetControl = this.cmdPeriodo;
+            // 
+            // pictureBox4
+            // 
+            this.panelTransition.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox4.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.justicia_social;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(51, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.panelTransition.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox3.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.localizacion;
-            this.pictureBox3.Location = new System.Drawing.Point(612, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(611, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(51, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -346,19 +475,6 @@
             this.cmdIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdIniciar.Click += new System.EventHandler(this.cmdIniciar_Click);
             // 
-            // lblBienvenido
-            // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.panelTransition.SetDecoration(this.lblBienvenido, BunifuAnimatorNS.DecorationType.None);
-            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.lblBienvenido.Location = new System.Drawing.Point(237, 24);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(200, 26);
-            this.lblBienvenido.TabIndex = 30;
-            this.lblBienvenido.Text = "MENÚ PRINCIPAL";
-            // 
             // pictureBox2
             // 
             this.panelTransition.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
@@ -392,116 +508,42 @@
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
-            // label3
+            // pbUsuario
             // 
-            this.label3.AutoSize = true;
-            this.panelTransition.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(319, 238);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Socios";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelTransition.SetDecoration(this.pbUsuario, BunifuAnimatorNS.DecorationType.None);
+            this.pbUsuario.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.mujer__1_;
+            this.pbUsuario.Location = new System.Drawing.Point(10, 3);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(78, 75);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsuario.TabIndex = 15;
+            this.pbUsuario.TabStop = false;
             // 
-            // label2
+            // Logo
             // 
-            this.label2.AutoSize = true;
-            this.panelTransition.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(64, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 22);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Aportaciones";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelTransition.SetDecoration(this.Logo, BunifuAnimatorNS.DecorationType.None);
+            this.Logo.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.Logo.Location = new System.Drawing.Point(10, 6);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(30, 27);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 14;
+            this.Logo.TabStop = false;
             // 
-            // label4
+            // btnCerrar
             // 
-            this.label4.AutoSize = true;
-            this.panelTransition.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(512, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 22);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Administradores";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmdLocalizacion
-            // 
-            this.cmdLocalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.panelTransition.SetDecoration(this.cmdLocalizacion, BunifuAnimatorNS.DecorationType.None);
-            this.cmdLocalizacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.cmdLocalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cmdLocalizacion.ForeColor = System.Drawing.SystemColors.Control;
-            this.cmdLocalizacion.Location = new System.Drawing.Point(477, 8);
-            this.cmdLocalizacion.Name = "cmdLocalizacion";
-            this.cmdLocalizacion.Size = new System.Drawing.Size(152, 49);
-            this.cmdLocalizacion.TabIndex = 37;
-            this.cmdLocalizacion.Text = "Nueva Ubicación";
-            this.cmdLocalizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdLocalizacion.UseVisualStyleBackColor = false;
-            this.cmdLocalizacion.Click += new System.EventHandler(this.cmdLugares_Click);
-            // 
-            // rdForma
-            // 
-            this.rdForma.ElipseRadius = 30;
-            this.rdForma.TargetControl = this;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label5);
-            this.panelTransition.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 393);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 24);
-            this.panel1.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.panelTransition.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(196, -1);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(423, 18);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "@Karla Santos, Edwin Villada, Manuel Davila y Erick (Equipo 6)";
-            // 
-            // panelTransition
-            // 
-            this.panelTransition.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
-            this.panelTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.panelTransition.DefaultAnimation = animation1;
-            this.panelTransition.Interval = 5;
-            // 
-            // rdLocation
-            // 
-            this.rdLocation.ElipseRadius = 20;
-            this.rdLocation.TargetControl = this.cmdLocalizacion;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.panelTransition.SetDecoration(this.btnCerrar, BunifuAnimatorNS.DecorationType.None);
+            this.btnCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(729, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(38, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmMenu_Principal
             // 
@@ -521,26 +563,26 @@
             this.Load += new System.EventHandler(this.frmMenu_Principal_Load);
             this.panEncabezado.ResumeLayout(false);
             this.panEncabezado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panOpciones.ResumeLayout(false);
             this.panOpciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.panPantalla.ResumeLayout(false);
             this.panPantalla.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private ns1.BunifuImageButton btnCerrar;
-        private ns1.BunifuDragControl arrastrarForma1;
         private ns1.BunifuElipse rdForma;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label lblLogo;
@@ -569,6 +611,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cmdLocalizacion;
         private ns1.BunifuElipse rdLocation;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button cmdPeriodo;
+        private ns1.BunifuElipse rdPeriodo;
     }
 }
 

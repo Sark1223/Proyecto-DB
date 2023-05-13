@@ -57,6 +57,7 @@
     <Compile Include="DAL\Conexion.cs" />
     <Compile Include="DAL\InicioSesionDaL.cs" />
     <Compile Include="DAL\LugarDAL.cs" />
+    <Compile Include="DAL\PeriodoDAL.cs" />
     <Compile Include="DAL\ReciboDAL.cs" />
     <Compile Include="DAL\SocioDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
@@ -120,6 +121,12 @@
     <Compile Include="PL\frmEdit_Usuario.Designer.cs">
       <DependentUpon>frmEdit_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmPeriodo.Designer.cs">
+      <DependentUpon>frmPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmSocios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmEdit_Usuario.resx">
       <DependentUpon>frmEdit_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmPeriodo.resx">
+      <DependentUpon>frmPeriodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmSocios.resx">
       <DependentUpon>frmSocios.cs</DependentUpon>
@@ -237,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\borrar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justicia-social.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

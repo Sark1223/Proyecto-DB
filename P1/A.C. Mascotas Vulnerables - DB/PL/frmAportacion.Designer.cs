@@ -37,31 +37,31 @@
             this.dgvProcedimiento = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCrearReporte = new ns1.BunifuThinButton2();
-            this.btnNuevaAportacion = new ns1.BunifuThinButton2();
-            this.btnModificarEstatus = new ns1.BunifuThinButton2();
             this.rdAportacion = new ns1.BunifuElipse(this.components);
             this.rdpnBusSocio = new ns1.BunifuElipse(this.components);
-            this.cmdIniciar = new ns1.BunifuThinButton2();
             this.pnBusfolio = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnBusqueda = new System.Windows.Forms.Panel();
             this.rdpnBusFolio = new ns1.BunifuElipse(this.components);
             this.encabezado = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmdCerrar = new ns1.BunifuImageButton();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new ns1.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmdCerrar = new ns1.BunifuImageButton();
+            this.btnCrearReporte = new ns1.BunifuThinButton2();
+            this.btnNuevaAportacion = new ns1.BunifuThinButton2();
+            this.btnModificarEstatus = new ns1.BunifuThinButton2();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.cmdIniciar = new ns1.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimiento)).BeginInit();
             this.pnBusfolio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.pnBusqueda.SuspendLayout();
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProcedimiento
@@ -132,6 +132,150 @@
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.Width = 95;
+            // 
+            // rdAportacion
+            // 
+            this.rdAportacion.ElipseRadius = 30;
+            this.rdAportacion.TargetControl = this;
+            // 
+            // rdpnBusSocio
+            // 
+            this.rdpnBusSocio.ElipseRadius = 20;
+            this.rdpnBusSocio.TargetControl = this;
+            // 
+            // pnBusfolio
+            // 
+            this.pnBusfolio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.pnBusfolio.Controls.Add(this.panel2);
+            this.pnBusfolio.Controls.Add(this.Logo);
+            this.pnBusfolio.Location = new System.Drawing.Point(7, 29);
+            this.pnBusfolio.Name = "pnBusfolio";
+            this.pnBusfolio.Size = new System.Drawing.Size(54, 32);
+            this.pnBusfolio.TabIndex = 41;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(44, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 32);
+            this.panel2.TabIndex = 34;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(53, 32);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(256, 25);
+            this.txtUsuario.TabIndex = 34;
+            this.txtUsuario.Text = "1139";
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 16);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Ingrese dato a Buscar";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnBusqueda
+            // 
+            this.pnBusqueda.Controls.Add(this.label1);
+            this.pnBusqueda.Controls.Add(this.txtUsuario);
+            this.pnBusqueda.Controls.Add(this.pnBusfolio);
+            this.pnBusqueda.Controls.Add(this.cmdIniciar);
+            this.pnBusqueda.Location = new System.Drawing.Point(234, 39);
+            this.pnBusqueda.Name = "pnBusqueda";
+            this.pnBusqueda.Size = new System.Drawing.Size(352, 73);
+            this.pnBusqueda.TabIndex = 36;
+            // 
+            // rdpnBusFolio
+            // 
+            this.rdpnBusFolio.ElipseRadius = 20;
+            this.rdpnBusFolio.TargetControl = this.pnBusfolio;
+            // 
+            // encabezado
+            // 
+            this.encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.encabezado.Controls.Add(this.pictureBox1);
+            this.encabezado.Controls.Add(this.cmdCerrar);
+            this.encabezado.Controls.Add(this.label3);
+            this.encabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.encabezado.Location = new System.Drawing.Point(0, 0);
+            this.encabezado.Name = "encabezado";
+            this.encabezado.Size = new System.Drawing.Size(800, 39);
+            this.encabezado.TabIndex = 47;
+            this.encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(366, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 25);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "SOCIOS";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DimGray;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Imprimir";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(608, 121);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(141, 48);
+            this.bunifuThinButton21.TabIndex = 48;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
+            this.cmdCerrar.ImageActive = null;
+            this.cmdCerrar.Location = new System.Drawing.Point(748, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // btnCrearReporte
             // 
@@ -210,15 +354,16 @@
             this.btnModificarEstatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnModificarEstatus.Click += new System.EventHandler(this.btnModificarEstatus_Click);
             // 
-            // rdAportacion
+            // Logo
             // 
-            this.rdAportacion.ElipseRadius = 30;
-            this.rdAportacion.TargetControl = this;
-            // 
-            // rdpnBusSocio
-            // 
-            this.rdpnBusSocio.ElipseRadius = 20;
-            this.rdpnBusSocio.TargetControl = this;
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.lupa__1_;
+            this.Logo.Location = new System.Drawing.Point(8, 2);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(30, 27);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 33;
+            this.Logo.TabStop = false;
             // 
             // cmdIniciar
             // 
@@ -246,151 +391,6 @@
             this.cmdIniciar.TabIndex = 32;
             this.cmdIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnBusfolio
-            // 
-            this.pnBusfolio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.pnBusfolio.Controls.Add(this.panel2);
-            this.pnBusfolio.Controls.Add(this.Logo);
-            this.pnBusfolio.Location = new System.Drawing.Point(7, 29);
-            this.pnBusfolio.Name = "pnBusfolio";
-            this.pnBusfolio.Size = new System.Drawing.Size(54, 32);
-            this.pnBusfolio.TabIndex = 41;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(44, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 32);
-            this.panel2.TabIndex = 34;
-            // 
-            // Logo
-            // 
-            this.Logo.BackColor = System.Drawing.Color.Transparent;
-            this.Logo.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.lupa__1_;
-            this.Logo.Location = new System.Drawing.Point(8, 2);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(30, 27);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 33;
-            this.Logo.TabStop = false;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.White;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(53, 32);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(256, 25);
-            this.txtUsuario.TabIndex = 34;
-            this.txtUsuario.Text = "1139";
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(12, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 16);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Ingrese dato a Buscar";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnBusqueda
-            // 
-            this.pnBusqueda.Controls.Add(this.label1);
-            this.pnBusqueda.Controls.Add(this.txtUsuario);
-            this.pnBusqueda.Controls.Add(this.pnBusfolio);
-            this.pnBusqueda.Controls.Add(this.cmdIniciar);
-            this.pnBusqueda.Location = new System.Drawing.Point(234, 39);
-            this.pnBusqueda.Name = "pnBusqueda";
-            this.pnBusqueda.Size = new System.Drawing.Size(352, 73);
-            this.pnBusqueda.TabIndex = 36;
-            // 
-            // rdpnBusFolio
-            // 
-            this.rdpnBusFolio.ElipseRadius = 20;
-            this.rdpnBusFolio.TargetControl = this.pnBusfolio;
-            // 
-            // encabezado
-            // 
-            this.encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
-            this.encabezado.Controls.Add(this.pictureBox1);
-            this.encabezado.Controls.Add(this.cmdCerrar);
-            this.encabezado.Controls.Add(this.label3);
-            this.encabezado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.encabezado.Location = new System.Drawing.Point(0, 0);
-            this.encabezado.Name = "encabezado";
-            this.encabezado.Size = new System.Drawing.Size(800, 39);
-            this.encabezado.TabIndex = 47;
-            this.encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.perro;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.cmdCerrar.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Equis;
-            this.cmdCerrar.ImageActive = null;
-            this.cmdCerrar.Location = new System.Drawing.Point(748, 3);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(40, 29);
-            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdCerrar.TabIndex = 0;
-            this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Zoom = 10;
-            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(366, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "SOCIOS";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Imprimir";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(608, 121);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(141, 48);
-            this.bunifuThinButton21.TabIndex = 48;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmAportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,13 +411,13 @@
             this.Text = "frmAportacion";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimiento)).EndInit();
             this.pnBusfolio.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.pnBusqueda.ResumeLayout(false);
             this.pnBusqueda.PerformLayout();
             this.encabezado.ResumeLayout(false);
             this.encabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
