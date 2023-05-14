@@ -17,12 +17,65 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             conexion = new Conexion();
         }
+        public bool BuscarEnTabla_Agregar(string sentencia, string valor, int posicion, Control control, ErrorProvider error)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sentencia);
+                cmd.Connection = conexion.EstablecerConexion();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr[posicion].ToString() == valor)
+                    {
+                        error.SetError(control, "EL valor " + valor + " de  ya existe");
+                        return false;
+                    }
+
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         
+        public void ReciboIDAuto(string sentencia)
+        {
+            string proid ;
+            SqlCommand cmd = new SqlCommand(sentencia);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                proid=id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                proid = ("1");
+            }
+            else
+            {
+                proid = ("1");
+            }
+            
+        }
 
         //METODOS Socio
         public bool AgregarRecibo(ReciboBLL recibo)
         {
-            SqlCommand agregar = new SqlCommand(
+            ReciboIDAuto("SELECT rec_folio FROM RECIBO order by rec_folio DESC");
+            try
+            {
+                //verifica si ya existe un socio con el mismo ID
+                if (!BuscarEnTabla_Agregar("SELECT rec_folio FROM RECIBO WHERE rec_folio = @folio", recibo.rec_folio.ToString(), 0, null, null))
+                {
+                    return false;
+                }
+                SqlCommand agregar = new SqlCommand(
         "insert into RECIBO(rec_folio," +
                            "rec_fecha," +
                            "rec_monto," +
@@ -43,6 +96,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 conexion.ejecutarComandoSinRetorno(agregar);
             }
             return true;
+
+            }
+            catch
+            {
+                return false;
+            }
 
         }
 

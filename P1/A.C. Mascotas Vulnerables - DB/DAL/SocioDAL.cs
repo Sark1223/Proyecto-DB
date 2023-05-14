@@ -69,6 +69,40 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             }
         }
 
+        public bool BuscarEnTabla_Modificar(string sentencia, string valor, int posicion, string valorCarga, Control control, ErrorProvider error)
+        {
+            try
+            {
+                if (valor == valorCarga)
+                {
+                    return true;
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(sentencia);
+                    cmd.Connection = conexion.EstablecerConexion();
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (dr[posicion].ToString() == valor)
+                        {
+                            error.SetError(control, "EL valor " + valor + " de  ya existe");
+                            return false;
+                        }
+
+                    }
+                    return true;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public bool AgregarSocio(SocioBLL socio)
         {
             try
@@ -139,7 +173,14 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
         public bool ModificarSocio(SocioBLL socio, string idAnterior)
         {
-            SqlCommand modificar = new SqlCommand(
+            try
+            {
+                //verifica si ya existe un socio con el mismo ID
+                if (!BuscarEnTabla_Modificar("SELECT socio_id FROM SOCIO WHERE socio_id = @id", socio.sc_id.ToString(), 0, null, null,null))
+                {
+                    return false;
+                }
+                SqlCommand modificar = new SqlCommand(
         "Update SOCIO set socio_id = @id," +
                            "sc_apaterno = @apaterno," +
                            "sc_amaterno = @amaterno," +
@@ -160,31 +201,36 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                            "sc_tipo_presona = @tipodepersona ," +
                            "sc_estatus = @estatus " +
                            "WHERE socio_id = " + idAnterior);
-            {
-                modificar.Parameters.AddWithValue("id", socio.sc_id);
-                modificar.Parameters.AddWithValue("apaterno", socio.sc_apaterno);
-                modificar.Parameters.AddWithValue("amaterno", socio.sc_amaterno);
-                modificar.Parameters.AddWithValue("nombres", socio.sc_nombre_s);
-                modificar.Parameters.AddWithValue("rfc", socio.sc_rfc);
-                modificar.Parameters.AddWithValue("calle", socio.sc_calle);
-                modificar.Parameters.AddWithValue("exterior", socio.sc_num_ext);
-                modificar.Parameters.AddWithValue("interior", socio.sc_num_int);
-                modificar.Parameters.AddWithValue("colonia", socio.sc_colonia);
-                modificar.Parameters.AddWithValue("cp", socio.sc_cp);
-                modificar.Parameters.AddWithValue("ciudad", socio.ciudad_id);
-                modificar.Parameters.AddWithValue("telefono", socio.sc_telefono);
-                modificar.Parameters.AddWithValue("telefono2", socio.sc_telefono2);
-                modificar.Parameters.AddWithValue("telefono3", socio.sc_telefono3);
-                modificar.Parameters.AddWithValue("email", socio.sc_email);
-                modificar.Parameters.AddWithValue("nacimiento", socio.sc_fecha_nacimiento);
-                modificar.Parameters.AddWithValue("ingreso", socio.sc_fecha_ingreso);
-                modificar.Parameters.AddWithValue("tipodepersona", socio.sc_tipo_presona);
-                modificar.Parameters.AddWithValue("estatus", socio.sc_estatus);
+                {
+                    modificar.Parameters.AddWithValue("id", socio.sc_id);
+                    modificar.Parameters.AddWithValue("apaterno", socio.sc_apaterno);
+                    modificar.Parameters.AddWithValue("amaterno", socio.sc_amaterno);
+                    modificar.Parameters.AddWithValue("nombres", socio.sc_nombre_s);
+                    modificar.Parameters.AddWithValue("rfc", socio.sc_rfc);
+                    modificar.Parameters.AddWithValue("calle", socio.sc_calle);
+                    modificar.Parameters.AddWithValue("exterior", socio.sc_num_ext);
+                    modificar.Parameters.AddWithValue("interior", socio.sc_num_int);
+                    modificar.Parameters.AddWithValue("colonia", socio.sc_colonia);
+                    modificar.Parameters.AddWithValue("cp", socio.sc_cp);
+                    modificar.Parameters.AddWithValue("ciudad", socio.ciudad_id);
+                    modificar.Parameters.AddWithValue("telefono", socio.sc_telefono);
+                    modificar.Parameters.AddWithValue("telefono2", socio.sc_telefono2);
+                    modificar.Parameters.AddWithValue("telefono3", socio.sc_telefono3);
+                    modificar.Parameters.AddWithValue("email", socio.sc_email);
+                    modificar.Parameters.AddWithValue("nacimiento", socio.sc_fecha_nacimiento);
+                    modificar.Parameters.AddWithValue("ingreso", socio.sc_fecha_ingreso);
+                    modificar.Parameters.AddWithValue("tipodepersona", socio.sc_tipo_presona);
+                    modificar.Parameters.AddWithValue("estatus", socio.sc_estatus);
 
 
-                conexion.ejecutarComandoSinRetorno(modificar);
+                    conexion.ejecutarComandoSinRetorno(modificar);
+                }
+                return true;
             }
-            return true;
+            catch
+            {
+                return false;
+            }
 
         }
 
