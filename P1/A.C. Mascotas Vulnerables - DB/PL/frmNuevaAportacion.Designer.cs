@@ -59,9 +59,10 @@
             this.pnMonto = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox5 = new ns1.BunifuMetroTextbox();
+            this.txtMtoEscrito = new ns1.BunifuMetroTextbox();
             this.txtImporte = new ns1.BunifuMetroTextbox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgregarRecibo = new ns1.BunifuThinButton2();
             this.label10 = new System.Windows.Forms.Label();
@@ -78,7 +79,6 @@
             this.rdSocio = new ns1.BunifuElipse(this.components);
             this.rdMonto = new ns1.BunifuElipse(this.components);
             this.rdFirmas = new ns1.BunifuElipse(this.components);
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -408,7 +408,7 @@
             // 
             this.pnMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
             this.pnMonto.Controls.Add(this.panel3);
-            this.pnMonto.Controls.Add(this.bunifuMetroTextbox5);
+            this.pnMonto.Controls.Add(this.txtMtoEscrito);
             this.pnMonto.Controls.Add(this.txtImporte);
             this.pnMonto.Controls.Add(this.label8);
             this.pnMonto.Controls.Add(this.label7);
@@ -438,24 +438,24 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Monto";
             // 
-            // bunifuMetroTextbox5
+            // txtMtoEscrito
             // 
-            this.bunifuMetroTextbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.bunifuMetroTextbox5.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox5.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.bunifuMetroTextbox5.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox5.BorderThickness = 1;
-            this.bunifuMetroTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.bunifuMetroTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox5.isPassword = false;
-            this.bunifuMetroTextbox5.Location = new System.Drawing.Point(248, 68);
-            this.bunifuMetroTextbox5.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox5.Name = "bunifuMetroTextbox5";
-            this.bunifuMetroTextbox5.Size = new System.Drawing.Size(276, 39);
-            this.bunifuMetroTextbox5.TabIndex = 32;
-            this.bunifuMetroTextbox5.Text = "Tres Mil";
-            this.bunifuMetroTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMtoEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.txtMtoEscrito.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtMtoEscrito.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.txtMtoEscrito.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtMtoEscrito.BorderThickness = 1;
+            this.txtMtoEscrito.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMtoEscrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtMtoEscrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMtoEscrito.isPassword = false;
+            this.txtMtoEscrito.Location = new System.Drawing.Point(248, 68);
+            this.txtMtoEscrito.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMtoEscrito.Name = "txtMtoEscrito";
+            this.txtMtoEscrito.Size = new System.Drawing.Size(276, 39);
+            this.txtMtoEscrito.TabIndex = 32;
+            this.txtMtoEscrito.Text = "Tres Mil";
+            this.txtMtoEscrito.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtImporte
             // 
@@ -488,6 +488,31 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(153, 557);
             this.panel9.TabIndex = 30;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.SystemColors.Window;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Agregar";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(27, 382);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(111, 50);
+            this.bunifuThinButton21.TabIndex = 24;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -668,31 +693,6 @@
             this.rdFirmas.ElipseRadius = 20;
             this.rdFirmas.TargetControl = this.pnFirmas;
             // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.SystemColors.Window;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Agregar";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(27, 382);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(111, 50);
-            this.bunifuThinButton21.TabIndex = 24;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmNuevaAportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -762,7 +762,7 @@
         public System.Windows.Forms.Panel pnMonto;
         public System.Windows.Forms.Panel panel9;
         public System.Windows.Forms.Label label10;
-        public ns1.BunifuMetroTextbox bunifuMetroTextbox5;
+        public ns1.BunifuMetroTextbox txtMtoEscrito;
         public ns1.BunifuMetroTextbox txtImporte;
         public ns1.BunifuDatepicker dtFecha;
         public ns1.BunifuMaterialTextbox txtFolio;
