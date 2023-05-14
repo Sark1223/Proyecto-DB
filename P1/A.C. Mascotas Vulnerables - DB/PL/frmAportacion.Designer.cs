@@ -369,6 +369,7 @@
             this.dgvRecibos.RowTemplate.Height = 30;
             this.dgvRecibos.Size = new System.Drawing.Size(749, 215);
             this.dgvRecibos.TabIndex = 51;
+            this.dgvRecibos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecibos_CellContentDoubleClick);
             // 
             // frmAportacion
             // 

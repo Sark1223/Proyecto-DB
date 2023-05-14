@@ -54,5 +54,21 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
 
         }
+        public string folio, fecha, monto, mtoescrito, firmaasistente, firmaadministrativo;
+
+        private void dgvRecibos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indice = e.RowIndex;
+            folio = dgvRecibos.Rows[indice].Cells[0].Value.ToString();
+            fecha = dgvRecibos.Rows[indice].Cells[1].Value.ToString();
+            monto = dgvRecibos.Rows[indice].Cells[2].Value.ToString();
+            mtoescrito = dgvRecibos.Rows[indice].Cells[3].Value.ToString();
+            firmaasistente = dgvRecibos.Rows[indice].Cells[4].Value.ToString();
+            firmaadministrativo = dgvRecibos.Rows[indice].Cells[5].Value.ToString();
+
+
+
+            MessageBox.Show("Se ha seleccionado el recibo " + folio + " " + fecha);
+        }
     }
 }
