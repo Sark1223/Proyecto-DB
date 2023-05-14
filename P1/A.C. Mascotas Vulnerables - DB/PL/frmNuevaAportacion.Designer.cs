@@ -79,6 +79,8 @@
             this.rdSocio = new ns1.BunifuElipse(this.components);
             this.rdMonto = new ns1.BunifuElipse(this.components);
             this.rdFirmas = new ns1.BunifuElipse(this.components);
+            this.cbEstatus = new System.Windows.Forms.ComboBox();
+            this.lblEstatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -608,6 +610,8 @@
             // pnFirmas
             // 
             this.pnFirmas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.pnFirmas.Controls.Add(this.lblEstatus);
+            this.pnFirmas.Controls.Add(this.cbEstatus);
             this.pnFirmas.Controls.Add(this.txtEncargado1);
             this.pnFirmas.Controls.Add(this.cbEncargado2);
             this.pnFirmas.Controls.Add(this.panel5);
@@ -623,7 +627,7 @@
             this.txtEncargado1.AutoSize = true;
             this.txtEncargado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEncargado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEncargado1.Location = new System.Drawing.Point(121, 43);
+            this.txtEncargado1.Location = new System.Drawing.Point(121, 52);
             this.txtEncargado1.Name = "txtEncargado1";
             this.txtEncargado1.Size = new System.Drawing.Size(196, 20);
             this.txtEncargado1.TabIndex = 41;
@@ -672,7 +676,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(11, 44);
+            this.label13.Location = new System.Drawing.Point(11, 51);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 20);
             this.label13.TabIndex = 13;
@@ -692,6 +696,24 @@
             // 
             this.rdFirmas.ElipseRadius = 20;
             this.rdFirmas.TargetControl = this.pnFirmas;
+            // 
+            // cbEstatus
+            // 
+            this.cbEstatus.FormattingEnabled = true;
+            this.cbEstatus.Location = new System.Drawing.Point(436, 86);
+            this.cbEstatus.Name = "cbEstatus";
+            this.cbEstatus.Size = new System.Drawing.Size(111, 21);
+            this.cbEstatus.TabIndex = 42;
+            // 
+            // lblEstatus
+            // 
+            this.lblEstatus.AutoSize = true;
+            this.lblEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatus.Location = new System.Drawing.Point(432, 51);
+            this.lblEstatus.Name = "lblEstatus";
+            this.lblEstatus.Size = new System.Drawing.Size(68, 20);
+            this.lblEstatus.TabIndex = 43;
+            this.lblEstatus.Text = "Estatus:";
             // 
             // frmNuevaAportacion
             // 
@@ -794,5 +816,7 @@
         public ns1.BunifuElipse rdMonto;
         public ns1.BunifuElipse rdFirmas;
         public ns1.BunifuThinButton2 bunifuThinButton21;
+        public System.Windows.Forms.Label lblEstatus;
+        public System.Windows.Forms.ComboBox cbEstatus;
     }
 }
