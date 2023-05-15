@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,75 +45,21 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         //METODOS Socio
 
         //Busca valores en tabla
-        public bool BuscarEnTabla_Agregar(string sentencia, string valor, int posicion, Control control, ErrorProvider error)
+        public bool ValidarID(string valor, string valorCarga, Control control, ErrorProvider error)
         {
-            try
-            {
-                SqlCommand cmd = new SqlCommand(sentencia);
-                cmd.Connection = conexion.EstablecerConexion();
-
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    if (dr[posicion].ToString() == valor)
-                    {
-                        error.SetError(control, "EL valor " + valor + " de  ya existe");
-                        return false;
-                    }
-
-                }     
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            return conexion.BuscarEnTabla_MODIFICAR("select socio_id from SOCIO", valor, valorCarga, control, error);
         }
 
-        public bool BuscarEnTabla_Modificar(string sentencia, string valor, int posicion, string valorCarga, Control control, ErrorProvider error)
+        public bool ValidarID_Modificar(string valor, string valorCarga, Control control, ErrorProvider error)
         {
-            try
-            {
-                if (valor == valorCarga)
-                {
-                    return true;
-                }
-                else
-                {
-                    SqlCommand cmd = new SqlCommand(sentencia);
-                    cmd.Connection = conexion.EstablecerConexion();
-
-                    SqlDataReader dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
-                    {
-                        if (dr[posicion].ToString() == valor)
-                        {
-                            error.SetError(control, "EL valor " + valor + " de  ya existe");
-                            return false;
-                        }
-
-                    }
-                    return true;
-                }
-
-            }
-            catch
-            {
-                return false;
-            }
+            return conexion.BuscarEnTabla_MODIFICAR("select socio_id from SOCIO", valor, valorCarga, control, error);
         }
+
 
         public bool AgregarSocio(SocioBLL socio)
         {
             try
             {
-                //verifica si ya existe un socio con el mismo ID
-                if (!BuscarEnTabla_Agregar("SELECT socio_id FROM SOCIO WHERE socio_id = @id", socio.sc_id.ToString(), 0, null, null))
-                {
-                    return false;
-                }
-
                 // Si el socio no existe, procede con la inserción
                 SqlCommand agregar = new SqlCommand(
         "insert into SOCIO(socio_id, " +
@@ -175,11 +122,6 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         {
             try
             {
-                //verifica si ya existe un socio con el mismo ID
-                if (!BuscarEnTabla_Modificar("SELECT socio_id FROM SOCIO WHERE socio_id = @id", socio.sc_id.ToString(), 0, null, null,null))
-                {
-                    return false;
-                }
                 SqlCommand modificar = new SqlCommand(
         "Update SOCIO set socio_id = @id," +
                            "sc_apaterno = @apaterno," +
@@ -231,6 +173,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             {
                 return false;
             }
+            
 
         }
 

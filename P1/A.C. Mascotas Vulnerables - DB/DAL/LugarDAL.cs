@@ -82,6 +82,17 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return true;
         }
 
+        //Busca valores en tabla
+        public bool ValidarID(string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            return conexion.BuscarEnTabla_MODIFICAR("select pais_id from PAIS", valor, valorCarga, control, error);
+        }
+
+        public bool ValidarID_Modificar(string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            return conexion.BuscarEnTabla_MODIFICAR("select pais_id from PAIS", valor, valorCarga, control, error);
+        }
+
         /*CREATE TABLE ESTADO (
     estado_id    INTEGER NOT NULL,
     est_nombre   VARCHAR(50),

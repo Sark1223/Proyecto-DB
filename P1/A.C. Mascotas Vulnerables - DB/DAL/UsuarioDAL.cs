@@ -53,6 +53,17 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return conexion.InformacionID(sentencia);
         }
 
+        //Busca valores en tabla
+        public bool ValidarID(string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            return conexion.BuscarEnTabla_MODIFICAR("select usuario_id from USUARIO", valor, valorCarga, control, error);
+        }
+
+        public bool ValidarID_Modificar(string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            return conexion.BuscarEnTabla_MODIFICAR("select usuario_id from USUARIO", valor, valorCarga, control, error);
+        }
+
         //METODOS Usuario
         public bool AgregarUsuario(UsuarioBLL usuario)
         {

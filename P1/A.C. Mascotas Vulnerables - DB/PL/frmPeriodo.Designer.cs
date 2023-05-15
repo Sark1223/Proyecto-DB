@@ -92,6 +92,7 @@
             this.cmdCerrar.TabIndex = 0;
             this.cmdCerrar.TabStop = false;
             this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // label3
             // 
@@ -356,6 +357,7 @@
             this.Controls.Add(this.encabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPeriodo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPeriodo";
             this.Load += new System.EventHandler(this.frmPeriodo_Load);
             this.encabezado.ResumeLayout(false);

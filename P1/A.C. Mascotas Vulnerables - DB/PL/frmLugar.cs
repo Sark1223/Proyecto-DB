@@ -1,4 +1,5 @@
-﻿using A.C.Mascotas_Vulnerables___DB.DAL;
+﻿using A.C.Mascotas_Vulnerables___DB.BLL;
+using A.C.Mascotas_Vulnerables___DB.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +45,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             LimpiarEstado();
             LimpiarCiudad();
 
-            modifiCiudad = false; modifiEstado = false;  modifiPais = false;
+            modifiCiudad = false; modifiEstado = false; modifiPais = false;
         }
 
         //Objetos de forma
@@ -57,7 +58,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         //Variables auxiliares 
         bool modifiCiudad, modifiEstado, modifiPais;
-        string idActPais,  idActEstado, idActCiudad;
+        string idActPais, idActEstado, idActCiudad;
 
         //METODOS DE PAIS ------------------------------------------------------------
         private void RecuperarInformacionPais()
@@ -72,20 +73,63 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             txtNombrePais.Clear();
         }
 
-        private void btnAgregarPais_Click(object sender, EventArgs e)
+        public bool PaisVacios()
         {
-            RecuperarInformacionPais();
-            if (lugar.AgregarPais(pais))
+            string valoresVacios = "";
+            int no_vacios = 0;
+            //VERIFICACION DE VALORES VACIOS
             {
-                MessageBox.Show("El PAIS " + pais.pais_id + " se AGREGO correctamente", "Pais Agregado");
-                lugar.LlenarCBPais(cbPais);
-                dgvPais.DataSource = lugar.MostrarPaises().Tables[0];
-                LimpiarPais();
+                //Informacion personal
+                if(txtPaisID.Text == "")
+                {
+                    valoresVacios += "Pais id, ";
+                    no_vacios++;
+                }
+                if (txtNombrePais.Text == "")
+                {
+                    valoresVacios += "Nombre pais, ";
+                    no_vacios++;
+                }
+
+            }
+            if (no_vacios > 0)
+            {
+                MessageBox.Show("No puede dejar información en blanco \r\n\r\n" +
+                                "No. de valores vacios: " + no_vacios + "\r\n" +
+                                "Valores vacios: " + valoresVacios, "ERROR AL INGRESAR VALORES");
+                return true;
             }
             else
             {
-                MessageBox.Show("NO se pudo ingresar la informacion del pais", "Error al ingresar pais");
+                return false;
             }
+        }
+
+        private void btnAgregarPais_Click(object sender, EventArgs e)
+        {
+            if (!PaisVacios())
+            {
+                if (txtPaisID.Text == idActPais)
+                {
+                    MessageBox.Show("Esta intentando ingresar un id valores ya existentes, presione el boton modificar o ingrese nuevos valores", "PRECAUCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    RecuperarInformacionPais();
+                    if (lugar.AgregarPais(pais))
+                    {
+                        MessageBox.Show("El PAIS " + pais.pais_id + " se AGREGO correctamente", "Pais Agregado");
+                        lugar.LlenarCBPais(cbPais);
+                        dgvPais.DataSource = lugar.MostrarPaises().Tables[0];
+                        LimpiarPais();
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo ingresar la informacion del pais", "Error al ingresar pais");
+                    }
+                }
+            }
+                   
         }
 
         private void ModificarPais(object sender, DataGridViewCellMouseEventArgs e)
@@ -110,13 +154,14 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             if (modifiPais)
             {
                 RecuperarInformacionPais();
-                if (lugar.ModificarPais(pais,idActPais))
+                if (lugar.ModificarPais(pais, idActPais))
                 {
                     MessageBox.Show("El PAIS " + pais.pais_id + " se MODIFICO correctamente", "Pais Modificado");
                     lugar.LlenarCBPais(cbPais);
                     dgvPais.DataSource = lugar.MostrarPaises().Tables[0];
                     LimpiarPais();
                     modifiPais = false;
+                    idActPais = "";
                 }
                 else
                 {
@@ -128,6 +173,100 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 MessageBox.Show("Debe seleccionar primero un registro para modificarlo", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtPaisID_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtPaisID, "");
+        }
+
+        private void txtPaisID_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarNumeros(txtPaisID, error1, e);
+
+            if (!lugDAL.ValidarID(txtPaisID.Text, idActPais, txtPaisID, error1))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtPaisID.Select(0, txtPaisID.Text.Length);
+            }
+            else
+            {
+                if(txtPaisID.Text != "")
+                {
+                    pais.pais_id = int.Parse(txtPaisID.Text);
+                }
+                
+            }
+
+        }
+
+        //Validar el ID del pais
+        private void txtPaisID_TextChanged(object sender, EventArgs e)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtPaisID.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtPaisID, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+            else
+            {
+                error1.SetError(txtPaisID, "");
+            }
+        }
+        //Validaciones de nombre pais
+        private void txtNombrePais_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtNombrePais, "");
+        }
+        private void txtNombrePais_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtNombrePais, error1, e);
+        }
+        private void txtNombrePais_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNombrePais.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtNombrePais.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtNombrePais, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtNombrePais, "");
+            }
+        }
+
 
         //METODOS DE ESTADO ------------------------------------------------------------
         private void RecuperarInformacionEstado()
@@ -144,20 +283,69 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             cbPais.SelectedIndex = 0;
         }
 
-        private void btnAgregarEstado_Click(object sender, EventArgs e)
+        public bool EstadoVacios()
         {
-            RecuperarInformacionEstado();
-            if (lugar.AgregarEstado(estado))
+
+            string valoresVacios = "";
+            int no_vacios = 0;
+            //VERIFICACION DE VALORES VACIOS
             {
-                MessageBox.Show("El ESTADO " + estado.est_nombre + " se AGREGO correctamente", "Estado Agregado");
-                lugar.LlenarCBEstado(cbEstado);
-                dgvEstado.DataSource = lugar.MostrarEstados().Tables[0];
-                LimpiarEstado();
+                //Informacion personal
+                if (txtEstadoID.Text == "")
+                {
+                    valoresVacios += "Pais id, ";
+                    no_vacios++;
+                }
+                if (txtNombreEstado.Text == "")
+                {
+                    valoresVacios += "Nombre estado, ";
+                    no_vacios++;
+                }
+                if (cbPais.Text == "- SELECCIONE PAIS -")
+                {
+                    valoresVacios += "Pais, ";
+                    no_vacios++;
+                }
+
+            }
+            if (no_vacios > 0)
+            {
+                MessageBox.Show("No puede dejar información en blanco \r\n\r\n" +
+                                "No. de valores vacios: " + no_vacios + "\r\n" +
+                                "Valores vacios: " + valoresVacios, "ERROR AL INGRESAR VALORES");
+                return true;
             }
             else
             {
-                MessageBox.Show("NO se pudo ingresar la informacion del estado", "Error al ingresar estado");
+                return false;
             }
+        }
+
+        private void btnAgregarEstado_Click(object sender, EventArgs e)
+        {
+            if (!EstadoVacios())
+            {
+                if (txtEstadoID.Text == idActEstado)
+                {
+                    MessageBox.Show("Esta intentando ingresar un id valores ya existentes, presione el boton modificar o ingrese nuevos valores", "PRECAUCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    RecuperarInformacionEstado();
+                    if (lugar.AgregarEstado(estado))
+                    {
+                        MessageBox.Show("El ESTADO " + estado.est_nombre + " se AGREGO correctamente", "Estado Agregado");
+                        lugar.LlenarCBEstado(cbEstado);
+                        dgvEstado.DataSource = lugar.MostrarEstados().Tables[0];
+                        LimpiarEstado();
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo ingresar la informacion del estado", "Error al ingresar estado");
+                    }
+                }
+            }
+                    
         }
 
         private void cbPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -224,6 +412,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     dgvEstado.DataSource = lugar.MostrarEstados().Tables[0];
                     LimpiarEstado();
                     modifiEstado = false;
+                    idActEstado = "";
                 }
                 else
                 {
@@ -234,187 +423,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             {
                 MessageBox.Show("Debe seleccionar primero un registro para modificarlo", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        //METODOS DE CIUDAD ------------------------------------------------------------
-        private void RecuperarInformacionCiudad()
-        {
-            ciudad.ciudad_id = int.Parse(txtCiudadID.Text);
-            ciudad.ciudad_nombre = txtNombreCiudad.Text;
-            //estado.estado_id = int.Parse(txtNombreEstado.Text);
-        }
-
-        public void LimpiarCiudad()
-        {
-            txtCiudadID.Clear();
-            txtNombreCiudad.Clear();
-            cbEstado.SelectedIndex = 0;
-        }
-
-        private void btnAgregarCiudad_Click(object sender, EventArgs e)
-        {
-            RecuperarInformacionCiudad();
-            if (lugar.AgregarCiudad(ciudad))
-            {
-                MessageBox.Show("La CIUDAD " + ciudad.ciudad_nombre + " se AGREGO correctamente", "Ciudad Agregado");
-                dgvCiudad.DataSource = lugar.MostrarCiudad().Tables[0];
-                LimpiarCiudad();
-            }
-            else
-            {
-                MessageBox.Show("NO se pudo ingresar la informacion del ciudad", "Error al ingresar ciudad");
-            }
-        }
-
-
-        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbEstado.SelectedIndex > 0)
-            {
-
-                //Recuperar informacion de de la tabla CIUDAD
-                string id = lugar.ObtenerID($"Select estado_id From ESTADO WHERE est_nombre = '{cbEstado.Text}'");
-
-                //Reccuperar el id del nombre de la ciudad
-                ciudad.estado_id = int.Parse(id);//guardarlo
-            }
-        }
-
-        bool error = true;
-
-        //Metodo para validar que haya solamente numeros
-        private void ValidarNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsDigit(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-        }
-
-        //Validar el ID del pais
-        private void txtPaisID_TextChanged(object sender, EventArgs e)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtPaisID.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsDigit(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                error1.SetError(txtPaisID, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-            else
-            {
-                error1.SetError(txtPaisID, "");
-            }
-        }
-
-        private void txtPaisID_Validated(object sender, EventArgs e)
-        {
-            error1.SetError(txtPaisID, "");
-        }
-
-        private void txtPaisID_Validating(object sender, CancelEventArgs e)
-        {
-            ValidarNumeros(txtPaisID, error1, e);
-        }
-
-        //Metodo para validar que haya solamente letras o espacios
-        private void ValidarLetrasEspacios(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-            int espacio = 0;
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
-                {
-                    error = true;
-                    break;
-                }
-                if (char.IsSeparator(caracter))
-                {
-                    espacio++;
-                    if (espacio == txt.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
-            }
-        }
-
-        //Validaciones de nombre pais
-        private void txtNombrePais_TextChanged(object sender, EventArgs e)
-        {
-            int espacio = 0;
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtNombrePais.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
-                {
-                    error = true;
-                    break;
-                }
-                if (char.IsSeparator(caracter))
-                {
-                    espacio++;
-                    if (espacio == txtNombrePais.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
-                }
-            }
-            if (error)
-            {
-                error1.SetError(txtNombrePais, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
-            }
-            else
-            {
-                error1.SetError(txtNombrePais, "");
-            }
-        }
-
-        private void txtNombrePais_Validated(object sender, EventArgs e)
-        {
-            error1.SetError(txtNombrePais, "");
-        }
-
-        private void txtNombrePais_Validating(object sender, CancelEventArgs e)
-        {
-            ValidarLetrasEspacios(txtNombrePais, error1, e);
         }
 
         //Validaciones de estado id
@@ -451,110 +459,124 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 error1.SetError(txtEstadoID, "");
             }
         }
-
         private void txtEstadoID_Validating(object sender, CancelEventArgs e)
         {
             ValidarLetrasEspacios(txtEstadoID, error1, e);
-        }
 
+            if (!lugDAL.ValidarID(txtEstadoID.Text, idActEstado, txtEstadoID, error1))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtEstadoID.Select(0, txtEstadoID.Text.Length);
+            }
+            else
+            {
+                if (txtEstadoID.Text != "")
+                {
+                    estado.estado_id = int.Parse(txtEstadoID.Text);
+                }
+
+            }
+        }
         private void txtEstadoID_Validated(object sender, EventArgs e)
         {
             error1.SetError(txtEstadoID, "");
         }
 
-        //Validar la ciudad id 
-        private void txtCiudadID_TextChanged(object sender, EventArgs e)
+        //METODOS DE CIUDAD ------------------------------------------------------------
+        private void RecuperarInformacionCiudad()
         {
-            int espacio = 0;
-            error = false;
+            ciudad.ciudad_id = int.Parse(txtCiudadID.Text);
+            ciudad.ciudad_nombre = txtNombreCiudad.Text;
+            //estado.estado_id = int.Parse(txtNombreEstado.Text);
+        }
 
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtCiudadID.Text)
+        public void LimpiarCiudad()
+        {
+            txtCiudadID.Clear();
+            txtNombreCiudad.Clear();
+            cbEstado.SelectedIndex = 0;
+        }
+
+        public bool CiudadVacios()
+        {
+
+            string valoresVacios = "";
+            int no_vacios = 0;
+            //VERIFICACION DE VALORES VACIOS
             {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                //Informacion personal
+                if (txtCiudadID.Text == "")
                 {
-                    error = true;
-                    break;
+                    valoresVacios += "ciudad id, ";
+                    no_vacios++;
                 }
-                if (char.IsSeparator(caracter))
+                if (txtNombreCiudad.Text == "")
                 {
-                    espacio++;
-                    if (espacio == txtCiudadID.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
+                    valoresVacios += "Nombre ciudad, ";
+                    no_vacios++;
                 }
+                if (cbEstado.Text == "- SELECCIONE ESTADO -")
+                {
+                    valoresVacios += "Estado, ";
+                    no_vacios++;
+                }
+
             }
-            if (error)
+            if (no_vacios > 0)
             {
-                error1.SetError(txtCiudadID, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+                MessageBox.Show("No puede dejar información en blanco \r\n\r\n" +
+                                "No. de valores vacios: " + no_vacios + "\r\n" +
+                                "Valores vacios: " + valoresVacios, "ERROR AL INGRESAR VALORES");
+                return true;
             }
             else
             {
-                error1.SetError(txtCiudadID, "");
+                return false;
             }
         }
 
-        private void txtCiudadID_Validating(object sender, CancelEventArgs e)
+        private void btnAgregarCiudad_Click(object sender, EventArgs e)
         {
-            ValidarLetrasEspacios(txtCiudadID, error1, e);
-        }
-
-        private void txtCiudadID_Validated(object sender, EventArgs e)
-        {
-            error1.SetError(txtEstadoID, "");
-        }
-
-        //Validaciones del nombre de la ciudad
-        private void txtNombreCiudad_TextChanged(object sender, EventArgs e)
-        {
-            int espacio = 0;
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txtNombreCiudad.Text)
+            if (!CiudadVacios())
             {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                if(txtCiudadID.Text == idActCiudad)
                 {
-                    error = true;
-                    break;
+                    MessageBox.Show("Esta intentando ingresar un id valores ya existentes, presione el boton modificar o ingrese nuevos valores","PRECAUCION",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
-                if (char.IsSeparator(caracter))
+                else
                 {
-                    espacio++;
-                    if (espacio == txtNombreCiudad.TextLength)
+                    RecuperarInformacionCiudad();
+                    if (lugar.AgregarCiudad(ciudad))
                     {
-                        error = true;
-                        break;
+                        MessageBox.Show("La CIUDAD " + ciudad.ciudad_nombre + " se AGREGO correctamente", "Ciudad Agregado");
+                        dgvCiudad.DataSource = lugar.MostrarCiudad().Tables[0];
+                        LimpiarCiudad();
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo ingresar la informacion del ciudad", "Error al ingresar ciudad");
                     }
                 }
+                
             }
-            if (error)
-            {
-                error1.SetError(txtNombreCiudad, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
-            }
-            else
-            {
-                error1.SetError(txtNombreCiudad, "");
-            }
+            
         }
-
-        private void txtNombreCiudad_Validated(object sender, EventArgs e)
+    
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            error1.SetError(txtNombreCiudad, "");
+            if (cbEstado.SelectedIndex > 0)
+            {
+
+                //Recuperar informacion de de la tabla CIUDAD
+                string id = lugar.ObtenerID($"Select estado_id From ESTADO WHERE est_nombre = '{cbEstado.Text}'");
+
+                //Reccuperar el id del nombre de la ciudad
+                ciudad.estado_id = int.Parse(id);//guardarlo
+            }
         }
 
-        private void txtNombreCiudad_Validating(object sender, CancelEventArgs e)
-        {
-            ValidarLetrasEspacios(txtNombreCiudad, error1, e);
-        }
-
-        LugarDAL lugDAL = new LugarDAL();
-
-
+        bool error = true;
         private void ModificarCiudad(object sender, DataGridViewCellMouseEventArgs e)
         {
             {
@@ -604,6 +626,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     dgvCiudad.DataSource = lugar.MostrarCiudad().Tables[0];
                     LimpiarCiudad();
                     modifiCiudad = false;
+
+                    idActCiudad = "";
                 }
                 else
                 {
@@ -616,9 +640,153 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             }
         }
 
+        //Validar la ciudad id 
+        private void txtCiudadID_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtCiudadID.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtCiudadID.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtCiudadID, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtCiudadID, "");
+            }
+        }
+        private void txtCiudadID_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtCiudadID, error1, e);
+        }
+        private void txtCiudadID_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtEstadoID, "");
+        }
+        //Validaciones del nombre de la ciudad
+        private void txtNombreCiudad_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNombreCiudad.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtNombreCiudad.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtNombreCiudad, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtNombreCiudad, "");
+            }
+        }
+        private void txtNombreCiudad_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtNombreCiudad, "");
+        }
+        private void txtNombreCiudad_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtNombreCiudad, error1, e);
+        }
+
+        LugarDAL lugDAL = new LugarDAL();
+
+
+
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        //Metodo para validar que haya solamente numeros
+        private void ValidarNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+        }
+
+        //Metodo para validar que haya solamente letras o espacios
+        private void ValidarLetrasEspacios(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            int espacio = 0;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txt.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
         }
 
     }

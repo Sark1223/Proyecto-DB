@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.encabezado = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmdCerrar = new ns1.BunifuImageButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.encabezado = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmdCerrar = new ns1.BunifuImageButton();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,6 +104,36 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(735, 346);
             this.dgvUsuarios.TabIndex = 18;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Num_historial";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 128;
+            // 
+            // id_usuario
+            // 
+            this.id_usuario.HeaderText = "id_Ususario";
+            this.id_usuario.Name = "id_usuario";
+            this.id_usuario.Width = 116;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Detalles del cambio";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 170;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Fecha";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 77;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "hora";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 64;
+            // 
             // encabezado
             // 
             this.encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
@@ -138,6 +168,7 @@
             this.cmdCerrar.TabIndex = 0;
             this.cmdCerrar.TabStop = false;
             this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // label3
             // 
@@ -151,36 +182,6 @@
             this.label3.Text = "USUARIOS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Num_historial";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 128;
-            // 
-            // id_usuario
-            // 
-            this.id_usuario.HeaderText = "id_Ususario";
-            this.id_usuario.Name = "id_usuario";
-            this.id_usuario.Width = 116;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Detalles del cambio";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 170;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fecha";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 77;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "hora";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 64;
-            // 
             // frmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +192,7 @@
             this.Controls.Add(this.dgvUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHistorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHistorial";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.encabezado.ResumeLayout(false);

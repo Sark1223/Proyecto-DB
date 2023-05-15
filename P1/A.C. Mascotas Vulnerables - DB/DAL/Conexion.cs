@@ -12,17 +12,17 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
     internal class Conexion
     {
         //Conexion Santos Karla♥
-        //public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
-        //SqlConnection conexion;
+        public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
+        SqlConnection conexion;
 
         //////Conexion Villada Edwin
         //public string CadenaConexion = @"server = DESKTOP-BNMO14B; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
         //SqlConnection conexion;
 
-        //Conexion Manuel Davila
-        public string CadenaConexion = @"server = LAPTOP-MANUEL\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
-        SqlConnection conexion;
-        
+        ////Conexion Manuel Davila
+        //public string CadenaConexion = @"server = LAPTOP-MANUEL\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
+        //SqlConnection conexion;
+
 
 
 
@@ -149,6 +149,76 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             }
 
         }
+
+
+        //Buscar valores en tabla
+        public bool BuscarEnTabla_AGREGAR(string sentencia, string valor, int posicion, Control control, ErrorProvider error)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sentencia);
+                cmd.Connection = EstablecerConexion();
+                conexion.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr[posicion].ToString() == valor)
+                    {
+                        error.SetError(control, "EL valor " + valor + " de  ya existe");
+                        return false;
+                    }
+
+                }
+                conexion.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public bool BuscarEnTabla_MODIFICAR(string sentencia, string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            //int vecesRepetido = 0;
+            try
+            {
+                if (valor == valorCarga)
+                {
+                    return true;
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(sentencia);
+                    cmd.Connection = EstablecerConexion();
+                    conexion.Open();
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (dr[0].ToString() == valor)
+                        {
+                            error.SetError(control, "EL valor " + valor + " de  ya existe");
+                            return false;
+                        }
+
+                    }
+                    conexion.Close();
+                    return true;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+
     }
 
 

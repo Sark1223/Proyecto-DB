@@ -110,6 +110,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
+            error1.Clear();
             Close();
         }
 
@@ -121,6 +122,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             txtColonia.Clear(); txtPais.Clear(); txtEstado.Clear(); txtcp.Clear(); cbCiudad.SelectedIndex = 0;
             cbCargo.SelectedIndex = 0;
             pbFoto.Image = Properties.Resources.estilo_grafico;
+            pbFoto.SizeMode = PictureBoxSizeMode.CenterImage;
             lblAgregarFoto.Visible = true;
             foto = false;
         }
@@ -905,6 +907,43 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void txtAmaterno_Validating(object sender, CancelEventArgs e)
         {
             ValidarLetras(txtAmaterno, error1, e);
+        }
+
+        private void txtID_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtID, "");
+        }
+
+        private void txtID_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarNumeros(txtID, error1, e);
+
+            if (lblTitle.Text == "AGREGAR USUARIO")
+            {
+                if (!mu.ValidarID(txtID.Text, idActual, txtID, error1))
+                {
+                    // Cancel the event and select the text to be corrected by the user.
+                    e.Cancel = true;
+                    txtID.Select(0, txtID.Text.Length);
+                }
+                else
+                {
+                    usuario.usu_id = int.Parse(txtID.Text);
+                }
+            }
+            else
+            {
+                if (!mu.ValidarID_Modificar(txtID.Text, idActual, txtID, error1))
+                {
+                    // Cancel the event and select the text to be corrected by the user.
+                    e.Cancel = true;
+                    txtID.Select(0, txtID.Text.Length);
+                }
+                else
+                {
+                    usuario.usu_id = int.Parse(txtID.Text);
+                }
+            }
         }
     }
 }

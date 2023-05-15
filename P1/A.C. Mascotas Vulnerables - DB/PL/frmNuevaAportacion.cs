@@ -23,7 +23,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         ReciboDAL recibo = new ReciboDAL();
         frmBuscador buscador = new frmBuscador();
         BuscadorDAL bus  =  new BuscadorDAL();
-        frmAportacion aportacion = new frmAportacion();
+        //frmAportacion aportacion = new frmAportacion();
 
         private void cmdCerrar(object sender, EventArgs e)
         {
@@ -54,17 +54,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
         private void MostrarReicbo(object sender, EventArgs e)
         {
-            aportacion.dgvRecibos.DataSource = bus.MostrarTabla().Tables[0];
-            if (aportacion.ShowDialog() == DialogResult.OK)
-            {
-                txtFolio.Text = aportacion.folio;
-                dtFecha.Text = aportacion.fecha;
-                txtImporte.Text = aportacion.monto;
-                txtMtoEscrito.Text = aportacion.mtoescrito;
-                txtEncargado1.Text = aportacion.firmaasistente;
-                cbEncargado2.Text = aportacion.firmaadministrativo;
+            //aportacion.dgvRecibos.DataSource = bus.MostrarTabla().Tables[0];
+            //if (aportacion.ShowDialog() == DialogResult.OK)
+            //{
+            //    txtFolio.Text = aportacion.folio;
+            //    dtFecha.Text = aportacion.fecha;
+            //    txtImporte.Text = aportacion.monto;
+            //    txtMtoEscrito.Text = aportacion.mtoescrito;
+            //    txtEncargado1.Text = aportacion.firmaasistente;
+            //    cbEncargado2.Text = aportacion.firmaadministrativo;
 
-            }
+            //}
         }
 
 

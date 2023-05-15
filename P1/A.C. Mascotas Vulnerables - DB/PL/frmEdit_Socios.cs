@@ -47,6 +47,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 cmdAgregar.Visible = true;
                 pnModificar.Visible = false;
                 socioDAL.LlenarCBCiudad(cbCiudad);
+                idActual = "";
+                Limpiar();
             }
             else
             {
@@ -201,6 +203,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 error2.SetError(txtTelefonoPSocio, "");
             }
         }
+
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             error = false;
@@ -289,6 +292,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
+            error1.Clear();
+            error2.Clear();
             Close();
         }
 
@@ -299,162 +304,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
 
 
-        //Metodo para validar que no haya espacios en blanco
-        private void ValidarEspaciosSimbolos(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (char.IsSeparator(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten espacios en blanco\nIngrese el formato correcto");
-            }
-        }
-
-        //Metodo para validar que haya solamente numeros
-        private void ValidarNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsDigit(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
-            }
-        }
-
-        //Metodo para validar que haya solamente letras
-        private void ValidarLetras(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
-            }
-        }
-
-        //Metodo para validar que haya solamente letras o espacios
-        private void ValidarLetrasEspacios(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-            int espacio = 0;
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
-                {
-                    error = true;
-                    break;
-                }
-                if(char.IsSeparator(caracter))
-                {
-                    espacio++;
-                    if(espacio == txt.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
-            }
-        }
-
-        //Metodo para validar que haya solamente numeros o letras
-        private void ValidarLetrasNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsDigit(caracter))
-                {
-                    error = true;
-                    break;
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten espacios en blanco\nIngrese letras o números solamente");
-            }
-        }
-
-        //Metodo para validar que haya numeros o letras con espacios
-        private void ValidarLetrNumEsp(TextBox txt, ErrorProvider er, CancelEventArgs c)
-        {
-            error = false;
-            int espacio = 0;
-            //ciclo para recorrer caracter por caracter 
-            foreach (char caracter in txt.Text)
-            {
-                //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsDigit(caracter) && !char.IsSeparator(caracter))
-                {
-                    error = true;
-                    break;
-                }
-                if (char.IsSeparator(caracter))
-                {
-                    espacio++;
-                    if (espacio == txt.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
-                }
-            }
-            if (error)
-            {
-                c.Cancel = true;
-                txt.Select(0, txt.Text.Length);
-                er.SetError(txt, "No se admiten espacios en blanco\nIngrese letras o números solamente");
-            }
-        }
-
-        //va,idaciones de Socio ID
+        //validaciones de Socio ID
         private void txtSocioID_TextChanged(object sender, EventArgs e)
         {
             error = false;
@@ -487,6 +337,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void txtSocioID_Validating(object sender, CancelEventArgs e)
         {
             ValidarNumeros(txtSocioID, error1, e);
+
+            if (!socioDAL.ValidarID(txtSocioID.Text, idActual, txtSocioID, error1))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtSocioID.Select(0, txtSocioID.Text.Length);
+            }
+            else
+            {
+                socio.sc_id = int.Parse(txtSocioID.Text);
+            }
+
+
         }
 
         bool errorD = false;
@@ -610,20 +473,29 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void txtApellidoPSocio_TextChanged(object sender, EventArgs e)
         {
             error = false;
-
+            int espacio = 0;
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtApellidoPSocio.Text)
             {
                 //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter))
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
                 {
                     error = true;
                     break;
                 }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtApellidoPSocio.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
             }
             if (error)
             {
-                error1.SetError(txtApellidoPSocio, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+                error1.SetError(txtApellidoPSocio, "NO ingrese espacios al inicio o al final.");
             }
             else
             {
@@ -638,7 +510,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void txtApellidoPSocio_Validating(object sender, CancelEventArgs e)
         {
-            ValidarLetras(txtApellidoPSocio, error1, e);
+            ValidarLetrasEspacios(txtApellidoPSocio, error1, e);
         }
 
         //Validar Apellido Materno de Socio
@@ -980,6 +852,161 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void txtCorreoSocio_Validating(object sender, CancelEventArgs e)
         {
             ValidarEspaciosSimbolos(txtCorreoSocio, error1, e);
+        }
+
+        //Metodo para validar que no haya espacios en blanco
+        private void ValidarEspaciosSimbolos(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten espacios en blanco\nIngrese el formato correcto");
+            }
+        }
+
+        //Metodo para validar que haya solamente numeros
+        private void ValidarNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
+            }
+        }
+
+        //Metodo para validar que haya solamente letras
+        private void ValidarLetras(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+        }
+
+        //Metodo para validar que haya solamente letras o espacios
+        private void ValidarLetrasEspacios(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            int espacio = 0;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if(char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if(espacio == txt.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+        }
+
+        //Metodo para validar que haya solamente numeros o letras
+        private void ValidarLetrasNumeros(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsDigit(caracter))
+                {
+                    error = true;
+                    break;
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten espacios en blanco\nIngrese letras o números solamente");
+            }
+        }
+
+        //Metodo para validar que haya numeros o letras con espacios
+        private void ValidarLetrNumEsp(TextBox txt, ErrorProvider er, CancelEventArgs c)
+        {
+            error = false;
+            int espacio = 0;
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txt.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsDigit(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txt.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                c.Cancel = true;
+                txt.Select(0, txt.Text.Length);
+                er.SetError(txt, "No se admiten espacios en blanco\nIngrese letras o números solamente");
+            }
         }
     }
 }

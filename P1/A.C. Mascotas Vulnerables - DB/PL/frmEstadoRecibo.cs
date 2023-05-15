@@ -16,5 +16,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             InitializeComponent();
         }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

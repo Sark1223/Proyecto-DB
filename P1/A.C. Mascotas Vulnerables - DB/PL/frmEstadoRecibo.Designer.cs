@@ -84,6 +84,7 @@
             this.cmdCerrar.TabIndex = 0;
             this.cmdCerrar.TabStop = false;
             this.cmdCerrar.Zoom = 10;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // label3
             // 
@@ -240,6 +241,7 @@
             this.Controls.Add(this.encabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEstadoRecibo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstadoRecibo";
             this.encabezado.ResumeLayout(false);
             this.encabezado.PerformLayout();

@@ -113,6 +113,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
 
         }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
     public class PeriodoBLL

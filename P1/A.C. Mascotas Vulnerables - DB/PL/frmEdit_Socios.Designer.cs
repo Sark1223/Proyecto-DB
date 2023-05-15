@@ -35,7 +35,6 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.cmdCerrar = new ns1.BunifuImageButton();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.lblNombreSocio = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
@@ -185,13 +184,6 @@
             this.lblTitle.Text = "AGREGAR NUEVO SOCIO";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.encabezado;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // bunifuSeparator2
             // 
@@ -1036,6 +1028,7 @@
             this.pnModificar.Name = "pnModificar";
             this.pnModificar.Size = new System.Drawing.Size(242, 96);
             this.pnModificar.TabIndex = 198;
+            this.pnModificar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // cmdBorrar
             // 
@@ -1221,7 +1214,6 @@
         public  ns1.BunifuImageButton cmdCerrar;
         public  ns1.BunifuElipse rdSocios;
         public  System.Windows.Forms.Panel encabezado;
-        public  ns1.BunifuDragControl bunifuDragControl1;
         public  System.Windows.Forms.PictureBox pbLogo;
         public  ns1.BunifuSeparator bunifuSeparator2;
         public  System.Windows.Forms.Label lblNombreSocio;

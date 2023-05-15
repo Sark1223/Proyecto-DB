@@ -90,7 +90,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 edit_Socios.txtNombreSocio.Text = tb.Rows[0]["sc_nombre_s"].ToString();
 
                 //Datos personales
-                edit_Socios.lblRfcSocio.Text = tb.Rows[0]["sc_rfc"].ToString();
+                edit_Socios.txtRfcSocio.Text = tb.Rows[0]["sc_rfc"].ToString();
                 edit_Socios.txtTelefonoPSocio.Text = tb.Rows[0]["sc_telefono"].ToString();
                 edit_Socios.txtTelefono2Socio.Text = tb.Rows[0]["sc_telefono2"].ToString();
                 edit_Socios.txtTelefono3Socio.Text = tb.Rows[0]["sc_telefono3"].ToString();

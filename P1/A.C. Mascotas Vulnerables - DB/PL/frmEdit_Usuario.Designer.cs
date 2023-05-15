@@ -371,6 +371,8 @@
             this.txtID.Size = new System.Drawing.Size(84, 19);
             this.txtID.TabIndex = 0;
             this.txtID.Text = "122308";
+            this.txtID.Validating += new System.ComponentModel.CancelEventHandler(this.txtID_Validating);
+            this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
             // 
             // label7
             // 
