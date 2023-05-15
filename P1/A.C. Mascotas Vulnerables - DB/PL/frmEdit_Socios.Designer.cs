@@ -585,7 +585,7 @@
             this.lblEstadoSocio.Name = "lblEstadoSocio";
             this.lblEstadoSocio.Size = new System.Drawing.Size(126, 18);
             this.lblEstadoSocio.TabIndex = 78;
-            this.lblEstadoSocio.Text = "Estatus del socio:";
+            this.lblEstadoSocio.Text = "EstatusBLL del socio:";
             // 
             // dpFechaNSocio
             // 

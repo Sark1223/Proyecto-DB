@@ -111,7 +111,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 }
                 if (cbEstadoSocio.Text == "- SELECCIONE -")
                 {
-                    valoresVacios += "Estatus, ";
+                    valoresVacios += "EstatusBLL, ";
                     no_vacios++;
                 }
                 if (txtCorreoSocio.Text == "")

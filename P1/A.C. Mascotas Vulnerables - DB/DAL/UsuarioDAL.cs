@@ -110,9 +110,9 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 agregar.Parameters.AddWithValue("ingreso", usuario.usu_Fecha_ingreso);
                 agregar.Parameters.AddWithValue("estatus", usuario.usu_estatus);
 
-                conexion.ejecutarComandoSinRetorno(agregar);
+                
             }
-            return true;
+            return conexion.ejecutarComandoSinRetorno(agregar);
 
         }
 
@@ -161,16 +161,16 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 modificar.Parameters.AddWithValue("ingreso", usuario.usu_Fecha_ingreso);
                 modificar.Parameters.AddWithValue("estatus", usuario.usu_estatus);
 
-                conexion.ejecutarComandoSinRetorno(modificar);
+                
             }
-            return true;
+            return conexion.ejecutarComandoSinRetorno(modificar);
 
         }
 
-        public void EliminarUsuario(string valorid)
+        public bool EliminarUsuario(string valorid)
         {
             SqlCommand comandoSQL = new SqlCommand($"Update USUARIO set usu_estatus = 'inactivo' where usuario_id = {valorid}");
-            conexion.EjecutarSentenciaConRetorno(comandoSQL);
+            return conexion.ejecutarComandoSinRetorno(comandoSQL);
         }
         
     }

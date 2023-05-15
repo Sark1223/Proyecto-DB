@@ -366,10 +366,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             string Mesaje = $"Esta seguro de que quiere eliminar al Usuario {idActual}?";
             if(MessageBox.Show(Mesaje, "ATENCIÓN",MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                mu.EliminarUsuario(idActual);
-                MessageBox.Show("El Usuario ha sido eliminado, sin embargo, los recibos creados por el mismo, " +
-                    "seguiran guardados en la base de datos.");
-                Close();
+                if (mu.EliminarUsuario(idActual))
+                {
+                    MessageBox.Show("El Usuario ha sido eliminado, sin embargo, los recibos creados por el mismo, " +
+                        "seguiran guardados en la base de datos.");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no pudo ser eliminado.");
+                }
+                
             }
             
         }

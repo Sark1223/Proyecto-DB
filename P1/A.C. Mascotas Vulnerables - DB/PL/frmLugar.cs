@@ -428,31 +428,21 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         //Validaciones de estado id
         private void txtEstadoID_TextChanged(object sender, EventArgs e)
         {
-            int espacio = 0;
             error = false;
 
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtEstadoID.Text)
             {
                 //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                if (!char.IsDigit(caracter))
                 {
                     error = true;
                     break;
                 }
-                if (char.IsSeparator(caracter))
-                {
-                    espacio++;
-                    if (espacio == txtEstadoID.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
-                }
             }
             if (error)
             {
-                error1.SetError(txtEstadoID, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+                error1.SetError(txtEstadoID, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
             }
             else
             {
@@ -461,9 +451,9 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
         private void txtEstadoID_Validating(object sender, CancelEventArgs e)
         {
-            ValidarLetrasEspacios(txtEstadoID, error1, e);
+            ValidarNumeros(txtEstadoID, error1, e);
 
-            if (!lugDAL.ValidarID(txtEstadoID.Text, idActEstado, txtEstadoID, error1))
+            if (!lugDAL.ValidarID_Estado(txtEstadoID.Text, idActEstado, txtEstadoID, error1))
             {
                 // Cancel the event and select the text to be corrected by the user.
                 e.Cancel = true;
@@ -643,31 +633,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         //Validar la ciudad id 
         private void txtCiudadID_TextChanged(object sender, EventArgs e)
         {
-            int espacio = 0;
-            error = false;
-
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtCiudadID.Text)
             {
                 //si alguno de los caracteres es un numero el error es true
-                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                if (!char.IsDigit(caracter))
                 {
                     error = true;
                     break;
                 }
-                if (char.IsSeparator(caracter))
-                {
-                    espacio++;
-                    if (espacio == txtCiudadID.TextLength)
-                    {
-                        error = true;
-                        break;
-                    }
-                }
             }
             if (error)
             {
-                error1.SetError(txtCiudadID, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+                error1.SetError(txtCiudadID, "No se admiten letras ni espacios en blanco\nIngrese números solamente");
             }
             else
             {
@@ -676,7 +654,22 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
         private void txtCiudadID_Validating(object sender, CancelEventArgs e)
         {
-            ValidarLetrasEspacios(txtCiudadID, error1, e);
+            ValidarNumeros(txtCiudadID, error1, e);
+
+            if (!lugDAL.ValidarID_Ciudad(txtCiudadID.Text, idActCiudad, txtCiudadID, error1))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtCiudadID.Select(0, txtCiudadID.Text.Length);
+            }
+            else
+            {
+                if (txtCiudadID.Text != "")
+                {
+                    ciudad.ciudad_id = int.Parse(txtCiudadID.Text);
+                }
+
+            }
         }
         private void txtCiudadID_Validated(object sender, EventArgs e)
         {

@@ -55,7 +55,7 @@ namespace A.C.Mascotas_Vulnerables___DB
                     menu.txtPuesto.Text = tb.Rows[0]["usu_cargo"].ToString();
                     menu.txtUsuario.Text = txtUsuario.Text + " " + tb.Rows[0]["usu_apaterno"].ToString();
                     
-                    nuevaAportacion.txtEncargado1.Text = tb.Rows[0]["usu_apaterno"].ToString() + " " + tb.Rows[0]["usu_amaterno"].ToString() + " " + tb.Rows[0]["usu_nombre_s"].ToString();
+                    nuevaAportacion.txtEncargado1.Text = txtUsuario.Text +" "+ tb.Rows[0]["usu_apaterno"].ToString() + " " + tb.Rows[0]["usu_amaterno"].ToString() + " " + tb.Rows[0]["usu_nombre_s"].ToString();
 
                     //aportacion.ObtenerObjetoNuevaAportacion(nuevaAportacion);
                     

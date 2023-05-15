@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.txtMtoEscrito = new ns1.BunifuMetroTextbox();
             this.txtImporte = new ns1.BunifuMetroTextbox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
+            this.cmdGuardar = new ns1.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgregarRecibo = new ns1.BunifuThinButton2();
             this.label10 = new System.Windows.Forms.Label();
@@ -70,6 +70,10 @@
             this.dtFecha = new ns1.BunifuDatepicker();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.pnFirmas = new System.Windows.Forms.Panel();
+            this.cmdAgregarEstatus = new System.Windows.Forms.PictureBox();
+            this.lblEncargado2 = new ns1.BunifuCustomLabel();
+            this.lblEstatus = new System.Windows.Forms.Label();
+            this.cbEstatus = new System.Windows.Forms.ComboBox();
             this.txtEncargado1 = new ns1.BunifuCustomLabel();
             this.cbEncargado2 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -79,8 +83,10 @@
             this.rdSocio = new ns1.BunifuElipse(this.components);
             this.rdMonto = new ns1.BunifuElipse(this.components);
             this.rdFirmas = new ns1.BunifuElipse(this.components);
-            this.cbEstatus = new System.Windows.Forms.ComboBox();
-            this.lblEstatus = new System.Windows.Forms.Label();
+            this.cbPeriodo = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pnEstatus = new System.Windows.Forms.Panel();
+            this.lblPeriodo = new ns1.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,7 +102,9 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnFirmas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAgregarEstatus)).BeginInit();
             this.panel5.SuspendLayout();
+            this.pnEstatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdNuevaAportacion
@@ -196,24 +204,24 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Apellido Materno:";
             // 
-            // label5
+            // lblTitle
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(20, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 111);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Datos\r\ndel\r\nRecibo";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitle.Location = new System.Drawing.Point(20, 130);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(121, 111);
+            this.lblTitle.TabIndex = 10;
+            this.lblTitle.Text = "Datos\r\ndel\r\nRecibo";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 55);
+            this.label6.Location = new System.Drawing.Point(405, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 20);
             this.label6.TabIndex = 11;
@@ -481,9 +489,9 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.panel9.Controls.Add(this.bunifuThinButton21);
+            this.panel9.Controls.Add(this.cmdGuardar);
             this.panel9.Controls.Add(this.pictureBox2);
-            this.panel9.Controls.Add(this.label5);
+            this.panel9.Controls.Add(this.lblTitle);
             this.panel9.Controls.Add(this.btnAgregarRecibo);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel9.Location = new System.Drawing.Point(643, 43);
@@ -491,35 +499,35 @@
             this.panel9.Size = new System.Drawing.Size(153, 557);
             this.panel9.TabIndex = 30;
             // 
-            // bunifuThinButton21
+            // cmdGuardar
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.SystemColors.Window;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Agregar";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(27, 382);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(111, 50);
-            this.bunifuThinButton21.TabIndex = 24;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmdGuardar.ActiveBorderThickness = 1;
+            this.cmdGuardar.ActiveCornerRadius = 20;
+            this.cmdGuardar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.cmdGuardar.ActiveForecolor = System.Drawing.Color.White;
+            this.cmdGuardar.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.cmdGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
+            this.cmdGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.BackgroundImage")));
+            this.cmdGuardar.ButtonText = "Guardar";
+            this.cmdGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.cmdGuardar.IdleBorderThickness = 1;
+            this.cmdGuardar.IdleCornerRadius = 20;
+            this.cmdGuardar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.cmdGuardar.IdleForecolor = System.Drawing.Color.White;
+            this.cmdGuardar.IdleLineColor = System.Drawing.Color.White;
+            this.cmdGuardar.Location = new System.Drawing.Point(27, 458);
+            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(111, 50);
+            this.cmdGuardar.TabIndex = 24;
+            this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(27, 247);
+            this.pictureBox2.Location = new System.Drawing.Point(27, 281);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(114, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -556,7 +564,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(425, 87);
+            this.label10.Location = new System.Drawing.Point(39, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 20);
             this.label10.TabIndex = 33;
@@ -574,7 +582,7 @@
             this.txtFolio.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.txtFolio.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtFolio.LineThickness = 2;
-            this.txtFolio.Location = new System.Drawing.Point(479, 76);
+            this.txtFolio.Location = new System.Drawing.Point(43, 78);
             this.txtFolio.Margin = new System.Windows.Forms.Padding(4);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(125, 31);
@@ -587,13 +595,13 @@
             this.dtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.dtFecha.BorderRadius = 0;
             this.dtFecha.ForeColor = System.Drawing.Color.White;
-            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFecha.FormatCustom = null;
-            this.dtFecha.Location = new System.Drawing.Point(28, 76);
+            this.dtFecha.Location = new System.Drawing.Point(409, 88);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(295, 31);
+            this.dtFecha.Size = new System.Drawing.Size(194, 23);
             this.dtFecha.TabIndex = 36;
-            this.dtFecha.Value = new System.DateTime(2023, 4, 30, 22, 40, 42, 977);
+            this.dtFecha.Value = new System.DateTime(2023, 4, 30, 0, 0, 0, 0);
             // 
             // bunifuSeparator1
             // 
@@ -610,8 +618,8 @@
             // pnFirmas
             // 
             this.pnFirmas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
-            this.pnFirmas.Controls.Add(this.lblEstatus);
-            this.pnFirmas.Controls.Add(this.cbEstatus);
+            this.pnFirmas.Controls.Add(this.pnEstatus);
+            this.pnFirmas.Controls.Add(this.lblEncargado2);
             this.pnFirmas.Controls.Add(this.txtEncargado1);
             this.pnFirmas.Controls.Add(this.cbEncargado2);
             this.pnFirmas.Controls.Add(this.panel5);
@@ -621,6 +629,46 @@
             this.pnFirmas.Name = "pnFirmas";
             this.pnFirmas.Size = new System.Drawing.Size(576, 122);
             this.pnFirmas.TabIndex = 38;
+            // 
+            // cmdAgregarEstatus
+            // 
+            this.cmdAgregarEstatus.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.agregar__1_;
+            this.cmdAgregarEstatus.Location = new System.Drawing.Point(80, 5);
+            this.cmdAgregarEstatus.Name = "cmdAgregarEstatus";
+            this.cmdAgregarEstatus.Size = new System.Drawing.Size(41, 20);
+            this.cmdAgregarEstatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdAgregarEstatus.TabIndex = 45;
+            this.cmdAgregarEstatus.TabStop = false;
+            this.cmdAgregarEstatus.Click += new System.EventHandler(this.cmdAgregarEstatus_Click);
+            // 
+            // lblEncargado2
+            // 
+            this.lblEncargado2.AutoSize = true;
+            this.lblEncargado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncargado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEncargado2.Location = new System.Drawing.Point(122, 89);
+            this.lblEncargado2.Name = "lblEncargado2";
+            this.lblEncargado2.Size = new System.Drawing.Size(196, 20);
+            this.lblEncargado2.TabIndex = 44;
+            this.lblEncargado2.Text = "Karla Judith Santos Rivera";
+            // 
+            // lblEstatus
+            // 
+            this.lblEstatus.AutoSize = true;
+            this.lblEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatus.Location = new System.Drawing.Point(6, 5);
+            this.lblEstatus.Name = "lblEstatus";
+            this.lblEstatus.Size = new System.Drawing.Size(64, 20);
+            this.lblEstatus.TabIndex = 43;
+            this.lblEstatus.Text = "Estatus";
+            // 
+            // cbEstatus
+            // 
+            this.cbEstatus.FormattingEnabled = true;
+            this.cbEstatus.Location = new System.Drawing.Point(10, 28);
+            this.cbEstatus.Name = "cbEstatus";
+            this.cbEstatus.Size = new System.Drawing.Size(111, 21);
+            this.cbEstatus.TabIndex = 42;
             // 
             // txtEncargado1
             // 
@@ -697,23 +745,44 @@
             this.rdFirmas.ElipseRadius = 20;
             this.rdFirmas.TargetControl = this.pnFirmas;
             // 
-            // cbEstatus
+            // cbPeriodo
             // 
-            this.cbEstatus.FormattingEnabled = true;
-            this.cbEstatus.Location = new System.Drawing.Point(436, 86);
-            this.cbEstatus.Name = "cbEstatus";
-            this.cbEstatus.Size = new System.Drawing.Size(111, 21);
-            this.cbEstatus.TabIndex = 42;
+            this.cbPeriodo.FormattingEnabled = true;
+            this.cbPeriodo.Location = new System.Drawing.Point(210, 88);
+            this.cbPeriodo.Name = "cbPeriodo";
+            this.cbPeriodo.Size = new System.Drawing.Size(125, 21);
+            this.cbPeriodo.TabIndex = 43;
             // 
-            // lblEstatus
+            // label14
             // 
-            this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(432, 51);
-            this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(68, 20);
-            this.lblEstatus.TabIndex = 43;
-            this.lblEstatus.Text = "Estatus:";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(206, 59);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 20);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Periodo:";
+            // 
+            // pnEstatus
+            // 
+            this.pnEstatus.Controls.Add(this.cmdAgregarEstatus);
+            this.pnEstatus.Controls.Add(this.lblEstatus);
+            this.pnEstatus.Controls.Add(this.cbEstatus);
+            this.pnEstatus.Location = new System.Drawing.Point(426, 58);
+            this.pnEstatus.Name = "pnEstatus";
+            this.pnEstatus.Size = new System.Drawing.Size(134, 63);
+            this.pnEstatus.TabIndex = 46;
+            // 
+            // lblPeriodo
+            // 
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPeriodo.Location = new System.Drawing.Point(214, 86);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(68, 20);
+            this.lblPeriodo.TabIndex = 45;
+            this.lblPeriodo.Text = "20181-1";
             // 
             // frmNuevaAportacion
             // 
@@ -721,6 +790,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(796, 600);
+            this.Controls.Add(this.lblPeriodo);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cbPeriodo);
             this.Controls.Add(this.pnFirmas);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.dtFecha);
@@ -758,8 +830,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnFirmas.ResumeLayout(false);
             this.pnFirmas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAgregarEstatus)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.pnEstatus.ResumeLayout(false);
+            this.pnEstatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,7 +853,7 @@
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblTitle;
         public ns1.BunifuThinButton2 btnAgregarRecibo;
         public System.Windows.Forms.Panel pnSocio;
         public System.Windows.Forms.Panel pnMonto;
@@ -815,8 +890,14 @@
         public ns1.BunifuElipse rdSocio;
         public ns1.BunifuElipse rdMonto;
         public ns1.BunifuElipse rdFirmas;
-        public ns1.BunifuThinButton2 bunifuThinButton21;
+        public ns1.BunifuThinButton2 cmdGuardar;
         public System.Windows.Forms.Label lblEstatus;
         public System.Windows.Forms.ComboBox cbEstatus;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.ComboBox cbPeriodo;
+        public ns1.BunifuCustomLabel lblEncargado2;
+        private System.Windows.Forms.PictureBox cmdAgregarEstatus;
+        private System.Windows.Forms.Panel pnEstatus;
+        public ns1.BunifuCustomLabel lblPeriodo;
     }
 }

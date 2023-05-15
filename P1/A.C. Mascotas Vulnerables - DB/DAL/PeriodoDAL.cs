@@ -38,10 +38,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 agregar.Parameters.AddWithValue("periodo_inicio", periodo.periodo_inicio);
                 agregar.Parameters.AddWithValue("periodo_fin", periodo.periodo_fin);
             }
-
-            conexion.ejecutarComandoSinRetorno(agregar);
-
-            return true;
+            return conexion.ejecutarComandoSinRetorno(agregar);
         }
 
         /*CREATE TABLE PERIODO (
@@ -67,9 +64,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 modificar.Parameters.AddWithValue("periodo_fin", periodo.periodo_fin);
             }
 
-            conexion.ejecutarComandoSinRetorno(modificar);
-
-            return true;
+            return conexion.ejecutarComandoSinRetorno(modificar);
         }
     }
 }

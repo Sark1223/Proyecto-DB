@@ -33,6 +33,7 @@ namespace A.C.Mascotas_Vulnerables___DB
         }
         //Objetos de formas
         frmAportacion aportacion = new frmAportacion();
+        AportacionDAL apDAL = new AportacionDAL();  
         frmSocios socios = new frmSocios();
         SocioDAL socio = new SocioDAL();
         frmUsuarios usuarios = new frmUsuarios();
@@ -59,6 +60,7 @@ namespace A.C.Mascotas_Vulnerables___DB
 
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
+            aportacion.dgvRecibos.DataSource = apDAL.MostrarRecibos().Tables[0];
             aportacion.ShowDialog();
         }
 

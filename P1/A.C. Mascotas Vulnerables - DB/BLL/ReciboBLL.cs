@@ -27,10 +27,15 @@ namespace A.C.Mascotas_Vulnerables___DB.BLL
     rec_firma_administrativo VARCHAR(150) NOT NULL
 );
          */
-        public int rec_folio;
+        public long rec_folio;
         public DateTime rec_fecha;
+        public int usuario_id;
+        public int socio_id;
         public double rec_monto;
         public string rec_mto_escrito;
+        public string estatus_id;
+        public string periodo_año;
+        public byte periodo_num;
         public string rec_firma_asistente;
         public string rec_firma_administrativo;
 

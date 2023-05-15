@@ -14,7 +14,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
     public partial class frmBuscador : Form
     {
         //frmBuscador busca= new frmBuscador();
-        ReciboDAL recibo = new ReciboDAL();
+        AportacionDAL aportacionDAL = new AportacionDAL();
 
         bool error = false;
         public frmBuscador()
@@ -34,7 +34,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            dgvSocios.DataSource = recibo.Buscar(txtBuscar.Text).Tables[0];
+            dgvSocios.DataSource = aportacionDAL.Buscar(txtBuscar.Text).Tables[0];
         }
         public string idsocio, nombre, apaterno, amaterno;
 

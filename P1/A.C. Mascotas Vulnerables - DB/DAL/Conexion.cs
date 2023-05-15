@@ -57,13 +57,22 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         }
 
         //Metodo para AGREGAR, ELIMINAR Y MODIFICAR
-        public void ejecutarComandoSinRetorno(SqlCommand Comandosql)
+        public bool ejecutarComandoSinRetorno(SqlCommand Comandosql)
         {
-            SqlCommand comando = Comandosql;
-            comando.Connection = this.EstablecerConexion();
-            conexion.Open();
-            comando.ExecuteNonQuery();
-            conexion.Close();
+            try
+            {
+                SqlCommand comando = Comandosql;
+                comando.Connection = this.EstablecerConexion();
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+            
         }
 
         //METODOS COMBO BOX - COMPLEJO
@@ -81,6 +90,60 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 if (dr[posicion].ToString() != textoCB)
                 {
                     cb.Items.Add(dr[posicion].ToString());
+                }
+
+            }
+            conexion.Close();
+            cb.Items.Insert(0, textoCB);
+            cb.SelectedIndex = 0;
+        }
+
+        //METODOS COMBO BOX - COMPLEJO
+        public void RellenarCB_Encargado(ComboBox cb, string sentencia, string textoCB)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = this.EstablecerConexion();
+            conexion.Open();
+
+            cb.Items.Clear();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string nombreCompleto = $"{dr[0]} - {dr[1]} {dr[2]} {dr[2]}";  
+                if (nombreCompleto != textoCB)
+                {
+                    cb.Items.Add(nombreCompleto.ToString());
+                }
+
+            }
+            conexion.Close();
+            cb.Items.Insert(0, textoCB);
+            cb.SelectedIndex = 0;
+        }
+
+        //METODOS COMBO BOX - COMPLEJO
+        public void RellenarCB_Periodo(ComboBox cb, string sentencia, string textoCB)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = this.EstablecerConexion();
+            conexion.Open();
+
+            cb.Items.Clear();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                /*CREATE TABLE PERIODO (
+    periodo_año    Char(4) NOT NULL,
+    periodo_num     CHAR(1) NOT NULL,
+    periodo_inicio DATE,
+    periodo_fin    DATE
+);*/
+                string periodo = $"{dr[0]} - {dr[1]}";
+                if (periodo != textoCB)
+                {
+                    cb.Items.Add(periodo.ToString());
                 }
 
             }

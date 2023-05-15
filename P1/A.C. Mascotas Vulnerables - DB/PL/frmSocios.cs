@@ -151,7 +151,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     i++;
                 }
 
-                //Estatus del Socio
+                //EstatusBLL del Socio
                 bandera = false;
                 i = 0;
                 while (bandera == false)

@@ -53,12 +53,12 @@
     <Compile Include="BLL\ReciboBLL.cs" />
     <Compile Include="BLL\SocioBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
+    <Compile Include="DAL\AportacionDAL.cs" />
     <Compile Include="DAL\BuscadorDAL.cs" />
     <Compile Include="DAL\Conexion.cs" />
     <Compile Include="DAL\InicioSesionDaL.cs" />
     <Compile Include="DAL\LugarDAL.cs" />
     <Compile Include="DAL\PeriodoDAL.cs" />
-    <Compile Include="DAL\ReciboDAL.cs" />
     <Compile Include="DAL\SocioDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="PL\frmAportacion.cs">
@@ -253,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\justicia-social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

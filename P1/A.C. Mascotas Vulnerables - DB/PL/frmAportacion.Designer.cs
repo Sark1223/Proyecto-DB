@@ -221,10 +221,10 @@
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuThinButton21.ActiveCornerRadius = 25;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "Imprimir";
@@ -232,24 +232,24 @@
             this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.bunifuThinButton21.IdleCornerRadius = 25;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(608, 121);
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(407, 121);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(141, 48);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(141, 38);
             this.bunifuThinButton21.TabIndex = 48;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCrearReporte
             // 
             this.btnCrearReporte.ActiveBorderThickness = 1;
-            this.btnCrearReporte.ActiveCornerRadius = 20;
-            this.btnCrearReporte.ActiveFillColor = System.Drawing.Color.DimGray;
-            this.btnCrearReporte.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.btnCrearReporte.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.btnCrearReporte.ActiveCornerRadius = 25;
+            this.btnCrearReporte.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.btnCrearReporte.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(200)))), ((int)(((byte)(72)))));
+            this.btnCrearReporte.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(200)))), ((int)(((byte)(72)))));
             this.btnCrearReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.btnCrearReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCrearReporte.BackgroundImage")));
             this.btnCrearReporte.ButtonText = "Crear Reporte";
@@ -257,24 +257,24 @@
             this.btnCrearReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearReporte.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCrearReporte.IdleBorderThickness = 1;
-            this.btnCrearReporte.IdleCornerRadius = 20;
-            this.btnCrearReporte.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.btnCrearReporte.IdleCornerRadius = 25;
+            this.btnCrearReporte.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
             this.btnCrearReporte.IdleForecolor = System.Drawing.Color.Black;
-            this.btnCrearReporte.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.btnCrearReporte.Location = new System.Drawing.Point(26, 121);
+            this.btnCrearReporte.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(211)))), ((int)(((byte)(109)))));
+            this.btnCrearReporte.Location = new System.Drawing.Point(32, 121);
             this.btnCrearReporte.Margin = new System.Windows.Forms.Padding(5);
             this.btnCrearReporte.Name = "btnCrearReporte";
-            this.btnCrearReporte.Size = new System.Drawing.Size(141, 48);
+            this.btnCrearReporte.Size = new System.Drawing.Size(141, 38);
             this.btnCrearReporte.TabIndex = 39;
             this.btnCrearReporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnNuevaAportacion
             // 
             this.btnNuevaAportacion.ActiveBorderThickness = 1;
-            this.btnNuevaAportacion.ActiveCornerRadius = 20;
-            this.btnNuevaAportacion.ActiveFillColor = System.Drawing.Color.DimGray;
-            this.btnNuevaAportacion.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.btnNuevaAportacion.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
+            this.btnNuevaAportacion.ActiveCornerRadius = 25;
+            this.btnNuevaAportacion.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.btnNuevaAportacion.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.btnNuevaAportacion.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.btnNuevaAportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.btnNuevaAportacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevaAportacion.BackgroundImage")));
             this.btnNuevaAportacion.ButtonText = "Nueva Aportacion";
@@ -282,14 +282,14 @@
             this.btnNuevaAportacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaAportacion.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnNuevaAportacion.IdleBorderThickness = 1;
-            this.btnNuevaAportacion.IdleCornerRadius = 20;
-            this.btnNuevaAportacion.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.btnNuevaAportacion.IdleForecolor = System.Drawing.Color.Black;
-            this.btnNuevaAportacion.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.btnNuevaAportacion.Location = new System.Drawing.Point(206, 121);
+            this.btnNuevaAportacion.IdleCornerRadius = 25;
+            this.btnNuevaAportacion.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.btnNuevaAportacion.IdleForecolor = System.Drawing.Color.White;
+            this.btnNuevaAportacion.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.btnNuevaAportacion.Location = new System.Drawing.Point(212, 121);
             this.btnNuevaAportacion.Margin = new System.Windows.Forms.Padding(5);
             this.btnNuevaAportacion.Name = "btnNuevaAportacion";
-            this.btnNuevaAportacion.Size = new System.Drawing.Size(157, 48);
+            this.btnNuevaAportacion.Size = new System.Drawing.Size(157, 38);
             this.btnNuevaAportacion.TabIndex = 38;
             this.btnNuevaAportacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNuevaAportacion.Click += new System.EventHandler(this.cmdAportacion);
@@ -297,8 +297,8 @@
             // btnModificarEstatus
             // 
             this.btnModificarEstatus.ActiveBorderThickness = 1;
-            this.btnModificarEstatus.ActiveCornerRadius = 20;
-            this.btnModificarEstatus.ActiveFillColor = System.Drawing.Color.DimGray;
+            this.btnModificarEstatus.ActiveCornerRadius = 25;
+            this.btnModificarEstatus.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.btnModificarEstatus.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             this.btnModificarEstatus.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             this.btnModificarEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
@@ -308,14 +308,14 @@
             this.btnModificarEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarEstatus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnModificarEstatus.IdleBorderThickness = 1;
-            this.btnModificarEstatus.IdleCornerRadius = 20;
+            this.btnModificarEstatus.IdleCornerRadius = 25;
             this.btnModificarEstatus.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
             this.btnModificarEstatus.IdleForecolor = System.Drawing.Color.Black;
             this.btnModificarEstatus.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(107)))));
-            this.btnModificarEstatus.Location = new System.Drawing.Point(396, 121);
+            this.btnModificarEstatus.Location = new System.Drawing.Point(592, 121);
             this.btnModificarEstatus.Margin = new System.Windows.Forms.Padding(5);
             this.btnModificarEstatus.Name = "btnModificarEstatus";
-            this.btnModificarEstatus.Size = new System.Drawing.Size(172, 48);
+            this.btnModificarEstatus.Size = new System.Drawing.Size(172, 38);
             this.btnModificarEstatus.TabIndex = 37;
             this.btnModificarEstatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnModificarEstatus.Click += new System.EventHandler(this.btnModificarEstatus_Click);
@@ -353,7 +353,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRecibos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRecibos.EnableHeadersVisualStyles = false;
-            this.dgvRecibos.Location = new System.Drawing.Point(26, 182);
+            this.dgvRecibos.Location = new System.Drawing.Point(26, 167);
             this.dgvRecibos.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.dgvRecibos.Name = "dgvRecibos";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -367,16 +367,16 @@
             this.dgvRecibos.RowHeadersVisible = false;
             this.dgvRecibos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvRecibos.RowTemplate.Height = 30;
-            this.dgvRecibos.Size = new System.Drawing.Size(749, 215);
+            this.dgvRecibos.Size = new System.Drawing.Size(744, 255);
             this.dgvRecibos.TabIndex = 51;
-            this.dgvRecibos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecibos_CellContentDoubleClick);
+            this.dgvRecibos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRecibos_CellMouseClick);
             // 
             // frmAportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.dgvRecibos);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.encabezado);

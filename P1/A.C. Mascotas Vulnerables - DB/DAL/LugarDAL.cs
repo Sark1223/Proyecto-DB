@@ -61,9 +61,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 agregar.Parameters.AddWithValue("pa_nombre", pais.pa_nombre);
             }
 
-            conexion.ejecutarComandoSinRetorno(agregar);
-            
-            return true;
+            return conexion.ejecutarComandoSinRetorno(agregar);
         }
 
         public bool ModificarPais(PaisBLL pais, string idAnterior)
@@ -77,18 +75,11 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 modificar.Parameters.AddWithValue("pa_nombre", pais.pa_nombre);
             }
 
-            conexion.ejecutarComandoSinRetorno(modificar);
-
-            return true;
+            return conexion.ejecutarComandoSinRetorno(modificar);
         }
 
         //Busca valores en tabla
         public bool ValidarID(string valor, string valorCarga, Control control, ErrorProvider error)
-        {
-            return conexion.BuscarEnTabla_MODIFICAR("select pais_id from PAIS", valor, valorCarga, control, error);
-        }
-
-        public bool ValidarID_Modificar(string valor, string valorCarga, Control control, ErrorProvider error)
         {
             return conexion.BuscarEnTabla_MODIFICAR("select pais_id from PAIS", valor, valorCarga, control, error);
         }
@@ -119,9 +110,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 agregar.Parameters.AddWithValue("pais_id", estado.pais_id);
             }
 
-            conexion.ejecutarComandoSinRetorno(agregar);
-
-            return true;
+            return conexion.ejecutarComandoSinRetorno(agregar);
         }
 
         public bool ModificarEstado(EstadoBLL estado, string idAnterior)
@@ -137,9 +126,9 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 modificar.Parameters.AddWithValue("pais_id", estado.pais_id);
             }
 
-            conexion.ejecutarComandoSinRetorno(modificar);
+            
 
-            return true;
+            return conexion.ejecutarComandoSinRetorno(modificar);
         }
 
         public void LlenarCBPais(ComboBox cbCiudad)
@@ -147,6 +136,10 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             conexion.RellenarCB(cbCiudad, "SELECT * FROM PAIS", "- SELECCIONE PAIS -", 1);
         }
 
+        public bool ValidarID_Estado(string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            return conexion.BuscarEnTabla_MODIFICAR("select estado_id from ESTADO", valor, valorCarga, control, error);
+        }
 
         /*CREATE TABLE CIUDAD (
     ciudad_id        INTEGER NOT NULL,
@@ -182,7 +175,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         public bool ModificarCiudad(CiudadBLL ciudad, string idAnterior)
         {
             SqlCommand modificar = new SqlCommand(
-            "Update ESTADO set ciudad_id = @ciudad_id," +
+            "Update CIUDAD set ciudad_id = @ciudad_id," +
                              "ci_nombre = @ci_nombre," +
                              "estado_id = @estado_id " +
                              "WHERE ciudad_id = " + idAnterior);
@@ -192,9 +185,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 modificar.Parameters.AddWithValue("estado_id", ciudad.estado_id);
             }
 
-            conexion.ejecutarComandoSinRetorno(modificar);
-
-            return true;
+            return conexion.ejecutarComandoSinRetorno(modificar);
         }
 
         public void LlenarCBEstado(ComboBox cbCiudad)
@@ -202,6 +193,10 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             conexion.RellenarCB(cbCiudad, "SELECT * FROM ESTADO", "- SELECCIONE ESTADO -", 1);
         }
 
+        public bool ValidarID_Ciudad(string valor, string valorCarga, Control control, ErrorProvider error)
+        {
+            return conexion.BuscarEnTabla_MODIFICAR("select ciudad_id from ESTADO", valor, valorCarga, control, error);
+        }
 
     }
 }
