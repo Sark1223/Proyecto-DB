@@ -60,13 +60,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMtoEscrito = new ns1.BunifuMetroTextbox();
-            this.txtImporte = new ns1.BunifuMetroTextbox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.cmdGuardar = new ns1.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgregarRecibo = new ns1.BunifuThinButton2();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtFolio = new ns1.BunifuMaterialTextbox();
             this.dtFecha = new ns1.BunifuDatepicker();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.pnFirmas = new System.Windows.Forms.Panel();
@@ -87,6 +85,11 @@
             this.cbPeriodo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblPeriodo = new ns1.BunifuCustomLabel();
+            this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtImporte = new System.Windows.Forms.TextBox();
+            this.bunifuSeparator5 = new ns1.BunifuSeparator();
+            this.txtFolio = new System.Windows.Forms.TextBox();
+            this.bunifuSeparator6 = new ns1.BunifuSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +108,7 @@
             this.pnEstatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAgregarEstatus)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdNuevaAportacion
@@ -241,7 +245,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(275, 44);
+            this.label8.Location = new System.Drawing.Point(245, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 20);
             this.label8.TabIndex = 15;
@@ -417,9 +421,10 @@
             // pnMonto
             // 
             this.pnMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(203)))));
+            this.pnMonto.Controls.Add(this.txtImporte);
+            this.pnMonto.Controls.Add(this.bunifuSeparator5);
             this.pnMonto.Controls.Add(this.panel3);
             this.pnMonto.Controls.Add(this.txtMtoEscrito);
-            this.pnMonto.Controls.Add(this.txtImporte);
             this.pnMonto.Controls.Add(this.label8);
             this.pnMonto.Controls.Add(this.label7);
             this.pnMonto.Location = new System.Drawing.Point(28, 297);
@@ -459,32 +464,13 @@
             this.txtMtoEscrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtMtoEscrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMtoEscrito.isPassword = false;
-            this.txtMtoEscrito.Location = new System.Drawing.Point(248, 68);
+            this.txtMtoEscrito.Location = new System.Drawing.Point(249, 68);
             this.txtMtoEscrito.Margin = new System.Windows.Forms.Padding(4);
             this.txtMtoEscrito.Name = "txtMtoEscrito";
-            this.txtMtoEscrito.Size = new System.Drawing.Size(276, 39);
+            this.txtMtoEscrito.Size = new System.Drawing.Size(276, 30);
             this.txtMtoEscrito.TabIndex = 32;
             this.txtMtoEscrito.Text = "Tres Mil";
             this.txtMtoEscrito.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtImporte
-            // 
-            this.txtImporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.txtImporte.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtImporte.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.txtImporte.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtImporte.BorderThickness = 2;
-            this.txtImporte.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtImporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtImporte.isPassword = false;
-            this.txtImporte.Location = new System.Drawing.Point(62, 68);
-            this.txtImporte.Margin = new System.Windows.Forms.Padding(4);
-            this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(132, 39);
-            this.txtImporte.TabIndex = 31;
-            this.txtImporte.Text = "$3000.00";
-            this.txtImporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel9
             // 
@@ -570,26 +556,6 @@
             this.label10.Size = new System.Drawing.Size(47, 20);
             this.label10.TabIndex = 33;
             this.label10.Text = "Folio:";
-            // 
-            // txtFolio
-            // 
-            this.txtFolio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFolio.HintForeColor = System.Drawing.Color.Empty;
-            this.txtFolio.HintText = "";
-            this.txtFolio.isPassword = false;
-            this.txtFolio.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtFolio.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.txtFolio.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtFolio.LineThickness = 2;
-            this.txtFolio.Location = new System.Drawing.Point(43, 78);
-            this.txtFolio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFolio.Name = "txtFolio";
-            this.txtFolio.Size = new System.Drawing.Size(125, 31);
-            this.txtFolio.TabIndex = 35;
-            this.txtFolio.Text = "12345678";
-            this.txtFolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // dtFecha
             // 
@@ -786,19 +752,76 @@
             this.lblPeriodo.TabIndex = 45;
             this.lblPeriodo.Text = "20181-1";
             // 
+            // error1
+            // 
+            this.error1.ContainerControl = this;
+            this.error1.Icon = ((System.Drawing.Icon)(resources.GetObject("error1.Icon")));
+            // 
+            // txtImporte
+            // 
+            this.txtImporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.txtImporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtImporte.Location = new System.Drawing.Point(66, 77);
+            this.txtImporte.Name = "txtImporte";
+            this.txtImporte.Size = new System.Drawing.Size(84, 19);
+            this.txtImporte.TabIndex = 61;
+            this.txtImporte.Text = "12";
+            this.txtImporte.TextChanged += new System.EventHandler(this.txtImporte_TextChanged);
+            this.txtImporte.Validating += new System.ComponentModel.CancelEventHandler(this.txtImporte_Validating);
+            this.txtImporte.Validated += new System.EventHandler(this.txtImporte_Validated);
+            // 
+            // bunifuSeparator5
+            // 
+            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator5.LineThickness = 1;
+            this.bunifuSeparator5.Location = new System.Drawing.Point(67, 92);
+            this.bunifuSeparator5.Name = "bunifuSeparator5";
+            this.bunifuSeparator5.Size = new System.Drawing.Size(83, 13);
+            this.bunifuSeparator5.TabIndex = 60;
+            this.bunifuSeparator5.Transparency = 255;
+            this.bunifuSeparator5.Vertical = false;
+            // 
+            // txtFolio
+            // 
+            this.txtFolio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.txtFolio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFolio.Location = new System.Drawing.Point(43, 82);
+            this.txtFolio.Name = "txtFolio";
+            this.txtFolio.Size = new System.Drawing.Size(84, 19);
+            this.txtFolio.TabIndex = 63;
+            this.txtFolio.Text = "12";
+            this.txtFolio.Validating += new System.ComponentModel.CancelEventHandler(this.txtFolio_Validating);
+            this.txtFolio.Validated += new System.EventHandler(this.txtFolio_Validated);
+            // 
+            // bunifuSeparator6
+            // 
+            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator6.LineThickness = 1;
+            this.bunifuSeparator6.Location = new System.Drawing.Point(44, 97);
+            this.bunifuSeparator6.Name = "bunifuSeparator6";
+            this.bunifuSeparator6.Size = new System.Drawing.Size(83, 13);
+            this.bunifuSeparator6.TabIndex = 62;
+            this.bunifuSeparator6.Transparency = 255;
+            this.bunifuSeparator6.Vertical = false;
+            // 
             // frmNuevaAportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(796, 600);
+            this.Controls.Add(this.txtFolio);
+            this.Controls.Add(this.bunifuSeparator6);
             this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cbPeriodo);
             this.Controls.Add(this.pnFirmas);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.dtFecha);
-            this.Controls.Add(this.txtFolio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.label6);
@@ -837,6 +860,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdAgregarEstatus)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -862,9 +886,7 @@
         public System.Windows.Forms.Panel panel9;
         public System.Windows.Forms.Label label10;
         public ns1.BunifuMetroTextbox txtMtoEscrito;
-        public ns1.BunifuMetroTextbox txtImporte;
         public ns1.BunifuDatepicker dtFecha;
-        public ns1.BunifuMaterialTextbox txtFolio;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label label11;
@@ -901,5 +923,10 @@
         private System.Windows.Forms.PictureBox cmdAgregarEstatus;
         private System.Windows.Forms.Panel pnEstatus;
         public ns1.BunifuCustomLabel lblPeriodo;
+        private System.Windows.Forms.ErrorProvider error1;
+        public System.Windows.Forms.TextBox txtImporte;
+        public ns1.BunifuSeparator bunifuSeparator5;
+        public System.Windows.Forms.TextBox txtFolio;
+        public ns1.BunifuSeparator bunifuSeparator6;
     }
 }
