@@ -27,6 +27,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         AportacionDAL AportacionDAL = new AportacionDAL();
         ReciboBLL res = new ReciboBLL();
         frmEstadoRecibo estadoRecibo = new frmEstadoRecibo();
+        frmImprimir imprimir = new frmImprimir();
 
         HistorialDAL historialDAL = new HistorialDAL();
         HistorialBLL historial = new HistorialBLL();
@@ -180,7 +181,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 if (AportacionDAL.AgregarRecibo(res))
                 {
                     MessageBox.Show("El RECIBO " + res.rec_folio + " se AGREGO correctamente", "Recibo Agregado");
-                    LimpiarRecibo();
+                    
                     int num = 1 + historialDAL.RetornarUltimaModificacion();
                     historial.historia_num = num;
                     historial.usuario_id = res.usuario_id;
@@ -195,12 +196,32 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
                     historialDAL.AgregarModificacion(historial);
 
-                    imprimirRec = new PrintDocument();
-                    PrinterSettings configImpres = new PrinterSettings();
-                    imprimirRec.PrinterSettings = configImpres;
-                    imprimirRec.PrintPage += Imprimir;
-                    imprimirRec.Print();
+                    //imprimirRec = new PrintDocument();
+                    //PrinterSettings configImpres = new PrinterSettings();
+                    //imprimirRec.PrinterSettings = configImpres;
+                    //imprimirRec.PrintPage += Imprimir;
+                    //imprimirRec.Print();
 
+                    DialogResult aver = imprimir.ShowDialog();
+
+                    if (aver == DialogResult.OK)
+                    {
+                        imprimirRec = new PrintDocument();
+                        PrinterSettings configImpres = new PrinterSettings();
+                        imprimirRec.PrinterSettings = configImpres;
+                        imprimirRec.PrintPage += ImprimirHorizontal;
+                        imprimirRec.Print();
+                    }
+                    else if (aver == DialogResult.Cancel)
+                    {
+                        imprimirRec = new PrintDocument();
+                        PrinterSettings configImpres = new PrinterSettings();
+                        imprimirRec.PrinterSettings = configImpres;
+                        imprimirRec.PrintPage += ImprimirVertical;
+                        imprimirRec.Print();
+                    }
+
+                    LimpiarRecibo();
                     Close();
                 }
                 else
@@ -219,32 +240,32 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
 
         }
-        public void Imprimir(object sender, PrintPageEventArgs e)
-        {
-            Font letra = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Point);
-            //dibujar folio
-            e.Graphics.DrawString("Folio: " + res.rec_folio, letra, Brushes.Black, new RectangleF(600, 20, 450, 20));
-            //dibujar monto
-            e.Graphics.DrawString("Monto: " + res.rec_monto + ".00 $", letra, Brushes.Black, new RectangleF(600, 60, 450, 20));
-            //dibujar imagen
-            e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(20, 20, 45, 55));
-            //dibujar folio
-            e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(100, 20, 600, 20));
+        //public void Imprimir(object sender, PrintPageEventArgs e)
+        //{
+        //    Font letra = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Point);
+        //    //dibujar folio
+        //    e.Graphics.DrawString("Folio: " + res.rec_folio, letra, Brushes.Black, new RectangleF(600, 20, 450, 20));
+        //    //dibujar monto
+        //    e.Graphics.DrawString("Monto: " + res.rec_monto + ".00 $", letra, Brushes.Black, new RectangleF(600, 60, 450, 20));
+        //    //dibujar imagen
+        //    e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(20, 20, 45, 55));
+        //    //dibujar folio
+        //    e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(100, 20, 600, 20));
 
-            //Recuperacion de datos de socio
-            DataTable t = AportacionDAL.InformacionID($"Select usu_apaterno,usu_amaterno,usu_nombre_s from USUARIO WHERE usuario_id = {res.socio_id}");
-            string apaterno = t.Rows[0]["usu_apaterno"].ToString();
-            string amaterno = t.Rows[0]["usu_amaterno"].ToString();
-            string nombres = t.Rows[0]["usu_nombre_s"].ToString();
+        //    //Recuperacion de datos de socio
+        //    DataTable t = AportacionDAL.InformacionID($"Select usu_apaterno,usu_amaterno,usu_nombre_s from USUARIO WHERE usuario_id = {res.socio_id}");
+        //    string apaterno = t.Rows[0]["usu_apaterno"].ToString();
+        //    string amaterno = t.Rows[0]["usu_amaterno"].ToString();
+        //    string nombres = t.Rows[0]["usu_nombre_s"].ToString();
 
-            //dibuja datos del socio
-            e.Graphics.DrawString($"{nombres} {apaterno} {amaterno}", letra, Brushes.Black, new RectangleF(100, 60, 500, 30));
+        //    //dibuja datos del socio
+        //    e.Graphics.DrawString($"{nombres} {apaterno} {amaterno}", letra, Brushes.Black, new RectangleF(100, 60, 500, 30));
 
-            //dibuja rectangulo
-            e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 6, 845, 100);
-            e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 120, 845, 275);
-            e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(725, 385), new Point(845, 385));
-        }
+        //    //dibuja rectangulo
+        //    e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 6, 845, 100);
+        //    e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 120, 845, 275);
+        //    e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(725, 385), new Point(845, 385));
+        //}
         private void cmdAgregarEstatus_Click(object sender, EventArgs e)
         {
             if(cmdAgregarEstatus.Tag.ToString() == "no")
@@ -407,8 +428,251 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 {
                     MessageBox.Show("NO se pudo ingresar la informacion del recibo", "Error al ingresar recibo");
                 }
+
             }
             
+        }
+        public void ImprimirHorizontal(object sender, PrintPageEventArgs e)
+        {
+            Font letra = new Font("Arial", 11, FontStyle.Regular, GraphicsUnit.Point);
+            //Reporte 1 horizontal
+            {
+                //dibujar folio
+                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(500, 20, 450, 20));
+                ////dibujar monto
+                e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(500, 60, 450, 20));
+                //dibujar imagen
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(20, 20, 45, 55));
+                //dibujar folio
+                e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(100, 20, 600, 20));
+
+                //Encabezado
+                e.Graphics.DrawString("DATOS DE APORTACION", letra, Brushes.Black, new RectangleF(325, 125, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(6, 150), new Point(846, 150));
+
+                //dibuja datos del socio
+                e.Graphics.DrawString("Socio: " + $"{lblNombre.Text} {lblAPaterno.Text} {lblAMaterno.Text}",
+                    letra, Brushes.Black, new RectangleF(8, 160, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(61, 182), new Point(320, 182));
+
+                //dibuja datos de aportacion
+                e.Graphics.DrawString("Aportación: " + txtImporte.Text + "   " + txtMtoEscrito.Text,
+                    letra, Brushes.Black, new RectangleF(8, 210, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(100, 230), new Point(360, 230));
+
+                //dibuja rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 6, 840, 100);
+
+                //dibuja segundo rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 120, 840, 215);
+
+                //Linea de firma derecha
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(485, 310), new Point(835, 310));
+                e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(485, 290, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(650, 316, 600, 20));
+
+                //Linea de firma izquierda
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(7, 310), new Point(345, 310));
+                e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(8, 290, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(35, 316, 600, 20));
+            }
+            //Reporte 2 horizontal
+            {
+                //dibujar folio
+                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(500, 360, 450, 360));
+                //dibujar monto
+                e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(500, 400, 450, 400));
+                //dibujar imagen
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(20, 360, 45, 55));
+                //dibujar folio
+                e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(100, 360, 600, 20));
+
+                //Encabezado
+                e.Graphics.DrawString("DATOS DE APORTACION", letra, Brushes.Black, new RectangleF(325, 460, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(6, 485), new Point(846, 485));
+
+                //dibuja datos del socio
+                e.Graphics.DrawString("Socio: " + $"{lblNombre.Text} {lblAPaterno.Text} {lblAMaterno.Text}",
+                    letra, Brushes.Black, new RectangleF(8, 500, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(61, 522), new Point(320, 522));
+
+                //dibuja datos de aportacion
+                e.Graphics.DrawString("Aportación: " + txtImporte.Text + "   " + txtMtoEscrito.Text,
+                    letra, Brushes.Black, new RectangleF(8, 550, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(100, 572), new Point(360, 572));
+
+                //dibuja rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 345, 840, 100);
+
+                //dibuja segundo rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 453, 840, 215);
+
+                //Linea de firma derecha
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(485, 645), new Point(835, 645));
+                e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(485, 625, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(650, 650, 600, 20));
+
+                //Linea de firma izquierda
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(7, 645), new Point(345, 645));
+                e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(8, 625, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(35, 650, 600, 20));
+            }
+            //Reporte 3 horizontal
+            {
+                //dibujar folio
+                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(500, 685, 450, 685));
+                ////dibujar monto
+                e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(500, 725, 450, 725));
+                //dibujar imagen
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(20, 685, 45, 55));
+                //dibujar folio
+                e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(100, 685, 600, 20));
+
+                //Encabezado
+                e.Graphics.DrawString("DATOS DE APORTACION", letra, Brushes.Black, new RectangleF(325, 810, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(6, 836), new Point(846, 836));
+
+                //dibuja datos del socio
+                e.Graphics.DrawString("Socio: " + $"{lblNombre.Text}   {lblAPaterno.Text}   {lblAMaterno.Text}",
+                    letra, Brushes.Black, new RectangleF(8, 850, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(61, 872), new Point(320, 872));
+
+                //dibuja datos de aportacion
+                e.Graphics.DrawString("Aportación: " + txtImporte.Text + "   " + txtMtoEscrito.Text,
+                    letra, Brushes.Black, new RectangleF(8, 900, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(100, 922), new Point(360, 922));
+
+                //dibuja rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 675, 840, 118);
+
+                //dibuja segundo rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 800, 840, 215);
+
+                //Linea de firma derecha
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(485, 992), new Point(835, 992));
+                e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(485, 972, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(650, 995, 600, 20));
+
+                //Linea de firma izquierda
+                e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(7, 992), new Point(345, 992));
+                e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(8, 972, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(35, 995, 600, 20));
+            }
+
+        }
+
+        public void ImprimirVertical(object sender, PrintPageEventArgs e)
+        {
+            imprimirRec = new PrintDocument();
+            PrinterSettings configImpres = new PrinterSettings();
+            imprimirRec.PrinterSettings = configImpres;
+            //imprimirRec.PrintPage += ImprimirHorizontal;
+
+
+            Font letra = new Font("Arial", 6, FontStyle.Regular, GraphicsUnit.Point);
+            //Reporte 1 vertical
+            {
+                //dibujar folio
+                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(135, 80, 450, 20));
+                //dibujar monto
+                e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(135, 90, 450, 20));
+                //dibujar imagen
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(125, 10, 30, 35));
+                //dibujar titulo
+                e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(80, 50, 600, 20));
+
+                //dibuja datos del socio
+                e.Graphics.DrawString("Socio: ", letra, Brushes.Black, new RectangleF(8, 120, 500, 30));
+                e.Graphics.DrawString($"{lblNombre.Text} {lblAPaterno.Text} {lblAMaterno.Text}", letra, Brushes.Black, new RectangleF(8, 135, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(8, 145), new Point(150, 145));
+
+                //dibuja datos de aportacion
+                e.Graphics.DrawString("Aportación: ", letra, Brushes.Black, new RectangleF(8, 150, 500, 30));
+                e.Graphics.DrawString(txtImporte.Text + "   " + txtMtoEscrito.Text, letra, Brushes.Black, new RectangleF(8, 165, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(8, 175), new Point(150, 175));
+
+                //dibuja rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 6, 250, 300);
+
+                //Linea de firma derecha
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(60, 200), new Point(250, 200));
+                e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(60, 188, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(150, 205, 600, 20));
+
+                //Linea de firma izquierda
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(60, 230), new Point(250, 230));
+                e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(60, 218, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(150, 235, 600, 20));
+            }
+            //Reporte 2 vertical
+            {
+                //dibujar folio
+                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(390, 80, 450, 20));
+                //dibujar monto
+                e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(390, 90, 450, 20));
+                //dibujar imagen
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(380, 10, 30, 35));
+                //dibujar titulo
+                e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(330, 50, 600, 20));
+
+                //dibuja datos del socio
+                e.Graphics.DrawString("Socio: ", letra, Brushes.Black, new RectangleF(261, 120, 500, 30));
+                e.Graphics.DrawString($"{lblNombre.Text} {lblAPaterno.Text} {lblAMaterno.Text}", letra, Brushes.Black, new RectangleF(261, 135, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(262, 148), new Point(415, 148));
+
+                //dibuja datos de aportacion
+                e.Graphics.DrawString("Aportación: ", letra, Brushes.Black, new RectangleF(263, 150, 500, 30));
+                e.Graphics.DrawString(txtImporte.Text + "   " + txtMtoEscrito.Text, letra, Brushes.Black, new RectangleF(261, 165, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(262, 175), new Point(415, 175));
+
+                //dibuja rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 260, 6, 250, 300);
+
+                //Linea de firma derecha
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(330, 200), new Point(507, 200));
+                e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(330, 188, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(420, 205, 600, 20));
+
+                //Linea de firma izquierda
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(330, 230), new Point(507, 230));
+                e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(330, 218, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(420, 235, 600, 20));
+            }
+            //Reporte 3 vertical
+            {
+                //dibujar folio
+                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(645, 80, 450, 20));
+                //dibujar monto
+                e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(645, 90, 450, 20));
+                //dibujar imagen
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(635, 10, 30, 35));
+                //dibujar titulo
+                e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(585, 50, 600, 20));
+
+                //dibuja datos del socio
+                e.Graphics.DrawString("Socio: ", letra, Brushes.Black, new RectangleF(518, 120, 500, 30));
+                e.Graphics.DrawString($"{lblNombre.Text} {lblAPaterno.Text} {lblAMaterno.Text}", letra, Brushes.Black, new RectangleF(518, 135, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(518, 148), new Point(645, 148));
+
+                //dibuja datos de aportacion
+                e.Graphics.DrawString("Aportación: ", letra, Brushes.Black, new RectangleF(518, 150, 500, 30));
+                e.Graphics.DrawString(txtImporte.Text + "   " + txtMtoEscrito.Text, letra, Brushes.Black, new RectangleF(518, 165, 500, 30));
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(518, 175), new Point(645, 175));
+
+                //dibuja rectangulo
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 515, 6, 250, 300);
+
+                //Linea de firma derecha
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(585, 200), new Point(760, 200));
+                e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(585, 188, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(655, 205, 600, 20));
+
+                //Linea de firma izquierda
+                e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(585, 230), new Point(760, 230));
+                e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(585, 218, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(655, 235, 600, 20));
+            }
+            //imprimirRec.Print();
         }
 
         //Metodo para validar que haya solamente numeros o letras
