@@ -163,9 +163,9 @@ namespace A.C.Mascotas_Vulnerables___DB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap inicio {
+        internal static System.Drawing.Bitmap inicio1 {
             get {
-                object obj = ResourceManager.GetObject("inicio", resourceCulture);
+                object obj = ResourceManager.GetObject("inicio1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

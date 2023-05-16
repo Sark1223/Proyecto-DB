@@ -124,14 +124,17 @@
   <data name="borrar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar-usuario (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuario (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="localizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\localizacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Equis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +142,8 @@
   <data name="editar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ŧσllσฬ ๓є @ღ Ꮙαƪƪεȵα ღ #Corgi.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="justicia-social" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\justicia-social.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hucha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hucha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +154,8 @@
   <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="justicia-social" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\justicia-social.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar-usuario (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-usuario (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50 Cats Acting So Cute, People Just Had To Stop And Snap A Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,7 +169,7 @@
   <data name="perro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\perro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="inicio1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inicio.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
