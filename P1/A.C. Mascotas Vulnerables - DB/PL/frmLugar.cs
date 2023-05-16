@@ -720,6 +720,50 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             ValidarLetrasEspacios(txtNombreCiudad, error1, e);
         }
 
+        private void txtNombreEstado_TextChanged(object sender, EventArgs e)
+        {
+            int espacio = 0;
+            error = false;
+
+            //ciclo para recorrer caracter por caracter 
+            foreach (char caracter in txtNombreEstado.Text)
+            {
+                //si alguno de los caracteres es un numero el error es true
+                if (!char.IsLetter(caracter) && !char.IsSeparator(caracter))
+                {
+                    error = true;
+                    break;
+                }
+                if (char.IsSeparator(caracter))
+                {
+                    espacio++;
+                    if (espacio == txtNombreEstado.TextLength)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+            }
+            if (error)
+            {
+                error1.SetError(txtNombreEstado, "No se admiten números ni espacios en blanco\nIngrese letras solamente");
+            }
+            else
+            {
+                error1.SetError(txtNombreEstado, "");
+            }
+        }
+
+        private void txtNombreEstado_Validated(object sender, EventArgs e)
+        {
+            error1.SetError(txtNombreEstado, "");
+        }
+
+        private void txtNombreEstado_Validating(object sender, CancelEventArgs e)
+        {
+            ValidarLetrasEspacios(txtNombreEstado, error1, e);
+        }
+
         LugarDAL lugDAL = new LugarDAL();
 
 

@@ -50,9 +50,30 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             Close();
         }
-
+        bool modifier = false;
         private void btnModificarEstatus_Click(object sender, EventArgs e)
         {
+            if ()
+            {
+                ();
+                if ()
+                {
+                    MessageBox.Show("El PAIS " + pais.pais_id + " se MODIFICO correctamente", "Pais Modificado");
+                    lugar.LlenarCBPais(cbPais);
+                    dgvPais.DataSource = lugar.MostrarPaises().Tables[0];
+                    LimpiarPais();
+                    modifiPais = false;
+                    idActPais = "";
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo modificar la informacion del pais", "Error al momdificar pais");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar primero un registro para modificarlo", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             nAportacion.lblTitle.Text = "Datos\r\ndel\r\nRecibo\r\n(editar)";
             nAportacion.ShowDialog();
             dgvRecibos.DataSource = apDAL.MostrarRecibos().Tables[0];
@@ -63,6 +84,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         }
         public string folio, fecha, monto, mtoescrito, firmaasistente, firmaadministrativo;
+
+        private void frmAportacion_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void dgvRecibos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -80,8 +106,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 DataTable t = apDAL.InformacionID($"Select sc_apaterno,sc_amaterno,sc_nombre_s from SOCIO WHERE socio_id = {tb.Rows[0]["socio_id"]}");
 
                 nAportacion.lblAPaterno.Text = t.Rows[0]["sc_apaterno"].ToString();
-                nAportacion.lblAPaterno.Text = t.Rows[0]["sc_amaterno"].ToString();
-                nAportacion.lblAPaterno.Text = t.Rows[0]["sc_nombre_s"].ToString();
+                nAportacion.lblAMaterno.Text = t.Rows[0]["sc_amaterno"].ToString();
+                nAportacion.lblNombre.Text = t.Rows[0]["sc_nombre_s"].ToString();
             }
             
             //Obtener Importe

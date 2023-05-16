@@ -935,7 +935,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 }
                 else
                 {
-                    usuario.usu_id = int.Parse(txtID.Text);
+                    if (txtID.Text != "")
+                    {
+                        usuario.usu_id = int.Parse(txtID.Text);
+                    }
                 }
             }
             else
@@ -948,7 +951,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 }
                 else
                 {
-                    usuario.usu_id = int.Parse(txtID.Text);
+                    if (txtID.Text != "")
+                    {
+                        usuario.usu_id = int.Parse(txtID.Text);
+                    }
                 }
             }
         }

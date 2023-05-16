@@ -136,7 +136,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     valoresVacios += "Encargado 2, ";
                     no_vacios++;
                 }
-                if (cbEncargado2.Text == "- PERIODO -")
+                if (cbPeriodo.Text == "- PERIODO -")
                 {
                     valoresVacios += "Periodo";
                     no_vacios++;

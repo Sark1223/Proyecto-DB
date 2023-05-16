@@ -375,6 +375,9 @@
             this.txtNombreEstado.Size = new System.Drawing.Size(172, 19);
             this.txtNombreEstado.TabIndex = 10;
             this.txtNombreEstado.Text = "BAJA CALIFORNIA";
+            this.txtNombreEstado.TextChanged += new System.EventHandler(this.txtNombreEstado_TextChanged);
+            this.txtNombreEstado.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombreEstado_Validating);
+            this.txtNombreEstado.Validated += new System.EventHandler(this.txtNombreEstado_Validated);
             // 
             // lblNombreEstado
             // 

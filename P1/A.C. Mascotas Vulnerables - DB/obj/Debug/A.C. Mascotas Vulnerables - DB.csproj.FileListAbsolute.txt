@@ -63,3 +63,4 @@ C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proy
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmEdit_Usuario.resources
 C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmUsuarios.resources
 C:\Users\perro\OneDrive\Documentos\GitHub\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmPeriodo.resources
+C:\Users\edwin\OneDrive\Desktop\Semestre 4\Fundamentos de bases de datos\p1\Proyecto-DB\P1\A.C. Mascotas Vulnerables - DB\obj\Debug\A.C.Mascotas_Vulnerables___DB.PL.frmPeriodo.resources

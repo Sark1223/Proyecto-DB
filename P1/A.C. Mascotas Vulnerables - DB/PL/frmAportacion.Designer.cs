@@ -403,6 +403,7 @@
             this.Name = "frmAportacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAportacion";
+            this.Load += new System.EventHandler(this.frmAportacion_Load);
             this.pnBusfolio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.pnBusqueda.ResumeLayout(false);
