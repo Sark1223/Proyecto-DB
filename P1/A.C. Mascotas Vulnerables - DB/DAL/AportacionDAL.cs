@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using A.C.Mascotas_Vulnerables___DB.BLL;
 using A.C.Mascotas_Vulnerables___DB.PL;
+using System.Drawing;
 
 namespace A.C.Mascotas_Vulnerables___DB.DAL
 {
@@ -67,6 +68,22 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return conexion.BuscarEnTabla_MODIFICAR("select rec_folio from RECIBO", valor, valorCarga, control, error);
         }
 
+        //ID AUTO INCREMENTABLE
+        public string IncrementarID()
+        {
+            bool bandera = false;
+            int i = 1;
+            while (bandera == false && i <= int.MaxValue)
+            {
+                if(conexion.BuscarEnTabla_AGREGAR("select rec_folio from RECIBO", i.ToString(),0))
+                {
+                    bandera = true;
+                    return i.ToString();
+                }
+                i++;
+            }
+            return "0";
+        } 
 
         //METODOS Socio
         public bool AgregarRecibo(ReciboBLL recibo)

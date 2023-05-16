@@ -53,6 +53,7 @@
             this.btnNuevaAportacion = new ns1.BunifuThinButton2();
             this.btnModificarEstatus = new ns1.BunifuThinButton2();
             this.dgvRecibos = new System.Windows.Forms.DataGridView();
+            this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.pnBusfolio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.pnBusqueda.SuspendLayout();
@@ -371,6 +372,18 @@
             this.dgvRecibos.TabIndex = 51;
             this.dgvRecibos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRecibos_CellMouseClick);
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(126)))), ((int)(((byte)(150)))));
+            this.bunifuSeparator1.LineThickness = 5;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(18, 77);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(761, 10);
+            this.bunifuSeparator1.TabIndex = 52;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
             // frmAportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +397,7 @@
             this.Controls.Add(this.btnNuevaAportacion);
             this.Controls.Add(this.btnModificarEstatus);
             this.Controls.Add(this.pnBusqueda);
+            this.Controls.Add(this.bunifuSeparator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAportacion";
@@ -422,5 +436,6 @@
         private System.Windows.Forms.Label label3;
         private ns1.BunifuThinButton2 bunifuThinButton21;
         public System.Windows.Forms.DataGridView dgvRecibos;
+        private ns1.BunifuSeparator bunifuSeparator1;
     }
 }

@@ -52,13 +52,6 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return conexion.ejecutarComandoSinRetorno(agregar);
         }
 
-        /*CREATE TABLE PERIODO (
-    periodo_año    Char(4) NOT NULL,
-    periodo_num     CHAR(1) NOT NULL,
-    periodo_inicio DATE,
-    periodo_fin    DATE
-);
-*/
 
         public bool ModificarPeriodo(PeriodoBLL periodo, string periodoaño, string periodoNum)
         {

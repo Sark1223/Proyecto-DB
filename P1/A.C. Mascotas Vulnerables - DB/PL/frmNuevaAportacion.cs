@@ -32,7 +32,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             this.Close();
         }
-        string folio;
+        string folio, numValido;
 
         private void frmNuevaAportacion_Load(object sender, EventArgs e)
         {
@@ -45,6 +45,9 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 cmdGuardar.Visible = false;
                 cbPeriodo.Visible = true;
                 lblPeriodo.Visible = false;
+
+                numValido = AportacionDAL.IncrementarID();
+                txtFolio.Text = numValido.ToString();
             }
             else
             {
@@ -60,7 +63,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             }
             
         }
-
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -144,6 +146,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 return false;
             }
         }
+        public void LimpiarRecibo()
+        {
+            txtFolio.Text="";
+            lblAMaterno.Text = ""; lblAPaterno.Text = ""; txtImporte.Text = ""; txtMtoEscrito.Text = "";
+            cbEncargado2.SelectedIndex = 0;
+        }
 
         private void btnAgregarRecibo_Click(object sender, EventArgs e)
         {
@@ -153,7 +161,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 if (AportacionDAL.AgregarRecibo(res))
                 {
                     MessageBox.Show("El RECIBO " + res.rec_folio + " se AGREGO correctamente", "Recibo Agregado");
-                    //Limpiar();
+                    LimpiarRecibo();
+                    Close();
                 }
                 else
                 {

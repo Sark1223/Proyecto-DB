@@ -110,7 +110,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                string nombreCompleto = $"{dr[0]} - {dr[1]} {dr[2]} {dr[2]}";  
+                string nombreCompleto = $"{dr[0]} - {dr[1]} {dr[2]} {dr[3]}";  
                 if (nombreCompleto != textoCB)
                 {
                     cb.Items.Add(nombreCompleto.ToString());
@@ -215,7 +215,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
 
         //Buscar valores en tabla
-        public bool BuscarEnTabla_AGREGAR(string sentencia, string valor, int posicion, Control control, ErrorProvider error)
+        public bool BuscarEnTabla_AGREGAR(string sentencia, string valor, int posicion)
         {
             try
             {
@@ -228,7 +228,6 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
                 {
                     if (dr[posicion].ToString() == valor)
                     {
-                        error.SetError(control, "EL valor " + valor + " de  ya existe");
                         return false;
                     }
 
