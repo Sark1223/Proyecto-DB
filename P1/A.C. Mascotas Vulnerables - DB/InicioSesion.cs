@@ -77,9 +77,9 @@ namespace A.C.Mascotas_Vulnerables___DB
                         nuevaAportacion.cmdAgregarEstatus.Tag = "no";
                     }
 
-                    nuevaAportacion.txtEncargado1.Text = txtUsuario.Text +" "+ tb.Rows[0]["usu_apaterno"].ToString() + " " + tb.Rows[0]["usu_amaterno"].ToString() + " " + tb.Rows[0]["usu_nombre_s"].ToString();
+                    nuevaAportacion.txtEncargado1.Text = tb.Rows[0]["usuario_id"].ToString() + " "+ tb.Rows[0]["usu_apaterno"].ToString() + " " + tb.Rows[0]["usu_amaterno"].ToString() + " " + tb.Rows[0]["usu_nombre_s"].ToString();
 
-                    nuevaAportacion.idSocio = txtUsuario.Text; 
+                    nuevaAportacion.usuario_id = txtUsuario.Text; 
                     edit_Socios.usuario_id = int.Parse(txtUsuario.Text);
                     edit_Usuario.usuario_id = int.Parse(txtUsuario.Text);
                     edit_Periodo.usuario_id = int.Parse(txtUsuario.Text);

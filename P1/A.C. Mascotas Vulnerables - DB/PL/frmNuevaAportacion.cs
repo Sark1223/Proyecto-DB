@@ -194,8 +194,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     historial.hora = time;
                     historialDAL.AgregarModificacion(historial);
 
-                    historialDAL.AgregarModificacion(historial);
-
                     //imprimirRec = new PrintDocument();
                     //PrinterSettings configImpres = new PrinterSettings();
                     //imprimirRec.PrinterSettings = configImpres;
@@ -212,7 +210,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                         imprimirRec.PrintPage += ImprimirHorizontal;
                         imprimirRec.Print();
                     }
-                    else if (aver == DialogResult.Cancel)
+                    else if (aver == DialogResult.Cancel )
                     {
                         imprimirRec = new PrintDocument();
                         PrinterSettings configImpres = new PrinterSettings();
@@ -573,7 +571,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             //Reporte 1 vertical
             {
                 //dibujar folio
-                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(135, 80, 450, 20));
+                e.Graphics.DrawString("Fecha: " + res.rec_fecha, letra, Brushes.Black, new RectangleF(135, 80, 450, 20));
                 //dibujar monto
                 e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(135, 90, 450, 20));
                 //dibujar imagen
@@ -597,17 +595,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 //Linea de firma derecha
                 e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(60, 200), new Point(250, 200));
                 e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(60, 188, 600, 20));
-                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(150, 205, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(100, 205, 600, 20));
 
                 //Linea de firma izquierda
                 e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(60, 230), new Point(250, 230));
                 e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(60, 218, 600, 20));
-                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(150, 235, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(100, 235, 600, 20));
             }
             //Reporte 2 vertical
             {
                 //dibujar folio
-                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(390, 80, 450, 20));
+                e.Graphics.DrawString("Fecha: " + res.rec_fecha, letra, Brushes.Black, new RectangleF(390, 80, 450, 20));
                 //dibujar monto
                 e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(390, 90, 450, 20));
                 //dibujar imagen
@@ -631,17 +629,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 //Linea de firma derecha
                 e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(330, 200), new Point(507, 200));
                 e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(330, 188, 600, 20));
-                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(420, 205, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(370, 205, 600, 20));
 
                 //Linea de firma izquierda
                 e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(330, 230), new Point(507, 230));
                 e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(330, 218, 600, 20));
-                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(420, 235, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(370, 235, 600, 20));
             }
             //Reporte 3 vertical
             {
                 //dibujar folio
-                e.Graphics.DrawString("Fecha: " + dtFecha.Value, letra, Brushes.Black, new RectangleF(645, 80, 450, 20));
+                e.Graphics.DrawString("Fecha: " + res.rec_fecha, letra, Brushes.Black, new RectangleF(645, 80, 450, 20));
                 //dibujar monto
                 e.Graphics.DrawString("Periodo: " + lblPeriodo.Text, letra, Brushes.Black, new RectangleF(645, 90, 450, 20));
                 //dibujar imagen
@@ -665,12 +663,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 //Linea de firma derecha
                 e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(585, 200), new Point(760, 200));
                 e.Graphics.DrawString(res.rec_firma_asistente, letra, Brushes.Black, new RectangleF(585, 188, 600, 20));
-                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(655, 205, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(605, 205, 600, 20));
 
                 //Linea de firma izquierda
                 e.Graphics.DrawLine(new Pen(Color.Black, 1), new Point(585, 230), new Point(760, 230));
                 e.Graphics.DrawString(res.rec_firma_administrativo, letra, Brushes.Black, new RectangleF(585, 218, 600, 20));
-                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(655, 235, 600, 20));
+                e.Graphics.DrawString("Firma", letra, Brushes.Black, new RectangleF(605, 235, 600, 20));
             }
             //imprimirRec.Print();
         }

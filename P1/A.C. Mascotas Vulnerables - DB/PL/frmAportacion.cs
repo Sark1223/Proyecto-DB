@@ -17,9 +17,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
     {
         frmNuevaAportacion nAportacion = new frmNuevaAportacion();
         AportacionDAL apDAL = new AportacionDAL();
-        frmEstadoRecibo estadoRecibo = new frmEstadoRecibo();
         frmImprimir imp = new frmImprimir();
-        
+
         public frmAportacion()
         {
             InitializeComponent();
@@ -79,7 +78,24 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            imp.ShowDialog();
+            DialogResult aver = imp.ShowDialog();
+
+            if (aver == DialogResult.OK)
+            {
+                imprimirRec = new PrintDocument();
+                PrinterSettings configImpres = new PrinterSettings();
+                imprimirRec.PrinterSettings = configImpres;
+                imprimirRec.PrintPage += ImprimirHorizontal;
+                imprimirRec.Print();
+            }
+            else if (aver == DialogResult.Cancel)
+            {
+                imprimirRec = new PrintDocument();
+                PrinterSettings configImpres = new PrinterSettings();
+                imprimirRec.PrinterSettings = configImpres;
+                imprimirRec.PrintPage += ImprimirVertical;
+                imprimirRec.Print();
+            }
         }
 
         public void ImprimirHorizontal(object sender, PrintPageEventArgs e)

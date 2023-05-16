@@ -13,7 +13,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 {
     public partial class frmImprimir : Form
     {
-        frmAportacion aport = new frmAportacion();
+        //frmAportacion aport = new frmAportacion();
         public frmImprimir()
         {
             InitializeComponent();
