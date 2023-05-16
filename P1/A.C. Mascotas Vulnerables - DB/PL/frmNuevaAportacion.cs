@@ -32,6 +32,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             this.Close();
         }
+        string folio;
 
         private void frmNuevaAportacion_Load(object sender, EventArgs e)
         {
@@ -43,6 +44,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 pnEstatus.Visible = false;
                 cmdGuardar.Visible = false;
                 cbPeriodo.Visible = true;
+                lblPeriodo.Visible = false;
             }
             else
             {
@@ -50,6 +52,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 pnEstatus.Visible = true;
                 cbEncargado2.Visible = false;
                 cbPeriodo.Visible = false;
+                lblPeriodo.Visible = true;
+
+                folio = txtFolio.Text;
+
+                MessageBox.Show("Intenta modificar un recibo, el UNICO valor MODIFICABLE en esta ventana es ESTATUS, cualquier otro cambio no se guardara.", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
@@ -158,6 +165,24 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         private void cmdAgregarEstatus_Click(object sender, EventArgs e)
         {
             estadoRecibo.ShowDialog();
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            if(cbEstatus.SelectedIndex != 0)
+            {
+                res.estatus_id = cbEstatus.Text;
+                if (AportacionDAL.Modificar(res, folio))
+                {
+                    MessageBox.Show("El RECIBO " + res.rec_folio + " se AGREGO correctamente", "Recibo Agregado");
+                    //Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo ingresar la informacion del recibo", "Error al ingresar recibo");
+                }
+            }
+            
         }
     }
 }

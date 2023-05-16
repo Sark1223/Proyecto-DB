@@ -633,6 +633,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         //Validar la ciudad id 
         private void txtCiudadID_TextChanged(object sender, EventArgs e)
         {
+            error = false;
             //ciclo para recorrer caracter por caracter 
             foreach (char caracter in txtCiudadID.Text)
             {
@@ -673,8 +674,9 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         }
         private void txtCiudadID_Validated(object sender, EventArgs e)
         {
-            error1.SetError(txtEstadoID, "");
+            error1.SetError(txtCiudadID, "");
         }
+
         //Validaciones del nombre de la ciudad
         private void txtNombreCiudad_TextChanged(object sender, EventArgs e)
         {

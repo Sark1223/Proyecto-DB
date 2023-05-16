@@ -105,6 +105,15 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
         }
 
+        public bool Modificar(ReciboBLL recibo, string folio)
+        {
+            SqlCommand modificar = new SqlCommand($"Update RECIBO set estatus_id = @estatus_id where rec_folio = {folio}");
+            modificar.Parameters.AddWithValue("estatus_id", recibo.estatus_id);
+            return conexion.ejecutarComandoSinRetorno(modificar);
+        }
+
+
+        //METODOS ESTATUS ------------------------------------------------------
         public bool AgregarEstatus(EstatusBLL estatus)
         {
             /*CREATE TABLE ESTATUS_RECIBO (
@@ -123,7 +132,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             return conexion.ejecutarComandoSinRetorno(agregar);
         }
 
-        public bool ModificarPais(EstatusBLL estatus, string idAnterior)
+        public bool ModificarEstatus(EstatusBLL estatus, string idAnterior)
         {
             SqlCommand modificar = new SqlCommand(
             "Update ESTATUS_RECIBO set estatus_id = @estatus_id," +

@@ -18,6 +18,17 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             conexion = new Conexion();
         }
 
+        //Obtener el ID del registro
+        public string ObtenerID(string Sentencia)
+        {
+            return conexion.RetornarID(Sentencia);
+        }
+
+        //Obtener la informacion del registro con ID conocido
+        public DataTable InformacionID(string sentencia)
+        {
+            return conexion.InformacionID(sentencia);
+        }
         public DataSet MostrarPeriodos()
         {
             SqlCommand comandoSQL = new SqlCommand("Select * from PERIODO");
@@ -52,14 +63,10 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         public bool ModificarPeriodo(PeriodoBLL periodo, string periodoaño, string periodoNum)
         {
             SqlCommand modificar = new SqlCommand(
-            "Update PERIODO set periodo_año = @periodo_año," +
-                             "periodo_num = @periodo_num," +
-                             "periodo_inicio = @periodo_inicio," +
+            "Update PERIODO set periodo_inicio = @periodo_inicio," +
                              "periodo_fin = @periodo_fin " +
                              $"WHERE periodo_año = {periodoaño} and periodo_num ={periodoNum}" );
             {
-                modificar.Parameters.AddWithValue("periodo_año", periodo.periodo_año);
-                modificar.Parameters.AddWithValue("periodo_num", periodo.periodo_num);
                 modificar.Parameters.AddWithValue("periodo_inicio", periodo.periodo_inicio);
                 modificar.Parameters.AddWithValue("periodo_fin", periodo.periodo_fin);
             }

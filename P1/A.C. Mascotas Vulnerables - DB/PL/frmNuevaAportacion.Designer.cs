@@ -70,10 +70,11 @@
             this.dtFecha = new ns1.BunifuDatepicker();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.pnFirmas = new System.Windows.Forms.Panel();
+            this.pnEstatus = new System.Windows.Forms.Panel();
             this.cmdAgregarEstatus = new System.Windows.Forms.PictureBox();
-            this.lblEncargado2 = new ns1.BunifuCustomLabel();
             this.lblEstatus = new System.Windows.Forms.Label();
             this.cbEstatus = new System.Windows.Forms.ComboBox();
+            this.lblEncargado2 = new ns1.BunifuCustomLabel();
             this.txtEncargado1 = new ns1.BunifuCustomLabel();
             this.cbEncargado2 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -85,7 +86,6 @@
             this.rdFirmas = new ns1.BunifuElipse(this.components);
             this.cbPeriodo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.pnEstatus = new System.Windows.Forms.Panel();
             this.lblPeriodo = new ns1.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -102,9 +102,9 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnFirmas.SuspendLayout();
+            this.pnEstatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAgregarEstatus)).BeginInit();
             this.panel5.SuspendLayout();
-            this.pnEstatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdNuevaAportacion
@@ -210,7 +210,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Location = new System.Drawing.Point(20, 130);
+            this.lblTitle.Location = new System.Drawing.Point(20, 109);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(121, 111);
             this.lblTitle.TabIndex = 10;
@@ -523,13 +523,14 @@
             this.cmdGuardar.Size = new System.Drawing.Size(111, 50);
             this.cmdGuardar.TabIndex = 24;
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(27, 281);
+            this.pictureBox2.Location = new System.Drawing.Point(-9, 249);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(172, 185);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -630,6 +631,16 @@
             this.pnFirmas.Size = new System.Drawing.Size(576, 122);
             this.pnFirmas.TabIndex = 38;
             // 
+            // pnEstatus
+            // 
+            this.pnEstatus.Controls.Add(this.cmdAgregarEstatus);
+            this.pnEstatus.Controls.Add(this.lblEstatus);
+            this.pnEstatus.Controls.Add(this.cbEstatus);
+            this.pnEstatus.Location = new System.Drawing.Point(426, 58);
+            this.pnEstatus.Name = "pnEstatus";
+            this.pnEstatus.Size = new System.Drawing.Size(134, 63);
+            this.pnEstatus.TabIndex = 46;
+            // 
             // cmdAgregarEstatus
             // 
             this.cmdAgregarEstatus.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.agregar__1_;
@@ -640,17 +651,6 @@
             this.cmdAgregarEstatus.TabIndex = 45;
             this.cmdAgregarEstatus.TabStop = false;
             this.cmdAgregarEstatus.Click += new System.EventHandler(this.cmdAgregarEstatus_Click);
-            // 
-            // lblEncargado2
-            // 
-            this.lblEncargado2.AutoSize = true;
-            this.lblEncargado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEncargado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEncargado2.Location = new System.Drawing.Point(122, 89);
-            this.lblEncargado2.Name = "lblEncargado2";
-            this.lblEncargado2.Size = new System.Drawing.Size(196, 20);
-            this.lblEncargado2.TabIndex = 44;
-            this.lblEncargado2.Text = "Karla Judith Santos Rivera";
             // 
             // lblEstatus
             // 
@@ -670,6 +670,17 @@
             this.cbEstatus.Size = new System.Drawing.Size(111, 21);
             this.cbEstatus.TabIndex = 42;
             // 
+            // lblEncargado2
+            // 
+            this.lblEncargado2.AutoSize = true;
+            this.lblEncargado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncargado2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEncargado2.Location = new System.Drawing.Point(122, 86);
+            this.lblEncargado2.Name = "lblEncargado2";
+            this.lblEncargado2.Size = new System.Drawing.Size(196, 20);
+            this.lblEncargado2.TabIndex = 44;
+            this.lblEncargado2.Text = "Karla Judith Santos Rivera";
+            // 
             // txtEncargado1
             // 
             this.txtEncargado1.AutoSize = true;
@@ -683,10 +694,11 @@
             // 
             // cbEncargado2
             // 
+            this.cbEncargado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEncargado2.FormattingEnabled = true;
-            this.cbEncargado2.Location = new System.Drawing.Point(121, 89);
+            this.cbEncargado2.Location = new System.Drawing.Point(121, 81);
             this.cbEncargado2.Name = "cbEncargado2";
-            this.cbEncargado2.Size = new System.Drawing.Size(255, 21);
+            this.cbEncargado2.Size = new System.Drawing.Size(255, 26);
             this.cbEncargado2.TabIndex = 40;
             // 
             // panel5
@@ -763,16 +775,6 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Periodo:";
             // 
-            // pnEstatus
-            // 
-            this.pnEstatus.Controls.Add(this.cmdAgregarEstatus);
-            this.pnEstatus.Controls.Add(this.lblEstatus);
-            this.pnEstatus.Controls.Add(this.cbEstatus);
-            this.pnEstatus.Location = new System.Drawing.Point(426, 58);
-            this.pnEstatus.Name = "pnEstatus";
-            this.pnEstatus.Size = new System.Drawing.Size(134, 63);
-            this.pnEstatus.TabIndex = 46;
-            // 
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
@@ -830,11 +832,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnFirmas.ResumeLayout(false);
             this.pnFirmas.PerformLayout();
+            this.pnEstatus.ResumeLayout(false);
+            this.pnEstatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAgregarEstatus)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.pnEstatus.ResumeLayout(false);
-            this.pnEstatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

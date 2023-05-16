@@ -23,7 +23,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void frmPeriodo_Load(object sender, EventArgs e)
         {
-
+            LimpiarPeriodo();
         }
 
         private void RecuperarInformacion()
@@ -73,6 +73,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
+            modifiPeriodo = false;
             if (!ValoresVacios())
             {
                 RecuperarInformacion();
@@ -90,28 +91,54 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             }
         }
 
+        string periodoAño, periodoNum;
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-            //if (!ValoresVacios())
-            //{
-            //    RecuperarInformacion();
-            //    if (periodoDAL.ModificarPeriodo(periodo))
-            //    {
-            //        MessageBox.Show($"El PERIODO {periodo.periodo_año}-{periodo.periodo_num} se AGREGO correctamente", "Periodo Agregado");
+            if (modifiPeriodo)
+            {
+                if (!ValoresVacios())
+                {
+                    RecuperarInformacion();
+                    if (periodoDAL.ModificarPeriodo(periodo, periodoAño, periodoNum))
+                    {
+                        MessageBox.Show($"El PERIODO {periodo.periodo_año}-{periodo.periodo_num} se MODIFICO correctamente", "Periodo Modificado");
 
-            //        dgvPeriodo.DataSource = periodoDAL.MostrarPeriodos().Tables[0];
-            //        LimpiarPeriodo();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("NO se pudo ingresar la informacion del periodo", "Error al ingresar periodo");
-            //    }
-            //}
+                        dgvPeriodo.DataSource = periodoDAL.MostrarPeriodos().Tables[0];
+                        LimpiarPeriodo();
+                        modifiPeriodo = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo modificar la informacion del periodo", "Error al modificar periodo");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar primero un registro para modificarlo", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
+        bool modifiPeriodo;
         private void dgvPeriodo_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            int indice = e.RowIndex;
 
+            periodoAño = dgvPeriodo.Rows[indice].Cells[0].Value.ToString();
+            periodoNum = dgvPeriodo.Rows[indice].Cells[1].Value.ToString();
+
+            txtAño.Text = periodoAño;
+            txtNumero.Text = periodoNum;
+
+            //Obtener toda la informacion por medio de plato_id 
+            DataTable tb = periodoDAL.InformacionID($"Select * from PERIODO WHERE periodo_año = '{periodoAño}' and periodo_num = '{periodoNum}'");
+            //Mostrar ID
+            dtFechaInicio.Value = (DateTime) tb.Rows[0]["periodo_inicio"];
+            //Nombre del plato
+            dtFechaFin.Value = (DateTime) tb.Rows[0]["periodo_fin"];
+
+            modifiPeriodo = true;
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)

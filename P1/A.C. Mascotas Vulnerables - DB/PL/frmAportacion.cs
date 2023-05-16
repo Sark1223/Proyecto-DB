@@ -20,7 +20,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         public frmAportacion()
         {
             InitializeComponent();
-            dgvRecibos.DataSource = apDAL.MostrarRecibos().Tables[0];
         }
 
         ///Drag Form

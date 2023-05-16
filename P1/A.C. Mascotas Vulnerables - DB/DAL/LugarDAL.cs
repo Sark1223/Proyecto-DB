@@ -195,7 +195,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
 
         public bool ValidarID_Ciudad(string valor, string valorCarga, Control control, ErrorProvider error)
         {
-            return conexion.BuscarEnTabla_MODIFICAR("select ciudad_id from ESTADO", valor, valorCarga, control, error);
+            return conexion.BuscarEnTabla_MODIFICAR("select ciudad_id from CIUDAD", valor, valorCarga, control, error);
         }
 
     }
