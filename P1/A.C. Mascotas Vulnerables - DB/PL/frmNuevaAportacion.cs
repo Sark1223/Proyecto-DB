@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -194,6 +195,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
                     historialDAL.AgregarModificacion(historial);
 
+                    imprimirRec = new PrintDocument();
+                    PrinterSettings configImpres = new PrinterSettings();
+                    imprimirRec.PrinterSettings = configImpres;
+                    imprimirRec.PrintPage += Imprimir;
+                    imprimirRec.Print();
+
                     Close();
                 }
                 else
@@ -212,7 +219,32 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
 
         }
+        public void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font letra = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Point);
+            //dibujar folio
+            e.Graphics.DrawString("Folio: " + res.rec_folio, letra, Brushes.Black, new RectangleF(600, 20, 450, 20));
+            //dibujar monto
+            e.Graphics.DrawString("Monto: " + res.rec_monto + ".00 $", letra, Brushes.Black, new RectangleF(600, 60, 450, 20));
+            //dibujar imagen
+            e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(20, 20, 45, 55));
+            //dibujar folio
+            e.Graphics.DrawString("A.C MASCOTAS VULNERABLES", letra, Brushes.Black, new RectangleF(100, 20, 600, 20));
 
+            //Recuperacion de datos de socio
+            DataTable t = AportacionDAL.InformacionID($"Select usu_apaterno,usu_amaterno,usu_nombre_s from USUARIO WHERE usuario_id = {res.socio_id}");
+            string apaterno = t.Rows[0]["usu_apaterno"].ToString();
+            string amaterno = t.Rows[0]["usu_amaterno"].ToString();
+            string nombres = t.Rows[0]["usu_nombre_s"].ToString();
+
+            //dibuja datos del socio
+            e.Graphics.DrawString($"{nombres} {apaterno} {amaterno}", letra, Brushes.Black, new RectangleF(100, 60, 500, 30));
+
+            //dibuja rectangulo
+            e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 6, 845, 100);
+            e.Graphics.DrawRectangle(new Pen(Color.Black, 1), 6, 120, 845, 275);
+            e.Graphics.DrawLine(new Pen(Color.Black, 2), new Point(725, 385), new Point(845, 385));
+        }
         private void cmdAgregarEstatus_Click(object sender, EventArgs e)
         {
             if(cmdAgregarEstatus.Tag.ToString() == "no")

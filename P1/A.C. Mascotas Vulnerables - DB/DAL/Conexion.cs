@@ -15,7 +15,7 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
         public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
         SqlConnection conexion;
 
-        //////Conexion Villada Edwin
+        ////Conexion Villada Edwin
         //public string CadenaConexion = @"server = DESKTOP-BNMO14B; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
         //SqlConnection conexion;
 

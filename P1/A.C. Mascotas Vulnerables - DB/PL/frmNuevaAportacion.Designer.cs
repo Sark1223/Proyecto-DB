@@ -90,6 +90,7 @@
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.bunifuSeparator6 = new ns1.BunifuSeparator();
+            this.imprimirRec = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -928,5 +929,6 @@
         public ns1.BunifuSeparator bunifuSeparator5;
         public System.Windows.Forms.TextBox txtFolio;
         public ns1.BunifuSeparator bunifuSeparator6;
+        private System.Drawing.Printing.PrintDocument imprimirRec;
     }
 }

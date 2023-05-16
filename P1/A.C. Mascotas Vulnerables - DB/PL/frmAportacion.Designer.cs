@@ -54,6 +54,7 @@
             this.btnModificarEstatus = new ns1.BunifuThinButton2();
             this.dgvRecibos = new System.Windows.Forms.DataGridView();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.imprimirRec = new System.Drawing.Printing.PrintDocument();
             this.pnBusfolio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.pnBusqueda.SuspendLayout();
@@ -243,6 +244,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(141, 38);
             this.bunifuThinButton21.TabIndex = 48;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // btnCrearReporte
             // 
@@ -438,5 +440,6 @@
         private ns1.BunifuThinButton2 bunifuThinButton21;
         public System.Windows.Forms.DataGridView dgvRecibos;
         private ns1.BunifuSeparator bunifuSeparator1;
+        private System.Drawing.Printing.PrintDocument imprimirRec;
     }
 }
