@@ -57,6 +57,8 @@
             this.lblNombre = new ns1.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnMonto = new System.Windows.Forms.Panel();
+            this.txtImporte = new System.Windows.Forms.TextBox();
+            this.bunifuSeparator5 = new ns1.BunifuSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMtoEscrito = new ns1.BunifuMetroTextbox();
@@ -86,8 +88,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.lblPeriodo = new ns1.BunifuCustomLabel();
             this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtImporte = new System.Windows.Forms.TextBox();
-            this.bunifuSeparator5 = new ns1.BunifuSeparator();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.bunifuSeparator6 = new ns1.BunifuSeparator();
             this.panel1.SuspendLayout();
@@ -126,7 +126,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(796, 43);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 10;
             // 
             // btnCerrar
             // 
@@ -175,7 +175,7 @@
             this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 20);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Datos del Socio";
             // 
             // label2
@@ -185,7 +185,7 @@
             this.label2.Location = new System.Drawing.Point(110, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Nombre(s):";
             // 
             // label3
@@ -205,7 +205,7 @@
             this.label4.Location = new System.Drawing.Point(415, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Apellido Materno:";
             // 
             // lblTitle
@@ -217,7 +217,7 @@
             this.lblTitle.Location = new System.Drawing.Point(20, 109);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(121, 111);
-            this.lblTitle.TabIndex = 10;
+            this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Datos\r\ndel\r\nRecibo";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -228,7 +228,7 @@
             this.label6.Location = new System.Drawing.Point(405, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 20);
-            this.label6.TabIndex = 11;
+            this.label6.TabIndex = 5;
             this.label6.Text = "Fecha:";
             // 
             // label7
@@ -238,7 +238,7 @@
             this.label7.Location = new System.Drawing.Point(62, 44);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 20);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 2;
             this.label7.Text = "Importe$:";
             // 
             // label8
@@ -248,7 +248,7 @@
             this.label8.Location = new System.Drawing.Point(245, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 20);
-            this.label8.TabIndex = 15;
+            this.label8.TabIndex = 5;
             this.label8.Text = "Importe en Letra:";
             // 
             // pnSocio
@@ -336,7 +336,7 @@
             this.cmdBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdBuscar.Name = "cmdBuscar";
             this.cmdBuscar.Size = new System.Drawing.Size(69, 37);
-            this.cmdBuscar.TabIndex = 38;
+            this.cmdBuscar.TabIndex = 9;
             this.cmdBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdBuscar.Click += new System.EventHandler(this.BuscarSOcio);
             // 
@@ -348,7 +348,7 @@
             this.bunifuSeparator4.Location = new System.Drawing.Point(419, 116);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
             this.bunifuSeparator4.Size = new System.Drawing.Size(128, 13);
-            this.bunifuSeparator4.TabIndex = 41;
+            this.bunifuSeparator4.TabIndex = 0;
             this.bunifuSeparator4.Transparency = 255;
             this.bunifuSeparator4.Vertical = false;
             // 
@@ -360,7 +360,7 @@
             this.lblAMaterno.Location = new System.Drawing.Point(415, 93);
             this.lblAMaterno.Name = "lblAMaterno";
             this.lblAMaterno.Size = new System.Drawing.Size(54, 20);
-            this.lblAMaterno.TabIndex = 42;
+            this.lblAMaterno.TabIndex = 1;
             this.lblAMaterno.Text = "Rivera";
             // 
             // bunifuSeparator3
@@ -371,7 +371,7 @@
             this.bunifuSeparator3.Location = new System.Drawing.Point(262, 116);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(125, 13);
-            this.bunifuSeparator3.TabIndex = 39;
+            this.bunifuSeparator3.TabIndex = 3;
             this.bunifuSeparator3.Transparency = 255;
             this.bunifuSeparator3.Vertical = false;
             // 
@@ -383,7 +383,7 @@
             this.lblAPaterno.Location = new System.Drawing.Point(258, 93);
             this.lblAPaterno.Name = "lblAPaterno";
             this.lblAPaterno.Size = new System.Drawing.Size(60, 20);
-            this.lblAPaterno.TabIndex = 40;
+            this.lblAPaterno.TabIndex = 4;
             this.lblAPaterno.Text = "Santos";
             // 
             // bunifuSeparator2
@@ -394,7 +394,7 @@
             this.bunifuSeparator2.Location = new System.Drawing.Point(114, 116);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(112, 13);
-            this.bunifuSeparator2.TabIndex = 38;
+            this.bunifuSeparator2.TabIndex = 6;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
             // 
@@ -406,7 +406,7 @@
             this.lblNombre.Location = new System.Drawing.Point(110, 93);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(45, 20);
-            this.lblNombre.TabIndex = 38;
+            this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Karla";
             // 
             // panel2
@@ -416,7 +416,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(576, 40);
-            this.panel2.TabIndex = 37;
+            this.panel2.TabIndex = 10;
             // 
             // pnMonto
             // 
@@ -432,6 +432,32 @@
             this.pnMonto.Size = new System.Drawing.Size(576, 122);
             this.pnMonto.TabIndex = 25;
             // 
+            // txtImporte
+            // 
+            this.txtImporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
+            this.txtImporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtImporte.Location = new System.Drawing.Point(66, 77);
+            this.txtImporte.Name = "txtImporte";
+            this.txtImporte.Size = new System.Drawing.Size(84, 19);
+            this.txtImporte.TabIndex = 3;
+            this.txtImporte.Text = "12";
+            this.txtImporte.TextChanged += new System.EventHandler(this.txtImporte_TextChanged);
+            this.txtImporte.Validating += new System.ComponentModel.CancelEventHandler(this.txtImporte_Validating);
+            this.txtImporte.Validated += new System.EventHandler(this.txtImporte_Validated);
+            // 
+            // bunifuSeparator5
+            // 
+            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.bunifuSeparator5.LineThickness = 1;
+            this.bunifuSeparator5.Location = new System.Drawing.Point(67, 92);
+            this.bunifuSeparator5.Name = "bunifuSeparator5";
+            this.bunifuSeparator5.Size = new System.Drawing.Size(83, 13);
+            this.bunifuSeparator5.TabIndex = 1;
+            this.bunifuSeparator5.Transparency = 255;
+            this.bunifuSeparator5.Vertical = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(7)))), ((int)(((byte)(64)))));
@@ -439,7 +465,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(576, 40);
-            this.panel3.TabIndex = 38;
+            this.panel3.TabIndex = 3;
             // 
             // label11
             // 
@@ -450,7 +476,7 @@
             this.label11.Location = new System.Drawing.Point(11, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 20);
-            this.label11.TabIndex = 3;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Monto";
             // 
             // txtMtoEscrito
@@ -468,7 +494,7 @@
             this.txtMtoEscrito.Margin = new System.Windows.Forms.Padding(4);
             this.txtMtoEscrito.Name = "txtMtoEscrito";
             this.txtMtoEscrito.Size = new System.Drawing.Size(276, 30);
-            this.txtMtoEscrito.TabIndex = 32;
+            this.txtMtoEscrito.TabIndex = 4;
             this.txtMtoEscrito.Text = "Tres Mil";
             this.txtMtoEscrito.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -483,7 +509,7 @@
             this.panel9.Location = new System.Drawing.Point(643, 43);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(153, 557);
-            this.panel9.TabIndex = 30;
+            this.panel9.TabIndex = 0;
             // 
             // cmdGuardar
             // 
@@ -507,7 +533,7 @@
             this.cmdGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(111, 50);
-            this.cmdGuardar.TabIndex = 24;
+            this.cmdGuardar.TabIndex = 0;
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
@@ -543,7 +569,7 @@
             this.btnAgregarRecibo.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarRecibo.Name = "btnAgregarRecibo";
             this.btnAgregarRecibo.Size = new System.Drawing.Size(111, 50);
-            this.btnAgregarRecibo.TabIndex = 23;
+            this.btnAgregarRecibo.TabIndex = 2;
             this.btnAgregarRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarRecibo.Click += new System.EventHandler(this.btnAgregarRecibo_Click);
             // 
@@ -554,7 +580,7 @@
             this.label10.Location = new System.Drawing.Point(39, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 20);
-            this.label10.TabIndex = 33;
+            this.label10.TabIndex = 9;
             this.label10.Text = "Folio:";
             // 
             // dtFecha
@@ -567,7 +593,7 @@
             this.dtFecha.Location = new System.Drawing.Point(409, 88);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(194, 23);
-            this.dtFecha.TabIndex = 36;
+            this.dtFecha.TabIndex = 2;
             this.dtFecha.Value = new System.DateTime(2023, 4, 30, 0, 0, 0, 0);
             // 
             // bunifuSeparator1
@@ -578,7 +604,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(28, 425);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(576, 27);
-            this.bunifuSeparator1.TabIndex = 37;
+            this.bunifuSeparator1.TabIndex = 3;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
@@ -605,7 +631,7 @@
             this.pnEstatus.Location = new System.Drawing.Point(426, 58);
             this.pnEstatus.Name = "pnEstatus";
             this.pnEstatus.Size = new System.Drawing.Size(134, 63);
-            this.pnEstatus.TabIndex = 46;
+            this.pnEstatus.TabIndex = 1;
             // 
             // cmdAgregarEstatus
             // 
@@ -625,7 +651,7 @@
             this.lblEstatus.Location = new System.Drawing.Point(6, 5);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(64, 20);
-            this.lblEstatus.TabIndex = 43;
+            this.lblEstatus.TabIndex = 0;
             this.lblEstatus.Text = "Estatus";
             // 
             // cbEstatus
@@ -634,7 +660,7 @@
             this.cbEstatus.Location = new System.Drawing.Point(10, 28);
             this.cbEstatus.Name = "cbEstatus";
             this.cbEstatus.Size = new System.Drawing.Size(111, 21);
-            this.cbEstatus.TabIndex = 42;
+            this.cbEstatus.TabIndex = 6;
             // 
             // lblEncargado2
             // 
@@ -644,7 +670,7 @@
             this.lblEncargado2.Location = new System.Drawing.Point(122, 86);
             this.lblEncargado2.Name = "lblEncargado2";
             this.lblEncargado2.Size = new System.Drawing.Size(196, 20);
-            this.lblEncargado2.TabIndex = 44;
+            this.lblEncargado2.TabIndex = 3;
             this.lblEncargado2.Text = "Karla Judith Santos Rivera";
             // 
             // txtEncargado1
@@ -655,7 +681,7 @@
             this.txtEncargado1.Location = new System.Drawing.Point(121, 52);
             this.txtEncargado1.Name = "txtEncargado1";
             this.txtEncargado1.Size = new System.Drawing.Size(196, 20);
-            this.txtEncargado1.TabIndex = 41;
+            this.txtEncargado1.TabIndex = 2;
             this.txtEncargado1.Text = "Karla Judith Santos Rivera";
             // 
             // cbEncargado2
@@ -665,7 +691,7 @@
             this.cbEncargado2.Location = new System.Drawing.Point(121, 81);
             this.cbEncargado2.Name = "cbEncargado2";
             this.cbEncargado2.Size = new System.Drawing.Size(255, 26);
-            this.cbEncargado2.TabIndex = 40;
+            this.cbEncargado2.TabIndex = 5;
             // 
             // panel5
             // 
@@ -674,7 +700,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(576, 40);
-            this.panel5.TabIndex = 38;
+            this.panel5.TabIndex = 6;
             // 
             // label9
             // 
@@ -685,7 +711,7 @@
             this.label9.Location = new System.Drawing.Point(11, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 20);
-            this.label9.TabIndex = 3;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Firmas";
             // 
             // label12
@@ -695,7 +721,7 @@
             this.label12.Location = new System.Drawing.Point(11, 87);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 20);
-            this.label12.TabIndex = 15;
+            this.label12.TabIndex = 4;
             this.label12.Text = "Encargado 2:";
             // 
             // label13
@@ -705,7 +731,7 @@
             this.label13.Location = new System.Drawing.Point(11, 51);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 20);
-            this.label13.TabIndex = 13;
+            this.label13.TabIndex = 5;
             this.label13.Text = "Encargado 1:";
             // 
             // rdSocio
@@ -729,7 +755,7 @@
             this.cbPeriodo.Location = new System.Drawing.Point(210, 88);
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(125, 21);
-            this.cbPeriodo.TabIndex = 43;
+            this.cbPeriodo.TabIndex = 1;
             // 
             // label14
             // 
@@ -738,7 +764,7 @@
             this.label14.Location = new System.Drawing.Point(206, 59);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(67, 20);
-            this.label14.TabIndex = 44;
+            this.label14.TabIndex = 6;
             this.label14.Text = "Periodo:";
             // 
             // lblPeriodo
@@ -749,39 +775,13 @@
             this.lblPeriodo.Location = new System.Drawing.Point(214, 86);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(68, 20);
-            this.lblPeriodo.TabIndex = 45;
+            this.lblPeriodo.TabIndex = 7;
             this.lblPeriodo.Text = "20181-1";
             // 
             // error1
             // 
             this.error1.ContainerControl = this;
             this.error1.Icon = ((System.Drawing.Icon)(resources.GetObject("error1.Icon")));
-            // 
-            // txtImporte
-            // 
-            this.txtImporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(243)))), ((int)(((byte)(223)))));
-            this.txtImporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtImporte.Location = new System.Drawing.Point(66, 77);
-            this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(84, 19);
-            this.txtImporte.TabIndex = 61;
-            this.txtImporte.Text = "12";
-            this.txtImporte.TextChanged += new System.EventHandler(this.txtImporte_TextChanged);
-            this.txtImporte.Validating += new System.ComponentModel.CancelEventHandler(this.txtImporte_Validating);
-            this.txtImporte.Validated += new System.EventHandler(this.txtImporte_Validated);
-            // 
-            // bunifuSeparator5
-            // 
-            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
-            this.bunifuSeparator5.LineThickness = 1;
-            this.bunifuSeparator5.Location = new System.Drawing.Point(67, 92);
-            this.bunifuSeparator5.Name = "bunifuSeparator5";
-            this.bunifuSeparator5.Size = new System.Drawing.Size(83, 13);
-            this.bunifuSeparator5.TabIndex = 60;
-            this.bunifuSeparator5.Transparency = 255;
-            this.bunifuSeparator5.Vertical = false;
             // 
             // txtFolio
             // 
@@ -791,7 +791,7 @@
             this.txtFolio.Location = new System.Drawing.Point(43, 82);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(84, 19);
-            this.txtFolio.TabIndex = 63;
+            this.txtFolio.TabIndex = 0;
             this.txtFolio.Text = "12";
             this.txtFolio.Validating += new System.ComponentModel.CancelEventHandler(this.txtFolio_Validating);
             this.txtFolio.Validated += new System.EventHandler(this.txtFolio_Validated);
@@ -804,7 +804,7 @@
             this.bunifuSeparator6.Location = new System.Drawing.Point(44, 97);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
             this.bunifuSeparator6.Size = new System.Drawing.Size(83, 13);
-            this.bunifuSeparator6.TabIndex = 62;
+            this.bunifuSeparator6.TabIndex = 8;
             this.bunifuSeparator6.Transparency = 255;
             this.bunifuSeparator6.Vertical = false;
             // 
@@ -920,8 +920,8 @@
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.ComboBox cbPeriodo;
         public ns1.BunifuCustomLabel lblEncargado2;
-        private System.Windows.Forms.PictureBox cmdAgregarEstatus;
-        private System.Windows.Forms.Panel pnEstatus;
+        public System.Windows.Forms.PictureBox cmdAgregarEstatus;
+        public System.Windows.Forms.Panel pnEstatus;
         public ns1.BunifuCustomLabel lblPeriodo;
         private System.Windows.Forms.ErrorProvider error1;
         public System.Windows.Forms.TextBox txtImporte;

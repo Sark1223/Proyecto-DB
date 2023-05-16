@@ -12,12 +12,12 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
     internal class Conexion
     {
         //Conexion Santos Karla♥
-        //public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
-        //SqlConnection conexion;
+        public string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
+        SqlConnection conexion;
 
         //////Conexion Villada Edwin
-        public string CadenaConexion = @"server = DESKTOP-BNMO14B; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
-        SqlConnection conexion;
+        //public string CadenaConexion = @"server = DESKTOP-BNMO14B; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
+        //SqlConnection conexion;
 
         ////Conexion Manuel Davila
         //public string CadenaConexion = @"server = LAPTOP-MANUEL\SQLEXPRESS; Initial Catalog = AC_MASCOTAS; Integrated Security = true";
@@ -165,6 +165,24 @@ namespace A.C.Mascotas_Vulnerables___DB.DAL
             while (dr.Read())
             {
                 id = dr[0].ToString();
+            }
+            cmd.Connection.Close();
+            return id;
+        }//para el metodo modificar
+
+        //Recuperar ID
+        public int ValorMaximoEntero(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            cmd.Connection.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            int id = 0;
+
+            while (dr.Read())
+            {
+                id = int.Parse(dr[0].ToString());
             }
             cmd.Connection.Close();
             return id;

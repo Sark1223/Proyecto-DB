@@ -1,4 +1,5 @@
-﻿using A.C.Mascotas_Vulnerables___DB.DAL;
+﻿using A.C.Mascotas_Vulnerables___DB.BLL;
+using A.C.Mascotas_Vulnerables___DB.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,9 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
         PeriodoBLL periodo = new PeriodoBLL();
         PeriodoDAL periodoDAL = new PeriodoDAL();
-
+        HistorialBLL historial = new HistorialBLL();
+        HistorialDAL historialDAL = new HistorialDAL();
+        public int usuario_id;
         private void frmPeriodo_Load(object sender, EventArgs e)
         {
             LimpiarPeriodo();
@@ -83,6 +86,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
                     dgvPeriodo.DataSource = periodoDAL.MostrarPeriodos().Tables[0];
                     LimpiarPeriodo();
+
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se AGREGO el PERIODO: {periodo.periodo_año}-{periodo.periodo_num}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                 }
                 else
                 {
@@ -106,6 +121,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                         dgvPeriodo.DataSource = periodoDAL.MostrarPeriodos().Tables[0];
                         LimpiarPeriodo();
                         modifiPeriodo = false;
+
+                        int num = 1 + historialDAL.RetornarUltimaModificacion();
+                        historial.historia_num = num;
+                        historial.usuario_id = usuario_id;
+                        historial.cambio = $"Se MODIFICO el PERIODO: {periodo.periodo_año}-{periodo.periodo_num}";
+
+                        DateTime date = DateTime.Today;
+                        DateTime time = DateTime.Now;
+
+                        historial.fecha = date;
+                        historial.hora = time;
+                        historialDAL.AgregarModificacion(historial);
                     }
                     else
                     {

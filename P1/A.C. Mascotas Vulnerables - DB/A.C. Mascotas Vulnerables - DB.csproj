@@ -50,12 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\HistorialBLL.cs" />
     <Compile Include="BLL\ReciboBLL.cs" />
     <Compile Include="BLL\SocioBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\AportacionDAL.cs" />
     <Compile Include="DAL\BuscadorDAL.cs" />
     <Compile Include="DAL\Conexion.cs" />
+    <Compile Include="DAL\HistorialDAL.cs" />
     <Compile Include="DAL\InicioSesionDaL.cs" />
     <Compile Include="DAL\LugarDAL.cs" />
     <Compile Include="DAL\PeriodoDAL.cs" />

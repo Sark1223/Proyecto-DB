@@ -35,6 +35,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         frmEdit_Socios edit_Socios = new frmEdit_Socios();
         SocioDAL socio = new SocioDAL();
 
+        public void ObtenerObjetoSocios(frmEdit_Socios edit_Socios)
+        {
+            this.edit_Socios = edit_Socios;
+        }
+
         private void cmdAgregarUsuario_Click(object sender, EventArgs e)
         {
             edit_Socios.cbTipoPSocio.Items.Clear();

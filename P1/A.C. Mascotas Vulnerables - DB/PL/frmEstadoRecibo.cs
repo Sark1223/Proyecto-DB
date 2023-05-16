@@ -1,4 +1,5 @@
-﻿using A.C.Mascotas_Vulnerables___DB.DAL;
+﻿using A.C.Mascotas_Vulnerables___DB.BLL;
+using A.C.Mascotas_Vulnerables___DB.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         EstatusBLL estatus = new EstatusBLL();
         AportacionDAL aportacionDAL = new AportacionDAL();
 
+        HistorialBLL historial = new HistorialBLL();
+        HistorialDAL historialDAL = new HistorialDAL();
+
+        public int usuario_id;
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             Close();
@@ -79,12 +84,79 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     MessageBox.Show("El ESTATUS " + estatus.estatus_descripcion + " se AGREGO correctamente", "Estatus Agregado");
                     //Limpiar();
                     dgvEstatus.DataSource = aportacionDAL.MostrarEstatus().Tables[0];
+
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se AGREGO el nuevo ESTATUS: {estatus.estatus_id}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                 }
                 else
                 {
                     MessageBox.Show("NO se pudo ingresar la informacion del estatus", "Error al ingresar status");
                 }
             }
+        }
+
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            if (modifiEstatus && codigo != "AC")
+            {
+                recuperarInfo();
+                if (aportacionDAL.ModificarEstatus(estatus, codigo))
+                {
+                    MessageBox.Show("El ESTATUS: " + codigo + " se MODIFICO correctamente", "Estatus Modificado");
+                    dgvEstatus.DataSource = aportacionDAL.MostrarEstatus().Tables[0];
+                    modifiEstatus = false;
+
+                    codigo = "";
+
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se MODIFICO el ESTATUS: {codigo}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo modificar la informacion del Estatus", "Error al modificar estatus");
+                }
+            }
+            else
+            {
+                if(codigo == "AC")
+                {
+                    MessageBox.Show("NO puede MODIFICAR el ESTATUS 'AC'", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar primero un registro para modificarlo", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+            }
+        }
+
+        bool modifiEstatus; string codigo;
+        private void dgvEstatus_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int indice = e.RowIndex;
+            codigo = dgvEstatus.Rows[indice].Cells[0].Value.ToString();
+            txtcodigo.Text = codigo;
+            txtdescripcion.Text = dgvEstatus.Rows[indice].Cells[1].Value.ToString();
+
+            modifiEstatus = true;
         }
     }
 

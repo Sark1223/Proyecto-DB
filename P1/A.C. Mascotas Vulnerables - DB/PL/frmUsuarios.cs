@@ -34,6 +34,11 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         frmEdit_Usuario eusuario = new frmEdit_Usuario();
         UsuarioDAL usuDAL = new UsuarioDAL();
 
+        public void ObtenerObjetoUsuarios(frmEdit_Usuario edit_Usuario)
+        {
+            this.eusuario = edit_Usuario;
+        }
+
         private void cmdAgregarUsuario_Click(object sender, EventArgs e)
         {
             eusuario.cbCargo.Items.Clear();

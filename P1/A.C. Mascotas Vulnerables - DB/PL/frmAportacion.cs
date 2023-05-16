@@ -16,6 +16,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
     {
         frmNuevaAportacion nAportacion = new frmNuevaAportacion();
         AportacionDAL apDAL = new AportacionDAL();
+        frmEstadoRecibo estadoRecibo = new frmEstadoRecibo();
         
         public frmAportacion()
         {
@@ -34,9 +35,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        public void ObtenerObjetoNuevaAportacion(frmNuevaAportacion nuevaAportacion)
+        public void ObtenerObjetoNuevaAportacion(frmNuevaAportacion nuevaAportacion, frmEstadoRecibo estador)
         {
-            nAportacion = nuevaAportacion;
+            this.nAportacion = nuevaAportacion;
+            nAportacion.ObtenerObjetoEstadoR(estador);
         }
 
         private void cmdAportacion(object sender, EventArgs e)
@@ -50,33 +52,21 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         {
             Close();
         }
-        bool modifier = false;
+        bool modifi = false;
         private void btnModificarEstatus_Click(object sender, EventArgs e)
         {
-            if ()
+            if (modifi == true)
             {
-                ();
-                if ()
-                {
-                    MessageBox.Show("El PAIS " + pais.pais_id + " se MODIFICO correctamente", "Pais Modificado");
-                    lugar.LlenarCBPais(cbPais);
-                    dgvPais.DataSource = lugar.MostrarPaises().Tables[0];
-                    LimpiarPais();
-                    modifiPais = false;
-                    idActPais = "";
-                }
-                else
-                {
-                    MessageBox.Show("NO se pudo modificar la informacion del pais", "Error al momdificar pais");
-                }
+                nAportacion.lblTitle.Text = "Datos\r\ndel\r\nRecibo\r\n(editar)";
+                nAportacion.ShowDialog();
+                dgvRecibos.DataSource = apDAL.MostrarRecibos().Tables[0];
+                modifi = false;
             }
             else
             {
                 MessageBox.Show("Debe seleccionar primero un registro para modificarlo", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            nAportacion.lblTitle.Text = "Datos\r\ndel\r\nRecibo\r\n(editar)";
-            nAportacion.ShowDialog();
-            dgvRecibos.DataSource = apDAL.MostrarRecibos().Tables[0];
+            
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -160,6 +150,8 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 nAportacion.lblEncargado2.Text = $"{nombres} {apaterno} {amaterno}";
                 nAportacion.lblEncargado2.Visible = true;
             }
+
+            modifi = true;
 
         }
     }

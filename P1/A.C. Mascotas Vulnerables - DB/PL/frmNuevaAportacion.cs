@@ -27,7 +27,15 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         ReciboBLL res = new ReciboBLL();
         frmEstadoRecibo estadoRecibo = new frmEstadoRecibo();
 
+        HistorialDAL historialDAL = new HistorialDAL();
+        HistorialBLL historial = new HistorialBLL();
+
         //frmAportacion aportacion = new frmAportacion();
+
+        public void ObtenerObjetoEstadoR(frmEstadoRecibo estado)
+        {
+            this.estadoRecibo = estado;
+        }
 
         private void cmdCerrar(object sender, EventArgs e)
         {
@@ -61,6 +69,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
 
                 folio = txtFolio.Text;
 
+
                 MessageBox.Show("Intenta modificar un recibo, el UNICO valor MODIFICABLE en esta ventana es ESTATUS, cualquier otro cambio no se guardara.", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
@@ -72,7 +81,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
             error1.Clear();
             Close();
         }
-        string idSocio; bool socio = false;
+        public string idSocio, usuario_id; bool socio = false;
         private void BuscarSOcio(object sender, EventArgs e)
         {
             buscador.dgvSocios.DataSource = bus.MostrarTabla().Tables[0];
@@ -158,7 +167,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         public void LimpiarRecibo()
         {
             txtFolio.Clear(); txtImporte.Clear();lblAMaterno.Text = "";lblAPaterno.Text="";
-            lblNombre.Text = ""; txtMtoEscrito.Text = ""; cbEncargado2.SelectedIndex = 0;
+            lblNombre.Text = ""; txtMtoEscrito.Text = "";
 
         }
 
@@ -171,6 +180,20 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 {
                     MessageBox.Show("El RECIBO " + res.rec_folio + " se AGREGO correctamente", "Recibo Agregado");
                     LimpiarRecibo();
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = res.usuario_id;
+                    historial.cambio = $"Se agrego el recibo con folio: {res.rec_folio}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
+
+                    historialDAL.AgregarModificacion(historial);
+
                     Close();
                 }
                 else
@@ -178,18 +201,36 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     MessageBox.Show("NO se pudo ingresar la informacion del recibo", "Error al ingresar recibo");
                 }
             }
+
+            /*CREATE TABLE HISTORIAL (
+    historia_num          INTEGER NOT NULL,
+    usuario_id            tinyint NOT NULL,
+    cambio				  VARCHAR(100) not null,
+    fecha                 DATE NOT NULL,
+	hora				  Time not null
+);*/
+
+
         }
 
         private void cmdAgregarEstatus_Click(object sender, EventArgs e)
         {
-            estadoRecibo.ShowDialog();
+            if(cmdAgregarEstatus.Tag.ToString() == "no")
+            {
+                MessageBox.Show("Solo los Administradores pueden agregar nuevos Estatus.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                estadoRecibo.ShowDialog();
+            }
+            
         }
 
         private void txtFolio_Validating(object sender, CancelEventArgs e)
         {
             if(ValidarNumeros(txtFolio, error1, e))
             {
-                if (!AportacionDAL.ValidarID(txtFolio.Text, "0", txtFolio, error1))
+                if (!AportacionDAL.ValidarID(txtFolio.Text, folio, txtFolio, error1))
                 {
                     // Cancel the event and select the text to be corrected by the user.
                     e.Cancel = true;
@@ -317,6 +358,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 {
                     MessageBox.Show("El RECIBO " + res.rec_folio + " se AGREGO correctamente", "Recibo Agregado");
                     //Limpiar();
+
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = int.Parse(usuario_id);
+                    historial.cambio = $"Se agrego el recibo con folio: {folio}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                 }
                 else
                 {

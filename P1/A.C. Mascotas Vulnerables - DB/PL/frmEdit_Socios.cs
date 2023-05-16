@@ -38,8 +38,12 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         SocioBLL socio = new SocioBLL();
         SocioDAL socioDAL = new SocioDAL();
 
+        HistorialBLL historial = new HistorialBLL();
+        HistorialDAL historialDAL = new HistorialDAL();
+
         //variables auxiliares
         string idActual;
+        public int usuario_id;
         private void frmEdit_Socios_Load(object sender, EventArgs e)
         {
             if (lblTitle.Text == "AGREGAR NUEVO SOCIO")
@@ -241,6 +245,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     {
                         MessageBox.Show("El SOCIO " + socio.sc_id + " se AGREGO correctamente", "Socio Agregado");
                         Limpiar();
+                        int num = 1 + historialDAL.RetornarUltimaModificacion();
+                        historial.historia_num = num;
+                        historial.usuario_id = usuario_id;
+                        historial.cambio = $"Se MODIFICO el socio: {socio.sc_id}";
+
+                        DateTime date = DateTime.Today;
+                        DateTime time = DateTime.Now;
+
+                        historial.fecha = date;
+                        historial.hora = time;
+
+                        historialDAL.AgregarModificacion(historial);
+                        Close();
                     }
                     else
                     {
@@ -258,8 +275,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 if (socioDAL.ModificarSocio(socio, idActual))
                 {
                     MessageBox.Show("El SOCIO " + socio.sc_id + " se MODIFICO correctamente", "Socio Modificado");
-                    //Limpiar();
-                    //Close();
+                    Limpiar();
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se MODIFICO el socio: {socio.sc_id}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
+                    Close();
                 }
                 else
                 {

@@ -56,6 +56,10 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         //Objetos de Clases
         LugarDAL lugar = new LugarDAL();
 
+        //hISTORIAL OBJETOS
+        HistorialBLL historial = new HistorialBLL();
+        HistorialDAL historialDAL = new HistorialDAL();
+
         //Variables auxiliares 
         bool modifiCiudad, modifiEstado, modifiPais;
         string idActPais, idActEstado, idActCiudad;
@@ -104,7 +108,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 return false;
             }
         }
-
+        public int usuario_id;
         private void btnAgregarPais_Click(object sender, EventArgs e)
         {
             if (!PaisVacios())
@@ -122,6 +126,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                         lugar.LlenarCBPais(cbPais);
                         dgvPais.DataSource = lugar.MostrarPaises().Tables[0];
                         LimpiarPais();
+                        int num = 1 + historialDAL.RetornarUltimaModificacion();
+                        historial.historia_num = num;
+                        historial.usuario_id = usuario_id;
+                        historial.cambio = $"Se AGREGO el PAIS: {pais.pais_id}";
+
+                        DateTime date = DateTime.Today;
+                        DateTime time = DateTime.Now;
+
+                        historial.fecha = date;
+                        historial.hora = time;
+                        historialDAL.AgregarModificacion(historial);
                     }
                     else
                     {
@@ -162,6 +177,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     LimpiarPais();
                     modifiPais = false;
                     idActPais = "";
+
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se MODIFICO el PAIS: {pais.pais_id}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                 }
                 else
                 {
@@ -338,6 +365,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                         lugar.LlenarCBEstado(cbEstado);
                         dgvEstado.DataSource = lugar.MostrarEstados().Tables[0];
                         LimpiarEstado();
+                        int num = 1 + historialDAL.RetornarUltimaModificacion();
+                        historial.historia_num = num;
+                        historial.usuario_id = usuario_id;
+                        historial.cambio = $"Se AGREGO el ESTADO: {estado.est_nombre}";
+
+                        DateTime date = DateTime.Today;
+                        DateTime time = DateTime.Now;
+
+                        historial.fecha = date;
+                        historial.hora = time;
+                        historialDAL.AgregarModificacion(historial);
                     }
                     else
                     {
@@ -413,6 +451,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     LimpiarEstado();
                     modifiEstado = false;
                     idActEstado = "";
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se MODIFICO el ESTADO: {estado.estado_id}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                 }
                 else
                 {
@@ -542,6 +591,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                         MessageBox.Show("La CIUDAD " + ciudad.ciudad_nombre + " se AGREGO correctamente", "Ciudad Agregado");
                         dgvCiudad.DataSource = lugar.MostrarCiudad().Tables[0];
                         LimpiarCiudad();
+                        int num = 1 + historialDAL.RetornarUltimaModificacion();
+                        historial.historia_num = num;
+                        historial.usuario_id = usuario_id;
+                        historial.cambio = $"Se AGREGO la CIUDAD: {ciudad.ciudad_id}";
+
+                        DateTime date = DateTime.Today;
+                        DateTime time = DateTime.Now;
+
+                        historial.fecha = date;
+                        historial.hora = time;
+                        historialDAL.AgregarModificacion(historial);
                     }
                     else
                     {
@@ -618,6 +678,18 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                     modifiCiudad = false;
 
                     idActCiudad = "";
+
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se MODIFICO la CIUDAD: {ciudad.ciudad_id}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                 }
                 else
                 {

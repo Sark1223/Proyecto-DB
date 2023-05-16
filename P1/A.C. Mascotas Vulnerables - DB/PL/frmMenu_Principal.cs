@@ -40,17 +40,22 @@ namespace A.C.Mascotas_Vulnerables___DB
         UsuarioDAL mu = new UsuarioDAL();
         frmLugar lugar = new frmLugar();
         frmPeriodo periodo = new frmPeriodo();
-        PeriodoDAL periodoDAL = new PeriodoDAL();   
+        PeriodoDAL periodoDAL = new PeriodoDAL();  
+        frmHistorial historial = new frmHistorial();
+        HistorialDAL hist = new HistorialDAL();
 
         private void lblLogo_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void ObtenerObjetoAportacion(frmAportacion aportacion, frmNuevaAportacion nuevaAportacion) 
+        public void ObtenerObjetoAportacion(frmAportacion aportacion, frmNuevaAportacion nuevaAportacion, frmLugar lugar, frmPeriodo periodo,
+            frmEdit_Socios edit_Socios, frmEdit_Usuario edit_Usuario, frmEstadoRecibo estador) 
         {
-            this.aportacion = aportacion;
-            aportacion.ObtenerObjetoNuevaAportacion(nuevaAportacion);
+            this.aportacion = aportacion; this.periodo = periodo; this.lugar = lugar;
+            aportacion.ObtenerObjetoNuevaAportacion(nuevaAportacion, estador);
+            socios.ObtenerObjetoSocios(edit_Socios);
+            usuarios.ObtenerObjetoUsuarios(edit_Usuario);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -89,6 +94,12 @@ namespace A.C.Mascotas_Vulnerables___DB
         {
             periodo.dgvPeriodo.DataSource = periodoDAL.MostrarPeriodos().Tables[0];
             periodo.ShowDialog();
+        }
+
+        private void cmdHistorial_Click(object sender, EventArgs e)
+        {
+            historial.dgvCambios.DataSource = hist.MostrarTabla().Tables[0];
+            historial.ShowDialog();
         }
     }
 }

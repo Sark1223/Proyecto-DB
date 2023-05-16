@@ -38,6 +38,9 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
         UsuarioBLL usuario = new UsuarioBLL();
         UsuarioDAL mu = new UsuarioDAL();
 
+        HistorialBLL historial = new HistorialBLL();
+        HistorialDAL historialDAL = new HistorialDAL();
+
         //Variables auxiliares 
         string idActual = "";
 
@@ -61,51 +64,6 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 foto = true;
             }
             
-            //if (lblTitle.Text == "AGREGAR PLATILLO")
-            //{
-            //    editar_plato.LlenarCBCategoria(cbCategoria);
-
-            //    cmdAgregarIngrediente.Enabled = false;
-            //    cmdAgregarPaso.Enabled = false;
-
-            //    //Habilitar paneles de añadir
-            //    //pnAñadirIngre.Visible = true;
-            //    pnAñadirPaso.Visible = true;
-            //    pnAgregar.Visible = true;
-
-            //    //Inabilitar paneles modificar
-            //    pnModificar.Visible = false;
-            //    pnModifiIngre.Visible = false;
-            //    pnModifiPaso.Visible = false;
-            //    imagen = false;
-            //}
-            //else
-            //{
-            //    cmdAgregarIngrediente.Enabled = true;
-            //    cmdAgregarPaso.Enabled = true;
-            //    //Inabilitar paneles de añadir
-            //    //pnAñadirIngre.Visible = false;
-            //    //pnAñadirPaso.Visible = false;
-            //    pnAgregar.Visible = false;
-
-            //    //Mostrar paneles modificar
-            //    pnModificar.Visible = true;
-            //    pnModifiIngre.Visible = true;
-            //    pnModifiPaso.Visible = true;
-
-            //    imagen = true;
-
-            //    if (txtId_platillo.Text != "")
-            //    {
-            //        ID_Actual = txtId_platillo.Text;
-            //    }
-
-            //    if (txtNombre.Text != "")
-            //    {
-            //        nombre = txtNombre.Text;
-            //    }
-            //}
-            //primeraApertura = false;
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
@@ -273,7 +231,7 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 return false;
             }
         }
-
+        public int usuario_id;
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             error = false;
@@ -311,6 +269,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                         MessageBox.Show("El USUARIO " + usuario.usu_id + " se AGREGO correctamente", "Usuario Agregado");
 
                         Limpiar();
+                        int num = 1 + historialDAL.RetornarUltimaModificacion();
+                        historial.historia_num = num;
+                        historial.usuario_id = usuario_id;
+                        historial.cambio = $"Se AGREGO el usuario: {usuario.usu_id}";
+
+                        DateTime date = DateTime.Today;
+                        DateTime time = DateTime.Now;
+
+                        historial.fecha = date;
+                        historial.hora = time;
+                        historialDAL.AgregarModificacion(historial);
                     }
                     else
                     {
@@ -352,7 +321,19 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 if (mu.ModificarUsuario(usuario,idActual))
                 {
                     MessageBox.Show("El USUARIO " + usuario.usu_id + " se MODIFICO correctamente", "Usuario Modificado");
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se MODIFICO el usuario: {usuario.usu_id}";
 
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
+                    Limpiar();
+                    Close();
                 }
                 else
                 {
@@ -370,6 +351,17 @@ namespace A.C.Mascotas_Vulnerables___DB.PL
                 {
                     MessageBox.Show("El Usuario ha sido eliminado, sin embargo, los recibos creados por el mismo, " +
                         "seguiran guardados en la base de datos.");
+                    int num = 1 + historialDAL.RetornarUltimaModificacion();
+                    historial.historia_num = num;
+                    historial.usuario_id = usuario_id;
+                    historial.cambio = $"Se ELIMINO el usuario: {idActual}";
+
+                    DateTime date = DateTime.Today;
+                    DateTime time = DateTime.Now;
+
+                    historial.fecha = date;
+                    historial.hora = time;
+                    historialDAL.AgregarModificacion(historial);
                     Close();
                 }
                 else
