@@ -113,7 +113,7 @@
             // 
             // pbInicio
             // 
-            this.pbInicio.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.Ŧσllσฬ_๓є__ღ_Ꮙαƪƪεȵα_ღ__Corgi;
+            this.pbInicio.Image = global::A.C.Mascotas_Vulnerables___DB.Properties.Resources.inicio;
             this.pbInicio.Location = new System.Drawing.Point(0, 0);
             this.pbInicio.Name = "pbInicio";
             this.pbInicio.Size = new System.Drawing.Size(273, 483);
